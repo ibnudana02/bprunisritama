@@ -69,8 +69,8 @@
                     <div class=" col-md-6 col-sm-6">
                         <div class="topbar-right">
                             <ul>
-                                <li><a href="#"><i class="fa fa-envelope"></i> unisritamabpr@yahoo.co.id</a></li>
-                                <li><a href="#"><i class="fa fa-phone"></i> (0761) - 63381</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="left" title="Email Corporate"><i class="fa fa-envelope"></i> unisritamabpr@yahoo.co.id</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="left" title="Telpon Kantor"><i class="fa fa-phone"></i> (0761) - 63381</a></li>
                             </ul>
                         </div>
                     </div>
