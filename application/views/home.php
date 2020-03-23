@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/favicon.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/favicon.ico"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/ico.png">
 
     <!-- all css here -->
 
@@ -86,7 +87,8 @@
                         <div class="logo">
                             <!-- Brand -->
                             <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-                                <img src="<?php echo base_url('assets/'); ?>img/logo/logo.png" alt="">
+                                <!-- <img src="<?php echo base_url('assets/'); ?>img/logo/logo.png" alt=""> -->
+                                <img src="<?php echo base_url('assets/'); ?>img/logo/bpr-logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -1065,7 +1067,8 @@
                         <div class="footer-content">
                             <div class="footer-head">
                                 <div class="footer-logo">
-                                    <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/logo2.png" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/bpr-logo2.png" alt=""></a>
+                                    <!-- <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/logo2.png" alt=""></a> -->
                                 </div>
                                 <p>
                                     Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business.
