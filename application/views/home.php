@@ -1067,7 +1067,7 @@
                         <div class="footer-content">
                             <div class="footer-head">
                                 <div class="footer-logo">
-                                    <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/bpr-logo2.png" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/bpr-logo.png" alt=""></a>
                                     <!-- <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/logo2.png" alt=""></a> -->
                                 </div>
                                 <p>
@@ -1139,8 +1139,8 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="copyright">
                             <p>
-                                Copyright © 2019
-                                <a href="#">Mentos</a> All Rights Reserved
+                                Copyright © 2020
+                                <a href="#">Bank Unisritama</a> All Rights Reserved
                             </p>
                         </div>
                     </div>
