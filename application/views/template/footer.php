@@ -10,10 +10,9 @@
                                 <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/unisri-logo1.png" alt=""></a>
                                 <!-- <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/logo2.png" alt=""></a> -->
                             </div>
-                            <p>
-                                Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business.
+                            <p class="text-justify">
+                                ~ Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness” di Tahun 2023. ~
                             </p>
-
                         </div>
                     </div>
                 </div>
@@ -34,42 +33,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- end single footer -->
-                <div class="col-md-2 hidden-sm col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>Tags</h4>
-                            <ul class="footer-tags">
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Industry </a></li>
-                                <li><a href="#">Tax</a></li>
-                                <li><a href="#">Planning</a></li>
-                                <li><a href="#">Online</a></li>
-                                <li><a href="#">Consulting</a></li>
-                                <li><a href="#">Maketing</a></li>
-                                <li><a href="#">Expert</a></li>
-                                <li><a href="#">Consulting</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="footer-content last-content">
-                        <div class="footer-head">
-                            <h4>Subscribe</h4>
-                            <p>
-                                Are you looking for professional advice for your new business.
-                            </p>
-                            <div class="subs-feilds">
-                                <div class="suscribe-input">
-                                    <input type="email" class="email form-control width-80" id="sus_email" placeholder="Type Email">
-                                    <button type="submit" id="sus_submit" class="add-btn">Subscribe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </div>
