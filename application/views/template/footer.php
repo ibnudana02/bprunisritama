@@ -3,15 +3,14 @@
     <div class="footer-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="col-md-5 col-sm-5 col-xs-12">
                     <div class="footer-content">
                         <div class="footer-head">
                             <div class="footer-logo">
                                 <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/unisri-logo1.png" alt=""></a>
-                                <!-- <a href="#"><img src="<?php echo base_url('assets/'); ?>img/logo/logo2.png" alt=""></a> -->
                             </div>
-                            <p class="text-justify">
-                                ~ Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness” di Tahun 2023. ~
+                            <p class="text-left">
+                                ~ Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness di Tahun 2023. ~
                             </p>
                         </div>
                     </div>

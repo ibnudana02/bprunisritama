@@ -19,36 +19,36 @@
                     <div class="collapse navbar-collapse" id="navbar-example">
                         <div class="main-menu">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="pagess" href="index.html">Home</a></li>
-                                <li><a class="pagess" href="#">Tentang Kami</a>
+                                <li><a class="pagess" href="<?= base_url() ?>">Home</a></li>
+                                <li><a class="pagess">Tentang Kami</a>
                                     <ul class="sub-menu">
-                                        <li><a href="about.html">Profil Perusahaan</a></li>
-                                        <li><a href="team.html">Sejarah</a></li>
-                                        <li><a href="review.html">Visi & Misi</a></li>
-                                        <li><a href="faq.html">Board Manajemen</a></li>
-                                        <li><a href="error.html">Struktur Organisasi</a></li>
-                                        <li><a href="error.html">Penghargaan</a></li>
-                                        <li><a href="error.html">Lokasi Kantor</a></li>
+                                        <li><a href="<?= base_url('tentang_kami') ?>">Profil Perusahaan</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/sejarah') ?>">Sejarah</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi & Misi</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/manajemen') ?>">Board Manajemen</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/struktur') ?>">Struktur Organisasi</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/awards') ?>">Penghargaan</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/location') ?>">Lokasi Kantor</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="pagess" href="#">Produk dan Layanan</a>
+                                <li><a class="pagess">Produk dan Layanan</a>
                                     <ul class="sub-menu">
-                                        <li><a href="services.html">Pembayaran Mahasiswa</a></li>
-                                        <li><a href="single-service.html">Online Payment</a></li>
-                                        <li><a href="single-service.html">Deposito</a></li>
-                                        <li><a href="single-service.html">Tabungan</a></li>
-                                        <li><a href="single-service.html">Kredit</a></li>
+                                        <li><a href="<?= base_url() ?>">Pembayaran Mahasiswa</a></li>
+                                        <li><a href="<?= base_url() ?>">Online Payment</a></li>
+                                        <li><a href="<?= base_url() ?>">Deposito</a></li>
+                                        <li><a href="<?= base_url() ?>">Tabungan</a></li>
+                                        <li><a href="<?= base_url() ?>">Kredit</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="pagess" href="#">News</a>
                                     <ul class="sub-menu">
-                                        <li><a href="project-2.html">Artikel</a></li>
-                                        <li><a href="project-3.html">Laporan Publikasi</a></li>
-                                        <li><a href="project-4.html">GCG Report</a></li>
-                                        <li><a href="single-project.html">Pengkinian Data Nasabah</a></li>
+                                        <li><a href="<?= base_url('news/') ?>">Artikel</a></li>
+                                        <li><a href="<?= base_url('news/') ?>">Laporan Publikasi</a></li>
+                                        <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
+                                        <li><a href="<?= base_url('news/') ?>">Pengkinian Data Nasabah</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Hubungi Kami</a></li>
+                                <li><a href="<?= base_url('tentang_kami/contact') ?>">Hubungi Kami</a></li>
                             </ul>
                         </div>
                     </div>
