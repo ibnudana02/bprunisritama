@@ -8,9 +8,9 @@
                     <p>Are you looking for professional advice for your new business.Are you looking for professional advice for your new business</p>
                     <div class="contact-icon">
                         <div class="contact-inner">
-                            <a href="#"><i class="icon icon-map"></i><span>Jl. Soekarno-Hatta No. 03, Pekanbaru</span></a>
+                            <a href="#"><i class="icon icon-map-marker"></i><span>Jl. Soekarno-Hatta No. 03, Pekanbaru</span></a>
                             <a href="#"><i class="icon icon-phone"></i><span>0761 - 63381</span></a>
-                            <a href="#"><i class="icon icon-envelope"></i><span>unisritamabpr@yahoo.co.id</span></a>
+                            <a href="#"><i class="icon icon-envelope"></i><span>mentose@offices.com</span></a>
                         </div>
                     </div>
                 </div>
