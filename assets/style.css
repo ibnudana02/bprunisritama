@@ -103,6 +103,11 @@ p {
     color: #777;
 }
 
+p.visi {
+    margin: 0 0 15px;
+    color: #3f3f3f;
+}
+
 p.jam {
     margin: 0 0 0px;
     /* color: #777; */
@@ -432,7 +437,12 @@ div#preloader {
 }
 
 .bg-gray {
-    background: #fcfafa;
+    background: #bababa;
+}
+
+.bg-white {
+    /* background-image: url(img/logo/logo-bpr.png); */
+    background: #fdfcfc;
 }
 
 .bg-dark {

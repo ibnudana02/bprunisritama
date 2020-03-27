@@ -8,10 +8,10 @@
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#">
-                                <img src="<?= base_url('assets/') ?>img/project/1.jpg" alt="" />
+                                <img src="<?= base_url('assets/') ?>img/project/infobank2019.jpg" alt="" />
                             </a>
                             <div class="add-actions text-center">
-                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/1.jpg">
+                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/infobank2019.jpg">
                                     <i class="port-icon icon icon-picture"></i>
                                 </a>
                             </div>
@@ -27,16 +27,16 @@
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#">
-                                <img src="<?= base_url('assets/') ?>img/project/2.jpg" alt="" />
+                                <img src="<?= base_url('assets/') ?>img/project/infobank2015.jpg" alt="" />
                             </a>
                             <div class="add-actions text-center">
-                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/2.jpg">
+                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/infobank2015.jpg">
                                     <i class="port-icon icon icon-picture"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="project-dec">
-                            <h4>Infobank Award Tahun 2016</h4>
+                            <h4>Infobank Award Tahun 2015</h4>
                             <p>Our development opt in to the projects they genuinely want to work on, committing wholeheartedly to delivering.</p>
                         </div>
                     </div>

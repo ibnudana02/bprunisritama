@@ -1,25 +1,25 @@
 <!-- Start overview area -->
-<div class="overview-area bg-color area-padding">
+<div class="overview-area bg-white area-padding">
     <div class="container">
         <div class="row">
             <h2 class="text-center">Visi dan Misi</h2>
         </div>
-        <hr>
+        <!-- <hr> -->
         <div class="row">
             <div class="col-md">
                 <div class="single-well">
                     <a href="#">
                         <h4>Visi </h4>
                     </a>
-                    <p class="text-center"><strong>"Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness” di Tahun 2023"</strong></p>
+                    <p class="text-center visi"><strong>"Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness” di Tahun 2023"</strong></p>
                 </div>
-                <hr>
-                <br>
+                <!-- <hr> -->
+                <!-- <br> -->
                 <div class="single-well">
                     <a href="#">
                         <h4>Misi </h4>
                     </a>
-                    <p><strong> Mewujudkan Visi Perusahaan, untuk itu Bank menyelaraskan Misi kedalam 20 Point.</strong></p>
+                    <p class="visi"><strong> Mewujudkan Visi Perusahaan, untuk itu Bank menyelaraskan Misi kedalam 20 Point.</strong></p>
                     <ul class="marker-list">
                         <li>Memberikan pelayanan yang prima kepada nasabah.</li>
                         <li>Menjalankan operasional BPR secara effisien dan efektif.</li>
