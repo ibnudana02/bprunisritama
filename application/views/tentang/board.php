@@ -12,7 +12,7 @@
                     <div class="single-member">
                         <div class="team-img">
                             <a href="#">
-                                <img src="<?= base_url('assets/') ?>img/team/t1.jpg" alt="">
+                                <img src="<?= base_url('assets/') ?>img/team/rika.jpg" alt="">
                             </a>
                         </div>
                         <div class="team-content">

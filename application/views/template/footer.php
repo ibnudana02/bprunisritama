@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 col-sm-3 col-xs-12">
+                <div class="col-4 col-sm-4 col-xs-12">
                     <div class="footer-content">
                         <div class="footer-head">
                             <h4>Jam Pelayanan</h4>
@@ -41,9 +41,9 @@
                                 <p class="jam">08:00 - 16:00 WIB (Kantor Pusat)</p>
                                 <p class="jam">08:00 - 15:00 WIB (KAS UIR)</p>
                                 <li><a href="#">Jum'at</a></li>
-                                <p class="jam">15:00 - 16:30 WIB (Pasca)</p>
+                                <p class="jam">15:00 - 16:30 WIB (Pasca Sarjana)</p>
                                 <li><a href="#">Sabtu</a></li>
-                                <p class="jam">08:00 - 14:00 WIB (Pasca)</p>
+                                <p class="jam">08:00 - 14:00 WIB (Pasca Sarjana)</p>
                             </ul>
                         </div>
                     </div>
