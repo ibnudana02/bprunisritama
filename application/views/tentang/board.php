@@ -19,8 +19,8 @@
                             <h4><a href="#">Rika Puspa Ayu</a></h4>
                             <p>Komisaris Utama</p>
                             <ul class="team-hover">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/rikaoriflame" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/r.phuspaa/?hl=id" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                             </ul>
                         </div>
