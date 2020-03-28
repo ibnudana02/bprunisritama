@@ -33,14 +33,32 @@
                                 </li>
                                 <li><a class="pagess">Produk dan Layanan</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?= base_url() ?>">Pembayaran Mahasiswa</a></li>
-                                        <li><a href="<?= base_url() ?>">Online Payment</a></li>
-                                        <li><a href="<?= base_url() ?>">Deposito</a></li>
-                                        <li><a href="<?= base_url() ?>">Tabungan</a></li>
-                                        <li><a href="<?= base_url() ?>">Kredit</a></li>
+                                        <li><a href="<?= base_url('produk/pmb') ?>">Pembayaran Mahasiswa</a></li>
+                                        <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
+                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Deposito</a>
+                                            <div class="dropdown-content">
+                                                <a href="#">Deposito Masyarakat</a>
+                                                <a href="#">Deposito Berjangka</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Tabungan</a>
+                                            <div class="dropdown-content">
+                                                <a href="#">Tabungan Sejahtera</a>
+                                                <a href="#">Tabungan Umroh</a>
+                                                <a href="#">TabunganKu</a>
+                                                <a href="#">Tabungan Qurban</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Kredit</a>
+                                            <div class="dropdown-content">
+                                                <a href="#">Kredit Bakulan</a>
+                                                <a href="#">Kredit Konsumtif</a>
+                                                <a href="#">Kredit Produktif</a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li><a class="pagess" href="#">News</a>
+                                <li><a class="pagess">News</a>
                                     <ul class="sub-menu">
                                         <li><a href="<?= base_url('news/') ?>">Artikel</a></li>
                                         <li><a href="<?= base_url('news/') ?>">Laporan Publikasi</a></li>

@@ -28,4 +28,9 @@ class Welcome extends CI_Controller
 		$this->load->view('home');
 		$this->load->view('template/footer');
 	}
+
+	public function html()
+	{
+		$this->load->view('test.html');
+	}
 }

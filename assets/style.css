@@ -573,6 +573,7 @@ div#preloader {
 
 .main-menu ul.navbar-nav li a:hover {
     color: #80c32f;
+
 }
 
 .main-menu ul.navbar-nav>li>a::before {
@@ -3822,4 +3823,57 @@ span.email-notes {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}
+
+
+/* li {
+    float: left;
+} */
+
+.sub-menu a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+
+li.dropdown {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    border-top: 2px solid #80c32f;
+    position: relative;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    width: 200px;
+    box-shadow: 0px 0px 1px #ddd, -0px -0px 1px #ddd;
+}
+
+.dropdown-content a {
+    color: black;
+    /* min-width: 160px; */
+    width: 200px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+li.dropdown .dropdown-content {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+li.dropdown .dropdown-content a {
+    display: block;
+    width: fit-content;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Judul Halaman Saya</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" media="all" /> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FFF;
+        }
+
+        .menu-wrap {
+            background-color: #53bd84;
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            width: 770px;
+            margin: auto;
+            margin-top: 80px;
+        }
+
+        .menu-wrap ul {
+            list-style: none;
+        }
+
+        .menu-wrap ul li a {
+            float: left;
+            width: 150px;
+            display: block;
+            text-align: center;
+            color: #FFF;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .menu-wrap ul li a:hover {
+            background-color: #666;
+            display: block;
+        }
+
+        .menu-wrap ul li:hover ul {
+            display: block;
+        }
+
+        .menu-wrap ul ul {
+            display: none;
+            list-style: none;
+            position: absolute;
+            background-color: #53bd84;
+            left: 300px;
+            top: 50px;
+            width: 190px;
+        }
+
+        .menu-wrap ul ul li a {
+            float: none;
+            display: block;
+            padding-left: 30px;
+            text-align: left;
+            width: 160px;
+        }
+
+        .menu-wrap ul ul li a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-wrap">
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak Kami</a>
+                <ul>
+                    <li><a href="alamat.html">Alamat Kami</a></li>
+                    <li><a href="kebijakan.html">Kebijakan</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
