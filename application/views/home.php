@@ -1,5 +1,5 @@
     <!-- Welcome service area start -->
-    <div class="welcome-area bg-color-2 area-padding">
+    <div class="welcome-area area-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -37,7 +37,7 @@
     </div>
     <!-- Welcome service area End -->
     <!-- Start Service area -->
-    <div class="services-area bg-color area-padding">
+    <div class="services-area area-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">

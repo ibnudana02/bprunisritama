@@ -11,6 +11,7 @@
                             <a href="#" class="blog-images">
                                 <img src="<?= base_url('assets/') ?>img/blog/pmb.jpg" alt="">
                             </a>
+                            <hr>
                             <div class="blog-content">
                                 <div class="blog-category">
                                     <span>Pembayaran Mahasiswa</span>

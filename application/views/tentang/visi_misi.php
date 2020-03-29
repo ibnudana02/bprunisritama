@@ -1,10 +1,10 @@
 <!-- Start overview area -->
-<div class="overview-area bg-white area-padding">
+<div class="about-area area-padding">
     <div class="container">
         <div class="row">
             <h2 class="text-center">Visi dan Misi</h2>
         </div>
-        <!-- <hr> -->
+        <hr>
         <div class="row">
             <div class="col-md">
                 <div class="single-well">

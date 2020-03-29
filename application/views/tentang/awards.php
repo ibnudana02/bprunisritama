@@ -1,6 +1,10 @@
 <!-- Start project Area -->
-<div class="project-area bg-color-2 area-padding">
+<div class="about-area area-padding">
     <div class="container">
+        <div class="row">
+            <h2 class="text-center">Penghargaan</h2>
+        </div>
+        <hr>
         <div class="row">
             <div class="project-content">
                 <!-- single-awesome-project start -->
@@ -8,10 +12,10 @@
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#">
-                                <img src="<?= base_url('assets/') ?>img/project/infobank2019.jpg" alt="" />
+                                <img src="<?= base_url('assets/') ?>img/project/infobank2019-min.jpg" alt="" />
                             </a>
                             <div class="add-actions text-center">
-                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/infobank2019.jpg">
+                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/infobank2019-min.jpg">
                                     <i class="port-icon icon icon-picture"></i>
                                 </a>
                             </div>
@@ -27,10 +31,10 @@
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#">
-                                <img src="<?= base_url('assets/') ?>img/project/infobank2015.jpg" alt="" />
+                                <img src="<?= base_url('assets/') ?>img/project/infobank2015-min.jpg" alt="" />
                             </a>
                             <div class="add-actions text-center">
-                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/infobank2015.jpg">
+                                <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/') ?>img/project/infobank2015-min.jpg">
                                     <i class="port-icon icon icon-picture"></i>
                                 </a>
                             </div>

@@ -1,5 +1,5 @@
 <!-- Team area start -->
-<div class="team-area bg-color area-padding">
+<div class="about-area area-padding">
     <div class="container">
         <div class="row">
             <h2 class="text-center">Board Manajemen</h2>
