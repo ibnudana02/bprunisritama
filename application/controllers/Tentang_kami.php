@@ -5,42 +5,48 @@ class Tentang_kami extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Profil Perusahaan';
+        $this->load->view('template/header', $data);
         $this->load->view('tentang/profil');
         $this->load->view('template/footer');
     }
 
     public function sejarah()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Sejarah Pendirian';
+        $this->load->view('template/header', $data);
         $this->load->view('tentang/sejarah');
         $this->load->view('template/footer');
     }
 
     public function visi_misi()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Visi dan Misi';
+        $this->load->view('template/header', $data);
         $this->load->view('tentang/visi_misi');
         $this->load->view('template/footer');
     }
 
     public function manajemen()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Board Manajemen';
+        $this->load->view('template/header', $data);
         $this->load->view('tentang/board');
         $this->load->view('template/footer');
     }
 
     public function awards()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Penghargaan';
+        $this->load->view('template/header', $data);
         $this->load->view('tentang/awards');
         $this->load->view('template/footer');
     }
 
     public function contact()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Hubungi Kami';
+        $this->load->view('template/header', $data);
         $this->load->view('tentang/contact');
         $this->load->view('template/footer');
     }

@@ -6,13 +6,14 @@ class Produk extends CI_Controller
     public function index()
     {
         $this->load->view('template/header');
-        $this->load->view('tentang/profil');
+        // $this->load->view('tentang/profil');
         $this->load->view('template/footer');
     }
 
     public function pmb()
     {
-        $this->load->view('template/header');
+        $data['judul'] = 'Pembayaran Mahasiswa';
+        $this->load->view('template/header', $data);
         $this->load->view('produk/pmb');
         $this->load->view('template/footer');
     }

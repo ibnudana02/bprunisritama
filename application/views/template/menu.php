@@ -24,7 +24,7 @@
                                     <ul class="sub-menu">
                                         <li><a href="<?= base_url('tentang_kami') ?>">Profil Perusahaan</a></li>
                                         <li><a href="<?= base_url('tentang_kami/sejarah') ?>">Sejarah</a></li>
-                                        <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi & Misi</a></li>
+                                        <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi dan Misi</a></li>
                                         <li><a href="<?= base_url('tentang_kami/manajemen') ?>">Board Manajemen</a></li>
                                         <li><a href="<?= base_url('tentang_kami/struktur') ?>">Struktur Organisasi</a></li>
                                         <li><a href="<?= base_url('tentang_kami/awards') ?>">Penghargaan</a></li>
@@ -93,7 +93,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="<?= base_url('tentang_kami') ?>">Profil Perusahaan</a></li>
                                     <li><a href="<?= base_url('tentang_kami/sejarah') ?>">Sejarah</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi & Misi</a></li>
+                                    <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi dan Misi</a></li>
                                     <li><a href="<?= base_url('tentang_kami/manajemen') ?>">Board Manajemen</a></li>
                                     <li><a href="<?= base_url('tentang_kami/struktur') ?>">Struktur Organisasi</a></li>
                                     <li><a href="<?= base_url('tentang_kami/awards') ?>">Penghargaan</a></li>

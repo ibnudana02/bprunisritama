@@ -95,7 +95,8 @@
     intro_carousel.owlCarousel({
         loop: true,
         nav: true,
-        autoplay: 60000,
+        autoplay: true,
+        autoplayTimeout: 30000,
         dots: false,
         navText: ["<i class='icon icon-chevron-left'></i>", "<i class='icon icon-chevron-right'></i>"],
         responsive: {

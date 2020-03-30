@@ -13,21 +13,28 @@
                                 ~ Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness di Tahun 2023. ~
                             </p>
                         </div>
+                        <div class="foot-social">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/company/pt-bpr-unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                                <li><a href="https://www.instagram.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
+                                <li><a href="https://wa.me/6282391031212" target="_blank" data-toggle="tooltip" data-placement="right" title="Whatsapp"><i class="fa fa-whatsapp fa-2x"></i></a></li>
+                                <li><a href="https://twitter.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+                                <li><a href="https://www.facebook.com/bankunisritama/" target="_blank" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <!-- end single footer -->
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="footer-content">
                         <div class="footer-head">
-                            <h4>Services Link</h4>
+                            <h4>Kategori</h4>
                             <ul class="footer-list">
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Industry </a></li>
-                                <li><a href="#">Tax Planning</a></li>
+                                <li><a href="#">Berita Terbaru</a></li>
+                                <li><a href="#">Fasilitas dan Layanan</a></li>
+                                <li><a href="#">Profil Perusahaan</a></li>
                                 <li><a href="#">Online Consulting</a></li>
                                 <li><a href="#">Maketing Expert</a></li>
-                                <li><a href="#">Consulting</a></li>
-                                <li><a href="#">Business Planning</a></li>
                             </ul>
                         </div>
                     </div>
