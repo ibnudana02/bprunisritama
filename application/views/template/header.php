@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">
     <!-- owl.carousel css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.carousel.css">
+    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.theme.default.css"> -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.transitions.css">
     <!-- meanmenu css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/meanmenu.min.css">

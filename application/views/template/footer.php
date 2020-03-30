@@ -77,6 +77,7 @@
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
 <!-- owl.carousel js -->
 <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.min.js"></script>
+<!-- <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.js"></script> -->
 <!-- Counter js -->
 <script src="<?php echo base_url('assets/'); ?>js/jquery.counterup.min.js"></script>
 <!-- waypoint js -->
