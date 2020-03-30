@@ -22,7 +22,6 @@
                         </div>
                         <div class="project-dec">
                             <h4>Infobank Award Tahun 2018</h4>
-                            <p>Our development opt in to the projects they genuinely want to work on, committing wholeheartedly to delivering.</p>
                         </div>
                     </div>
                 </div>
@@ -41,7 +40,6 @@
                         </div>
                         <div class="project-dec">
                             <h4>Infobank Award Tahun 2015</h4>
-                            <p>Our development opt in to the projects they genuinely want to work on, committing wholeheartedly to delivering.</p>
                         </div>
                     </div>
                     <!-- single-awesome-project end -->
