@@ -27,9 +27,8 @@
                                     <?php echo form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <!-- <div class="form-group">
-                                    <label>Created by</label>
-                                    <input type="text" class="form-control form-control-user" name="created_by" id="alias" placeholder="Created by" value="<?= set_value('created_by'); ?>">
-                                    <?php echo form_error('alias', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    <label>Isi</label>
+                                    <textarea id="editor"></textarea>
                                 </div> -->
                                 <div class="form-group row">
                                     <div class="col-sm-6 ">

@@ -57,6 +57,19 @@
 
 <!-- Page level custom scripts -->
 <script src="<?= base_url('assets/admin/'); ?>js/demo/datatables-demo.js"></script>
+<script src="<?= base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+        })
+        .then(editor => {
+            window.editor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+</script>
 
 </body>
 
