@@ -20,9 +20,9 @@ class Produk extends CI_Controller
     public function pmb()
     {
         $data['judul'] = 'Pembayaran Mahasiswa';
-        $data['category'] = $this->tentang->get_kategori();
-        $this->load->view('template/header', $data);
-        $this->load->view('produk/pmb', $data);
+        $data['category'] = $this->tentang->get_kategori(); //Ambil data kategori
+        $this->load->view('template/header', $data); //passing data to header view
+        $this->load->view('produk/pmb', $data); //passing data to content view
         $this->load->view('template/footer');
     }
 
