@@ -117,8 +117,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 15px;
     color: #444;
@@ -223,7 +222,7 @@ ul {
     padding: 0;
 }
 
-input,
+/* input,
 select,
 textarea,
 input[type="text"],
@@ -236,7 +235,7 @@ button,
 button[type="submit"] {
     -moz-appearance: none;
     box-shadow: none !important;
-}
+} */
 
 input:focus,
 textarea:focus,
@@ -511,7 +510,7 @@ div#preloader {
 
 .foot-social {
     float: left;
-    padding: 11px 0px;
+    padding: 3px 0px;
     margin-left: 10px;
 }
 
@@ -525,8 +524,8 @@ div#preloader {
     display: block;
     text-align: center;
     font-size: 15px;
-    width: 35px;
-    height: 35px;
+    width: 26px;
+    height: 26px;
     border-radius: 5px;
     line-height: 25px;
 }
@@ -675,7 +674,8 @@ div#preloader {
     position: relative;
 }
 
-.navbar.navbar-default {
+.navbar.navbar-default,
+.navbar-expand-sm {
     float: right;
 }
 
@@ -2126,7 +2126,7 @@ single-services:hover .service-inner {
 /*  14. Footer Area
 /*----------------------------------------*/
 .footer-area {
-    padding: 25px 0;
+    padding: 25px 0px 15px 0px;
 }
 
 .footer-1 {
@@ -2170,7 +2170,7 @@ single-services:hover .service-inner {
 .footer-head h4 {
     color: #ddd;
     font-size: 18px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-transform: uppercase;
     font-weight: 700;
 }

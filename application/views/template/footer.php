@@ -12,15 +12,18 @@
                             <p class="text-left">
                                 ~ Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness di Tahun 2023. ~
                             </p>
-                        </div>
-                        <div class="foot-social">
-                            <ul>
-                                <li><a href="https://www.linkedin.com/company/pt-bpr-unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin fa-2x"></i></a></li>
-                                <li><a href="https://www.instagram.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
-                                <li><a href="https://wa.me/6282391031212" target="_blank" data-toggle="tooltip" data-placement="right" title="Whatsapp"><i class="fa fa-whatsapp fa-2x"></i></a></li>
-                                <li><a href="https://twitter.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
-                                <li><a href="https://www.facebook.com/bankunisritama/" target="_blank" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
-                            </ul>
+                            <p>
+                                Kunjungi Kami:
+                            </p>
+                            <div class="foot-social">
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/company/pt-bpr-unisritama" target="_blank" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin "></i></a></li>
+                                    <li><a href="https://www.instagram.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram "></i></a></li>
+                                    <li><a href="https://wa.me/6282391031212" target="_blank" data-toggle="tooltip" data-placement="top" title="Whatsapp"><i class="fa fa-whatsapp "></i></a></li>
+                                    <li><a href="https://twitter.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter "></i></a></li>
+                                    <li><a href="https://www.facebook.com/bankunisritama/" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook "></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,6 +85,8 @@
 <script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js"></script>
 <!-- bootstrap js -->
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
+<!-- <script src="<?php echo base_url('assets/'); ?>js/popper.min.js"></script>
+<script src="<?php echo base_url('assets/'); ?>js/bootstrap4.js"></script> -->
 <!-- owl.carousel js -->
 <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.min.js"></script>
 <!-- <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.js"></script> -->

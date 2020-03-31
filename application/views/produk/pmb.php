@@ -129,36 +129,15 @@
                     </div>
                     <div class="left-blog-page">
                         <div class="left-blog">
-                            <h4>categories</h4>
+                            <h4>Kategori</h4>
                             <ul>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Industry </a></li>
-                                <li><a href="#">Tax Planning</a></li>
-                                <li><a href="#">Online Consulting</a></li>
-                                <li><a href="#">Maketing Expert</a></li>
-                                <li><a href="#">Consulting</a></li>
-                                <li><a href="#">Business Planning</a></li>
+                                <?php foreach ($category as $row) : ?>
+                                    <li><a href="#"><?php echo $row->kategori; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
-                    <div class="left-blog-page">
-                        <div class="left-tags blog-tags">
-                            <div class="popular-tag left-side-tags left-blog">
-                                <h4>popular tags</h4>
-                                <ul>
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Industry </a></li>
-                                    <li><a href="#">Tax</a></li>
-                                    <li><a href="#">Planning</a></li>
-                                    <li><a href="#">Online</a></li>
-                                    <li><a href="#">Consulting</a></li>
-                                    <li><a href="#">Maketing</a></li>
-                                    <li><a href="#">Expert</a></li>
-                                    <li><a href="#">Consulting</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <!-- End left sidebar -->

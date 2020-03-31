@@ -17,6 +17,7 @@
 
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap4.css"> -->
     <!-- owl.carousel css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.carousel.css">
     <!-- <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.theme.default.css"> -->
