@@ -19,10 +19,6 @@ class Manage extends CI_Controller
     public function add_kategori()
     {
         $this->form_validation->set_rules('kategori', 'Kategori', 'required|trim');
-        // $this->form_validation->set_rules('created_by', 'Created by', 'required|trim|min_length[2]|max_length[5]', [
-        //     'min_length' => 'Minimal terdiri 2 Character',
-        //     'max_length' => 'Maximal 5 charachter'
-        // ]);
         $nama = $this->session->userdata('name');
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Add Kategori Surat - MIS';

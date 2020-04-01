@@ -26,16 +26,45 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="true" aria-controls="masterData">
-                <i class="fas fa-fw fa-tv"></i>
-                <span>Data Master</span>
+                <i class="fas fa-fw fa-newspaper"></i>
+                <span>Berita</span>
             </a>
             <div id="masterData" class="collapse" aria-labelledby="masterData" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Components</h6>
-                    <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Kategori</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Produk</a>
-                    <a class="collapse-item" href="<?= base_url('admin/lokasi') ?>">Tentang</a>
-                    <a class="collapse-item" href="<?= base_url('admin/users') ?>">Kantor</a>
+                    <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Kategori Berita</a>
+                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Berita Terbaru</a>
+                </div>
+            </div>
+        </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterInput" aria-expanded="true" aria-controls="masterData">
+                <i class="fas fa-fw fa-edit"></i>
+                <span>Input Konten</span>
+            </a>
+            <div id="masterInput" class="collapse" aria-labelledby="masterData" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Components</h6>
+                    <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Produk</a>
+                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Publikasi</a>
+                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">GCG Report</a>
+                </div>
+            </div>
+        </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterSet" aria-expanded="true" aria-controls="masterData">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Settings</span>
+            </a>
+            <div id="masterSet" class="collapse" aria-labelledby="masterData" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Components</h6>
+                    <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Slider</a>
+                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Suku Bunga</a>
+                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Tentang Perusahaan</a>
+                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Penghargaan</a>
                 </div>
             </div>
         </li>
@@ -53,36 +82,14 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <?php if ($user['role_id'] == 1) : ?>
-            <a class="nav-link" href="<?= base_url('admin/in_mail'); ?>">
-            <?php else : ?>
-                <a class="nav-link" href="<?= base_url('user/in_mail'); ?>">
-                <?php endif; ?>
-                <i class="fas fa-fw fa-envelope-open"></i>
-                <span>Surat Masuk</span></a>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-envelope"></i>
-            <span>Surat Keluar</span></a>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-envelope-open-text"></i>
-            <span>Surat Internal</span></a>
+        <a class="nav-link" href="<?= base_url('user/in_mail'); ?>">
+            <i class="fas fa-fw fa-user-cog"></i>
+            <span>Profil</span></a>
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+    <!-- <hr class="sidebar-divider d-none d-md-block"> -->
 
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Utility
-    </div>
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -50,5 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['404_override'] = 'admin/welcome/error_page';
+$route['admin/login'] = 'admin/welcome/index';
+$route['admin/tambah_kategori'] = 'admin/manage/add_kategori';
+$route['admin/dashboard'] = 'admin/welcome/home';
 $route['translate_uri_dashes'] = FALSE;

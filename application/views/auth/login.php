@@ -28,7 +28,8 @@
                                     </form>
                                     <hr>
                                     <div class="copyright text-center my-auto">
-                                        <span>Copyright &copy; BPR Unisritama - 2019.</span>
+                                        <span>Copyright &copy; BPR Unisritama
+                                            <br> 2019 - <?php echo date('Y'); ?></span>
                                     </div>
                                 </div>
                             </div>

@@ -11,7 +11,7 @@
 
 <title><?= $title; ?></title>
 
-<link rel="icon" href="<?= base_url('assets/img/logo/ico.png'); ?>" type="image/x-icon" />
+<link rel="icon" href="<?= base_url('assets/img/bpr.png'); ?>" type="image/x-icon" />
 <link href="<?php echo base_url('assets/admin/'); ?>bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 <script src="<?= base_url('assets/admin/'); ?>vendor/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url('assets/admin/'); ?>bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
@@ -34,7 +34,7 @@
     <div id="wrapper">
 
         <!-- Sidebar / Menu -->
-        <?php $this->load->view('template/admin_menu'); ?>
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -51,29 +51,20 @@
                     </button>
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name'] ?></span>
-                                <!-- <img class="img-profile rounded-circle" src="<?= base_url("assets/img/" . $user['images']); ?>"> -->
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
 
-                    </ul>
 
                 </nav>
                 <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- 404 Error Text -->
+                    <div class="text-center">
+                        <div class="error mx-auto" data-text="404">404</div>
+                        <p class="lead text-gray-800 mb-5">Page Not Found</p>
+                        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
+                        <a href="<?= base_url(); ?>">&larr; Back to Dashboard</a>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->

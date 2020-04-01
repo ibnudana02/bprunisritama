@@ -5,7 +5,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a target="www.bprunisritama.com">Bank Unisritama</a> 2019 - All Right Reserved</span>
+            <span>Copyright &copy; <a target="www.bprunisritama.com">Bank Unisritama</a> <?php echo date("Y"); ?> - All Right Reserved</span>
         </div>
     </div>
 </footer>
@@ -57,19 +57,7 @@
 
 <!-- Page level custom scripts -->
 <script src="<?= base_url('assets/admin/'); ?>js/demo/datatables-demo.js"></script>
-<script src="<?= base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
-<script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-        })
-        .then(editor => {
-            window.editor = editor;
-        })
-        .catch(err => {
-            console.error(err.stack);
-        });
-</script>
+
 
 </body>
 

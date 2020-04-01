@@ -4,30 +4,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Welcome extends CI_Controller
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function ind()
+	public function home()
 	{
-
-		$data['title'] = 'DASHBOARD - MIS';
+		$data['title'] = 'Administrator - Dashboard';
 		$data['heading'] = 'Dashboard';
 		$data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
 		$data['judul'] = 'BPR Unisritama - Administrator';
 		$this->load->view('template/admin_header', $data);
-		// $this->load->view('template/slider');
 		$this->load->view('admin/home');
 		$this->load->view('template/admin_footer');
 	}
@@ -60,32 +43,28 @@ class Welcome extends CI_Controller
 					'role_id' => $user['role_id']
 				];
 				$this->session->set_userdata($data);
-				if ($user['role_id'] == 1) {
-					$this->session->set_flashdata(
-						'message',
-						'<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Selamat Datang ' . $user['name'] . ' di Admin Panel - Bank Unisritama!</strong>
+				$this->session->set_flashdata(
+					'message',
+					'<div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Selamat Datang <strong>' . $user['name'] . '</strong> di Admin Panel - Bank Unisritama!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button></div>'
-					);
-					redirect('admin/welcome/ind');
-				} else {
-					$this->session->set_flashdata(
-						'message',
-						'<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Selamat Datang ' . $user['name'] . ' di Mail Information System - Bank Unisritama!</strong> Please check in Mail Type below.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span></button></div>'
-					);
-					redirect('user');
-				}
+				);
+				redirect('admin/dashboard');
 			} else {
-				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password!</div>');
-				redirect('auth');
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span></button></div>');
+				redirect('admin');
 			}
 		} else {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email doesnt exist!</div>');
-			redirect('auth');
+			redirect('admin');
 		}
+	}
+
+	public function error_page()
+	{
+		$this->load->view('error_page');
+		$this->load->view('template/admin_footer');
 	}
 }
