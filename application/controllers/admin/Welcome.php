@@ -67,4 +67,12 @@ class Welcome extends CI_Controller
 		$this->load->view('error_page');
 		$this->load->view('template/admin_footer');
 	}
+
+	public function logout()
+	{
+		$this->session->unset_userdata('email');
+		$this->session->unset_userdata('role_id');
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logout</div>');
+		redirect('admin');
+	}
 }

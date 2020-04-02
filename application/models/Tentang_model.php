@@ -23,4 +23,13 @@ class Tentang_model extends CI_Model
             ->from('kategori');
         return $this->db->get()->result();
     }
+
+    public function get_berita()
+    {
+        $this->db->select('*')
+            ->from('berita')
+            ->join('kategori', 'kategori.id_kategori=berita.id_kategori')
+            ->order_by('berita.created_on', 'asc');
+        return $this->db->get();
+    }
 }

@@ -27,6 +27,9 @@
                                         </button>
                                     </form>
                                     <hr>
+                                    <a href="<?= base_url(); ?>">
+                                        <p>Kembali ke Beranda</p>
+                                    </a>
                                     <div class="copyright text-center my-auto">
                                         <span>Copyright &copy; BPR Unisritama
                                             <br> 2019 - <?php echo date('Y'); ?></span>

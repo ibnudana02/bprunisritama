@@ -23,6 +23,12 @@
                 <i class="fas fa-fw fa-chart-bar"></i>
                 <span>Dashboard</span></a>
         </li>
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>" target="_blank">
+                <i class="fas fa-fw fa-chart-bar"></i>
+                <span>Lihat Website</span></a>
+        </li>
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="true" aria-controls="masterData">

@@ -51,7 +51,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome';
 $route['404_override'] = 'admin/welcome/error_page';
-$route['admin/login'] = 'admin/welcome/index';
-$route['admin/tambah_kategori'] = 'admin/manage/add_kategori';
+$route['admin'] = 'admin/welcome/index';
+$route['admin/add_kategori'] = 'admin/manage/add_kategori';
 $route['admin/dashboard'] = 'admin/welcome/home';
+$route['admin/kategori'] = 'admin/manage/index';
+$route['admin/add_berita'] = 'admin/manage/add_berita';
+$route['admin/logout'] = 'admin/welcome/logout';
+$route['admin/delete_kategori/(:any)'] = 'admin/manage/delete_kategori/$1';
 $route['translate_uri_dashes'] = FALSE;

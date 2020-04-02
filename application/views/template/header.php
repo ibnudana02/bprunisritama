@@ -56,7 +56,7 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="topbar-left">
                             <div class="quote-button">
-                                <a href="#" class="quote-btn" title="Quick view" data-toggle="modal" data-target="#quoteModal">free consultaion</a>
+                                <a href="<?= base_url('admin') ?>" target="_blank" class="quote-btn" title="Quick view">Login</a>
                             </div>
                             <div class="top-social">
                                 <ul>
