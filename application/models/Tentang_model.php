@@ -17,13 +17,6 @@ class Tentang_model extends CI_Model
         return $this->db->get()->result();
     }
 
-    public function get_kategori()
-    {
-        $this->db->select('*')
-            ->from('kategori');
-        return $this->db->get()->result();
-    }
-
     public function get_berita()
     {
         $this->db->select('*')

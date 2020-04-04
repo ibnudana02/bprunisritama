@@ -13,8 +13,8 @@
                 <div class="card-header py-3">
                     <div class="row">
                         <div class="col-8">
-                            <h6 class="mx-auto font-weight-bold text-primary">List Berita</h6>
-                            <h4 class="font-weight-bold text-primary">Tambah Berita</h4>
+                            <h4 class="mx-auto font-weight-bold text-primary">List Berita</h4>
+                            <!-- <h4 class="font-weight-bold text-primary">Tambah Berita</h4> -->
                         </div>
                     </div>
                 </div>

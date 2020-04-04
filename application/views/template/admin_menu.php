@@ -1,4 +1,5 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion-toggled toggled" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>">
@@ -39,7 +40,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Components</h6>
                     <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Kategori Berita</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Berita Terbaru</a>
+                    <a class="collapse-item" href="<?= base_url('admin/berita') ?>">Berita Terbaru</a>
                 </div>
             </div>
         </li>
@@ -52,9 +53,9 @@
             <div id="masterInput" class="collapse" aria-labelledby="masterData" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Components</h6>
-                    <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Produk</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Publikasi</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">GCG Report</a>
+                    <a class="collapse-item" href="<?= base_url('admin/produk') ?>">Produk</a>
+                    <a class="collapse-item" href="<?= base_url('admin/publikasi') ?>">Publikasi</a>
+                    <a class="collapse-item" href="<?= base_url('admin/gcg') ?>">GCG Report</a>
                 </div>
             </div>
         </li>
@@ -67,10 +68,10 @@
             <div id="masterSet" class="collapse" aria-labelledby="masterData" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Components</h6>
-                    <a class="collapse-item" href="<?= base_url('admin/kategori') ?>">Slider</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Suku Bunga</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Tentang Perusahaan</a>
-                    <a class="collapse-item" href="<?= base_url('admin/type') ?>">Penghargaan</a>
+                    <a class="collapse-item" href="<?= base_url('admin/slider') ?>">Slider</a>
+                    <a class="collapse-item" href="<?= base_url('admin/sb') ?>">Suku Bunga</a>
+                    <a class="collapse-item" href="<?= base_url('admin/tentang') ?>">Tentang Perusahaan</a>
+                    <a class="collapse-item" href="<?= base_url('admin/awards') ?>">Penghargaan</a>
                 </div>
             </div>
         </li>

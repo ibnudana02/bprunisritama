@@ -20,7 +20,7 @@
                 <div class="card-body col-12 mx-auto">
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
-                            <form class="user" method="post" action="<?= base_url('admin/manage/add_kategori'); ?>">
+                            <form class="user" method="post" action="<?= base_url('admin/add_kategori'); ?>">
                                 <div class="form-group">
                                     <label>Kategori</label>
                                     <input type="text" class="form-control form-control-user" name="kategori" id="kategori" placeholder="Enter Kategori" value="<?= set_value('kategori'); ?>">
