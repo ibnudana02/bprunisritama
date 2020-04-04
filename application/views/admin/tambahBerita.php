@@ -40,9 +40,10 @@
                                     <label>Isi</label>
                                     <textarea id="editor" name="isi"></textarea>
                                 </div>
+                                <?php echo form_error('image', '<small class="text-danger pl-5">', '</small>'); ?>
                                 <div class="form-group">
-                                    <label for="gambar">Gambar</label>
-                                    <input type="file" class="form-control-file" name="image">
+                                    <label for="image">Gambar</label>
+                                    <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 ">

@@ -33,7 +33,7 @@ class Berita_model extends CI_Model
         $post = $this->input->post();
         $this->id_berita = uniqid();
         $this->id_kategori = htmlspecialchars($post['kategori']);
-        $this->judul = htmlspecialchars($post['judul']);
+        $this->judul = htmlspecialchars(ucwords($post['judul']));
         $this->isi = htmlspecialchars($post['isi']);
         $this->image = $this->_uploadImage();
         $this->created_by = $this->session->userdata('name');
@@ -45,23 +45,37 @@ class Berita_model extends CI_Model
 
     private function _uploadImage()
     {
-        $config['upload_path']          = 'C:/xampp/htdocs/bprunisritama/upload/';
-        $config['allowed_types']        = 'jpg|png';
-        $config['file_name']            = $this->id_berita;
-        $config['overwrite']            = true;
-        $config['max_size']             = 1024; // 1MB
+        $config['upload_path'] = './upload/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name'] = $this->id_berita;
+        $config['overwrite'] = true;
+        $config['max_size'] = 1024;
 
-        $this->load->library('upload', $config);
+        // $config['max_width']  = 1024 * 3;
+        // $config['max_height']  = 768 * 3;
 
-        if ($this->upload->do_upload('image')) {
-            return $this->upload->data("file_name");
+        $this->upload->initialize($config);
+
+        if (!$this->upload->do_upload('image')) {
+            $this->session->set_flashdata('message', $this->upload->display_errors());
+            redirect('admin/berita');
+        } else {
+            return $this->upload->file_name;
         }
-        // return "default.jpg";
-        return $this->upload->display_errors();
     }
 
     public function delete($id)
     {
+        // $this->_deleteImage($id);
         return $this->db->delete($this->_table, array('id_berita' => $id));
+    }
+
+    private function _deleteImage($id)
+    {
+        $berita = $this->getById($id);
+        if ($berita->image != "default.jpg") {
+            $filename = explode(".", $berita->image)[0];
+            return array_map('unlink', glob(FCPATH . "upload/$filename.*"));
+        }
     }
 }

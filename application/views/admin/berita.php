@@ -23,25 +23,24 @@
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>No.</th>
-                                    <th>Tanggal</th>
-                                    <th>Gambar</th>
-                                    <th>Kategori</th>
-                                    <th>Judul</th>
-                                    <th>Penulis</th>
-                                    <th>Isi</th>
-                                    <th>Action</th>
+                                    <th width="10%">No.</th>
+                                    <th width="10%">Tanggal</th>
+                                    <th width="10%">Gambar</th>
+                                    <th width="15%">Kategori</th>
+                                    <th width="15%">Judul</th>
+                                    <th width="15%">Penulis</th>
+                                    <th width="15%">Isi</th>
+                                    <th width="15%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $no = 1;
                                 date_default_timezone_set('Asia/Jakarta');
                                 foreach ($data as $row) : ?>
-                                    <!-- <?php echo $row->update_on; ?> -->
                                     <tr>
-                                        <th><?= $no++; ?>
+                                        <th><?= $no++; ?></th>
                                         <th><?php echo $row->update_on; ?></th>
-                                        <th><?= html_entity_decode($row->image); ?></th>
+                                        <th><img src="<?= base_url('upload/' . $row->image); ?>" width="70" height="70"> </th>
                                         <th><?= htmlspecialchars($row->kategori); ?></th>
                                         <th><?= html_entity_decode($row->judul); ?></th>
                                         <th><?= htmlspecialchars($row->created_by); ?></th>
