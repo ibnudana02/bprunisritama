@@ -51,78 +51,26 @@
                         <div class="left-blog">
                             <h4>recent post</h4>
                             <div class="recent-post">
-                                <!-- start single post -->
-                                <div class="recent-single-post">
-                                    <div class="post-img">
-                                        <a href="#">
-                                            <img src="<?= base_url('assets/') ?>img/blog/b1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="pst-content">
-                                        <p><a href="#">Designer have to make sure the prototype looks.</a>
-                                            <div class="blog-meta">
-                                                <span class="date-type">
-                                                    <i class="fa fa-calendar"></i>
-                                                    10 feb, 2018
-                                                </span>
-                                            </div>
-                                    </div>
-                                </div>
-                                <!-- End single post -->
-                                <!-- start single post -->
-                                <div class="recent-single-post">
-                                    <div class="post-img">
-                                        <a href="#">
-                                            <img src="<?= base_url('assets/') ?>img/blog/b2.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="pst-content">
-                                        <p><a href="#">The phrasal sequence of the Lorem Ipsum text.</a></p>
-                                        <div class="blog-meta">
-                                            <span class="date-type">
-                                                <i class="fa fa-calendar"></i>
-                                                13 july, 2017
-                                            </span>
+                                <?php foreach ($berita as $row) : ?>
+                                    <!-- start single post -->
+                                    <div class="recent-single-post">
+                                        <div class="post-img">
+                                            <a href="#">
+                                                <img src="<?= base_url('upload/' . $row->image); ?>">
+                                            </a>
+                                        </div>
+                                        <div class="pst-content">
+                                            <p><a href="#"><?= $row->judul; ?></a>
+                                                <div class="blog-meta">
+                                                    <span class="date-type">
+                                                        <i class="fa fa-calendar"></i>
+                                                        <?= $row->update_on; ?>
+                                                    </span>
+                                                </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End single post -->
-                                <!-- start single post -->
-                                <div class="recent-single-post">
-                                    <div class="post-img">
-                                        <a href="#">
-                                            <img src="<?= base_url('assets/') ?>img/blog/b3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="pst-content">
-                                        <p><a href="#">Make sure the prototype looks finished by.</a></p>
-                                        <div class="blog-meta">
-                                            <span class="date-type">
-                                                <i class="fa fa-calendar"></i>
-                                                25 may, 2017
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End single post -->
-                                <!-- start single post -->
-                                <div class="recent-single-post">
-                                    <div class="post-img">
-                                        <a href="#">
-                                            <img src="<?= base_url('assets/') ?>img/blog/b4.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="pst-content">
-                                        <p><a href="#">The phrasal sequence of the Lorem Ipsum text.</a></p>
-                                        <div class="blog-meta">
-                                            <span class="date-type">
-                                                <i class="fa fa-calendar"></i>
-                                                20 jan, 2018
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End single post -->
+                                    <!-- End single post -->
+                                <?php endforeach; ?>
                             </div>
                         </div>
                         <!-- recent end -->

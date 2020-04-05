@@ -43,7 +43,7 @@
                                         <th><img src="<?= base_url('upload/' . $row->image); ?>" width="70" height="70"> </th>
                                         <th><?= htmlspecialchars($row->kategori); ?></th>
                                         <th><?= html_entity_decode($row->judul); ?></th>
-                                        <th><?= htmlspecialchars($row->created_by); ?></th>
+                                        <th><?= htmlspecialchars($row->penulis); ?></th>
                                         <th><?= html_entity_decode($row->isi); ?></th>
                                         <th width><a href="<?php echo $row->id_berita; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_berita; ?>" data-toggle="modal">Edit</a>
                                             <a href="<?php echo $row->id_berita; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_berita; ?>" data-toggle="modal">Hapus</a></th>

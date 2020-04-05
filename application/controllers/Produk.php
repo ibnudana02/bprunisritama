@@ -7,7 +7,7 @@ class Produk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('tentang_model', 'tentang');
+        $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita'));
     }
 
     public function index()
@@ -20,7 +20,8 @@ class Produk extends CI_Controller
     public function pmb()
     {
         $data['judul'] = 'Pembayaran Mahasiswa';
-        $data['category'] = $this->tentang->get_kategori(); //Ambil data kategori
+        $data['category'] = $this->kategori->getAll(); //Ambil data kategori
+        $data['berita'] = $this->berita->getLima(); //Ambil data berita
         $this->load->view('template/header', $data); //passing data to header view
         $this->load->view('produk/pmb', $data); //passing data to content view
         $this->load->view('template/footer');

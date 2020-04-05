@@ -20,7 +20,7 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('admin'); ?>">
+            <a class="nav-link" href="<?= base_url('admin/dashboard'); ?>">
                 <i class="fas fa-fw fa-chart-bar"></i>
                 <span>Dashboard</span></a>
         </li>

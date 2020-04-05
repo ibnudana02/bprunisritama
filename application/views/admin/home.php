@@ -48,7 +48,7 @@
                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                 <h6><a href="#">Berita</a></h6>
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">#</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $beritaCount; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-fw fa-newspaper fa-2x text-gray-300"></i>

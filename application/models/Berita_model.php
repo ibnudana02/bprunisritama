@@ -9,7 +9,7 @@ class Berita_model extends CI_Model
     public $judul;
     public $isi;
     public $image;
-    public $created_by;
+    public $penulis;
     public $created_on;
     public $update_by;
     public $update_on;
@@ -22,9 +22,23 @@ class Berita_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function getLima()
+    {
+        $this->db->select('*')
+            ->from($this->_table)
+            ->limit(5);
+        return $this->db->get()->result();
+    }
+
     public function getById($id)
     {
         return $this->db->get_where($this->_table, ['id_berita' => $id]);
+    }
+
+    public function getCount()
+    {
+        // $this->db->select('id_berita')
+        return $this->db->get($this->_table);
     }
 
     public function save()
@@ -36,7 +50,7 @@ class Berita_model extends CI_Model
         $this->judul = htmlspecialchars(ucwords($post['judul']));
         $this->isi = htmlspecialchars($post['isi']);
         $this->image = $this->_uploadImage();
-        $this->created_by = $this->session->userdata('name');
+        $this->penulis = $this->session->userdata('name');
         $this->created_on = date('Y-m-d H:i:s');
         $this->update_by = '';
         $this->update_on = date('Y-m-d H:i:s');
