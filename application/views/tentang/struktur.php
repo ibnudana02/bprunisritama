@@ -14,6 +14,7 @@
 
 <script>
     var chart = new OrgChart(document.getElementById("tree"), {
+        mouseScrool: OrgChart.action.none,
         nodeBinding: {
             field_0: "name"
         },

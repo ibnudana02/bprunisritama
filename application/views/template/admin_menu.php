@@ -68,6 +68,8 @@
             <div id="masterSet" class="collapse" aria-labelledby="masterData" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Components</h6>
+                    <a class="collapse-item" href="<?= base_url('admin/jabatan') ?>">Jabatan</a>
+                    <a class="collapse-item" href="<?= base_url('admin/pegawai') ?>">Pegawai</a>
                     <a class="collapse-item" href="<?= base_url('admin/slider') ?>">Slider</a>
                     <a class="collapse-item" href="<?= base_url('admin/sb') ?>">Suku Bunga</a>
                     <a class="collapse-item" href="<?= base_url('admin/tentang') ?>">Tentang Perusahaan</a>

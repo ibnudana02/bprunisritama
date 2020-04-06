@@ -52,6 +52,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = 'admin/welcome/error_page';
 $route['admin/dashboard'] = 'admin/welcome/home';
+$route['admin/add_jabatan'] = 'admin/jabatan/tambahJabatan';
+$route['admin/jabatan'] = 'admin/jabatan/jabatan';
+$route['admin/pegawai'] = 'admin/manage';
+$route['admin/add_pegawai'] = 'admin/manage/tambahPegawai';
+
 //Routes for kategori
 $route['admin/kategori'] = 'admin/kategori/index';
 $route['admin/add_kategori'] = 'admin/kategori/add_kategori';

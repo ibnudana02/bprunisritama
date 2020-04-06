@@ -1,47 +1,47 @@
 <?php
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Manage extends CI_Controller
+class Jabatan extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Pegawai_model' => 'pegawai', 'Jabatan_model' => 'jabatan'));
+        $this->load->model('Jabatan_model', 'jabatan');
     }
 
-    public function index()
+    public function jabatan()
     {
-        $data['title'] = 'Data Pegawai';
+        $data['title'] = 'Jabatan';
         $data['heading'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
-        $data['data'] = $this->pegawai->getAll();
+        $data['data'] = $this->jabatan->getAll();
         $data['judul'] = 'BPR Unisritama - Administrator';
         $this->load->view('template/admin_header', $data);
-        $this->load->view('admin/pegawai');
+        $this->load->view('admin/jabatan');
         $this->load->view('template/admin_footer');
     }
 
-    public function tambahPegawai()
+    public function tambahJabatan()
     {
-        $this->form_validation->set_rules('nama', 'Nama Pegawai', 'trim|required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
-
-        $pegawai = $this->pegawai;
+        $this->form_validation->set_rules('jabatan', 'Alias', 'trim|required');
+        $jabatan = $this->jabatan;
         if ($this->form_validation->run()) {
-            $pegawai->save();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil tambah Data Pegawai!</div>');
-            redirect('admin/pegawai', 'refresh');
+            $jabatan->save();
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil tambah Jabatan!</div>');
+            redirect('admin/jabatan', 'refresh');
         } else {
-            $data['title'] = 'Administrator - Data Pegawai';
+            $data['title'] = 'Administrator - Jabatan';
             $data['heading'] = 'Dashboard';
             $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
             $data['judul'] = 'BPR Unisritama - Administrator';
-            $data['jabatan'] = $this->jabatan->getAll();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Gagal tambah pegawai!</div>');
             $this->load->view('template/admin_header', $data);
-            $this->load->view('admin/tambahPegawai');
+            $this->load->view('admin/tambahJabatan');
             $this->load->view('template/admin_footer');
         }
     }
 }
+
+/* End of file Controllername.php */
