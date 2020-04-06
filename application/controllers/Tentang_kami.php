@@ -50,4 +50,12 @@ class Tentang_kami extends CI_Controller
         $this->load->view('tentang/contact');
         $this->load->view('template/footer');
     }
+
+    public function struktur()
+    {
+        $data['judul'] = 'Struktur Organisasi';
+        $this->load->view('template/header', $data);
+        $this->load->view('tentang/struktur');
+        $this->load->view('template/footer');
+    }
 }

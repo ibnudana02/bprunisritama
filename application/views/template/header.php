@@ -39,6 +39,7 @@
 
     <!-- modernizr css -->
     <script src="<?php echo base_url('assets/'); ?>js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="<?php echo base_url('assets/'); ?>js/orgchart.js"></script>
 </head>
 
 <body>
