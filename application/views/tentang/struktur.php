@@ -1,11 +1,10 @@
 <!-- about-area start -->
-<div class="about-area area-padding">
+<div class="about-area struktur">
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Struktur Organisasi</h2>
-        </div>
-        <hr>
-        <div class="row">
+            <h4 class="text-center">Struktur Organisasi</h4>
+            <hr>
+
             <div id="tree" />
         </div>
     </div>
@@ -13,25 +12,60 @@
 <!-- about-area end -->
 
 <script>
+    var data = <?php echo json_encode($data); ?>;
+
     var chart = new OrgChart(document.getElementById("tree"), {
-        mouseScrool: OrgChart.action.none,
+        // orientation: OrgChart.orientation.right,
+        enableSearch: false,
+        template: "mila",
         nodeBinding: {
-            field_0: "name"
+            field_0: "Nama",
+            field_1: "Jabatan",
         },
-        nodes: [{
-                id: 1,
-                name: "Amber McKenzie"
+        tags: {
+            dekom: {
+                group: true,
+                groupName: "Dewan Komisaris",
+                groupState: OrgChart.EXPAND,
+
+                template: "group_grey"
             },
-            {
-                id: 2,
-                pid: 1,
-                name: "Ava Field"
+            dir: {
+                group: true,
+                groupName: "Direksi",
+                groupState: OrgChart.EXPAND,
+
+                template: "group_grey"
             },
-            {
-                id: 3,
-                pid: 1,
-                name: "Peter Stevens"
-            }
-        ]
+
+            mkrd: {
+                group: true,
+                groupName: "Marketing Kredit",
+                groupState: OrgChart.EXPAND,
+
+                template: "group_grey"
+            },
+        },
+        // nodes: data
     });
+
+    for (i in data) {
+        var nama = data[i].nama,
+            jabatan = data[i].jabatan,
+            id = data[i].id_pegawai,
+            pid = data[i].parent_job,
+            tags = data[i].tag;
+
+
+
+        chart.add({
+            id: id,
+            pid: pid,
+            tags: [tags],
+            Nama: nama,
+            Jabatan: jabatan
+        });
+    }
+
+    chart.draw(OrgChart.action.init);
 </script>

@@ -3,6 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Tentang_kami extends CI_Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Pegawai_model', 'pegawai');
+    }
+
+
     public function index()
     {
         $data['judul'] = 'Profil Perusahaan';
@@ -54,6 +62,9 @@ class Tentang_kami extends CI_Controller
     public function struktur()
     {
         $data['judul'] = 'Struktur Organisasi';
+        $data['data'] = $this->pegawai->getAll();
+        $d = $this->pegawai->getAll();
+        // echo json_encode($d);
         $this->load->view('template/header', $data);
         $this->load->view('tentang/struktur');
         $this->load->view('template/footer');

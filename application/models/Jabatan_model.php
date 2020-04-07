@@ -12,6 +12,8 @@ class Jabatan_model extends CI_Model
     {
         $this->db->select('*')
             ->from($this->_table);
+        $this->db->order_by('jabatan', 'asc');
+
         return $this->db->get()->result();
     }
 

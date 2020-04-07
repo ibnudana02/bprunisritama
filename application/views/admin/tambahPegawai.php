@@ -27,6 +27,24 @@
                                     <input type="text" class="form-control form-control-user" name="nama" id="nama" placeholder="Enter Nama Pegawai" value="<?= set_value('nama'); ?>">
                                     <?php echo form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
+                                <!-- <div class="form-group">
+                                    <label>Atasan Langsung</label>
+                                    <select class="form-control custom-select custom-select-md" id="atasan" name="atasan">
+                                        <option value="" disabled diselected>--Pilih Atasan--</option>
+                                        <?php foreach ($jabatan as $row) : ?>
+                                            <option value="<?= $row->id_jabatan; ?>"><?= $row->jabatan; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Atasan Dalam Struktur Organisasi</label>
+                                    <select class="form-control custom-select custom-select-md" id="jabatan" name="jabatan">
+                                        <option value="" disabled diselected>--Pilih Jabatan--</option>
+                                        <?php foreach ($jabatan as $row) : ?>
+                                            <option value="<?= $row->id_jabatan; ?>"><?= $row->jabatan; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div> -->
                                 <div class="form-group">
                                     <label>Jabatan</label>
                                     <select class="form-control custom-select custom-select-md" id="jabatan" name="jabatan">
