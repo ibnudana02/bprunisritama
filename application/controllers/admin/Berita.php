@@ -54,4 +54,10 @@ class Berita extends CI_Controller
             redirect(site_url('admin/berita')); //arahkan ke halaman list berita
         }
     }
+
+    public function cek($id = null)
+    {
+        $data = $this->berita->getById($id);
+        print_r($data);
+    }
 }

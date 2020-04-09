@@ -32,7 +32,7 @@ class Berita_model extends CI_Model
 
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ['id_berita' => $id]);
+        return $this->db->get_where($this->_table, ['id_berita' => $id])->row();
     }
 
     public function getCount()
@@ -80,14 +80,14 @@ class Berita_model extends CI_Model
 
     public function delete($id)
     {
-        // $this->_deleteImage($id);
+        $this->_deleteImage($id);
         return $this->db->delete($this->_table, array('id_berita' => $id));
     }
 
     private function _deleteImage($id)
     {
         $berita = $this->getById($id);
-        if ($berita->image != "default.jpg") {
+        if ($berita->image != null) {
             $filename = explode(".", $berita->image)[0];
             return array_map('unlink', glob(FCPATH . "upload/$filename.*"));
         }
