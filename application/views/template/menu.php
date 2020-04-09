@@ -26,7 +26,7 @@
                                         <li><a href="<?= base_url('tentang_kami/sejarah') ?>">Sejarah</a></li>
                                         <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi dan Misi</a></li>
                                         <li><a href="<?= base_url('tentang_kami/manajemen') ?>">Board Manajemen</a></li>
-                                        <li><a href="<?= base_url('tentang_kami/struktur') ?>">Struktur Organisasi</a></li>
+                                        <li><a href="<?= base_url('tentang/struktur') ?>">Struktur Organisasi</a></li>
                                         <li><a href="<?= base_url('tentang_kami/awards') ?>">Penghargaan</a></li>
                                         <li><a href="<?= base_url('tentang_kami/location') ?>">Lokasi Kantor</a></li>
                                     </ul>

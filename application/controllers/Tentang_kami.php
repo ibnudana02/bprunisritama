@@ -7,7 +7,7 @@ class Tentang_kami extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Pegawai_model', 'pegawai');
+        $this->load->model(array('Pegawai_model' => 'pegawai', 'Awards_model' => 'awards'));
     }
 
 
@@ -46,6 +46,7 @@ class Tentang_kami extends CI_Controller
     public function awards()
     {
         $data['judul'] = 'Penghargaan';
+        $data['data'] = $this->awards->getAll();
         $this->load->view('template/header', $data);
         $this->load->view('tentang/awards');
         $this->load->view('template/footer');

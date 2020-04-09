@@ -82,6 +82,7 @@
                 // template: "mila",
                 template: "diva",
                 // scaleInitial: 0.5,
+                mouseScrool: OrgChart.action.scroll,
                 scaleInitial: OrgChart.match.boundary,
                 menu: {
                     pdf: {

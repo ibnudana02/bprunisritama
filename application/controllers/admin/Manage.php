@@ -7,40 +7,37 @@ class Manage extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Pegawai_model' => 'pegawai', 'Jabatan_model' => 'jabatan'));
+        $this->load->model(array('Awards_model' => 'awards'));
     }
 
     public function index()
     {
-        $data['title'] = 'Data Pegawai';
+        $data['title'] = 'Data Penghargaan';
         $data['heading'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
-        $data['data'] = $this->pegawai->getAll();
+        $data['data'] = $this->awards->getAll();
         $data['judul'] = 'BPR Unisritama - Administrator';
         $this->load->view('template/admin_header', $data);
-        $this->load->view('admin/pegawai');
+        $this->load->view('admin/awards');
         $this->load->view('template/admin_footer');
     }
 
-    public function tambahPegawai()
+    public function tambahAwards()
     {
-        $this->form_validation->set_rules('nama', 'Nama Pegawai', 'trim|required');
-        $this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
+        $this->form_validation->set_rules('nama', 'Nama Penghargaan', 'trim|required');
 
-        $pegawai = $this->pegawai;
+        $award = $this->awards;
         if ($this->form_validation->run()) {
-            $pegawai->save();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil tambah Data Pegawai!</div>');
-            redirect('admin/pegawai', 'refresh');
+            $award->save();
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil tambah Data Penghargaan!</div>');
+            redirect('admin/awards', 'refresh');
         } else {
-            $data['title'] = 'Administrator - Data Pegawai';
+            $data['title'] = 'Administrator - Data Penghargaan';
             $data['heading'] = 'Dashboard';
             $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
             $data['judul'] = 'BPR Unisritama - Administrator';
-            $data['jabatan'] = $this->jabatan->getAll();
-            // $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Gagal tambah pegawai!</div>');
             $this->load->view('template/admin_header', $data);
-            $this->load->view('admin/tambahPegawai');
+            $this->load->view('admin/tambahPenghargaan');
             $this->load->view('template/admin_footer');
         }
     }
