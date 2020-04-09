@@ -80,7 +80,7 @@
                             <h4>Kategori</h4>
                             <ul>
                                 <?php foreach ($category as $row) : ?>
-                                    <li><a href="#"><?php echo $row->kategori; ?></a></li>
+                                    <li><a href="<?= base_url($row->link) ?>"><?php echo $row->kategori; ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>

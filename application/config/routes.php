@@ -71,7 +71,7 @@ $route['admin/delete_berita/(:any)'] = 'admin/berita/delete/$1';
 $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
 //Routes for Page Tentang
-$route['tentang/profil'] = 'tentang_kami/';
+$route['tentang/profil'] = 'tentang_kami/index';
 $route['tentang/sejarah'] = 'tentang_kami/sejarah';
 $route['tentang/visi_misi'] = 'tentang_kami/visi_misi';
 $route['tentang/manajemen'] = 'tentang_kami/manajemen';

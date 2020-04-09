@@ -35,7 +35,7 @@
                             </a>
                         </div>
                         <div class="team-content">
-                            <h4><a href="#">Azirman, Ph.D</a></h4>
+                            <h4><a href="#">Azirman</a></h4>
                             <p>Komisaris</p>
                             <ul class="team-hover">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -73,7 +73,7 @@
                             </a>
                         </div>
                         <div class="team-content">
-                            <h4><a href="#">Parhan, MM</a></h4>
+                            <h4><a href="#">Parhan</a></h4>
                             <p>Direktur</p>
                             <ul class="team-hover">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
