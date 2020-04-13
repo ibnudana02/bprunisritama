@@ -47,6 +47,26 @@ class Awards_model extends CI_Model
             return $this->upload->file_name;
         }
     }
+
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ['id_penghargaan' => $id])->row();
+    }
+
+    public function delete($id)
+    {
+        $this->_deleteImage($id);
+        return $this->db->delete($this->_table, array('id_penghargaan' => $id));
+    }
+
+    private function _deleteImage($id)
+    {
+        $award = $this->getById($id);
+        if ($award->imagegambar != null) {
+            $filename = explode(".", $award->imagegambar)[0];
+            return array_map('unlink', glob(FCPATH . "upload/$filename.*"));
+        }
+    }
 }
 
 /* End of file Awards_model.php */

@@ -56,13 +56,14 @@ $route['admin/add_jabatan'] = 'admin/jabatan/tambahJabatan';
 $route['admin/jabatan'] = 'admin/jabatan/jabatan';
 $route['admin/pegawai'] = 'admin/pegawai';
 $route['admin/add_pegawai'] = 'admin/pegawai/tambahPegawai';
-$route['admin/add_awards'] = 'admin/manage/tambahAwards';
-$route['admin/awards'] = 'admin/manage';
+$route['admin/add_awards'] = 'admin/awards/tambahAwards';
+$route['admin/awards'] = 'admin/awards';
+$route['admin/delete_awards/(:any)'] = 'admin/awards/delete/$1';
 
 //Routes for kategori
 $route['admin/kategori'] = 'admin/kategori/index';
 $route['admin/add_kategori'] = 'admin/kategori/add_kategori';
-$route['admin/delete_kategori/(:any)'] = 'admin/manage/delete_kategori/$1';
+$route['admin/delete_kategori/(:any)'] = 'admin/kategori/delete_kategori/$1';
 //Routes for kategori
 $route['admin/berita'] = 'admin/berita';
 $route['admin/add_berita'] = 'admin/berita/add_berita';
