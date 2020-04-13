@@ -8,6 +8,11 @@ class Pegawai extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $nama = $this->session->has_userdata('name');
+        if (empty($nama)) {
+
+            redirect('admin', 'refresh');
+        }
         $this->load->model(array('Pegawai_model' => 'pegawai', 'Jabatan_model' => 'jabatan'));
     }
 

@@ -6,11 +6,17 @@ class Welcome extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+
 		$this->load->model('Berita_model', 'berita');
 	}
 
 	public function home()
 	{
+		$nama = $this->session->has_userdata('name');
+		if (empty($nama)) {
+
+			redirect('admin', 'refresh');
+		}
 		$data['title'] = 'Administrator - Dashboard';
 		$data['heading'] = 'Dashboard';
 		$data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
@@ -77,7 +83,7 @@ class Welcome extends CI_Controller
 
 	public function logout()
 	{
-		$this->session->unset_userdata('email');
+		$this->session->unset_userdata('name');
 		$this->session->unset_userdata('role_id');
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logout</div>');
 		redirect('admin');

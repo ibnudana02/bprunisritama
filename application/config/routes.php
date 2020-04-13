@@ -52,10 +52,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = 'custom404';
 $route['admin/dashboard'] = 'admin/welcome/home';
+$route['admin/corporate'] = 'admin/corporate';
+$route['admin/profil'] = 'admin/profil';
+
+// Routes for Jabatan
 $route['admin/add_jabatan'] = 'admin/jabatan/tambahJabatan';
 $route['admin/jabatan'] = 'admin/jabatan/jabatan';
+
+// Routes for Pegawai
 $route['admin/pegawai'] = 'admin/pegawai';
 $route['admin/add_pegawai'] = 'admin/pegawai/tambahPegawai';
+
+// Routes for Awards
 $route['admin/add_awards'] = 'admin/awards/tambahAwards';
 $route['admin/awards'] = 'admin/awards';
 $route['admin/delete_awards/(:any)'] = 'admin/awards/delete/$1';

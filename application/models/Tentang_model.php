@@ -7,7 +7,7 @@ class Tentang_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tentang');
-        return $this->db->get()->result_array();
+        return $this->db->get()->result();
     }
 
     public function get_kantor()

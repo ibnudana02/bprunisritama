@@ -69,11 +69,11 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Components</h6>
                     <a class="collapse-item" href="<?= base_url('admin/jabatan') ?>">Jabatan</a>
+                    <a class="collapse-item" href="<?= base_url('admin/awards') ?>">Penghargaan</a>
                     <a class="collapse-item" href="<?= base_url('admin/pegawai') ?>">Pegawai</a>
                     <a class="collapse-item" href="<?= base_url('admin/slider') ?>">Slider</a>
                     <a class="collapse-item" href="<?= base_url('admin/sb') ?>">Suku Bunga</a>
-                    <a class="collapse-item" href="<?= base_url('admin/tentang') ?>">Tentang Perusahaan</a>
-                    <a class="collapse-item" href="<?= base_url('admin/awards') ?>">Penghargaan</a>
+                    <a class="collapse-item" href="<?= base_url('admin/corporate') ?>">Tentang Perusahaan</a>
                 </div>
             </div>
         </li>
@@ -91,7 +91,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('user/in_mail'); ?>">
+        <a class="nav-link" href="<?= base_url('admin/profil'); ?>">
             <i class="fas fa-fw fa-user-cog"></i>
             <span>Profil</span></a>
     </li>
