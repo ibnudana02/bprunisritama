@@ -60,7 +60,7 @@
                                             </a>
                                         </div>
                                         <div class="pst-content">
-                                            <p><a href="#"><?= $row->judul; ?></a>
+                                            <p><a href="<?= base_url('artikel/' . $row->slug) ?>"><?= ucwords($row->judul); ?></a>
                                                 <div class="blog-meta">
                                                     <span class="date-type">
                                                         <i class="fa fa-calendar"></i>

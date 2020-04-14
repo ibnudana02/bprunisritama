@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title><?= $title; ?></title>
+<title>Halaman Tidak Ditemukan</title>
 
 <link rel="icon" href="<?= base_url('assets/img/bpr.png'); ?>" type="image/x-icon" />
 <link href="<?php echo base_url('assets/admin/'); ?>bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">

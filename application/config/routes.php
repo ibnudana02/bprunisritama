@@ -54,6 +54,8 @@ $route['404_override'] = 'custom404';
 $route['admin/dashboard'] = 'admin/welcome/home';
 $route['admin/corporate'] = 'admin/corporate';
 $route['admin/profil'] = 'admin/profil';
+$route['admin/add_jenis'] = 'admin/jenis/add_jenis';
+$route['admin/jenis'] = 'admin/jenis';
 
 // Routes for Jabatan
 $route['admin/add_jabatan'] = 'admin/jabatan/tambahJabatan';

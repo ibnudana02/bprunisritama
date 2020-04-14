@@ -7,6 +7,7 @@ class Berita_model extends CI_Model
     public $id_berita;
     public $id_kategori;
     public $judul;
+    public $slug;
     public $isi;
     public $image;
     public $penulis;
@@ -34,6 +35,10 @@ class Berita_model extends CI_Model
     {
         return $this->db->get_where($this->_table, ['id_berita' => $id])->row();
     }
+    public function getBySlug($slug)
+    {
+        return $this->db->get_where($this->_table, ['slug' => $slug])->row();
+    }
 
     public function getCount()
     {
@@ -47,7 +52,9 @@ class Berita_model extends CI_Model
         $post = $this->input->post();
         $this->id_berita = uniqid();
         $this->id_kategori = htmlspecialchars($post['kategori']);
-        $this->judul = htmlspecialchars(ucwords($post['judul']));
+        $this->judul = htmlspecialchars(strtolower($post['judul']));
+        $out = explode(" ", $this->judul);
+        $this->slug = implode("-", $out);
         $this->isi = htmlspecialchars($post['isi']);
         $this->image = $this->_uploadImage();
         $this->penulis = $this->session->userdata('name');
