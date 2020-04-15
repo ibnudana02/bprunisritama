@@ -22,6 +22,8 @@
 
 <!-- Custom styles for this template-->
 <link href="<?= base_url('assets/admin/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
+<link href="<?= base_url('assets/'); ?>css/bootstrap-iconpicker.min.css" rel="stylesheet">
+<script src="<?= base_url('assets/'); ?>js/bootstrap-iconpicker.min.js"></script>
 <!-- Custom styles for this page -->
 <link href="<?= base_url('assets/admin/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 

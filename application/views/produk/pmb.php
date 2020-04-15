@@ -6,26 +6,28 @@
                 <!-- Start single blog -->
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <!-- single-blog start -->
+
                     <article class="blog-post-wrapper">
                         <div class="blog-banner">
                             <a href="#" class="blog-images">
-                                <img src="<?= base_url('assets/') ?>img/blog/pmb.jpg" alt="">
+                                <!-- <img src="<?= base_url('assets/') ?>img/blog/pmb.jpg" alt=""> -->
+                                <img src="<?= base_url('upload/produk/' . $row->image); ?>" alt="">
                             </a>
                             <hr>
                             <div class="blog-content">
                                 <div class="blog-category">
-                                    <span>Pembayaran Mahasiswa</span>
+                                    <!-- <span>Pembayaran Mahasiswa</span> -->
+                                    <span><?= $row->jenis; ?></span>
                                 </div>
-                                <h4>The universal acceptance of Consultation has given a tremendous</h4>
+                                <!-- <h4>The universal acceptance of Consultation has given a tremendous</h4> -->
+                                <h3><?= strtoupper($row->produk); ?></h3>
 
-                                <p>The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.Consultations are slowly gaining immense recognition and are growing phenomenally with more and more people trading with this digital currency.</p>
-                                <blockquote>
-                                    <p>Consultations are slowly gaining immense recognition and are growing phenomenally with more and more people trading with this digital currency. The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.</p>
-                                </blockquote>
-                                <p>The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.Consultations are slowly gaining immense recognition and are growing phenomenally with more and more people trading with this digital currency. The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.</p>
+                                <?= ucfirst($row->deskripsi); ?>
+
                             </div>
                         </div>
                     </article>
+
                     <div class="clear"></div>
                 </div>
                 <!-- single-blog end -->
@@ -56,11 +58,11 @@
                                     <div class="recent-single-post">
                                         <div class="post-img">
                                             <a href="#">
-                                                <img src="<?= base_url('upload/' . $row->image); ?>">
+                                                <img src="<?= base_url('upload/berita/' . $row->image); ?>">
                                             </a>
                                         </div>
                                         <div class="pst-content">
-                                            <p><a href="<?= base_url('artikel/' . $row->slug) ?>"><?= ucwords($row->judul); ?></a>
+                                            <p><a href="<?= base_url('artikel/' . $row->slug) ?>"><?= strtoupper($row->judul); ?></a>
                                                 <div class="blog-meta">
                                                     <span class="date-type">
                                                         <i class="fa fa-calendar"></i>
@@ -80,7 +82,7 @@
                             <h4>Kategori</h4>
                             <ul>
                                 <?php foreach ($category as $row) : ?>
-                                    <li><a href="<?= base_url($row->link) ?>"><?php echo $row->kategori; ?></a></li>
+                                    <li><a href="<?= base_url($row->link) ?>"><?php echo strtoupper($row->kategori); ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>

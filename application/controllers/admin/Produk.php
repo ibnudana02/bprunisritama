@@ -51,6 +51,21 @@ class Produk extends CI_Controller
         $this->load->view('admin/tambahProduk');
         $this->load->view('template/admin_footer');
     }
+
+    public function delete($id = null)
+    {
+        if (!isset($id)) show_404(); //jika tidak ada $id yang dipilih, tampilkan error page
+        if ($this->produk->delete($id)) { //jika $id terpilih, lakukan hapus data 
+            $this->session->set_flashdata( //tambahkan pesan jika berhasil
+                'message',
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Hapus Produk <strong>Berhasil!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button></div>'
+            );
+            redirect(site_url('admin/produk')); //arahkan ke halaman list kategori
+        }
+    }
 }
 
 /* End of file Produk.php */

@@ -66,14 +66,11 @@ class Berita_model extends CI_Model
 
     private function _uploadImage()
     {
-        $config['upload_path'] = './upload/';
+        $config['upload_path'] = './upload/berita/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['file_name'] = $this->id_berita;
         $config['overwrite'] = true;
         $config['max_size'] = 1024;
-
-        // $config['max_width']  = 1024 * 3;
-        // $config['max_height']  = 768 * 3;
 
         $this->upload->initialize($config);
 
@@ -96,7 +93,7 @@ class Berita_model extends CI_Model
         $berita = $this->getById($id);
         if ($berita->image != null) {
             $filename = explode(".", $berita->image)[0];
-            return array_map('unlink', glob(FCPATH . "upload/$filename.*"));
+            return array_map('unlink', glob(FCPATH . "upload/berita/$filename.*"));
         }
     }
 }

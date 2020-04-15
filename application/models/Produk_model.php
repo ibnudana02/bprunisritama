@@ -30,9 +30,29 @@ class Produk_model extends CI_Model
         $this->db->insert($this->_table, $this);
     }
 
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ['id_produk' => $id])->row();
+    }
+
+    public function delete($id)
+    {
+        $this->_deleteImage($id);
+        return $this->db->delete($this->_table, array('id_produk' => $id));
+    }
+
+    private function _deleteImage($id)
+    {
+        $produk = $this->getById($id);
+        if ($produk->image != null) {
+            $filename = explode(".", $produk->image)[0];
+            return array_map('unlink', glob(FCPATH . "upload/produk/$filename.*"));
+        }
+    }
+
     private function _uploadImage()
     {
-        $config['upload_path'] = './upload/';
+        $config['upload_path'] = './upload/produk/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['file_name'] = $this->id_produk;
         $config['overwrite'] = true;
@@ -44,7 +64,21 @@ class Produk_model extends CI_Model
             $this->session->set_flashdata('message', $this->upload->display_errors());
             redirect('admin/add_produk');
         } else {
-            return $this->upload->file_name;
+            // return $this->upload->file_name;
+            $gbr = $this->upload->data();
+            //Compress Image
+            $config['image_library'] = 'gd2';
+            $config['source_image'] = './upload/produk/' . $gbr['file_name'];
+            $config['create_thumb'] = FALSE;
+            $config['maintain_ratio'] = FALSE;
+            $config['quality'] = '70%';
+            $config['width'] = 1200;
+            $config['height'] = 760;
+            // $config['new_image'] = './upload/produk/' . $gbr['file_name'];
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+
+            return $gbr['file_name'];
         }
     }
 
@@ -54,6 +88,17 @@ class Produk_model extends CI_Model
             ->from($this->_table)
             ->join('jenis', $this->_table . '.jenis=jenis.id_jenis');
         return $this->db->get()->result();
+    }
+
+    public function getPmb()
+    {
+        $Value = '5e95457d76d01';
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('jenis', $this->_table . '.jenis=jenis.id_jenis');
+        $this->db->where('id_jenis', $Value);
+        return $this->db->get()->row();
+        // return $this->db->get()->result_array();
     }
 }
 

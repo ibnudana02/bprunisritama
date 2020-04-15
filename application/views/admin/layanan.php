@@ -39,7 +39,7 @@
                                         <th><?= htmlspecialchars(ucwords($row->produk)); ?></th>
                                         <th><?= htmlspecialchars($row->jenis); ?></th>
                                         <th><?= html_entity_decode($row->deskripsi); ?></th>
-                                        <th><img src="<?= base_url('upload/produk/' . $row->image); ?>" width="70" height="70"></th>
+                                        <th><img src="<?= base_url('upload/' . $row->image); ?>" width="70" height="70"></th>
                                         <th width><a href="<?php echo $row->id_produk; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_produk; ?>" data-toggle="modal">Edit</a>
                                             <a href="<?php echo $row->id_produk; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_produk; ?>" data-toggle="modal">Hapus</a></th>
                                     </tr>
@@ -54,7 +54,7 @@
                                                     <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="<?= base_url('admin/delete_produk/' . $row->id_produk) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
+                                                    <a href="<?= base_url('admin/delete_kategori/' . $row->id_produk) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
                                                 </div>
                                             </div>

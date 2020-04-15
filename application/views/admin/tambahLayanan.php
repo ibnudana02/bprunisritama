@@ -11,37 +11,22 @@
                 <div class="card-header py-3">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="mx-auto font-weight-bold text-primary">Tambah Produk</h4>
+                            <h4 class="mx-auto font-weight-bold text-primary">Tambah Layanan</h4>
                         </div>
                     </div>
                 </div>
                 <div class="card-body col-12 mx-auto">
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
-                            <form class="user" method="post" action="<?= base_url('admin/add_produk'); ?>" enctype="multipart/form-data">
+                            <form class="user" method="post" action="#">
                                 <div class="form-group">
-                                    <label>Produk</label>
+                                    <label>Layanan</label>
                                     <input type="text" class="form-control form-control-user" name="produk" id="produk" placeholder="Enter produk" value="<?= set_value('produk'); ?>">
                                     <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <label>Jenis Produk</label>
-                                    <select class="form-control custom-select custom-select-md" id="jenis" name="jenis">
-                                        <option value="" disabled diselected>--Pilih Jenis Produk--</option>
-                                        <?php foreach ($data as $row) : ?>
-                                            <option value="<?= $row->id_jenis; ?>"><?= $row->jenis; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
                                     <label>Deskripsi</label>
-                                    <!-- <textarea id="editor" name="deskripsi"></textarea> -->
-                                    <textarea name="deskripsi" rows="3" class="form-control" required data-error="Write your deskripsi"></textarea>
-                                </div>
-                                <?php echo form_error('image', '<small class="text-danger pl-5">', '</small>'); ?>
-                                <div class="form-group">
-                                    <label for="image">Gambar</label>
-                                    <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                    <textarea id="editor" name="deskripsi"></textarea>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 ">
@@ -76,4 +61,13 @@
         .catch(err => {
             console.error(err.stack);
         });
+</script>
+<script>
+    $('#iconpicker').iconpicker({
+        iconset: 'fontawesome',
+        icon: 'fa-key',
+        rows: 5,
+        cols: 5,
+        placement: 'top',
+    });
 </script>
