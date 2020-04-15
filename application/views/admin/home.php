@@ -31,7 +31,7 @@
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 <h6><a href="#">Produk</a></h6>
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">#</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $produkCount; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-fw fa-dolly-flatbed fa-2x text-gray-300"></i>

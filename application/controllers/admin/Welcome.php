@@ -7,7 +7,7 @@ class Welcome extends CI_Controller
 	{
 		parent::__construct();
 
-		$this->load->model('Berita_model', 'berita');
+		$this->load->model(array('Berita_model' => 'berita', 'Produk_model' => 'produk'));
 	}
 
 	public function home()
@@ -22,7 +22,7 @@ class Welcome extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
 		$data['judul'] = 'BPR Unisritama - Administrator';
 		$data['beritaCount'] = $this->berita->getCount()->num_rows();
-		// echo ($data['beritaCount']);
+		$data['produkCount'] = $this->produk->getCount()->num_rows();
 		$this->load->view('template/admin_header', $data);
 		$this->load->view('admin/home');
 		$this->load->view('template/admin_footer');

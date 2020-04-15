@@ -1,5 +1,5 @@
 <!-- Start overview area -->
-<div class="about-area area-padding">
+<div class="about-area struktur">
     <div class="container">
         <div class="row">
             <h2 class="text-center">Visi dan Misi</h2>

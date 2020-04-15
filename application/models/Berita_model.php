@@ -42,7 +42,6 @@ class Berita_model extends CI_Model
 
     public function getCount()
     {
-        // $this->db->select('id_berita')
         return $this->db->get($this->_table);
     }
 

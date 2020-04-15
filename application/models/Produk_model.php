@@ -90,6 +90,12 @@ class Produk_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function getCount()
+    {
+        // return $this->db->get($this->_table);
+        return $this->db->get($this->_table);
+    }
+
     public function getPmb()
     {
         $Value = '5e95457d76d01';

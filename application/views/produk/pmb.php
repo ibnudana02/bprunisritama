@@ -1,5 +1,5 @@
 <!--Blog Area Start-->
-<div class="blog-page-area area-padding">
+<div class="blog-page-area struktur">
     <div class="container">
         <div class="row">
             <div class="blog-details">
