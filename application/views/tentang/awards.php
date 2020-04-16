@@ -13,11 +13,10 @@
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a href="#">
-                                    <!-- <img src="<?= base_url('assets/') ?>img/project/infobank2015-min.jpg" alt="" /> -->
-                                    <img src="<?= base_url('upload/' . $row->gambar) ?>" alt="" />
+                                    <img src="<?= base_url('upload/awards/' . $row->gambar) ?>" alt="" />
                                 </a>
                                 <div class="add-actions text-center">
-                                    <a class="venobox" data-gall="myGallery" href="<?= base_url('upload/' . $row->gambar) ?>">
+                                    <a class="venobox" data-gall="myGallery" href="<?= base_url('upload/awards/' . $row->gambar) ?>">
                                         <i class="port-icon icon icon-picture"></i>
                                     </a>
                                 </div>

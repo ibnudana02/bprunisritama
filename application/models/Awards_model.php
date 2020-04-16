@@ -29,20 +29,16 @@ class Awards_model extends CI_Model
 
     private function _uploadImage()
     {
-        $config['upload_path'] = './upload/';
+        $config['upload_path'] = './upload/awards/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['file_name'] = $this->id_penghargaan;
         $config['overwrite'] = true;
         $config['max_size'] = 1024;
 
-        // $config['max_width']  = 1024 * 3;
-        // $config['max_height']  = 768 * 3;
-
         $this->upload->initialize($config);
 
-        if (!$this->upload->do_upload('image')) {
+        if (!$this->upload->do_upload('gambar')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            // redirect('admin/berita');
         } else {
             return $this->upload->file_name;
         }
@@ -62,9 +58,9 @@ class Awards_model extends CI_Model
     private function _deleteImage($id)
     {
         $award = $this->getById($id);
-        if ($award->imagegambar != null) {
-            $filename = explode(".", $award->imagegambar)[0];
-            return array_map('unlink', glob(FCPATH . "upload/$filename.*"));
+        if ($award->gambar != null) {
+            $filename = explode(".", $award->gambar)[0];
+            return array_map('unlink', glob(FCPATH . "upload/awards/$filename.*"));
         }
     }
 }

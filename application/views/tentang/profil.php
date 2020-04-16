@@ -19,8 +19,8 @@
             <!-- column end -->
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="about-content">
-                    <h4>Berdiri sejak 1991</h4>
-                    <p class="hidden-sm">The phrasal sequence of the Lorem Ipsum text is now so widespread and commonplace that many DTP programmes can generate dummy text using the starting sequence "Lorem ipsum". Fortunately, the phrase 'Lorem Ipsum' is now recognized by electronic pre-press systems and, when found, an alarm can be raised.</p>
+                    <h4>Berdiri Sejak Tahun 1991</h4>
+                    <p class="hidden-sm text-justify">Pendirian BPR Unisritama ditujukan untuk mengelola keuangan dan aset Yayasan Lembaga Pendidikan Islam Riau (YLPI Riau) yang saat itu sedang mengalami perkembangan sangat pesat. </p>
                     <div class="about-details">
                         <div class="single-about">
                             <a href="#"><i class="icon icon-chart-bars"></i></a>

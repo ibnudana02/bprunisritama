@@ -21,7 +21,30 @@
                 <div class="card-body col-12 mx-auto">
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
-
+                            <form class="user" method="post" action="<?= base_url('admin/add_awards'); ?>" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label>Penghargaan</label>
+                                    <input type="text" class="form-control form-control-user" name="nama" id="nama" placeholder="Enter nama" value="<?= set_value('nama'); ?>">
+                                    <?php echo form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <?php echo form_error('gambar', '<small class="text-danger pl-5">', '</small>'); ?>
+                                <div class="form-group">
+                                    <label for="gambar">Gambar</label>
+                                    <input type="file" class="form-control-file" name="gambar" value="<?= set_value('gambar'); ?>">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 ">
+                                        <a href="<?= base_url('admin/kategori'); ?>" class="btn btn-google btn-user btn-block">
+                                            Cancel
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="submit" class="btn btn-facebook btn-user btn-block">
+                                            Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
