@@ -15,7 +15,7 @@
                             <!-- <h6 class="mx-auto font-weight-bold text-primary">List User</h6> -->
                             <h4 class="font-weight-bold text-primary">List Produk</h4>
                         </div>
-                        <div class="col-4"><a href="<?= base_url('admin/add_produk'); ?>" class="btn btn-facebook float-right">Add Produk</a></div>
+                        <div class="col-4"><a href="<?= base_url('admin/add_layanan'); ?>" class="btn btn-facebook float-right">Add Produk</a></div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -24,10 +24,8 @@
                             <thead>
                                 <tr>
                                     <th width="10%">No.</th>
-                                    <th>Produk</th>
-                                    <th>Jenis Produk</th>
+                                    <th>Layanan</th>
                                     <th>Deskripsi</th>
-                                    <th>Gambar</th>
                                     <th width="15%">Action</th>
                                 </tr>
                             </thead>
@@ -36,14 +34,12 @@
                                 foreach ($data as $row) : ?>
                                     <tr>
                                         <th><?= $no++; ?>
-                                        <th><?= htmlspecialchars(ucwords($row->produk)); ?></th>
-                                        <th><?= htmlspecialchars($row->jenis); ?></th>
-                                        <th><?= html_entity_decode($row->deskripsi); ?></th>
-                                        <th><img src="<?= base_url('upload/' . $row->image); ?>" width="70" height="70"></th>
-                                        <th width><a href="<?php echo $row->id_produk; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_produk; ?>" data-toggle="modal">Edit</a>
-                                            <a href="<?php echo $row->id_produk; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_produk; ?>" data-toggle="modal">Hapus</a></th>
+                                        <th><?= htmlspecialchars(strtoupper($row->layanan)); ?></th>
+                                        <th><?= html_entity_decode(strtoupper($row->deskripsi)); ?></th>
+                                        <th width><a href="<?php echo $row->id_layanan; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_layanan; ?>" data-toggle="modal">Edit</a>
+                                            <a href="<?php echo $row->id_layanan; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_layanan; ?>" data-toggle="modal">Hapus</a></th>
                                     </tr>
-                                    <div id="hapus<?= $row->id_produk; ?>" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div id="hapus<?= $row->id_layanan; ?>" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -54,13 +50,13 @@
                                                     <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="<?= base_url('admin/delete_kategori/' . $row->id_produk) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
+                                                    <a href="<?= base_url('admin/delete_kategori/' . $row->id_layanan) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="edit<?= $row->id_produk; ?>" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                    <div id="edit<?= $row->id_layanan; ?>" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -71,7 +67,7 @@
                                                     <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="<?= base_url('admin/delete_kategori/' . $row->id_produk) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
+                                                    <a href="<?= base_url('admin/delete_kategori/' . $row->id_layanan) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
                                                 </div>
                                             </div>

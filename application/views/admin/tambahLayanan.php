@@ -18,15 +18,15 @@
                 <div class="card-body col-12 mx-auto">
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
-                            <form class="user" method="post" action="#">
+                            <form class="user" method="post" action="<?= base_url('admin/add_layanan'); ?>">
                                 <div class="form-group">
                                     <label>Layanan</label>
-                                    <input type="text" class="form-control form-control-user" name="produk" id="produk" placeholder="Enter produk" value="<?= set_value('produk'); ?>">
-                                    <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    <input type="text" class="form-control form-control-user" name="layanan" id="layanan" placeholder="Enter layanan" value="<?= set_value('layanan'); ?>">
+                                    <?php echo form_error('layanan', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>
-                                    <textarea id="editor" name="deskripsi"></textarea>
+                                    <textarea name="deskripsi" rows="3" class="form-control" required data-error="Write your deskripsi"></textarea>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 ">

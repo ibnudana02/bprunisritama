@@ -54,6 +54,10 @@ $route['404_override'] = 'custom404';
 $route['admin/dashboard'] = 'admin/welcome/home';
 $route['admin/corporate'] = 'admin/corporate';
 $route['admin/profil'] = 'admin/profil';
+$route['admin/layanan'] = 'admin/layanan';
+$route['admin/add_layanan'] = 'admin/layanan/add_layanan';
+
+// Routes for Produk
 $route['admin/produk'] = 'admin/produk';
 $route['admin/add_produk'] = 'admin/produk/add_produk';
 $route['admin/delete_produk/(:any)'] = 'admin/produk/delete/$1';
