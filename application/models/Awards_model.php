@@ -30,7 +30,7 @@ class Awards_model extends CI_Model
     private function _uploadImage()
     {
         $config['upload_path'] = './upload/awards/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'jpg|png';
         $config['file_name'] = $this->id_penghargaan;
         $config['overwrite'] = true;
         $config['max_size'] = 1024;

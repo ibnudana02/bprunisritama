@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Layanan extends CI_Controller
+class Slider extends CI_Controller
 {
 
 
@@ -14,7 +14,7 @@ class Layanan extends CI_Controller
 
             redirect('admin', 'refresh');
         }
-        $this->load->model('Layanan_model', 'layanan');
+        $this->load->model('Slider_model', 'slider');
     }
 
 
@@ -24,30 +24,24 @@ class Layanan extends CI_Controller
         $data['heading'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
         $data['judul'] = 'BPR Unisritama - Administrator';
-        $data['data'] = $this->layanan->getAll();
         $this->load->view('template/admin_header', $data);
-        $this->load->view('admin/Layanan');
+        $this->load->view('admin/Slider');
         $this->load->view('template/admin_footer');
     }
-    public function add_layanan()
+
+    public function tambahSlider()
     {
-        $this->form_validation->set_rules('layanan', 'Layanan', 'required|trim');
-        $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required|trim');
+        $this->form_validation->set_rules('slider', 'Nama Slider', 'trim|required');
 
-        if ($this->form_validation->run()) {
-            $this->layanan->save();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Success add new Layanan</div>');
-            redirect('admin/layanan', 'refresh');
-        }
 
-        $data['title'] = 'Tambah Layanan';
+        $data['title'] = 'Produk';
         $data['heading'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
         $data['judul'] = 'BPR Unisritama - Administrator';
         $this->load->view('template/admin_header', $data);
-        $this->load->view('admin/tambahLayanan');
+        $this->load->view('admin/Slider');
         $this->load->view('template/admin_footer');
     }
 }
 
-/* End of file Layanan.php */
+/* End of file Slider.php */

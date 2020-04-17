@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 15 Apr 2020 pada 12.21
+-- Waktu pembuatan: 17 Apr 2020 pada 11.17
 -- Versi server: 10.3.22-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -185,6 +185,13 @@ CREATE TABLE IF NOT EXISTS `layanan` (
   PRIMARY KEY (`id_layanan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `layanan`
+--
+
+INSERT INTO `layanan` (`id_layanan`, `layanan`, `deskripsi`) VALUES
+('5e97b2324dc8f', 'pickup service', 'layanan antar jemput setoran dan penarikan nasabah serta aplikasi kredit.');
+
 -- --------------------------------------------------------
 
 --
@@ -254,8 +261,7 @@ CREATE TABLE IF NOT EXISTS `penghargaan` (
 --
 
 INSERT INTO `penghargaan` (`id_penghargaan`, `nama`, `gambar`) VALUES
-('5e8e932cda94b', 'INFOBANK AWARD 2015', '5e8e932cda94b.jpg'),
-('5e8e9366c229a', 'INFOBANK AWARDS 2019', '5e8e9366c229a.jpg');
+('5e97fcdcdcc43', 'INFOBANK AWARDS 2019', '5e97fcdcdcc43.jpg');
 
 -- --------------------------------------------------------
 
