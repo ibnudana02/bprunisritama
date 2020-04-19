@@ -5,6 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $heading; ?></h1>
     <?= $this->session->flashdata('message'); ?>
     <div class="row">
+        <!-- start card for gcg -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
