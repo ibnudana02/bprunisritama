@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Waktu pembuatan: 17 Apr 2020 pada 11.17
--- Versi server: 10.3.22-MariaDB
--- Versi PHP: 7.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Apr 20, 2020 at 02:35 AM
+-- Server version: 10.1.39-MariaDB
+-- PHP Version: 7.1.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -27,7 +27,7 @@ USE `webbpr`;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `berita`
+-- Table structure for table `berita`
 --
 
 DROP TABLE IF EXISTS `berita`;
@@ -39,14 +39,14 @@ CREATE TABLE IF NOT EXISTS `berita` (
   `isi` longtext NOT NULL,
   `image` varchar(255) NOT NULL,
   `penulis` varchar(30) NOT NULL,
-  `created_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `update_by` varchar(30) DEFAULT NULL,
-  `update_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `update_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_berita`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `berita`
+-- Dumping data for table `berita`
 --
 
 INSERT INTO `berita` (`id_berita`, `id_kategori`, `judul`, `slug`, `isi`, `image`, `penulis`, `created_on`, `update_by`, `update_on`) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `berita` (`id_berita`, `id_kategori`, `judul`, `slug`, `isi`, `image
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jabatan`
+-- Table structure for table `jabatan`
 --
 
 DROP TABLE IF EXISTS `jabatan`;
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `jabatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jabatan`
+-- Dumping data for table `jabatan`
 --
 
 INSERT INTO `jabatan` (`id_jabatan`, `id`, `jabatan`, `alias`) VALUES
@@ -97,7 +97,7 @@ INSERT INTO `jabatan` (`id_jabatan`, `id`, `jabatan`, `alias`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis`
+-- Table structure for table `jenis`
 --
 
 DROP TABLE IF EXISTS `jenis`;
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `jenis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jenis`
+-- Dumping data for table `jenis`
 --
 
 INSERT INTO `jenis` (`id_jenis`, `jenis`) VALUES
@@ -121,7 +121,7 @@ INSERT INTO `jenis` (`id_jenis`, `jenis`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kantor`
+-- Table structure for table `kantor`
 --
 
 DROP TABLE IF EXISTS `kantor`;
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `kantor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kantor`
+-- Dumping data for table `kantor`
 --
 
 INSERT INTO `kantor` (`id_kantor`, `nama_kantor`, `lat_map`, `lng_map`, `lat_view`, `lng_view`, `zoom`) VALUES
@@ -147,7 +147,7 @@ INSERT INTO `kantor` (`id_kantor`, `nama_kantor`, `lat_map`, `lng_map`, `lat_vie
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 DROP TABLE IF EXISTS `kategori`;
@@ -156,12 +156,12 @@ CREATE TABLE IF NOT EXISTS `kategori` (
   `kategori` varchar(30) NOT NULL,
   `link` varchar(255) NOT NULL,
   `created_by` varchar(30) NOT NULL,
-  `created_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_kategori`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `kategori`, `link`, `created_by`, `created_on`) VALUES
@@ -174,7 +174,7 @@ INSERT INTO `kategori` (`id_kategori`, `kategori`, `link`, `created_by`, `create
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `layanan`
+-- Table structure for table `layanan`
 --
 
 DROP TABLE IF EXISTS `layanan`;
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `layanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `layanan`
+-- Dumping data for table `layanan`
 --
 
 INSERT INTO `layanan` (`id_layanan`, `layanan`, `deskripsi`) VALUES
@@ -195,7 +195,7 @@ INSERT INTO `layanan` (`id_layanan`, `layanan`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pegawai`
+-- Table structure for table `pegawai`
 --
 
 DROP TABLE IF EXISTS `pegawai`;
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pegawai`
+-- Dumping data for table `pegawai`
 --
 
 INSERT INTO `pegawai` (`id_pegawai`, `job_id`, `parent_job`, `tag`, `nama`, `id_jabatan`) VALUES
@@ -245,7 +245,7 @@ INSERT INTO `pegawai` (`id_pegawai`, `job_id`, `parent_job`, `tag`, `nama`, `id_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penghargaan`
+-- Table structure for table `penghargaan`
 --
 
 DROP TABLE IF EXISTS `penghargaan`;
@@ -257,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `penghargaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `penghargaan`
+-- Dumping data for table `penghargaan`
 --
 
 INSERT INTO `penghargaan` (`id_penghargaan`, `nama`, `gambar`) VALUES
@@ -266,7 +266,7 @@ INSERT INTO `penghargaan` (`id_penghargaan`, `nama`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk`
+-- Table structure for table `produk`
 --
 
 DROP TABLE IF EXISTS `produk`;
@@ -277,14 +277,14 @@ CREATE TABLE IF NOT EXISTS `produk` (
   `jenis` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `penulis` varchar(64) NOT NULL,
-  `created_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `update_by` varchar(64) NOT NULL,
   `update_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id_produk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `produk`
+-- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `produk`, `deskripsi`, `jenis`, `image`, `penulis`, `created_on`, `update_by`, `update_on`) VALUES
@@ -294,7 +294,30 @@ INSERT INTO `produk` (`id_produk`, `produk`, `deskripsi`, `jenis`, `image`, `pen
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tentang`
+-- Table structure for table `slider`
+--
+
+DROP TABLE IF EXISTS `slider`;
+CREATE TABLE IF NOT EXISTS `slider` (
+  `id_slider` varchar(64) NOT NULL,
+  `slider` varchar(255) NOT NULL,
+  `image` varchar(64) NOT NULL,
+  `aktif` enum('Active','Null') NOT NULL,
+  PRIMARY KEY (`id_slider`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `slider`
+--
+
+INSERT INTO `slider` (`id_slider`, `slider`, `image`, `aktif`) VALUES
+('5e9be4050de27', 'slider 1', '5e9be4050de27.png', 'Active'),
+('5e9bede00f969', 'slider 2', '5e9bede00f969.jpg', 'Null');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tentang`
 --
 
 DROP TABLE IF EXISTS `tentang`;
@@ -315,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `tentang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tentang`
+-- Dumping data for table `tentang`
 --
 
 INSERT INTO `tentang` (`id_tentang`, `company`, `story`, `alamat`, `phone`, `email`, `whatsapp`, `facebook`, `instagram`, `youtube`, `linkedin`, `twitter`) VALUES
@@ -324,7 +347,7 @@ INSERT INTO `tentang` (`id_tentang`, `company`, `story`, `alamat`, `phone`, `ema
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 DROP TABLE IF EXISTS `user`;
@@ -334,12 +357,12 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role_id` int(11) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `name`, `email`, `password`, `role_id`, `date_created`) VALUES

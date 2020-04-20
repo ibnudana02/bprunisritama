@@ -7,7 +7,7 @@ class Welcome extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Layanan_model', 'layanan');
+		$this->load->model(array('Layanan_model' => 'layanan', 'Slider_model' => 'slider'));
 	}
 
 
@@ -16,8 +16,9 @@ class Welcome extends CI_Controller
 		// $this->load->view('welcome_message');
 		$data['judul'] = 'BPR Unisritama - Mitra Ekonomi Kerakyatan';
 		$data['data'] = $this->layanan->getAll();
+		$data['slider'] = $this->slider->getAll()->result();
 		$this->load->view('template/header', $data);
-		$this->load->view('template/slider');
+		$this->load->view('template/slider', $data);
 		$this->load->view('home');
 		$this->load->view('template/footer');
 	}

@@ -54,6 +54,9 @@ $route['404_override'] = 'custom404';
 $route['admin/dashboard'] = 'admin/welcome/home';
 $route['admin/corporate'] = 'admin/corporate';
 $route['admin/profil'] = 'admin/profil';
+$route['admin/add_slider'] = 'admin/slider/tambahSlider';
+
+// Routes for Layanan
 $route['admin/layanan'] = 'admin/layanan';
 $route['admin/add_layanan'] = 'admin/layanan/add_layanan';
 
