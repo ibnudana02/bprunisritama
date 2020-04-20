@@ -15,7 +15,7 @@ class Welcome extends CI_Controller
 	{
 		// $this->load->view('welcome_message');
 		$data['judul'] = 'BPR Unisritama - Mitra Ekonomi Kerakyatan';
-		$data['data'] = $this->layanan->getAll();
+		$data['data'] = $this->layanan->getAll()->result();
 		$data['slider'] = $this->slider->getAll()->result();
 		$this->load->view('template/header', $data);
 		$this->load->view('template/slider', $data);

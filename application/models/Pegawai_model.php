@@ -17,7 +17,7 @@ class Pegawai_model extends CI_Model
             ->from($this->_table);
         $this->db->join('jabatan', 'pegawai.id_jabatan = jabatan.id_jabatan', 'left');
 
-        return $this->db->get()->result();
+        return $this->db->get();
     }
 
     public function save()

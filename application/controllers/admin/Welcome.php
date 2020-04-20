@@ -7,7 +7,11 @@ class Welcome extends CI_Controller
 	{
 		parent::__construct();
 
-		$this->load->model(array('Berita_model' => 'berita', 'Produk_model' => 'produk'));
+		$this->load->model(array(
+			'Berita_model' => 'berita', 'Produk_model' => 'produk',
+			'Layanan_model' => 'layanan', 'Jenis_model' => 'jenis',
+			'Pegawai_model' => 'pegawai', 'Awards_model' => 'awards'
+		));
 	}
 
 	public function home()
@@ -23,6 +27,10 @@ class Welcome extends CI_Controller
 		$data['judul'] = 'BPR Unisritama - Administrator';
 		$data['beritaCount'] = $this->berita->getCount()->num_rows();
 		$data['produkCount'] = $this->produk->getCount()->num_rows();
+		$data['layananCount'] = $this->layanan->getAll()->num_rows();
+		$data['jenisCount'] = $this->jenis->getAll()->num_rows();
+		$data['pegawaiCount'] = $this->pegawai->getAll()->num_rows();
+		$data['awardsCount'] = $this->awards->getAll()->num_rows();
 		$this->load->view('template/admin_header', $data);
 		$this->load->view('admin/home');
 		$this->load->view('template/admin_footer');

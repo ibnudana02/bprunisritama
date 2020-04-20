@@ -14,7 +14,7 @@ class Awards_model extends CI_Model
     {
         $this->db->select('*')
             ->from($this->_table);
-        return $this->db->get()->result();
+        return $this->db->get();
     }
 
     public function save()

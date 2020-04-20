@@ -46,7 +46,7 @@ class Tentang_kami extends CI_Controller
     public function awards()
     {
         $data['judul'] = 'Penghargaan';
-        $data['data'] = $this->awards->getAll();
+        $data['data'] = $this->awards->getAll()->result();
         $this->load->view('template/header', $data);
         $this->load->view('tentang/awards');
         $this->load->view('template/footer');
@@ -63,7 +63,7 @@ class Tentang_kami extends CI_Controller
     public function struktur()
     {
         $data['judul'] = 'Struktur Organisasi';
-        $data['data'] = $this->pegawai->getAll();
+        $data['data'] = $this->pegawai->getAll()->result();
         $d = $this->pegawai->getAll();
         // echo json_encode($d);
         $this->load->view('template/header', $data);

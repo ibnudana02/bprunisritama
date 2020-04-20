@@ -19,7 +19,7 @@ class Jenis_model extends CI_Model
 
     public function getAll()
     {
-        return $this->db->get('jenis')->result();
+        return $this->db->get('jenis');
     }
 }
 

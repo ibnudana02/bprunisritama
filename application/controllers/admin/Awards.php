@@ -21,7 +21,7 @@ class Awards extends CI_Controller
         $data['title'] = 'Data Penghargaan';
         $data['heading'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
-        $data['data'] = $this->awards->getAll();
+        $data['data'] = $this->awards->getAll()->result();
         $data['judul'] = 'BPR Unisritama - Administrator';
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/awards');

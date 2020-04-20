@@ -31,7 +31,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                <h6><a href="#">Produk</a></h6>
+                                <h6><a href="<?= base_url('admin/produk'); ?>">Produk</a></h6>
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $produkCount; ?></div>
                         </div>
@@ -49,7 +49,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                <h6><a href="#">Berita</a></h6>
+                                <h6><a href="<?= base_url('admin/berita'); ?>">Berita</a></h6>
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $beritaCount; ?></div>
                         </div>
@@ -70,6 +70,78 @@
                                 <h6><a href="#">Publikasi</a></h6>
                             </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">#</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start card for jenis produk  -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                <h6><a href="<?= base_url('admin/jenis'); ?>">Jenis Produk</a></h6>
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jenisCount; ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start card for Layanan  -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                <h6><a href="#">Layanan</a></h6>
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $layananCount; ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start card for Pegawai  -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                <h6><a href="<?= base_url('admin/pegawai'); ?>">Pegawai</a></h6>
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $pegawaiCount; ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start card for Penghargaan  -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                <h6><a href="<?= base_url('admin/awards'); ?>">Penghargaan</a></h6>
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $awardsCount; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-fw fa-book fa-2x text-gray-300"></i>
