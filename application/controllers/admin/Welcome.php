@@ -10,7 +10,8 @@ class Welcome extends CI_Controller
 		$this->load->model(array(
 			'Berita_model' => 'berita', 'Produk_model' => 'produk',
 			'Layanan_model' => 'layanan', 'Jenis_model' => 'jenis',
-			'Pegawai_model' => 'pegawai', 'Awards_model' => 'awards'
+			'Pegawai_model' => 'pegawai', 'Awards_model' => 'awards',
+			'User_model' => 'user'
 		));
 	}
 
@@ -81,6 +82,57 @@ class Welcome extends CI_Controller
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email doesnt exist!</div>');
 			redirect('admin');
 		}
+	}
+
+	public function registration()
+	{
+		$nama = $this->session->has_userdata('name');
+		if (empty($nama)) {
+
+			redirect('admin', 'refresh');
+		}
+
+		$this->form_validation->set_rules('name', 'Nama Lengkap', 'required|trim');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim');
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]');
+		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[8]|matches[password2]', [
+			'matches' => 'Password dont match!',
+			'min_length' => 'Minimal 8 character'
+		]);
+		$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
+
+		if ($this->form_validation->run()) {
+			$this->user->simpan();
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil tambah User</div>');
+			redirect('admin/users');
+			// echo 'berhasil';
+		} else {
+			$data['title'] = 'Administrator - Tambah User';
+			$data['heading'] = 'Dashboard';
+			$data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
+			$data['judul'] = 'BPR Unisritama - Administrator';
+			$data['role'] = $this->user->getRole()->result();
+			$this->load->view('template/admin_header', $data);
+			$this->load->view('auth/registration');
+			$this->load->view('template/admin_footer');
+		}
+	}
+
+	public function users()
+	{
+		$nama = $this->session->has_userdata('name');
+		if (empty($nama)) {
+
+			redirect('admin', 'refresh');
+		}
+		$data['title'] = 'Administrator - Users';
+		$data['heading'] = 'Dashboard';
+		$data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
+		$data['judul'] = 'BPR Unisritama - Administrator';
+		$data['users'] = $this->user->getAll()->result();
+		$this->load->view('template/admin_header', $data);
+		$this->load->view('admin/users');
+		$this->load->view('template/admin_footer');
 	}
 
 	public function error_page()

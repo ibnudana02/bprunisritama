@@ -17,10 +17,9 @@
                             <div class="single-services">
                                 <div class="service-inner">
                                     <a class="service-icon" href="#">
-                                        <i class="flaticon-presentation-17"></i>
+                                        <i class="flaticon-point-of-service"></i>
                                     </a>
                                     <div class="service-content">
-                                        <!-- <a><a href="#">Business Analytics</a></h4> -->
                                         <h4><a href="#"><?= strtoupper($row->layanan); ?></a></h4>
                                         <p><?= ucwords($row->deskripsi); ?></p>
                                     </div>
@@ -30,7 +29,7 @@
                     <?php endforeach; ?>
                     <!-- End services -->
                     <div class="col-md-12 text-center">
-                        <a class="load-more-btn" href="services.html">More services</a>
+                        <a class="load-more-btn" href="#">More services</a>
                     </div>
                 </div>
             </div>

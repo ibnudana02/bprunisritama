@@ -16,6 +16,8 @@ class Pegawai_model extends CI_Model
         $this->db->select('pegawai.id_pegawai, pegawai.nama, pegawai.parent_job, pegawai.tag, jabatan.jabatan')
             ->from($this->_table);
         $this->db->join('jabatan', 'pegawai.id_jabatan = jabatan.id_jabatan', 'left');
+        $this->db->order_by('pegawai.nama', 'Asc');
+
 
         return $this->db->get();
     }

@@ -74,6 +74,7 @@
                     <a class="collapse-item" href="<?= base_url('admin/pegawai') ?>">Pegawai</a>
                     <a class="collapse-item" href="<?= base_url('admin/slider') ?>">Slider</a>
                     <a class="collapse-item" href="<?= base_url('admin/sb') ?>">Suku Bunga</a>
+                    <a class="collapse-item" href="<?= base_url('admin/registration') ?>">Registrasi User</a>
                     <a class="collapse-item" href="<?= base_url('admin/corporate') ?>">Tentang Perusahaan</a>
                 </div>
             </div>

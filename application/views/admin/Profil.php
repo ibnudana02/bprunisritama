@@ -27,8 +27,12 @@
                                 <label>Email</label>
                                 <input type="text" class="form-control form-control-user" value="<?= $user['email']; ?>" disabled>
                             </div>
-
+                            <div class="form-group user">
+                                <label for="Image">Gambar</label><br>
+                                <img src="<?= base_url('upload/user/' . $user['image']); ?>" class="rounded" alt="" height="100px" width="100px">
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
