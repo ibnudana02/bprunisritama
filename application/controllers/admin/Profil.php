@@ -13,6 +13,7 @@ class Profil extends CI_Controller
 
             redirect('admin', 'refresh');
         }
+        $this->load->model('User_model', 'user');
     }
 
 
@@ -21,7 +22,8 @@ class Profil extends CI_Controller
         $data['title'] = 'Profil - User';
         $data['heading'] = 'Profil';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
-        // print_r($data);
+        $data['data'] = $this->user->getProfil()->row_array();
+        // var_dump($data['data']);
         $data['judul'] = 'BPR Unisritama - Administrator';
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/profil');

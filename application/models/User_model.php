@@ -14,9 +14,16 @@ class User_model extends CI_Model
     public $image;
     public $date_created;
 
-    public function getProfil($id)
+    public function getProfil()
     {
-        return $this->db->get_where($this->_table, ['id_user' => $id])->row();
+        $id = $this->session->userdata('id_user');
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('role', 'user.role_id=role.id_role')
+            ->where('user.id_user', $id);
+        return $this->db->get();
+
+        // return $this->db->get_where($this->_table, ['id_user' => $id])->row();
     }
 
     public function simpan()
