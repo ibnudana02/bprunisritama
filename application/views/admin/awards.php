@@ -2,7 +2,6 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <!-- <p class="mb-4">Fitur ini digunakan untuk Menambah dan menghapus Kategori. Hanya dapat diakses oleh Administrator.</p> -->
     <?= $this->session->flashdata('message'); ?>
     <!-- DataTales Example -->
     <div class="row">

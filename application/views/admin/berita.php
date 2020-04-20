@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?= $heading; ?></h1>
+    <!-- <h1 class="h3 mb-4 text-gray-800"><?= $heading; ?></h1> -->
     <!-- <p class="mb-4">Fitur ini digunakan untuk Menambah dan menghapus Berita. Hanya dapat diakses oleh Administrator.</p> -->
     <?= $this->session->flashdata('message'); ?>
     <!-- DataTales Example -->

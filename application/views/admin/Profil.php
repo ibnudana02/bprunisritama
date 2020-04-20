@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?= $heading; ?></h1>
+    <!-- <h1 class="h3 mb-4 text-gray-800"><?= $heading; ?></h1> -->
     <?= $this->session->flashdata('message'); ?>
     <!-- DataTales Example -->
     <div class="row">

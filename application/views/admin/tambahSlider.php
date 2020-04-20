@@ -1,12 +1,10 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
     <!-- Page Heading -->
-
     <?= $this->session->flashdata('message'); ?>
     <!-- DataTales Example -->
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-6">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <div class="row">
