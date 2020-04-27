@@ -55,8 +55,12 @@ class Tentang_kami extends CI_Controller
     public function contact()
     {
         $data['judul'] = 'Hubungi Kami';
+        $data['captcha'] = $this->recaptcha->getWidget();
+        $data['script_captcha'] = $this->recaptcha->getScriptTag();
+        $recaptcha = $this->input->post('g-recaptcha-response');
+        $response = $this->recaptcha->verifyResponse($recaptcha);
         $this->load->view('template/header', $data);
-        $this->load->view('tentang/contact');
+        $this->load->view('tentang/contact', $data);
         $this->load->view('template/footer');
     }
 

@@ -27,6 +27,7 @@ class Berita_model extends CI_Model
     {
         $this->db->select('*')
             ->from($this->_table)
+            ->join('kategori', 'kategori.id_kategori = berita.id_kategori')
             ->limit(5);
         return $this->db->get()->result();
     }
