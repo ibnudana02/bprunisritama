@@ -63,7 +63,7 @@
                                         <li><a href="<?= base_url('news/') ?>">Artikel</a></li>
                                         <li><a href="<?= base_url('news/') ?>">Laporan Publikasi</a></li>
                                         <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
-                                        <li><a href="<?= base_url('news/') ?>">Pengkinian Data Nasabah</a></li>
+                                        <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="<?= base_url('tentang_kami/contact') ?>">Hubungi Kami</a></li>

@@ -36,3 +36,36 @@
         </div>
     </div>
     <!-- End Service area -->
+    <!-- Start brand Banner area -->
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="banner-content">
+                        <!-- <div class="banner-text text-center">
+                            <h3>Terdaftar dan diawasi oleh</h3> -->
+                        <div class="brand-items">
+                            <div class="single-brand-item">
+                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/LPS.jpg" alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/perbarindo.jpg" alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/ylpi.jpg" alt=""></a>
+                            </div>
+
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End brand Banner area -->

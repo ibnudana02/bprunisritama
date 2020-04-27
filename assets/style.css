@@ -1730,9 +1730,10 @@ single-services:hover .service-inner {
 .banner-text h3 {
     font-size: 32px;
     line-height: 44px;
-    color: #fff;
+    /* color: #fff; */
+    color: rgb(26, 25, 25);
     max-width: 760px;
-    margin: 0px auto 30px;
+    margin: 0px auto;
     letter-spacing: 1px;
 }
 

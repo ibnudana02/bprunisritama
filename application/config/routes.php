@@ -53,6 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = 'custom404';
 $route['admin/dashboard'] = 'admin/welcome/home';
 $route['admin/corporate'] = 'admin/corporate';
+$route['pembayaran_mahasiswa_uir'] = 'produk/pmb';
 $route['admin/profil'] = 'admin/profil';
 $route['pengkinian_nasabah'] = 'news/pengkinian_data';
 
