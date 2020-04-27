@@ -58,7 +58,7 @@
                                 <a href="#"><img src="<?= base_url('assets/') ?>img/client/perbarindo.jpg" alt=""></a>
                             </div>
                             <div class="single-brand-item">
-                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/ylpi.jpg" alt=""></a>
+                                <a href="#"><img src="<?= base_url('assets/') ?>img/client/YLPI.jpg" alt=""></a>
                             </div>
 
                             <!-- </div> -->
