@@ -13,15 +13,15 @@
                 <div class="services-all">
                     <!-- Start services -->
                     <?php foreach ($data as $row) : ?>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="col-md-4 col-sm-6 col-xs-12 ">
                             <div class="single-services">
-                                <div class="service-inner">
+                                <div class="service-inner layanan">
                                     <a class="service-icon" href="#">
                                         <i class="flaticon-point-of-service"></i>
                                     </a>
                                     <div class="service-content">
                                         <h4><a href="#"><?= strtoupper($row->layanan); ?></a></h4>
-                                        <p><?= ucwords($row->deskripsi); ?></p>
+                                        <p class="text-justify"><?= ucwords($row->deskripsi); ?></p>
                                     </div>
                                 </div>
                             </div>

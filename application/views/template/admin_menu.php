@@ -72,6 +72,7 @@
                     <a class="collapse-item" href="<?= base_url('admin/jabatan') ?>">Jabatan</a>
                     <a class="collapse-item" href="<?= base_url('admin/awards') ?>">Penghargaan</a>
                     <a class="collapse-item" href="<?= base_url('admin/pegawai') ?>">Pegawai</a>
+                    <a class="collapse-item" href="<?= base_url('admin/layanan') ?>">Layanan</a>
                     <a class="collapse-item" href="<?= base_url('admin/slider') ?>">Slider</a>
                     <a class="collapse-item" href="<?= base_url('admin/sb') ?>">Suku Bunga</a>
                     <a class="collapse-item" href="<?= base_url('admin/registration') ?>">Registrasi User</a>

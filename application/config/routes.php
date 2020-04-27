@@ -65,6 +65,7 @@ $route['admin/slider'] = 'admin/slider';
 // Routes for Layanan
 $route['admin/layanan'] = 'admin/layanan';
 $route['admin/add_layanan'] = 'admin/layanan/add_layanan';
+$route['admin/delete_layanan/(:any)'] = 'admin/layanan/delete/$1';
 
 // Routes for Produk
 $route['admin/produk'] = 'admin/produk';
