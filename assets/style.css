@@ -319,7 +319,7 @@ div#preloader {
     left: 0;
     margin: 0 auto;
     position: absolute;
-    width: 60px;
+    width: 210px;
     right: 0;
 }
 
@@ -1201,6 +1201,10 @@ div#preloader {
     color: #80c32f;
 }
 
+.well-services:hover .service-content p {
+    color: #80c32f;
+}
+
 .well-services:hover .service-btn:hover {
     color: #80c32f;
 }
@@ -1996,6 +2000,7 @@ single-services:hover .service-inner {
 /*  13. Blog Area
 /*----------------------------------------*/
 .blog-area {
+    margin: 30px 0;
     background: #fff;
 }
 
@@ -2672,6 +2677,10 @@ single-services:hover .service-inner {
 .services-area-3 .service-icon {
     position: relative;
     top: 0px;
+}
+
+.services-area {
+    margin-top: 25px;
 }
 
 .services-area-3 .services-all {
@@ -3912,7 +3921,7 @@ li.dropdown .dropdown-content a {
 
 hr {
     border: 0;
-    height: 1px;
+    height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 

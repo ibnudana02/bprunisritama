@@ -1,68 +1,46 @@
-<div class="blog-area bg-color area-padding">
+<div class="blog-area bg-color-2">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h3>Latest<span class="color"> News</span></h3>
-                    <p>Our development opt in to the projects they genuinely want to work on, committing wholeheartedly to delivering.</p>
+                    <h4>Berita <span class="color">Terbaru</span></h4>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="blog-grid home-blog">
-                <?php foreach ($berita as $row) : ?>
-                    <!-- Start single blog -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <!-- <img src="<?= base_url('assets/') ?>img/blog/b1.jpg" alt=""> -->
-                                    <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-category">
-                                    <span><?= $row->kategori; ?></span>
-                                </div>
-                                <div class="blog-title">
-                                    <a href="#">
-                                        <h4><?= strtoupper($row->judul); ?></h4>
-                                    </a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="date-type">
-                                        <i class="fa fa-calendar"></i>
-                                        20 june, 2017
-                                    </span>
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        13
-                                    </span>
-                                </div>
+            <?php foreach ($berita as $row) : ?>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="well-services">
+                        <div class="services-img">
+                            <a class="image-scale">
+                                <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
+                            </a>
+                            <span class="top-icon"><i class="flaticon-graph-6"></i></span>
+                        </div>
+                        <div class="main-services">
+                            <div class="service-content">
+                                <h4><?= $row->kategori; ?></h4>
+                                <p><?= strtoupper($row->judul); ?></p>
+                                <a class="service-btn" href="#">read more</a>
                             </div>
                         </div>
                     </div>
-                    <!-- End single blog -->
-                <?php endforeach; ?>
-            </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <!-- End row -->
     </div>
 </div>
-<!-- Start Service area -->
 <div class="services-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h3>Our <span class="color">Services</span></h3>
-                    <p>Memberikan Layanan Prima Kepada Nasabah Dalam Penghimpunan Dana Dan Penyaluran Kredit. </p>
+                    <h5>Memberikan Pelayanan Yang Prima Kepada Nasabah <br> Dalam Kegiatan Penghimpunan Dana Dan Penyaluran Kredit </h5>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="services-all">
-                <!-- Start services -->
                 <?php foreach ($data as $row) : ?>
                     <div class="col-md-4 col-sm-6 col-xs-12 ">
                         <div class="single-services">
@@ -78,7 +56,6 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-                <!-- End services -->
                 <div class="col-md-12 text-center">
                     <a class="load-more-btn" href="#">More services</a>
                 </div>
@@ -86,21 +63,17 @@
         </div>
     </div>
 </div>
-<!-- End Service area -->
-<!-- Start brand Banner area -->
 <div class="">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="banner-content">
-                    <!-- <div class="banner-text text-center">
-                            <h3>Terdaftar dan diawasi oleh</h3> -->
                     <div class="brand-items">
                         <div class="single-brand-item">
                             <a href="#"><img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt=""></a>
                         </div>
                         <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/lps.png" alt="" height="250px"></a>
+                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/lps.png" alt=""></a>
                         </div>
                         <div class="single-brand-item">
                             <a href="#"><img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt=""></a>
@@ -111,12 +84,9 @@
                         <div class="single-brand-item">
                             <a href="#"><img src="<?= base_url('assets/') ?>img/client/YLPI.jpg" alt=""></a>
                         </div>
-
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- End brand Banner area -->

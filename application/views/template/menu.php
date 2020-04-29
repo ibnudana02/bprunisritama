@@ -22,13 +22,13 @@
                                 <li><a class="pagess" href="<?= base_url() ?>">Home</a></li>
                                 <li><a class="pagess">Tentang Kami</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?= base_url('tentang/profil') ?>">Profil Perusahaan</a></li>
-                                        <li><a href="<?= base_url('tentang/sejarah') ?>">Sejarah</a></li>
-                                        <li><a href="<?= base_url('tentang/visi_misi') ?>">Visi dan Misi</a></li>
-                                        <li><a href="<?= base_url('tentang/manajemen') ?>">Board Manajemen</a></li>
-                                        <li><a href="<?= base_url('tentang/struktur') ?>">Struktur Organisasi</a></li>
-                                        <li><a href="<?= base_url('tentang/awards') ?>">Penghargaan</a></li>
-                                        <li><a href="<?= base_url('tentang/location') ?>">Lokasi Kantor</a></li>
+                                        <li><a href="<?= base_url('profil') ?>">Profil Perusahaan</a></li>
+                                        <li><a href="<?= base_url('sejarah') ?>">Sejarah</a></li>
+                                        <li><a href="<?= base_url('visi_misi') ?>">Visi dan Misi</a></li>
+                                        <li><a href="<?= base_url('manajemen') ?>">Board Manajemen</a></li>
+                                        <li><a href="<?= base_url('struktur') ?>">Struktur Organisasi</a></li>
+                                        <li><a href="<?= base_url('awards') ?>">Penghargaan</a></li>
+                                        <li><a href="<?= base_url('location') ?>">Lokasi Kantor</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="pagess">Produk dan Layanan</a>
@@ -91,13 +91,13 @@
                             <li><a class="pagess" href="<?= base_url() ?>">Home</a></li>
                             <li><a class="pagess">Tentang Kami</a>
                                 <ul class="sub-menu">
-                                    <li><a href="<?= base_url('tentang/profil') ?>">Profil Perusahaan</a></li>
-                                    <li><a href="<?= base_url('tentang/sejarah') ?>">Sejarah</a></li>
-                                    <li><a href="<?= base_url('tentang/visi_misi') ?>">Visi dan Misi</a></li>
-                                    <li><a href="<?= base_url('tentang/manajemen') ?>">Board Manajemen</a></li>
-                                    <li><a href="<?= base_url('tentang/struktur') ?>">Struktur Organisasi</a></li>
-                                    <li><a href="<?= base_url('tentang/awards') ?>">Penghargaan</a></li>
-                                    <li><a href="<?= base_url('tentang/location') ?>">Lokasi Kantor</a></li>
+                                    <li><a href="<?= base_url('profil') ?>">Profil Perusahaan</a></li>
+                                    <li><a href="<?= base_url('sejarah') ?>">Sejarah</a></li>
+                                    <li><a href="<?= base_url('visi_misi') ?>">Visi dan Misi</a></li>
+                                    <li><a href="<?= base_url('manajemen') ?>">Board Manajemen</a></li>
+                                    <li><a href="<?= base_url('struktur') ?>">Struktur Organisasi</a></li>
+                                    <li><a href="<?= base_url('awards') ?>">Penghargaan</a></li>
+                                    <li><a href="<?= base_url('location') ?>">Lokasi Kantor</a></li>
                                 </ul>
                             </li>
                             <li><a class="pagess">Produk dan Layanan</a>

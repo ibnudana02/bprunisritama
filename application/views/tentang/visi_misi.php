@@ -20,7 +20,7 @@
                         <h4>Misi </h4>
                     </a>
                     <p class="visi"><strong> Mewujudkan Visi Perusahaan, untuk itu Bank menyelaraskan Misi kedalam 20 Point.</strong></p>
-                    <ul class="marker-list">
+                    <ul class="marker-list ">
                         <li>Memberikan pelayanan yang prima kepada nasabah.</li>
                         <li>Menjalankan operasional BPR secara effisien dan efektif.</li>
                         <li>Menciptakan daya tarik nasabah terhadap produk/ jasa BPR.</li>

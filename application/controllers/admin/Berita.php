@@ -45,6 +45,30 @@ class Berita extends CI_Controller
         $this->load->view('template/admin_footer');
     }
 
+    public function update($id)
+    {
+        if (!isset($id)) redirect('admin/berita');
+        $this->form_validation->set_rules('judul', 'Judul', 'required|trim');
+        $this->form_validation->set_rules('kategori', 'Kategori', 'required|trim');
+        $this->form_validation->set_rules('isi', 'Isi', 'required|trim');
+
+        if ($this->form_validation->run()) {
+            $this->berita->update();
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Perubahan berhasil disimpan!</div>');
+            redirect('admin/berita', 'refresh');
+        } else {
+            $data['title'] = 'Tambah Berita';
+            $data['heading'] = 'Tambah Berita';
+            $data['kategori'] = $this->kategori->getAll();
+            $data['data'] = $this->berita->getById($id);
+            if (!$data['data']) show_404();
+            $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
+            $this->load->view('template/admin_header', $data);
+            $this->load->view('admin/editBerita');
+            $this->load->view('template/admin_footer');
+        }
+    }
+
     public function delete($id = null)
     {
         if (!isset($id)) show_404(); //jika tidak ada $id yang dipilih, tampilkan error page

@@ -95,17 +95,18 @@ $route['admin/add_kategori'] = 'admin/kategori/add_kategori';
 $route['admin/delete_kategori/(:any)'] = 'admin/kategori/delete_kategori/$1';
 //Routes for kategori
 $route['admin/berita'] = 'admin/berita';
+$route['admin/update/(:any)'] = 'admin/berita/update/$1';
 $route['admin/add_berita'] = 'admin/berita/add_berita';
 $route['admin/delete_berita/(:any)'] = 'admin/berita/delete/$1';
 //Routes for Auth function
 $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
 //Routes for Page Tentang
-$route['tentang/profil'] = 'tentang_kami/index';
-$route['tentang/sejarah'] = 'tentang_kami/sejarah';
-$route['tentang/visi_misi'] = 'tentang_kami/visi_misi';
-$route['tentang/manajemen'] = 'tentang_kami/manajemen';
-$route['tentang/struktur'] = 'tentang_kami/struktur';
-$route['tentang/awards'] = 'tentang_kami/awards';
-$route['tentang/location'] = 'tentang_kami/location';
+$route['profil'] = 'tentang_kami/index';
+$route['sejarah'] = 'tentang_kami/sejarah';
+$route['visi_misi'] = 'tentang_kami/visi_misi';
+$route['manajemen'] = 'tentang_kami/manajemen';
+$route['struktur'] = 'tentang_kami/struktur';
+$route['awards'] = 'tentang_kami/awards';
+$route['location'] = 'tentang_kami/location';
 $route['translate_uri_dashes'] = FALSE;
