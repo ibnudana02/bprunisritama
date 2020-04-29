@@ -21,6 +21,11 @@ class News extends CI_Controller
         $this->load->view('news/pengkinian_data', $data);
         $this->load->view('template/footer');
     }
+
+    public function detail($slug)
+    {
+        $data['row'] = $this->berita->getBySlug($slug);
+    }
 }
 
 /* End of file News.php */

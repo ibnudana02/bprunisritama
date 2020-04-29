@@ -91,13 +91,13 @@
                             <li><a class="pagess" href="<?= base_url() ?>">Home</a></li>
                             <li><a class="pagess">Tentang Kami</a>
                                 <ul class="sub-menu">
-                                    <li><a href="<?= base_url('tentang_kami') ?>">Profil Perusahaan</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/sejarah') ?>">Sejarah</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/visi_misi') ?>">Visi dan Misi</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/manajemen') ?>">Board Manajemen</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/struktur') ?>">Struktur Organisasi</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/awards') ?>">Penghargaan</a></li>
-                                    <li><a href="<?= base_url('tentang_kami/location') ?>">Lokasi Kantor</a></li>
+                                    <li><a href="<?= base_url('tentang/profil') ?>">Profil Perusahaan</a></li>
+                                    <li><a href="<?= base_url('tentang/sejarah') ?>">Sejarah</a></li>
+                                    <li><a href="<?= base_url('tentang/visi_misi') ?>">Visi dan Misi</a></li>
+                                    <li><a href="<?= base_url('tentang/manajemen') ?>">Board Manajemen</a></li>
+                                    <li><a href="<?= base_url('tentang/struktur') ?>">Struktur Organisasi</a></li>
+                                    <li><a href="<?= base_url('tentang/awards') ?>">Penghargaan</a></li>
+                                    <li><a href="<?= base_url('tentang/location') ?>">Lokasi Kantor</a></li>
                                 </ul>
                             </li>
                             <li><a class="pagess">Produk dan Layanan</a>
@@ -132,7 +132,7 @@
                                     <li><a href="<?= base_url('news/') ?>">Artikel</a></li>
                                     <li><a href="<?= base_url('news/') ?>">Laporan Publikasi</a></li>
                                     <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
-                                    <li><a href="<?= base_url('news/') ?>">Pengkinian Data Nasabah</a></li>
+                                    <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?= base_url('tentang_kami/contact') ?>">Hubungi Kami</a></li>

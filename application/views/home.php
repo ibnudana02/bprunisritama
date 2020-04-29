@@ -100,7 +100,7 @@
                             <a href="#"><img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt=""></a>
                         </div>
                         <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/LPS.jpg" alt=""></a>
+                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/lps.png" alt="" height="250px"></a>
                         </div>
                         <div class="single-brand-item">
                             <a href="#"><img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt=""></a>
