@@ -13,7 +13,6 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
-		// $this->load->view('welcome_message');
 		$data['judul'] = 'BPR Unisritama - Mitra Ekonomi Kerakyatan';
 		$data['data'] = $this->layanan->getAll()->result();
 		$data['slider'] = $this->slider->getAll()->result();

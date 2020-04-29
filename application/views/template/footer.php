@@ -83,23 +83,16 @@
 
 <!-- jquery latest version -->
 <script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js"></script>
-<!-- <script src="<?php echo base_url('assets/'); ?>js/orgchart.js"></script> -->
 <!-- bootstrap js -->
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
-<!-- <script src="<?php echo base_url('assets/'); ?>js/popper.min.js"></script>
-<script src="<?php echo base_url('assets/'); ?>js/bootstrap4.js"></script> -->
 <!-- owl.carousel js -->
 <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.min.js"></script>
-<!-- <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.js"></script> -->
 <!-- Counter js -->
 <script src="<?php echo base_url('assets/'); ?>js/jquery.counterup.min.js"></script>
 <!-- waypoint js -->
 <script src="<?php echo base_url('assets/'); ?>js/waypoints.js"></script>
 <!-- stellar js -->
 <script src="<?php echo base_url('assets/'); ?>js/jquery.stellar.min.js"></script>
-<!-- Chart JS -->
-<!-- <script src="<?php echo base_url('assets/'); ?>js/Chart.bundle.min.js"></script> -->
-<!-- <script src="<?php echo base_url('assets/'); ?>js/Chart.js"></script> -->
 <!-- magnific js -->
 <script src="<?php echo base_url('assets/'); ?>js/magnific.min.js"></script>
 <!-- venobox js -->

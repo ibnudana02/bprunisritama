@@ -90,3 +90,13 @@
         </div>
     </div>
 </div>
+
+<div class="intro-carousel">
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+</div>

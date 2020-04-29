@@ -4,23 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- <title>Home - Bank Unisritama</title> -->
     <title><?= $judul; ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- favicon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/favicon.ico"> -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/ico.png">
-
     <!-- all css here -->
-
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap4.css"> -->
     <!-- owl.carousel css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.carousel.css">
-    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.theme.default.css"> -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.transitions.css">
     <!-- meanmenu css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/meanmenu.min.css">
@@ -43,11 +37,6 @@
 </head>
 
 <body>
-
-    <!--[if lt IE 8]>
-			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
     <div id="preloader"></div>
     <header class="header-one">
         <!-- Start top bar -->

@@ -5,7 +5,6 @@
             <?php foreach ($slider as $row) : ?>
                 <div class="intro-content">
                     <div class="slider-images">
-                        <!-- <img src="<?php echo base_url('assets/'); ?>img/slider/1.jpg" alt=""> -->
                         <img src="<?php echo base_url('upload/slider/' . $row->image); ?>" alt="">
                     </div>
                     <div class="slider-content">
@@ -35,7 +34,6 @@
                     </div>
                 </div>
             <?php endforeach; ?>
-
         </div>
     </div>
     <!-- End Slider Area -->
