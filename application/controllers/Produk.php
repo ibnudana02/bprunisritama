@@ -44,8 +44,11 @@ class Produk extends CI_Controller
 
     public function tabungan()
     {
-        $this->load->view('template/header');
-        $this->load->view('produk/tab');
+        $data['judul'] = 'Tabungan | Bank Unisritama';
+        $data['data'] = $this->produk->getTab()->result();
+        // var_dump($data['data']);
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/tabungan', $data);
         $this->load->view('template/footer');
     }
 

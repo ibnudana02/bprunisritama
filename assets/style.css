@@ -895,7 +895,7 @@ div#preloader {
 }
 
 .intro-content::after {
-    background: rgba(10, 27, 40, 0.75) none repeat scroll 0 0;
+    /* background: rgba(10, 27, 40, 0.75) none repeat scroll 0 0; */
     content: "";
     height: 100%;
     left: 0;
@@ -1060,7 +1060,7 @@ div#preloader {
 .intro-carousel .owl-item .layer-1-3 {
     transform: translateY(100%);
     opacity: 0;
-    transition: all 1s ease-in-out 1.5s;
+    transition: all 1s ease-in-out 0.5s;
 }
 
 .intro-carousel .owl-item.active .layer-1-2,
@@ -2445,6 +2445,10 @@ single-services:hover .service-inner {
 .project-area-2 .single-awesome-project {
     position: relative;
     margin-top: 0px;
+}
+
+.project-area-2 {
+    margin-bottom: 40px;
 }
 
 .project-area-2 .project-dec {
@@ -4018,4 +4022,8 @@ hr {
     color: #fff;
     background: #80c32f;
     border: 1px solid #80c32f;
+}
+
+.tombol {
+    top: 290px;
 }

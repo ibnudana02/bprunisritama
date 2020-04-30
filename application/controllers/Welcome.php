@@ -7,7 +7,7 @@ class Welcome extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(array('Layanan_model' => 'layanan', 'Slider_model' => 'slider', 'Berita_model' => 'berita'));
+		$this->load->model(array('Layanan_model' => 'layanan', 'Slider_model' => 'slider', 'Berita_model' => 'berita', 'Produk_model' => 'produk'));
 	}
 
 
@@ -23,8 +23,11 @@ class Welcome extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
-	public function html()
+	public function test()
 	{
-		$this->load->view('test.html');
+		$data['data'] = $this->produk->getTab()->result();
+		$this->load->view('template/header');
+		$this->load->view('produk/tabungan', $data);
+		$this->load->view('template/footer');
 	}
 }

@@ -43,7 +43,7 @@ class Produk extends CI_Controller
             redirect('admin/produk', 'refresh');
         }
         //Tampilkan Form tambah kategori
-        $data['data'] = $this->jenis->getAll();
+        $data['data'] = $this->jenis->getAll()->result();
         $data['title'] = 'Tambah Produk';
         $data['heading'] = 'Tambah Produk';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();

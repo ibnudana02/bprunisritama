@@ -104,7 +104,15 @@ class Produk_model extends CI_Model
             ->join('jenis', $this->_table . '.jenis=jenis.id_jenis');
         $this->db->where('id_jenis', $Value);
         return $this->db->get()->row();
-        // return $this->db->get()->result_array();
+    }
+
+    public function getTab()
+    {
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('jenis', 'produk.jenis=jenis.id_jenis')
+            ->where('id_jenis', '5e9545a2ecf3e');
+        return $this->db->get();
     }
 }
 
