@@ -12,7 +12,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="well-services">
                         <div class="services-img">
-                            <a class="image-scale">
+                            <a href="" class="image-scale">
                                 <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
                             </a>
                             <span class="top-icon"><i class="flaticon-graph-6"></i></span>
@@ -63,40 +63,23 @@
         </div>
     </div>
 </div>
-<div class="">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="banner-content">
-                    <div class="brand-items">
-                        <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt=""></a>
-                        </div>
-                        <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/lps.png" alt=""></a>
-                        </div>
-                        <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt=""></a>
-                        </div>
-                        <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/perbarindo.jpg" alt=""></a>
-                        </div>
-                        <div class="single-brand-item">
-                            <a href="#"><img src="<?= base_url('assets/') ?>img/client/YLPI.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<div class="container">
+    <div class="intro-slider">
+        <div class="slider-gambar">
+            <img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt="">
+        </div>
+        <div class="slider-gambar">
+            <img src="<?= base_url('assets/') ?>img/client/YLPI.jpg" alt="">
+        </div>
+        <div class="slider-gambar">
+            <img src="<?= base_url('assets/') ?>img/client/perbarindo.jpg" alt="">
+        </div>
+        <div class="slider-gambar">
+            <img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt="">
+        </div>
+        <div class="slider-gambar">
+            <img src="<?= base_url('assets/') ?>img/client/lps.png" alt="">
         </div>
     </div>
-</div>
-
-<div class="intro-carousel">
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
-    <div> Your Content </div>
 </div>

@@ -3932,3 +3932,43 @@ hr {
 .layanan {
     height: 214px;
 }
+
+.intro-slider {
+    position: relative;
+    z-index: 1;
+    margin: 20px 0;
+}
+
+
+.intro-slider.owl-carousel.owl-theme .owl-item img {
+    height: 100px !important;
+    border: 2px;
+
+
+}
+
+.slider-gambar {
+    color: white;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    /* border: 1px solid #666; */
+}
+
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev,
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
+    color: #fff;
+    font-size: 24px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    ;
+    text-align: center;
+    line-height: 48px;
+    opacity: 0;
+    border: 1px solid #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+}

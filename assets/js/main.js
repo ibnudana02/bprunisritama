@@ -112,6 +112,27 @@
         }
     });
 
+    var intro_slider = $('.intro-slider');
+    intro_slider.owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 30000,
+        dots: false,
+        navText: ["<i class='icon icon-chevron-left'></i>", "<i class='icon icon-chevron-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+
     /*--------------------------
          Project carousel
     ---------------------------- */
