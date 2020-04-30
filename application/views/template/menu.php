@@ -110,7 +110,7 @@
                                             <a href="#">Deposito Berjangka</a>
                                         </div>
                                     </li>
-                                    <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Tabungan</a>
+                                    <li class="dropdown"><a class="dropbtn" href="<?= base_url('tabungan') ?>">Tabungan</a>
                                         <div class="dropdown-content">
                                             <a href="#">Tabungan Sejahtera</a>
                                             <a href="#">Tabungan Umroh</a>

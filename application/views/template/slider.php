@@ -15,7 +15,7 @@
                                         <div class="col-md-12 tombol">
                                             <!-- layer 3 -->
                                             <div class="layer-1-3 text-center ">
-                                                <a href="#" class="ready-btn ">Our Services</a>
+                                                <a href="#" class="ready-btn ">Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>
