@@ -3866,11 +3866,6 @@ span.email-notes {
     border-radius: 6px 0 6px 6px;
 }
 
-
-/* li {
-    float: left;
-} */
-
 .sub-menu a:hover,
 .dropdown:hover .dropbtn {
     background-color: #f1f1f1;
@@ -3943,8 +3938,6 @@ hr {
 .intro-slider.owl-carousel.owl-theme .owl-item img {
     height: 100px !important;
     border: 2px;
-
-
 }
 
 .slider-gambar {
@@ -3953,22 +3946,64 @@ hr {
     width: fit-content;
     height: fit-content;
     padding: 10px;
-    /* border: 1px solid #666; */
 }
 
 .intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev,
 .intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
-    color: #fff;
-    font-size: 24px;
+    color: rgb(71, 161, 86);
+    font-size: 10px;
     margin-top: -20px;
     position: absolute;
-    top: 50%;
+    top: -10px;
     ;
     text-align: center;
-    line-height: 48px;
-    opacity: 0;
-    border: 1px solid #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 3px;
+    line-height: 18px;
+    opacity: 50;
+    border: 1px solid rgb(71, 161, 86);
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev {
+    /* left: -65px; */
+    right: -30px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+}
+
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
+    right: -55px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+}
+
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next {
+    right: -55px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+    opacity: 1;
+}
+
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev {
+    /* left: -65px; */
+    right: -30px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+    opacity: 1;
+}
+
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next:hover,
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev:hover {
+    color: #fff;
+    background: #80c32f;
+    border: 1px solid #80c32f;
 }

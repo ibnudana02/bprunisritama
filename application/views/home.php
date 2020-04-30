@@ -81,5 +81,6 @@
         <div class="slider-gambar">
             <img src="<?= base_url('assets/') ?>img/client/lps.png" alt="">
         </div>
+
     </div>
 </div>
