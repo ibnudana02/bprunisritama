@@ -1647,6 +1647,7 @@ single-services:hover .service-inner {
 
 .pst-content {
     padding-left: 10px;
+    max-height: 100px;
 }
 
 .single-awesome-project:hover .project-dec h4 {
@@ -2831,24 +2832,25 @@ single-services:hover .service-inner {
     top: 0;
     height: 100%;
     width: 100%;
-    background: rgba(10, 27, 40, 0.5) none repeat scroll 0 0;
+    background: #0a1b2880 none repeat scroll 0 0;
     content: "";
 }
 
 .breadcrumb {
-    padding: 100px 0px;
+    /* padding: 100px 0px; */
     background-color: transparent;
     margin-bottom: 0;
+    margin-top: 15px;
     overflow: hidden;
 }
 
 .breadcrumb-bg {
     float: right;
-    padding: 14px 0px;
+    /* padding: 14px 0px; */
 }
 
 .bread-inner {
-    padding: 80px 0px;
+    /* padding: 80px 0px; */
 }
 
 .breadcrumb .section-headline h2 {
@@ -2857,7 +2859,7 @@ single-services:hover .service-inner {
     line-height: 54px;
     text-transform: uppercase;
     position: relative;
-    color: #fff;
+    color: #292828;
     margin-bottom: 0px;
 }
 
@@ -2872,7 +2874,7 @@ single-services:hover .service-inner {
 
 .breadcrumb ul li {
     display: inline-block;
-    color: #fff;
+    color: #292828;
     padding: 0px 10px 0px 20px;
     position: relative;
     font-size: 15px;
@@ -3127,7 +3129,7 @@ single-services:hover .service-inner {
 }
 
 .pst-content p {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .blog-tags {
@@ -3947,6 +3949,7 @@ hr {
     width: fit-content;
     height: fit-content;
     padding: 10px;
+    transition: .3s ease;
 }
 
 .slider-gambar:hover {
@@ -3954,7 +3957,7 @@ hr {
     transform: scale(1.1);
     display: block;
     transition: 0.5s;
-    opacity: 1;
+    opacity: 1.5;
 }
 
 .intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev,
@@ -3963,7 +3966,7 @@ hr {
     font-size: 10px;
     margin-top: -20px;
     position: absolute;
-    top: -10px;
+    top: 0px;
     ;
     text-align: center;
     line-height: 18px;
@@ -3974,17 +3977,8 @@ hr {
     border-radius: 2px;
 }
 
-.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev {
-    /* left: -65px; */
-    right: -30px;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    -ms-transition: 0.4s;
-}
-
 .intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
-    right: -55px;
+    right: -28px;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -3992,7 +3986,7 @@ hr {
 }
 
 .intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next {
-    right: -55px;
+    right: -28px;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -4000,9 +3994,18 @@ hr {
     opacity: 1;
 }
 
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev {
+    /* left: -65px; */
+    right: -5px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+}
+
 .intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev {
     /* left: -65px; */
-    right: -30px;
+    right: -5px;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
