@@ -14,19 +14,19 @@
 </div>
 <!-- Start project Area -->
 <div class="project-area-2">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="project-content project-2">
                 <!-- single-awesome-project start -->
-                <?php foreach ($data as $row) : ?>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                <?php foreach ($data->result() as $row) : ?>
+                    <div class="col-md-6 col-sm-6 col-xs-12 produk">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="<?= base_url('assets/'); ?>#">
-                                    <img src="<?= base_url('assets/'); ?>img/project/p1.jpg" alt="" />
+                                <a>
+                                    <img src="<?= base_url('upload/produk/' . $row->image); ?>" alt="" />
                                 </a>
                                 <div class="add-actions text-center">
-                                    <a class="venobox" data-gall="myGallery" href="<?= base_url('assets/'); ?>img/project/p1.jpg">
+                                    <a class="venobox" data-gall="myGallery" href="<?= base_url('upload/produk/' . $row->image); ?>">
                                         <i class="port-icon icon icon-picture"></i>
                                     </a>
                                 </div>

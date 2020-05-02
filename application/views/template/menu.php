@@ -49,7 +49,7 @@
                                                 <a href="#">Tabungan Qurban</a>
                                             </div>
                                         </li>
-                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Kredit</a>
+                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('kredit') ?>">Kredit</a>
                                             <div class="dropdown-content">
                                                 <a href="#">Kredit Bakulan</a>
                                                 <a href="#">Kredit Konsumtif</a>
@@ -118,7 +118,7 @@
                                             <a href="#">Tabungan Qurban</a>
                                         </div>
                                     </li>
-                                    <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Kredit</a>
+                                    <li class="dropdown"><a class="dropbtn" href="<?= base_url('kredit') ?>">Kredit</a>
                                         <div class="dropdown-content">
                                             <a href="#">Kredit Bakulan</a>
                                             <a href="#">Kredit Konsumtif</a>

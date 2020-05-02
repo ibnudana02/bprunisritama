@@ -117,7 +117,7 @@
         loop: true,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 30000,
+        autoplayTimeout: 3000,
         dots: false,
         navText: ["<i class='icon icon-chevron-left'></i>", "<i class='icon icon-chevron-right'></i>"],
         responsive: {

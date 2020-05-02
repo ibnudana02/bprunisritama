@@ -1526,6 +1526,7 @@ single-services:hover .service-inner {
     display: block;
     width: 100%;
     height: 100%;
+    /* height: 300px; */
     position: relative;
     overflow: hidden;
 }
@@ -1554,7 +1555,7 @@ single-services:hover .service-inner {
 }
 
 .awesome-img>a::after {
-    background: rgba(0, 44, 87, 0.95);
+    background: #002c57f2;
     content: "";
     height: 100%;
     left: 0;
@@ -1566,16 +1567,18 @@ single-services:hover .service-inner {
 }
 
 .add-actions {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    left: 0;
+    /* left: 0; */
     opacity: 0;
-    position: absolute;
+    position: static;
     text-align: center;
     transition: all 0.4s ease 0s;
     width: 100%;
     z-index: 9999;
-    top: 0;
+    /* bottom: 100px; */
     cursor: pointer;
 }
 
@@ -1583,8 +1586,10 @@ single-services:hover .service-inner {
     color: #fff;
     display: inline-block;
     cursor: pointer;
-    top: 41%;
-    position: relative;
+    top: 42%;
+    right: 45%;
+    /* top: 41%; */
+    position: absolute;
     font-size: 40px;
 }
 
@@ -4029,4 +4034,11 @@ hr {
 
 .tombol {
     top: 290px;
+}
+
+.produk {
+    position: relative;
+    min-height: 1px;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
 }

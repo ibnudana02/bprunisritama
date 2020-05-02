@@ -134,6 +134,16 @@
   max-height: 500px !important;
 }
 
+@media (min-width:1080px) {
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    max-height: 440px !important;
+  }
+}
+}
+
 .owl-carousel.owl-text-select-on .owl-item {
   -webkit-user-select: auto;
   -moz-user-select: auto;

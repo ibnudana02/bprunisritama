@@ -102,6 +102,7 @@ $route['admin/delete_berita/(:any)'] = 'admin/berita/delete/$1';
 $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
 //Routes for Page Tentang
+$route['kredit'] = 'produk/kredit';
 $route['tabungan'] = 'produk/tabungan';
 $route['profil'] = 'tentang_kami/index';
 $route['sejarah'] = 'tentang_kami/sejarah';
