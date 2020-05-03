@@ -10,6 +10,7 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/ico.png">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/logo.png"> -->
     <!-- all css here -->
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">

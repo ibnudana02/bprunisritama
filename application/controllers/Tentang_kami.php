@@ -13,7 +13,7 @@ class Tentang_kami extends CI_Controller
 
     public function index()
     {
-        $data['judul'] = 'Profil Perusahaan';
+        $data['judul'] = 'Profil Perusahaan | Bank Unisritama';
         $this->load->view('template/header', $data);
         $this->load->view('tentang/profil');
         $this->load->view('template/footer');
@@ -21,7 +21,7 @@ class Tentang_kami extends CI_Controller
 
     public function sejarah()
     {
-        $data['judul'] = 'Sejarah Pendirian';
+        $data['judul'] = 'Sejarah Pendirian | Bank Unisritama';
         $this->load->view('template/header', $data);
         $this->load->view('tentang/sejarah');
         $this->load->view('template/footer');
@@ -29,7 +29,7 @@ class Tentang_kami extends CI_Controller
 
     public function visi_misi()
     {
-        $data['judul'] = 'Visi dan Misi';
+        $data['judul'] = 'Visi dan Misi | Bank Unisritama';
         $this->load->view('template/header', $data);
         $this->load->view('tentang/visi_misi');
         $this->load->view('template/footer');
@@ -37,7 +37,7 @@ class Tentang_kami extends CI_Controller
 
     public function manajemen()
     {
-        $data['judul'] = 'Board Manajemen';
+        $data['judul'] = 'Board Manajemen | Bank Unisritama';
         $this->load->view('template/header', $data);
         $this->load->view('tentang/board');
         $this->load->view('template/footer');
@@ -45,7 +45,7 @@ class Tentang_kami extends CI_Controller
 
     public function awards()
     {
-        $data['judul'] = 'Penghargaan';
+        $data['judul'] = 'Penghargaan | Bank Unisritama';
         $data['data'] = $this->awards->getAll()->result();
         $this->load->view('template/header', $data);
         $this->load->view('tentang/awards');
@@ -54,7 +54,7 @@ class Tentang_kami extends CI_Controller
 
     public function contact()
     {
-        $data['judul'] = 'Hubungi Kami';
+        $data['judul'] = 'Hubungi Kami | Bank Unisritama';
         $data['captcha'] = $this->recaptcha->getWidget();
         $data['script_captcha'] = $this->recaptcha->getScriptTag();
         $recaptcha = $this->input->post('g-recaptcha-response');
@@ -66,7 +66,7 @@ class Tentang_kami extends CI_Controller
 
     public function struktur()
     {
-        $data['judul'] = 'Struktur Organisasi';
+        $data['judul'] = 'Struktur Organisasi | Bank Unisritama';
         $data['data'] = $this->pegawai->getAll()->result();
         $d = $this->pegawai->getAll();
         // echo json_encode($d);

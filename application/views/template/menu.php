@@ -35,7 +35,7 @@
                                     <ul class="sub-menu">
                                         <li><a href="<?= base_url('produk/pmb') ?>">Pembayaran Mahasiswa</a></li>
                                         <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
-                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Deposito</a>
+                                        <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                             <div class="dropdown-content">
                                                 <a href="#">Deposito Masyarakat</a>
                                                 <a href="#">Deposito Berjangka</a>
@@ -60,7 +60,7 @@
                                 </li>
                                 <li><a class="pagess">News</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?= base_url('news/') ?>">Artikel</a></li>
+                                        <li><a href="<?= base_url('news/') ?>">Berita</a></li>
                                         <li><a href="<?= base_url('news/') ?>">Laporan Publikasi</a></li>
                                         <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
                                         <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
@@ -104,7 +104,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="<?= base_url('produk/pmb') ?>">Pembayaran Mahasiswa</a></li>
                                     <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
-                                    <li class="dropdown"><a class="dropbtn" href="<?= base_url('produk/') ?>">Deposito</a>
+                                    <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                         <div class="dropdown-content">
                                             <a href="#">Deposito Masyarakat</a>
                                             <a href="#">Deposito Berjangka</a>
@@ -129,7 +129,7 @@
                             </li>
                             <li><a class="pagess">News</a>
                                 <ul class="sub-menu">
-                                    <li><a href="<?= base_url('news/') ?>">Artikel</a></li>
+                                    <li><a href="<?= base_url('news/') ?>">Berita</a></li>
                                     <li><a href="<?= base_url('news/') ?>">Laporan Publikasi</a></li>
                                     <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
                                     <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>

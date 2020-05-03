@@ -2177,7 +2177,7 @@ single-services:hover .service-inner {
 }
 
 .footer-head p {
-    color: #ddd;
+    color: rgb(221, 221, 221);
     letter-spacing: 0.60px;
 }
 
@@ -3412,26 +3412,26 @@ span.email-notes {
 .contact-inner a i {
     color: #fff;
     display: inline-block;
-    font-size: 26px;
+    font-size: 16px;
     text-align: center;
-    line-height: 48px;
-    margin-right: 15px;
+    line-height: 18px;
+    margin-right: 10px;
     border-radius: 3px;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border: 1px solid #80c32f;
     background: #80c32f;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .contact-inner a {
     color: #666;
-    font-size: 16px;
+    font-size: 15px;
     display: block;
 }
 
 .contact-inner a span {
-    line-height: 30px;
+    line-height: 19px;
     display: inline-block;
     overflow: hidden;
 }
@@ -4041,4 +4041,17 @@ hr {
     min-height: 1px;
     padding-left: 2px !important;
     padding-right: 2px !important;
+}
+
+.classic-title {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+
+.classic-title span {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #80c32f;
+    font-weight: 400;
 }

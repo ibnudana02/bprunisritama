@@ -94,7 +94,7 @@ class Berita_model extends CI_Model
 
         if (!$this->upload->do_upload('image')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('admin/add_slider');
+            redirect('admin/berita');
         } else {
             // return $this->upload->file_name;
             $gbr = $this->upload->data();

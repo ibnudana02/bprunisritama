@@ -4,8 +4,8 @@
             <div class="breadcrumb">
                 <div class="bread-inner">
                     <ul class="breadcrumb-bg">
-                        <li class="home-bread">Home</li>
-                        <li>About us</li>
+                        <li class="home-bread"><?= $bread; ?></li>
+                        <li><?= $crumb; ?></li>
                     </ul>
                 </div>
             </div>

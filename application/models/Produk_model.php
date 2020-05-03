@@ -123,6 +123,15 @@ class Produk_model extends CI_Model
             ->where('id_jenis', '5e95459d30794');
         return $this->db->get();
     }
+
+    public function getDep()
+    {
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('jenis', 'produk.jenis=jenis.id_jenis')
+            ->where('id_jenis', '5e954595bcb46');
+        return $this->db->get();
+    }
 }
 
 /* End of file Porduk_model.php */

@@ -6,15 +6,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="contact-head">
+                <!-- <div class="contact-head">
                     <h3><span class="color">Information</span></h3>
                     <p>Are you looking for professional advice for your new business.Are you looking for professional advice for your new business</p>
-                    <div class="contact-icon">
-                        <div class="contact-inner">
-                            <a href="#"><i class="icon icon-map-marker"></i><span>JL. Soekarno-Hatta No.3</span></a>
-                            <a href="#"><i class="icon icon-phone"></i><span>0761 - 63381</span></a>
-                            <a href="#"><i class="icon icon-envelope"></i><span>mentose@offices.com</span></a>
-                        </div>
+                </div> -->
+                <h4 class="classic-title">
+                    <span>Information</span>
+                </h4>
+                <p class="jam"><b>PT. BPR Unisritama</b></p>
+                <div class="contact-icon">
+                    <div class="contact-inner">
+                        <a href="#"><i class="icon icon-map-marker"></i><span><strong>Kantor Pusat:</strong> JL. Soekarno-Hatta No. 03, Desa Kubang Jaya, Kampar</span></a>
+                        <a href="#"><i class="icon icon-phone"></i><span><strong>Telp:</strong> (0761) 63381</span></a>
+                        <a href="#"><i class="icon icon-envelope"></i><span><strong>Email:</strong> unisritamabpr@yahoo.co.id</span></a>
                     </div>
                 </div>
             </div>
