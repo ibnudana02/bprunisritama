@@ -13,6 +13,9 @@ class Jenis extends CI_Controller
         if (empty($nama)) {
 
             redirect('admin', 'refresh');
+        } elseif ($this->session->userdata('role_id') !== "1") {
+            $this->session->sess_destroy();
+            redirect(base_url());
         }
         $this->load->model('Jenis_model', 'produk');
     }

@@ -6,24 +6,34 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <!-- <div class="contact-head">
-                    <h3><span class="color">Information</span></h3>
-                    <p>Are you looking for professional advice for your new business.Are you looking for professional advice for your new business</p>
-                </div> -->
                 <h4 class="classic-title">
                     <span>Information</span>
                 </h4>
-                <p class="jam"><b>PT. BPR Unisritama</b></p>
-                <div class="contact-icon">
+                <p><b>PT. BPR Unisritama</b></p>
+                <!-- <div class="contact-icon">
                     <div class="contact-inner">
                         <a href="#"><i class="icon icon-map-marker"></i><span><strong>Kantor Pusat:</strong> JL. Soekarno-Hatta No. 03, Desa Kubang Jaya, Kampar</span></a>
                         <a href="#"><i class="icon icon-phone"></i><span><strong>Telp:</strong> (0761) 63381</span></a>
                         <a href="#"><i class="icon icon-envelope"></i><span><strong>Email:</strong> unisritamabpr@yahoo.co.id</span></a>
                     </div>
-                </div>
+                </div> -->
+                <?php foreach ($data as $row) : ?>
+                    <!-- <p class="jam"><b><?= strtoupper($row->kantor); ?></b></p> -->
+                    <p class="classic-title">
+                        <span><?= strtoupper($row->kantor); ?></span>
+                    </p>
+                    <div class="contact-icon">
+                        <div class="contact-inner">
+                            <a href="#"><i class="icon icon-map-marker"></i><span><?= ucwords($row->alamat) ?></span></a>
+                            <a href="#"><i class="icon icon-phone"></i><span><?= $row->telp ?></span></a>
+                            <a href="#"><i class="icon icon-envelope"></i><span><?= $row->email ?></span></a>
+                        </div>
+                    </div>
+                    <br>
+                <?php endforeach; ?>
             </div>
             <!-- End contact icon -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
                 <div class="contact-form">
                     <div class="row">
                         <form id="contactForm" method="POST" action="<?= base_url('contact') ?>" class="contact-form">
@@ -56,6 +66,6 @@
                 </div>
             </div>
             <!-- End contact Form -->
+            </>
         </div>
     </div>
-</div>

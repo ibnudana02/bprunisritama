@@ -2343,7 +2343,7 @@ single-services:hover .service-inner {
 
 .footer-1 .footer-area-bottom {
     background: rgba(10, 24, 40, 0.9) none repeat scroll 0 0;
-    padding: 25px 0;
+    padding: 15px 0;
     border-top: none;
 }
 
@@ -4053,5 +4053,18 @@ hr {
 .classic-title span {
     padding-bottom: 8px;
     border-bottom: 2px solid #80c32f;
+    font-weight: 400;
+}
+
+.footer-title {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    /* border-bottom: 1px solid #eee; */
+    font-weight: 300;
+}
+
+.footer-title span {
+    padding-bottom: 8px;
+    border-bottom: 3px solid #80c32f;
     font-weight: 400;
 }

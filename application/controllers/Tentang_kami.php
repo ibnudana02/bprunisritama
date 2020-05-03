@@ -7,7 +7,7 @@ class Tentang_kami extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Pegawai_model' => 'pegawai', 'Awards_model' => 'awards'));
+        $this->load->model(array('Pegawai_model' => 'pegawai', 'Awards_model' => 'awards', 'Tentang_model' => 'kantor'));
     }
 
 
@@ -55,6 +55,7 @@ class Tentang_kami extends CI_Controller
     public function contact()
     {
         $data['judul'] = 'Hubungi Kami | Bank Unisritama';
+        $data['data'] = $this->kantor->get_kantor()->result();
         $data['captcha'] = $this->recaptcha->getWidget();
         $data['script_captcha'] = $this->recaptcha->getScriptTag();
         $recaptcha = $this->input->post('g-recaptcha-response');

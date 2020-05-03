@@ -3,7 +3,6 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $heading; ?></h1>
-    <p class="mb-4">Fitur ini digunakan untuk Menambah dan menghapus Kategori. Hanya dapat diakses oleh Administrator.</p>
     <?= $this->session->flashdata('message'); ?>
     <!-- DataTales Example -->
     <div class="row">
