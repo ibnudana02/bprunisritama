@@ -2,7 +2,7 @@
     <?php echo $script_captcha; ?>
 </head>
 <!-- Start contact Area -->
-<div class="contact-page area-padding">
+<div class="contact-page" style="margin-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -10,15 +10,7 @@
                     <span>Information</span>
                 </h4>
                 <p><b>PT. BPR Unisritama</b></p>
-                <!-- <div class="contact-icon">
-                    <div class="contact-inner">
-                        <a href="#"><i class="icon icon-map-marker"></i><span><strong>Kantor Pusat:</strong> JL. Soekarno-Hatta No. 03, Desa Kubang Jaya, Kampar</span></a>
-                        <a href="#"><i class="icon icon-phone"></i><span><strong>Telp:</strong> (0761) 63381</span></a>
-                        <a href="#"><i class="icon icon-envelope"></i><span><strong>Email:</strong> unisritamabpr@yahoo.co.id</span></a>
-                    </div>
-                </div> -->
                 <?php foreach ($data as $row) : ?>
-                    <!-- <p class="jam"><b><?= strtoupper($row->kantor); ?></b></p> -->
                     <p class="classic-title">
                         <span><?= strtoupper($row->kantor); ?></span>
                     </p>

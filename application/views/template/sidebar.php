@@ -16,7 +16,7 @@
                                 </a>
                             </div>
                             <div class="pst-content">
-                                <p class="jam"><a href="<?= base_url('artikel/' . $row->slug) ?>"><?= strtoupper(substr($row->judul, 0, 42)); ?></a>
+                                <p class="jam"><a href="<?= base_url('berita/' . $row->slug) ?>"><?= strtoupper(substr($row->judul, 0, 42)); ?></a>
                                     <div class="blog-meta">
                                         <span class="date-type">
                                             <i class="fa fa-calendar"></i>

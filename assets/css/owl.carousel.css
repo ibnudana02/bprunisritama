@@ -134,14 +134,23 @@
   max-height: 500px !important;
 }
 
-@media (min-width:1080px) {
+/* @media (min-width:1600px) { */
+@media only screen and (min-width: 1600px) {
   .owl-carousel .owl-item img {
     display: block;
     width: 100%;
     -webkit-transform-style: preserve-3d;
-    max-height: 440px !important;
+    max-height: 635px !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    max-height: 520px !important;
+  }
 }
 
 .owl-carousel.owl-text-select-on .owl-item {

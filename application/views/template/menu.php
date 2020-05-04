@@ -33,7 +33,7 @@
                                 </li>
                                 <li><a class="pagess">Produk dan Layanan</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?= base_url('produk/pmb') ?>">Pembayaran Mahasiswa</a></li>
+                                        <li><a href="<?= base_url('pembayaran_mahasiswa_uir') ?>">Pembayaran Mahasiswa</a></li>
                                         <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                             <div class="dropdown-content">
@@ -66,7 +66,7 @@
                                         <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="<?= base_url('tentang_kami/contact') ?>">Hubungi Kami</a></li>
+                                <li><a href="<?= base_url('contact') ?>">Hubungi Kami</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             </li>
                             <li><a class="pagess">Produk dan Layanan</a>
                                 <ul class="sub-menu">
-                                    <li><a href="<?= base_url('produk/pmb') ?>">Pembayaran Mahasiswa</a></li>
+                                    <li><a href="<?= base_url('pembayaran_mahasiswa_uir') ?>">Pembayaran Mahasiswa</a></li>
                                     <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                         <div class="dropdown-content">
@@ -135,7 +135,7 @@
                                     <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?= base_url('tentang_kami/contact') ?>">Hubungi Kami</a></li>
+                            <li><a href="<?= base_url('contact') ?>">Hubungi Kami</a></li>
                         </ul>
                     </nav>
                 </div>
