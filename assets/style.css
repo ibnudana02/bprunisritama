@@ -4046,7 +4046,7 @@ hr {
 .classic-title {
     margin-bottom: 16px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1.5px solid #eee;
     font-weight: 300;
 }
 
@@ -4065,6 +4065,6 @@ hr {
 
 .footer-title span {
     padding-bottom: 8px;
-    border-bottom: 3px solid #80c32f;
+    border-bottom: 2px solid #80c32f;
     font-weight: 400;
 }

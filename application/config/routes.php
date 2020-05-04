@@ -105,6 +105,8 @@ $route['admin/delete_berita/(:any)'] = 'admin/berita/delete/$1';
 //Routes for Auth function
 $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
+
+$route['berita'] = 'news/berita';
 //Routes for Page Tentang
 $route['deposito'] = 'produk/deposito';
 $route['kredit'] = 'produk/kredit';

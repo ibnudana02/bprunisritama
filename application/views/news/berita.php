@@ -1,32 +1,32 @@
-<!--Blog Area Start-->
-<div class="blog-page-area struktur">
+<div class="blog-area bg-color-2">
     <div class="container">
         <div class="row">
-            <div class="blog-details">
-                <!-- Start single blog -->
-                <div class="col-md-8 col-sm-8 col-xs-12">
-                    <!-- single-blog start -->
-                    <article class="blog-post-wrapper">
-                        <div class="blog-banner">
-                            <a href="#" class="blog-images">
-                                <img src="<?= base_url('upload/berita/' . $row->image); ?>" alt="">
-                            </a>
-                            <hr>
-                            <div class="blog-content">
-                                <div class="blog-category">
-                                    <span><?= $row->kategori; ?></span>
-                                </div>
-                                <h3><?= strtoupper($row->judul); ?></h3>
-                                <?= ucfirst($row->isi); ?>
-                            </div>
-                        </div>
-                    </article>
-                    <div class="clear"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center">
+                    <h4>Berita <span class="color">Terbaru</span></h4>
                 </div>
             </div>
-            <?php $this->load->view('template/sidebar'); ?>
+        </div>
+        <div class="row">
+            <?php foreach ($berita as $row) : ?>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="well-services">
+                        <div class="services-img">
+                            <a href="" class="image-scale">
+                                <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
+                            </a>
+                            <span class="top-icon"><i class="flaticon-graph-6"></i></span>
+                        </div>
+                        <div class="main-services">
+                            <div class="service-content">
+                                <h4><?= $row->kategori; ?></h4>
+                                <p><?= strtoupper($row->judul); ?></p>
+                                <a class="service-btn" href="#">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
-</div>
-<!--End of Blog Area-->

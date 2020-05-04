@@ -22,9 +22,13 @@ class News extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function detail($slug)
+    public function berita()
     {
-        $data['row'] = $this->berita->getBySlug($slug);
+        $data['judul'] = 'Berita Terbaru | Bank Unisritama';
+        $data['berita'] = $this->berita->getAll()->result();
+        $this->load->view('template/header', $data);
+        $this->load->view('news/berita', $data);
+        $this->load->view('template/footer');
     }
 }
 

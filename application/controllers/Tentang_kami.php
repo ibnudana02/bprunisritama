@@ -22,8 +22,6 @@ class Tentang_kami extends CI_Controller
     public function sejarah()
     {
         $data['judul'] = 'Sejarah Pendirian | Bank Unisritama';
-        $data['bread'] = 'Home';
-        $data['crumb'] = 'Sejarah';
         $this->load->view('template/header', $data);
         $this->load->view('tentang/sejarah');
         $this->load->view('template/footer');
