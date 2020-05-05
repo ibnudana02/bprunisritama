@@ -66,23 +66,24 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="intro-slider">
-        <div class="slider-gambar">
-            <a href=""><img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt=""></a>
+<div class="services-area">
+    <div class="container">
+        <div class="intro-slider">
+            <div class="slider-gambar">
+                <a href=""><img src="<?= base_url('assets/') ?>img/client/ayokebank.jpg" alt=""></a>
+            </div>
+            <div class="slider-gambar">
+                <a href=""><img src="<?= base_url('assets/') ?>img/client/YLPI.jpg" alt=""></a>
+            </div>
+            <div class="slider-gambar">
+                <a href=""><img src="<?= base_url('assets/') ?>img/client/perbarindo.jpg" alt=""></a>
+            </div>
+            <div class="slider-gambar">
+                <a href=""><img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt=""></a>
+            </div>
+            <div class="slider-gambar">
+                <a href=""><img src="<?= base_url('assets/') ?>img/client/lps.png" alt=""></a>
+            </div>
         </div>
-        <div class="slider-gambar">
-            <a href=""><img src="<?= base_url('assets/') ?>img/client/YLPI.jpg" alt=""></a>
-        </div>
-        <div class="slider-gambar">
-            <a href=""><img src="<?= base_url('assets/') ?>img/client/perbarindo.jpg" alt=""></a>
-        </div>
-        <div class="slider-gambar">
-            <a href=""><img src="<?= base_url('assets/') ?>img/client/ojk.jpg" alt=""></a>
-        </div>
-        <div class="slider-gambar">
-            <a href=""><img src="<?= base_url('assets/') ?>img/client/lps.png" alt=""></a>
-        </div>
-
     </div>
 </div>
