@@ -87,7 +87,7 @@ class Berita_model extends CI_Model
     private function _uploadImage()
     {
         $config['upload_path'] = './upload/berita/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['file_name'] = $this->id_berita;
         $config['overwrite'] = true;
         $config['max_size'] = 2048;
@@ -98,7 +98,6 @@ class Berita_model extends CI_Model
             $this->session->set_flashdata('message', $this->upload->display_errors());
             redirect('admin/berita');
         } else {
-            // return $this->upload->file_name;
             $gbr = $this->upload->data();
             //Compress Image
             $config['image_library'] = 'gd2';
