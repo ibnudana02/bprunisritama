@@ -3966,7 +3966,7 @@ hr {
 
 .slider-berita {
     color: white;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     font-size: 30px;
     width: fit-content;
     height: fit-content;
