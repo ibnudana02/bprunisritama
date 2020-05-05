@@ -456,9 +456,9 @@
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
-    .container {
+    /* .container {
         width: 300px
-    }
+    } */
 
     .logo {
         height: inherit;
