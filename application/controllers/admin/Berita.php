@@ -22,7 +22,7 @@ class Berita extends CI_Controller
         $data['title'] = 'Berita Terbaru';
         $data['heading'] = 'Berita Terbaru';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
-        $data['data'] = $this->berita->getAll();
+        $data['data'] = $this->berita->getAll()->result();
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/berita');
         $this->load->view('template/admin_footer');

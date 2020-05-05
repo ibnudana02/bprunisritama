@@ -56,6 +56,7 @@ $route['404_override'] = 'custom404';
 $route['admin/kantor'] = 'admin/manage/kantor';
 $route['admin/add_kantor'] = 'admin/manage/tambah_kantor';
 $route['admin/dashboard'] = 'admin/welcome/home';
+$route['admin/welcome'] = 'admin/welcome/index';
 $route['admin/corporate'] = 'admin/corporate';
 $route['pembayaran_mahasiswa_uir'] = 'produk/pmb';
 $route['admin/profil'] = 'admin/profil';

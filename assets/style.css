@@ -116,8 +116,7 @@ p.jam {
 h1,
 h2,
 h3,
-h4,
-h5 {
+h4 {
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 10px;
     color: #444;
@@ -150,15 +149,22 @@ h4 {
 }
 
 h5 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 10px;
+    color: #444;
+    font-weight: 400;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 18px;
 
 }
 
 h6 {
-    font-size: 16px;
-    line-height: 26px;
-
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 10px;
+    color: #444;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 a {
@@ -1081,7 +1087,8 @@ div#preloader {
 .well-services {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    background: #fff;
+    background: #f7f5f5;
+    border: 0.3px solid rgb(204, 204, 204);
 }
 
 .top-icon {
@@ -1105,6 +1112,7 @@ div#preloader {
     padding: 20px;
     position: relative;
     z-index: 1;
+    min-height: 150px;
 }
 
 .well-icon {
@@ -1170,7 +1178,9 @@ div#preloader {
     font-weight: 700;
     text-transform: uppercase;
     color: #444;
-    position: relative;
+    position: fixed;
+    bottom: 20px;
+    /* right: 150px; */
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     z-index: 2;
@@ -1181,7 +1191,7 @@ div#preloader {
     content: "\f105";
     font-family: fontAwesome;
     right: -15px;
-    top: -5px;
+    /* top: -5px; */
     font-size: 16px;
 }
 
@@ -1197,7 +1207,7 @@ div#preloader {
     transition: 0.4s;
 }
 
-.well-services:hover .service-content h4 {
+.well-services:hover .service-content h5 {
     color: #80c32f;
 }
 
@@ -3954,6 +3964,16 @@ hr {
     border: 2px;
 }
 
+.slider-berita {
+    color: white;
+    opacity: 0.7;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    transition: .3s ease;
+}
+
 .slider-gambar {
     color: white;
     opacity: 0.7;
@@ -3973,7 +3993,9 @@ hr {
 }
 
 .intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev,
-.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next,
+.intro-berita.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev,
+.intro-berita.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
     color: rgb(71, 161, 86);
     font-size: 10px;
     margin-top: -20px;
@@ -3989,7 +4011,8 @@ hr {
     border-radius: 2px;
 }
 
-.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next,
+.intro-berita.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next {
     right: -28px;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -3997,7 +4020,8 @@ hr {
     -ms-transition: 0.4s;
 }
 
-.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next {
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next,
+.intro-berita.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next {
     right: -28px;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -4006,7 +4030,8 @@ hr {
     opacity: 1;
 }
 
-.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev {
+.intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev,
+.intro-berita.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev {
     /* left: -65px; */
     right: -5px;
     -webkit-transition: 0.4s;
@@ -4015,7 +4040,8 @@ hr {
     -ms-transition: 0.4s;
 }
 
-.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev {
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev,
+.intro-berita.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev {
     /* left: -65px; */
     right: -5px;
     -webkit-transition: 0.4s;
@@ -4026,7 +4052,9 @@ hr {
 }
 
 .intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next:hover,
-.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev:hover {
+.intro-slider.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev:hover,
+.intro-berita.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-next:hover,
+.intro-berita.owl-carousel.owl-theme:hover .owl-controls .owl-nav div.owl-prev:hover {
     color: #fff;
     background: #80c32f;
     border: 1px solid #80c32f;

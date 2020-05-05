@@ -132,6 +132,26 @@
             }
         }
     });
+    var intro_berita = $('.intro-berita');
+    intro_berita.owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        // autoplayTimeout: 36000,
+        dots: false,
+        navText: ["<i class='icon icon-chevron-left'></i>", "<i class='icon icon-chevron-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
 
     /*--------------------------
          Project carousel
