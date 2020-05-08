@@ -43,7 +43,7 @@
                                 <li><a href="#">Produk</a></li>
                             </ul>
                         </div>
-                        <br><br>
+                        <br>
                         <div class="footer-head">
                             <h4 class="footer-title"><span>Follow Us</span></h4>
                             <div class="foot-social">
@@ -65,9 +65,9 @@
             <div class="row">
                 <div class="col-xs">
                     <div class="copyright text-center">
-                        <p>
-                            Copyright © 2020
-                            <a href="#">Bank Unisritama</a> All Rights Reserved
+                        <p class="copyright-text">
+                            Copyright © 2020 -
+                            <a href="<?= base_url() ?>">Bank Unisritama</a>
                         </p>
                     </div>
                 </div>

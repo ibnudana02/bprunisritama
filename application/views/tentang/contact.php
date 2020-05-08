@@ -6,22 +6,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <h4 class="classic-title">
+                <p class="classic-title">
                     <span>Information</span>
-                </h4>
+                </p>
                 <p><b>PT. BPR Unisritama</b></p>
                 <?php foreach ($data as $row) : ?>
                     <p class="classic-title">
-                        <span><?= strtoupper($row->kantor); ?></span>
+                        <span><?= ucwords($row->kantor); ?></span>
                     </p>
-                    <div class="contact-icon">
+                    <div class="contact-icon" style="margin-bottom: 10px;">
                         <div class="contact-inner">
                             <a href="#"><i class="icon icon-map-marker"></i><span><?= ucwords($row->alamat) ?></span></a>
                             <a href="#"><i class="icon icon-phone"></i><span><?= $row->telp ?></span></a>
-                            <a href="#"><i class="icon icon-envelope"></i><span><?= $row->email ?></span></a>
                         </div>
                     </div>
-                    <br>
+                    <!-- <br> -->
                 <?php endforeach; ?>
             </div>
             <!-- End contact icon -->
