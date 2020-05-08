@@ -110,8 +110,10 @@ p.visi {
 
 p.jam {
     margin: 0 0 0px;
+    font-weight: 400;
     /* color: #777; */
 }
+
 
 h1,
 h2,
@@ -511,13 +513,12 @@ div#preloader {
 
 .top-social ul li a:hover {
     color: #fff;
-    background: #80c32f;
+    /* background: #80c32f; */
 }
 
 .foot-social {
     float: left;
     padding: 3px 0px;
-    margin-left: 10px;
 }
 
 .foot-social ul li {
@@ -538,7 +539,27 @@ div#preloader {
 
 .foot-social ul li a:hover {
     color: #fff;
-    background: #80c32f;
+    /* background: #80c32f; */
+}
+
+.top-social ul li a.instagram:hover,
+.foot-social ul li a.instagram:hover {
+    background: #d11f69;
+}
+
+.top-social ul li a.facebook:hover,
+.foot-social ul li a.facebook:hover {
+    background: #507CBE;
+}
+
+.top-social ul li a.twitter:hover,
+.foot-social ul li a.twitter:hover {
+    background: #63CDF1;
+}
+
+.top-social ul li a.whatsapp:hover,
+.foot-social ul li a.whatsapp:hover {
+    background: rgb(31, 223, 56);
 }
 
 .quote-button {
@@ -2150,7 +2171,7 @@ single-services:hover .service-inner {
 /*  14. Footer Area
 /*----------------------------------------*/
 .footer-area {
-    padding: 25px 0px 15px 0px;
+    padding: 15px 0px 15px 0px;
 }
 
 .footer-1 {
@@ -2193,10 +2214,10 @@ single-services:hover .service-inner {
 
 .footer-head h4 {
     color: #ddd;
-    font-size: 18px;
+    font-size: 16px;
     /* margin-bottom: 20px; */
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .suscribe-input input {
@@ -2343,6 +2364,7 @@ single-services:hover .service-inner {
 }
 
 .copyright>p {
+    font-size: 14px;
     margin-bottom: 0;
     color: #ddd;
 }
@@ -4148,4 +4170,10 @@ hr {
 
 .pol {
     margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .fanpage {
+        margin-left: 50px;
+    }
 }

@@ -1,9 +1,9 @@
 <!-- Start Footer bottom Area -->
 <footer class="footer-1">
     <div class="footer-area">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="footer-content">
                         <div class="footer-head">
                             <div class="footer-logo">
@@ -11,54 +11,49 @@
                             </div>
                             <p><b>PT. BPR Unisritama</b></p>
                             <p><b>Kantor Pusat </b><br>Jl. Soekarno-Hatta No. 03, Desa Kubang Jaya, Kec. Siak Hulu, Kabupaten Kampar, Riau</p>
+                            <br>
+                            <p>Telp: <b>(0761) 63381</b><br>
+                                Email: <b>unisritamabpr@yahoo.co.id</b><br>
+                                Website: <b>www.bprunisritama.com</b>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- end single footer -->
-                <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12 fanpage">
                     <div class="footer-content">
                         <div class="footer-head">
                             <h4 class="footer-title"><span>Facebook Fanpage</span></h4>
                         </div>
-                        <div class="text-center">
+                        <div class="">
                             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbankunisritama%2F&tabs=timeline&width=300&height=280&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="col-3 col-sm-3 col-xs-12">
-                    <div class="footer-content pol">
+                <!-- end single footer -->
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <div class="footer-content">
                         <div class="footer-head">
-                            <h4 class="footer-title"><span>Jam Pelayanan</span></h4>
-                            <ul class="footer-list">
-                                <li><a href="#">Senin - Jum'at</a></li>
-                                <p class="jam">08:00 - 16:00 WIB (Kantor Pusat)</p>
-                                <p class="jam">08:00 - 15:00 WIB (KAS UIR)</p>
-                                <li><a href="#">Jum'at</a></li>
-                                <p class="jam">15:00 - 16:30 WIB (Pasca Sarjana)</p>
-                                <li><a href="#">Sabtu</a></li>
-                                <p class="jam">08:00 - 14:00 WIB (Pasca Sarjana)</p>
+                            <h4 class="footer-title"><span>Kategori</span></h4>
+                            <ul class=" footer-list">
+                                <li><a href="#">Berita Terbaru</a></li>
+                                <li><a href="#">Layanan </a></li>
+                                <li><a href="#">Profil Perusahaan</a></li>
+                                <li><a href="#">Milad</a></li>
+                                <li><a href="#">Produk</a></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="footer-content">
+                        <br><br>
                         <div class="footer-head">
                             <h4 class="footer-title"><span>Follow Us</span></h4>
                             <div class="foot-social">
                                 <ul>
-                                    <li><a href="https://www.linkedin.com/company/pt-bpr-unisritama" target="_blank" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin "></i></a></li>
-                                    <li><a href="https://www.instagram.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram "></i></a></li>
-                                    <li><a href="https://wa.me/6282391031212" target="_blank" data-toggle="tooltip" data-placement="top" title="Whatsapp"><i class="fa fa-whatsapp "></i></a></li>
-                                    <li><a href="https://twitter.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter "></i></a></li>
-                                    <li><a href="https://www.facebook.com/bankunisritama/" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook "></i></a></li>
+                                    <li><a href="https://www.instagram.com/bpr_unisritama" class="instagram" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram "></i></a></li>
+                                    <li><a href="https://wa.me/6282391031212" class="whatsapp" target="_blank" data-toggle="tooltip" data-placement="top" title="Whatsapp"><i class="fa fa-whatsapp "></i></a></li>
+                                    <li><a href="https://twitter.com/bpr_unisritama" class="twitter" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter "></i></a></li>
+                                    <li><a href="https://www.facebook.com/bankunisritama/" class="facebook" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook "></i></a></li>
                                 </ul>
                             </div>
-                            <br><br>
-                            <p class="text-justify">
-                                ~ Menjadi BPR yang Sehat, Kuat, Tumbuh dan Berkembang dengan mengutamakan prinsip Transparancy, Accountability, Responsibility, Independency, and Fairness di Tahun 2023. ~
-                            </p>
                         </div>
                     </div>
                 </div>

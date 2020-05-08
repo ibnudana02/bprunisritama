@@ -51,11 +51,10 @@
                             </div>
                             <div class="top-social">
                                 <ul>
-                                    <li><a href="https://www.linkedin.com/company/pt-bpr-unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="https://www.instagram.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="https://wa.me/6282391031212" target="_blank" data-toggle="tooltip" data-placement="right" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li>
-                                    <li><a href="https://twitter.com/bpr_unisritama" target="_blank" data-toggle="tooltip" data-placement="right" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="https://www.facebook.com/bankunisritama/" target="_blank" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/bpr_unisritama" class="instagram" target="_blank" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://wa.me/6282391031212" class="whatsapp" target="_blank" data-toggle="tooltip" data-placement="right" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+                                    <li><a href="https://twitter.com/bpr_unisritama" class="twitter" target="_blank" data-toggle="tooltip" data-placement="right" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.facebook.com/bankunisritama/" class="facebook" target="_blank" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -76,18 +75,3 @@
         <?php $this->load->view('template/menu'); ?>
         <!-- End menu area -->
     </header>
-    <!-- header end -->
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="breadcrumb">
-                    <div class="bread-inner">
-                        <ul class="breadcrumb-bg">
-                            <li class="home-bread">Home</li>
-                            <li>About us</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
