@@ -322,7 +322,7 @@ div#preloader {
 
 .section-headline::after {
     border: 1px solid #80c32f;
-    bottom: -27px;
+    bottom: -9px;
     content: "";
     left: 0;
     margin: 0 auto;
@@ -3970,7 +3970,12 @@ hr {
 }
 
 .layanan {
-    height: 214px;
+    height: 230px;
+}
+
+.servis {
+    margin-top: -30px;
+    margin-bottom: 40px;
 }
 
 .intro-slider {
