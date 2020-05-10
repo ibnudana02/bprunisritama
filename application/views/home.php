@@ -109,3 +109,44 @@
         </div>
     </div>
 </div>
+
+<script>
+    /* Dengan Rupiah 
+	var tanpa_rupiah = document.getElementById('plafond');
+	tanpa_rupiah.addEventListener('keyup', function(e)
+	{
+		tanpa_rupiah.value = formatRupiah(this.value);
+	});
+	
+	 Fungsi
+	function formatRupiah(angka, prefix)
+	{
+		var number_string = angka.replace(/[^,\d]/g, '').toString(),
+			split	= number_string.split(','),
+			sisa 	= split[0].length % 3,
+			rupiah 	= split[0].substr(0, sisa),
+			ribuan 	= split[0].substr(sisa).match(/\d{3}/gi);
+			
+		if (ribuan) {
+			separator = sisa ? '.' : '';
+			rupiah += separator + ribuan.join('.');
+		}
+		
+		rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+		return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+	}*/
+
+
+
+    $("#plafond,#bunga,#jkw").keyup(function() {
+        var plafon = parseFloat($("#plafond").val());
+        var bunga = parseFloat($("#bunga").val());
+        var jkw = parseInt($("#jkw").val());
+        var bpokok = plafon / jkw;
+        var bbunga = plafon * ((bunga / 100) / 12);
+        var btotal = bpokok + bbunga;
+        $("#bpokoks").val(bpokok.toFixed(0));
+        $("#bbungas").val(bbunga.toFixed(0));
+        $("#btotals").val(btotal.toFixed(0));
+    });
+</script>
