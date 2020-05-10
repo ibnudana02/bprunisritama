@@ -16,7 +16,7 @@
                                 <i class="flaticon-point-of-service"></i>
                             </a>
                             <div class="service-content">
-                                <h4><a href="#">Produk Kredit</a></h4>
+                                <h4><a href="<?= base_url('kredit') ?>">Produk Kredit</a></h4>
                                 <p class="text-justify">Solusi kebutuhan modal usaha Anda, kredit kendaraan bermotor, biaya pendidikan dan keperluan mendesak lainnya.</p>
                             </div>
                         </div>
