@@ -30,7 +30,10 @@ class Berita_model extends CI_Model
         $this->db->select('*')
             ->from($this->_table)
             ->join('kategori', 'kategori.id_kategori = berita.id_kategori')
-            ->limit(5);
+            ->limit(3);
+        $this->db->order_by($this->_table . '.created_on', 'desc');
+
+
         return $this->db->get()->result();
     }
 

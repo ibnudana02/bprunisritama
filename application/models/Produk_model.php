@@ -13,6 +13,7 @@ class Produk_model extends CI_Model
     public $created_on;
     public $update_by;
     public $update_on;
+    public $jenisT = 'Tabungan';
 
     public function save()
     {
@@ -130,6 +131,16 @@ class Produk_model extends CI_Model
             ->from($this->_table)
             ->join('jenis', 'produk.jenis=jenis.id_jenis')
             ->where('id_jenis', '5e954595bcb46');
+        return $this->db->get();
+    }
+
+    public function getDana()
+    {
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('jenis', 'produk.jenis=jenis.id_jenis');
+        $this->db->where_in('id_jenis', '5e954595bcb46');
+        $this->db->or_where_in('id_jenis', '5e9545a2ecf3e');
         return $this->db->get();
     }
 }

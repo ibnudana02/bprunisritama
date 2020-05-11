@@ -68,6 +68,19 @@ class Produk extends CI_Controller
         $this->load->view('template/footer');
     }
 
+    public function dana()
+    {
+        $data['judul'] = 'Produk Dana | Bank Unisritama';
+        $data['bread'] = 'Home';
+        $data['crumb'] = 'Produk Dana';
+        $data['data'] = $this->produk->getDana();
+        // print_r($data['data']->result());
+        // die;
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/produk', $data);
+        $this->load->view('template/footer');
+    }
+
     public function awards()
     {
         $this->load->view('template/header');
