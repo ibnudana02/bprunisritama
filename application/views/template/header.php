@@ -10,7 +10,8 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/ico.png">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/'); ?>img/logo/logo.png"> -->
+    <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>">
+    <script src="<?= base_url('assets/leaflet/leaflet.js') ?>"></script>
     <!-- all css here -->
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">

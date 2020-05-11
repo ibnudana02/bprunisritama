@@ -202,21 +202,21 @@ body {
 
 #scrollUp {
     background: #000 none repeat scroll 0 0;
-    border-radius: 5px;
+    border-radius: 20px;
     bottom: 90px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     color: #fff;
     font-size: 30px;
-    height: 50px;
-    line-height: 46px;
-    right: 25px;
+    height: 35px;
+    line-height: 25px;
+    right: 35px;
     text-align: center;
     transition: all 0.3s ease 0s;
-    width: 50px;
+    width: 35px;
 }
 
 #scrollUp:hover {
-    background: #80c32f;
+    background: #03a84e;
     opacity: 1;
 }
 

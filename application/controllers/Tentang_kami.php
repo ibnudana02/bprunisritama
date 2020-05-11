@@ -70,9 +70,16 @@ class Tentang_kami extends CI_Controller
         $data['judul'] = 'Struktur Organisasi | Bank Unisritama';
         $data['data'] = $this->pegawai->getAll()->result();
         $d = $this->pegawai->getAll();
-        // echo json_encode($d);
         $this->load->view('template/header', $data);
         $this->load->view('tentang/struktur');
+        $this->load->view('template/footer');
+    }
+
+    public function location()
+    {
+        $data['judul'] = 'Lokasi | Bank Unisritama';
+        $this->load->view('template/header', $data);
+        $this->load->view('tentang/location');
         $this->load->view('template/footer');
     }
 }
