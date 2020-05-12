@@ -4083,12 +4083,20 @@ hr {
 @media (max-width: 767px) {
     .slider-gambar {
         color: white;
-        opacity: 0.7;
+        opacity: 2;
         font-size: 30px;
         width: auto;
         height: auto;
         padding: 10px;
         transition: .3s ease;
+    }
+
+    .slider-gambar:hover {
+        position: relative;
+        transform: scale(1.1);
+        display: block;
+        transition: 0.5s;
+        opacity: 2;
     }
 
     .intro-slider.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next,
