@@ -7,28 +7,34 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="intro-berita">
+        <div class="row" style="padding-bottom: 20px;">
+            <div class="blog-grid">
                 <?php foreach ($berita as $row) : ?>
-                    <div class="slider-berita">
-                        <div class="well-services">
-                            <div class="services-img">
-                                <a href="" class="">
+                    <!-- Start single blog -->
+                    <div class="col-md-4 col-sm-4 col-xs-12 blog">
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a class="image-scale" href="#">
                                     <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
                                 </a>
-                                <span class="top-icon"><i class="flaticon-graph-6"></i></span>
                             </div>
-                            <div class="main-services">
-                                <div class="service-content">
+                            <div class="blog-content">
+                                <div class="blog-category" style="padding: 0 15px;">
                                     <h6><span class="label label-success"><?= $row->kategori; ?></span></h6>
-                                    <h5><?= ucwords($row->judul); ?></h5>
-                                    <a class="service-btn" href="#">read more</a>
+                                </div>
+                                <div class="blog-title">
+                                    <a href="#">
+                                        <h4><?= ucwords($row->judul); ?></h4>
+                                    </a>
+                                </div>
+                                <div class="text-center berita-more" style="top: 5ppx;">
+                                    <a href="">Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End single blog -->
                 <?php endforeach; ?>
             </div>
         </div>
     </div>
-</div>

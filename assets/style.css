@@ -2075,16 +2075,20 @@ single-services:hover .service-inner {
 .blog-category span {
     text-transform: uppercase;
     font-size: 13px;
-    color: #80c32f;
+    /* color: #80c32f; */
     font-weight: 600;
+
 }
 
 .blog-content {
     margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 150px;
 }
 
 .blog-title {
     margin-top: 10px;
+    padding: 0 15px;
 }
 
 .blog-details .blog-content a h4 {
@@ -2124,6 +2128,7 @@ single-services:hover .service-inner {
 .single-blog {
     position: relative;
     overflow: hidden;
+    border: 0.3px solid rgb(204, 204, 204);
 }
 
 .blog-grid-fast {
@@ -3068,7 +3073,7 @@ single-services:hover .service-inner {
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 0;
-    padding: 15px 0px;
+    /* padding: 15px 0px; */
     text-transform: uppercase;
     position: relative;
 }
@@ -3085,7 +3090,7 @@ single-services:hover .service-inner {
 
 .left-blog {
     overflow: hidden;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .left-blog ul {
@@ -4181,4 +4186,26 @@ hr {
     .fanpage {
         margin-left: 50px;
     }
+}
+
+.berita-load a:hover {
+    text-decoration: underline;
+    color: #80c32f;
+}
+
+.berita-more {
+    position: absolute;
+    bottom: 45px;
+    right: 35%;
+}
+
+.berita-more :hover {
+    text-decoration: underline;
+    color: #80c32f;
+}
+
+.blog {
+    padding-bottom: 20px !important;
+    padding-left: 5px;
+    padding-right: 5px;
 }
