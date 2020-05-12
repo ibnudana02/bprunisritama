@@ -27,7 +27,7 @@
                     <?php endforeach; ?>
                 </div>
                 <div class="text-center berita-load">
-                    <a href="">Berita Lainnya</a>
+                    <a href="<?= base_url('berita') ?>">Berita Lainnya</a>
                 </div>
             </div>
             <!-- recent end -->

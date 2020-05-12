@@ -2083,7 +2083,7 @@ single-services:hover .service-inner {
 .blog-content {
     margin-top: 20px;
     margin-bottom: 20px;
-    min-height: 150px;
+    min-height: 100px;
 }
 
 .blog-title {
@@ -4203,7 +4203,7 @@ hr {
 
 .berita-more {
     position: absolute;
-    bottom: 45px;
+    bottom: 5px;
     right: 35%;
 }
 

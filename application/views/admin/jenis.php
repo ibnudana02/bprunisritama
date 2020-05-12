@@ -30,7 +30,7 @@
                                 foreach ($data as $row) : ?>
                                     <tr>
                                         <th><?= $no++; ?>
-                                        <th><?= htmlspecialchars($row->jenis); ?></th>
+                                        <th><?= strtoupper($row->jenis); ?></th>
                                         <th width><a href="<?php echo $row->id_jenis; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_jenis; ?>" data-toggle="modal">Edit</a>
                                             <a href="<?php echo $row->id_jenis; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_jenis; ?>" data-toggle="modal">Hapus</a></th>
                                     </tr>
