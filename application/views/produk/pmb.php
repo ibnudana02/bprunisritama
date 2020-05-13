@@ -11,10 +11,10 @@
                             <a href="#" class="blog-images">
                                 <img src="<?= base_url('upload/produk/' . $row->image); ?>" alt="">
                             </a>
-                            <hr>
-                            <div class="blog-content">
-                                <div class="blog-category">
-                                    <span><?= $row->jenis; ?></span>
+                            <div class="blog-content bor">
+                                <div class="blog-category" style="padding-top: 20px;">
+                                    <!-- <span><?= $row->jenis; ?></span> -->
+                                    <h6><span class="label label-success"><?= $row->jenis; ?></span></h6>
                                 </div>
                                 <h3><?= strtoupper($row->produk); ?></h3>
                                 <?= ucfirst($row->deskripsi); ?>

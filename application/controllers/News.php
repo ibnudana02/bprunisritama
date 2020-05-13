@@ -30,6 +30,18 @@ class News extends CI_Controller
         $this->load->view('news/berita', $data);
         $this->load->view('template/footer');
     }
+
+    public function detailBerita($slug)
+    {
+        $row = $this->berita->getBySlug($slug);
+        $data['judul'] = ucwords($row->judul).' | Bank Unisritama';
+        $data['category'] = $this->kategori->getAll(); //Ambil data kategori
+        $data['berita'] = $this->berita->getLima(); //Ambil data berita
+        $data['row'] = $this->berita->getBySlug($slug);
+        $this->load->view('template/header', $data);
+        $this->load->view('news/detailBerita', $data);
+        $this->load->view('template/footer');
+    }
 }
 
 /* End of file News.php */

@@ -1,4 +1,4 @@
-<div class="blog-area bg-color-2">
+<div class="blog-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -14,7 +14,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 blog">
                         <div class="single-blog">
                             <div class="blog-image">
-                                <a class="image-scale" href="#">
+                                <a class="image-scale" href="<?= 'berita/'.$row->slug ?>">
                                     <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
                                 </a>
                             </div>
@@ -23,12 +23,12 @@
                                     <h6><span class="label label-success"><?= $row->kategori; ?></span></h6>
                                 </div>
                                 <div class="blog-title">
-                                    <a href="#">
+                                    <a href="<?= 'berita/'.$row->slug ?>">
                                         <h4><?= ucwords($row->judul); ?></h4>
                                     </a>
                                 </div>
                                 <div class="text-center berita-more" style="top: 5ppx;">
-                                    <a href="">Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="<?= 'berita/'.$row->slug ?>">Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>

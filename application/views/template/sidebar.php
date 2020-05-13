@@ -9,7 +9,7 @@
                         <!-- start single post -->
                         <div class="recent-single-post">
                             <div class="post-img">
-                                <a href="#">
+                                <a href="<?= 'berita/'.$row->slug ?>">
                                     <img src="<?= base_url('upload/berita/' . $row->image); ?>">
                                 </a>
                             </div>

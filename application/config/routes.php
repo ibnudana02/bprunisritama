@@ -108,6 +108,7 @@ $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
 
 $route['berita'] = 'news/berita';
+$route['berita/(:any)'] = 'news/detailBerita/$1';
 //Routes for Page Tentang
 $route['dana'] = 'produk/dana';
 $route['deposito'] = 'produk/deposito';

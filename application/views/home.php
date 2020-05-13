@@ -52,7 +52,7 @@
         </div>
     </div>
 </div>
-<div class="blog-area bg-color-2">
+<div class="blog-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
