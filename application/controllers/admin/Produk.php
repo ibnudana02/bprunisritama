@@ -42,7 +42,7 @@ class Produk extends CI_Controller
         $produk = $this->produk; //produk model disimpan dalam variable
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
             $produk->save();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Success add new Category</div>');
+            $this->session->set_flashdata('message', 'Berhasil ditambahkan');
             redirect('admin/produk', 'refresh');
         }
         //Tampilkan Form tambah kategori
@@ -58,14 +58,14 @@ class Produk extends CI_Controller
     public function edit($id = null)
     {
         if (!isset($id)) redirect('admin/produk');
-       
+
         $this->form_validation->set_rules('produk', 'Produk', 'required|trim');
         $this->form_validation->set_rules('jenis', 'Jenis', 'required|trim');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required|trim');
         $produk = $this->produk; //produk model disimpan dalam variable
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
             $produk->update();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            $this->session->set_flashdata('message', 'Berhasil disimpan');
             redirect('admin/produk', 'refresh');
         }
 
@@ -86,11 +86,8 @@ class Produk extends CI_Controller
         if (!isset($id)) show_404(); //jika tidak ada $id yang dipilih, tampilkan error page
         if ($this->produk->delete($id)) { //jika $id terpilih, lakukan hapus data 
             $this->session->set_flashdata( //tambahkan pesan jika berhasil
-                'message',
-                '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                Hapus Produk <strong>Berhasil!</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button></div>'
+                'alert',
+                'Hapus Produk <strong>Berhasil!</strong>'
             );
             redirect(site_url('admin/produk')); //arahkan ke halaman list kategori
         }
