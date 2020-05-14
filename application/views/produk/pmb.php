@@ -11,7 +11,7 @@
                             <a href="#" class="blog-images">
                                 <img src="<?= base_url('upload/produk/' . $row->image); ?>" alt="">
                             </a>
-                            <div class="blog-content bor">
+                            <div class="blog-content bor text-justify" >
                                 <div class="blog-category" style="padding-top: 20px;">
                                     <!-- <span><?= $row->jenis; ?></span> -->
                                     <h6><span class="label label-success"><?= $row->jenis; ?></span></h6>

@@ -55,6 +55,32 @@ class Produk extends CI_Controller
         $this->load->view('template/admin_footer');
     }
 
+    public function edit($id = null)
+    {
+        if (!isset($id)) redirect('admin/produk');
+       
+        $this->form_validation->set_rules('produk', 'Produk', 'required|trim');
+        $this->form_validation->set_rules('jenis', 'Jenis', 'required|trim');
+        $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required|trim');
+        $produk = $this->produk; //produk model disimpan dalam variable
+        if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
+            $produk->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            redirect('admin/produk', 'refresh');
+        }
+
+        $data['data'] = $this->jenis->getAll()->result();
+        $data['title'] = 'Tambah Produk';
+        $data['heading'] = 'Tambah Produk';
+        $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
+        $data['produk'] = $produk->getById($id);
+        // print_r($data['produk']);
+        if (!$data["produk"]) show_404();
+        $this->load->view('template/admin_header', $data);
+        $this->load->view('admin/edit_produk', $data);
+        $this->load->view('template/admin_footer');
+    }
+
     public function delete($id = null)
     {
         if (!isset($id)) show_404(); //jika tidak ada $id yang dipilih, tampilkan error page

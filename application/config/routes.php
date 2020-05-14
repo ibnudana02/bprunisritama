@@ -74,6 +74,7 @@ $route['admin/delete_layanan/(:any)'] = 'admin/layanan/delete/$1';
 
 // Routes for Produk
 $route['admin/produk'] = 'admin/produk';
+$route['admin/edit/(:any)'] = 'admin/produk/edit/$1';
 $route['admin/add_produk'] = 'admin/produk/add_produk';
 $route['admin/delete_produk/(:any)'] = 'admin/produk/delete/$1';
 

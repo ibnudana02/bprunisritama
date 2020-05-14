@@ -1004,10 +1004,10 @@ div#preloader {
 }
 
 .ready-btn:hover {
-    background: #fff;
+    background: rgb(252, 252, 252,0.5);
     border: 1px solid #1FC157;
-    color: #1FC157;
-    transform: translateY(6px);
+    color: #fff;
+    transform: translateY(-4px);
 }
 
 .layer-1-2 .color {

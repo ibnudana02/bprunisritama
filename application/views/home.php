@@ -67,7 +67,7 @@
                     <div class="slider-berita">
                         <div class="well-services">
                             <div class="services-img">
-                                <a href="" class="">
+                                <a href="<?= 'berita/'.$row->slug ?>" class="">
                                     <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
                                 </a>
                                 <span class="top-icon"><i class="flaticon-graph-6"></i></span>
@@ -76,7 +76,7 @@
                                 <div class="service-content">
                                     <h6><span class="label label-success"><?= $row->kategori; ?></span></h6>
                                     <h5><?= ucwords($row->judul); ?></h5>
-                                    <a class="service-btn" href="#">read more</a>
+                                    <a class="service-btn" href="<?= 'berita/'.$row->slug ?>">read more</a>
                                 </div>
                             </div>
                         </div>

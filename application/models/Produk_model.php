@@ -13,7 +13,6 @@ class Produk_model extends CI_Model
     public $created_on;
     public $update_by;
     public $update_on;
-    public $jenisT = 'Tabungan';
 
     public function save()
     {
@@ -29,6 +28,22 @@ class Produk_model extends CI_Model
         $this->update_by = '';
         $this->update_on = date('Y-m-d H:i:s');
         $this->db->insert($this->_table, $this);
+    }
+
+    public function update()
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $post = $this->input->post();
+        $this->id_produk = $post['id'];
+        $this->produk = htmlspecialchars($post['produk']);
+        $this->deskripsi = htmlspecialchars($post['deskripsi']);
+        $this->jenis = $post['jenis'];
+        $this->image = $post['old_image'];
+        $this->penulis = $this->session->userdata('name');
+        $this->created_on = date('Y-m-d H:i:s');
+        $this->update_by = '';
+        $this->update_on = date('Y-m-d H:i:s');
+        return $this->db->update($this->_table, $this, array('id_produk' => $post['id']));
     }
 
     public function getById($id)
@@ -99,11 +114,10 @@ class Produk_model extends CI_Model
 
     public function getPmb()
     {
-        $Value = '5e95457d76d01';
         $this->db->select('*')
             ->from($this->_table)
             ->join('jenis', $this->_table . '.jenis=jenis.id_jenis');
-        $this->db->where('id_jenis', $Value);
+        $this->db->where('id_produk', '5e96bd2139efc');
         return $this->db->get()->row();
     }
 
