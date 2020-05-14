@@ -62,7 +62,7 @@
                                     <ul class="sub-menu">
                                         <li><a href="<?= base_url('berita') ?>">Berita</a></li>
                                         <li><a href="<?= base_url('news/') ?>">Laporan Keuangan</a></li>
-                                        <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
+                                        <li><a href="<?= base_url('gcg') ?>">GCG Report</a></li>
                                         <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
                                     </ul>
                                 </li>
@@ -131,7 +131,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="<?= base_url('berita') ?>">Berita</a></li>
                                     <li><a href="<?= base_url('news/') ?>">Laporan Keuangan</a></li>
-                                    <li><a href="<?= base_url('news/') ?>">GCG Report</a></li>
+                                    <li><a href="<?= base_url('gcg') ?>">GCG Report</a></li>
                                     <li><a href="<?= base_url('pengkinian_nasabah') ?>">Pengkinian Data Nasabah</a></li>
                                 </ul>
                             </li>

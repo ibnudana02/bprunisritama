@@ -2073,6 +2073,14 @@ single-services:hover .service-inner {
     line-height: 28px;
     margin-bottom: 10px;
 }
+.blog-content a h5 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #444;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
 
 .blog-category span {
     text-transform: uppercase;
@@ -2147,7 +2155,8 @@ single-services:hover .service-inner {
     margin-top: 20px;
 }
 
-.blog-content a h4:hover {
+.blog-content a h4:hover,
+.blog-content a h5:hover {
     color: #1FC157;
 }
 
@@ -3526,7 +3535,9 @@ span.email-notes {
 /* 25. Services Details area
 /*----------------------------------------*/
 .single-page-head {
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 25px;
 }
 
 .single-services-page p {

@@ -42,6 +42,14 @@ class News extends CI_Controller
         $this->load->view('news/detailBerita', $data);
         $this->load->view('template/footer');
     }
+
+    public function gcg()
+    {
+        $data['judul'] = 'Laporan Tata Kelola | Bank Unisritama';
+        $this->load->view('template/header', $data);
+        $this->load->view('news/gcg', $data);
+        $this->load->view('template/footer');
+    }
 }
 
 /* End of file News.php */
