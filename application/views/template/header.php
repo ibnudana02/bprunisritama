@@ -42,12 +42,12 @@
     <div id="preloader"></div>
     <header class="header-one">
         <!-- Start top bar -->
-        <div class="topbar-area fix hidden-xs">
+        <div class="topbar-area fix ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="topbar-left">
-                            <div class="quote-button">
+                            <div class="quote-button hidden-xs">
                                 <a href="<?= base_url('admin') ?>" target="_blank" class="quote-btn" title="Quick view">Login</a>
                             </div>
                             <div class="top-social">

@@ -6,11 +6,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 blog">
                     <div class="single-blog">
                         <div class="blog-content">
-                            <div class="blog-image">
+                            <!-- <div class="blog-image">
                                 <a class="image-scale" href="#">
                                     <img src="<?= base_url('upload/bpr.jpg') ?>" alt="">
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="blog-title" style="padding: 0 25px;">
                                 <a href="">
                                     <h5>Laporan Tata Kelola Tahun 2019</h4>

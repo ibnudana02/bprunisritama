@@ -11,7 +11,7 @@
             <div class="blog-grid">
                 <?php foreach ($berita as $row) : ?>
                     <!-- Start single blog -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 blog">
+                    <div class="col-md-4 col-sm-6 col-xs-12 blog">
                         <div class="single-blog">
                             <div class="blog-image">
                                 <a class="image-scale" href="<?= 'berita/'.$row->slug ?>">
@@ -24,10 +24,10 @@
                                 </div>
                                 <div class="blog-title">
                                     <a href="<?= 'berita/'.$row->slug ?>">
-                                        <h4><?= ucwords($row->judul); ?></h4>
+                                        <h5><?= ucwords($row->judul); ?></h4>
                                     </a>
                                 </div>
-                                <div class="text-center berita-more" style="top: 5ppx;">
+                                <div class="berita-more">
                                     <a href="<?= 'berita/'.$row->slug ?>">Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
@@ -38,3 +38,4 @@
             </div>
         </div>
     </div>
+</div>

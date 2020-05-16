@@ -24,7 +24,7 @@
                 <?php endforeach; ?>
             </div>
             <!-- End contact icon -->
-            <div class="col-md-6 col-sm-6 col-xs-12" style="padding-bottom: 30px;">
+            <div class="col-md-6 col-sm-6 col-xs-12" style="padding-bottom: 50px;">
                 <div class="contact-form">
                     <div class="row">
                         <form id="contactForm" method="POST" action="<?= base_url('contact') ?>" class="contact-form">
@@ -57,6 +57,6 @@
                 </div>
             </div>
             <!-- End contact Form -->
-            </>
         </div>
     </div>
+</div>

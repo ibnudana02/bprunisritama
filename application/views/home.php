@@ -52,32 +52,38 @@
         </div>
     </div>
 </div>
-<div class="blog-area">
+
+<div class="project-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h4>Berita <span class="color">Terbaru</span></h4>
+                    <h3>Berita <span class="color">Terbaru</span></h3>
+                    <!-- <p>Our development opt in to the projects they genuinely want to work on, committing wholeheartedly to delivering.</p> -->
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="intro-berita">
+            <div class="project-carousel">
+                <!-- single-awesome-project start -->
                 <?php foreach ($berita as $row) : ?>
-                    <div class="slider-berita">
-                        <div class="well-services">
-                            <div class="services-img">
-                                <a href="<?= 'berita/'.$row->slug ?>" class="">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="single-awesome-project">
+                            <div class="awesome-img">
+                                <a href="<?= 'berita/' . $row->slug ?>">
                                     <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
                                 </a>
-                                <span class="top-icon"><i class="flaticon-graph-6"></i></span>
-                            </div>
-                            <div class="main-services">
-                                <div class="service-content">
-                                    <h6><span class="label label-success"><?= $row->kategori; ?></span></h6>
-                                    <h5><?= ucwords($row->judul); ?></h5>
-                                    <a class="service-btn" href="<?= 'berita/'.$row->slug ?>">read more</a>
+                                <div class="add-actions text-center">
+                                    <a href="<?= 'berita/' . $row->slug ?>">
+                                        <!-- <i class="port-icon icon icon-picture"></i> -->
+                                    </a>
                                 </div>
+                            </div>
+                            <div class="project-dec">
+                                <h6><span class="label label-success"><?= $row->kategori; ?></span></h6>
+                                <a href="<?= 'berita/' . $row->slug ?>">
+                                    <h4><?= ucwords($row->judul); ?></h4>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -85,8 +91,8 @@
             </div>
         </div>
     </div>
+    <!-- End main content -->
 </div>
-
 
 <div class="services-area">
     <div class="container">

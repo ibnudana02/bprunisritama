@@ -160,7 +160,8 @@
     Project_carousel.owlCarousel({
         loop: true,
         nav: true,
-        autoplay: false,
+        autoplay: true,
+        autoplayTimeout: 3600,
         dots: false,
         navText: ["<i class='icon icon-chevron-left'></i>", "<i class='icon icon-chevron-right'></i>"],
         responsive: {

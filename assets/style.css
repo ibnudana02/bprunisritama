@@ -1107,7 +1107,7 @@ div#preloader {
 /* 4.Welcome Services Area
 /*--------------------------------*/
 .well-services {
-    box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 6px 6px rgba(0, 0, 0, 0.1); */
     z-index: 1;
     /* background: #f7f5f5; */
     border: 0.3px solid rgb(204, 204, 204);
@@ -1588,7 +1588,7 @@ single-services:hover .service-inner {
 }
 
 .awesome-img>a::after {
-    background: #002c57f2;
+    /* background: #002c57f2; */
     content: "";
     height: 100%;
     left: 0;
@@ -2074,7 +2074,7 @@ single-services:hover .service-inner {
     margin-bottom: 10px;
 }
 .blog-content a h5 {
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     font-weight: 600;
     color: #444;
@@ -2093,7 +2093,7 @@ single-services:hover .service-inner {
 .blog-content {
     margin-top: 20px;
     margin-bottom: 20px;
-    min-height: 100px;
+    min-height: 120px;
 }
 .bor{
     border: 1px solid #ddd;
@@ -2143,8 +2143,8 @@ single-services:hover .service-inner {
 .single-blog {
     position: relative;
     overflow: hidden;
-    border: 0.3px solid rgb(204, 204, 204);
-    box-shadow: 6px 6px #8d8d8d1a;
+    border: 1px solid rgb(204, 204, 204);
+    /* box-shadow: 6px 6px #8d8d8d1a; */
 }
 
 .blog-grid-fast {
@@ -4171,8 +4171,9 @@ hr {
 .produk {
     position: relative;
     min-height: 1px;
-    padding-left: 2px !important;
-    padding-right: 2px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-bottom: -15px;
 }
 
 .classic-title {
@@ -4210,6 +4211,24 @@ hr {
         margin-left: 50px;
     }
 }
+@media (max-width: 767px) {
+    .topbar-right ul li a {
+        color: #ddd;
+        display: block;
+        font-weight: 600;
+        /* margin-right: 20px; */
+        padding: 5px 0;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .topbar-right{
+        text-align: center;
+    }
+    .top-social{
+        float: none;
+        text-align: center;
+    }
+}
 
 .berita-load a:hover {
     text-decoration: underline;
@@ -4219,8 +4238,16 @@ hr {
 .berita-more {
     position: absolute;
     bottom: 5px;
-    right: 35%;
+    margin-left: 34%;
 }
+
+/* @media (max-width: 767px) {
+    .berita-more {
+        position: absolute;
+        bottom: 5px;
+        margin-left: 85px;
+    }
+} */
 
 .berita-more :hover {
     text-decoration: underline;
@@ -4229,6 +4256,4 @@ hr {
 
 .blog {
     padding-bottom: 20px !important;
-    padding-left: 10px;
-    padding-right: 10px;
 }
