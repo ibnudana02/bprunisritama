@@ -104,11 +104,16 @@ $route['admin/berita'] = 'admin/berita';
 $route['admin/update/(:any)'] = 'admin/berita/update/$1';
 $route['admin/add_berita'] = 'admin/berita/add_berita';
 $route['admin/delete_berita/(:any)'] = 'admin/berita/delete/$1';
+// Routes for Laporan
+$route['admin/laporan'] = 'admin/laporan/index';
+$route['admin/add_laporan'] = 'admin/laporan/tambah_laporan';
+
 //Routes for Auth function
 $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
 
 $route['gcg'] = 'news/gcg';
+$route['publikasi'] = 'news/publikasi';
 $route['berita'] = 'news/berita';
 $route['berita/(:any)'] = 'news/detailBerita/$1';
 

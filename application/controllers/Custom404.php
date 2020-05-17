@@ -14,6 +14,8 @@ class Custom404 extends CI_Controller
 
     public function index()
     {
+        
+        $this->session->sess_destroy();
         $this->output->set_status_header('404');
         $this->load->view('error_page');
         $this->load->view('template/admin_footer');

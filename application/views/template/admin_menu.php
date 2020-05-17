@@ -55,8 +55,7 @@
                     <h6 class="collapse-header">Components</h6>
                     <a class="collapse-item" href="<?= base_url('admin/jenis') ?>">Jenis Produk</a>
                     <a class="collapse-item" href="<?= base_url('admin/produk') ?>">Produk</a>
-                    <a class="collapse-item" href="<?= base_url('admin/publikasi') ?>">Publikasi</a>
-                    <a class="collapse-item" href="<?= base_url('admin/gcg') ?>">GCG Report</a>
+                    <a class="collapse-item" href="<?= base_url('admin/laporan') ?>">Company Report</a>
                 </div>
             </div>
         </li>

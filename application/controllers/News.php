@@ -8,7 +8,10 @@ class News extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk'));
+        $this->load->model(array(
+            'Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk',
+            'Laporan_model' => 'laporan'
+        ));
     }
 
 
@@ -34,7 +37,7 @@ class News extends CI_Controller
     public function detailBerita($slug)
     {
         $row = $this->berita->getBySlug($slug);
-        $data['judul'] = ucwords($row->judul).' | Bank Unisritama';
+        $data['judul'] = ucwords($row->judul) . ' | Bank Unisritama';
         $data['category'] = $this->kategori->getAll(); //Ambil data kategori
         $data['berita'] = $this->berita->getLima(); //Ambil data berita
         $data['row'] = $row;
@@ -46,6 +49,16 @@ class News extends CI_Controller
     public function gcg()
     {
         $data['judul'] = 'Laporan Tata Kelola | Bank Unisritama';
+        $data['data'] = $this->laporan->getGcg()->result();
+        // $data['gcg'] = $this->laporan->getAll()->result();
+        $this->load->view('template/header', $data);
+        $this->load->view('news/gcg', $data);
+        $this->load->view('template/footer');
+    }
+    public function publikasi()
+    {
+        $data['judul'] = 'Laporan Publikasi | Bank Unisritama';
+        $data['data'] = $this->laporan->getPub()->result();
         $this->load->view('template/header', $data);
         $this->load->view('news/gcg', $data);
         $this->load->view('template/footer');

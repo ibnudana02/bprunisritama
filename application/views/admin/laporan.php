@@ -32,6 +32,7 @@
                                     <th>No.</th>
                                     <th>Laporan</th>
                                     <th>Tipe</th>
+                                    <th>Preview</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -41,8 +42,9 @@
                                 foreach ($data as $row) : ?>
                                     <tr>
                                         <th><?= $no++; ?></th>
-                                        <th><?= $row->laporan; ?></th>
-                                        <th><?= $row->tipe; ?></th>
+                                        <th><?= strtoupper($row->laporan); ?></th>
+                                        <th><?= $row->tipe; ?></th>                                        
+                                        <th><a href="<?= $row->id_laporan?>" class="btn btn-sm btn-primary float-center" data-target="#view<?php echo $row->id_laporan; ?>" data-toggle="modal">View</a></th>
                                         <th width><a href="<?php echo $row->id_laporan; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_laporan; ?>" data-toggle="modal">Edit</a>
                                             <a href="<?php echo $row->id_laporan; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_laporan; ?>" data-toggle="modal">Hapus</a></th>
                                     </tr>
@@ -76,6 +78,25 @@
                                                 <div class="modal-footer">
                                                     <a href="<?= base_url('admin/update/' . $row->id_laporan) ?>" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Delete User">Edit</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="view<?= $row->id_laporan; ?>" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title mt-0"><?= strtoupper($row->laporan); ?></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body" style="height: 350px;">
+                                                    <!-- <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5> -->
+                                                    <object data="<?= base_url('upload/laporan/'.$row->dokumen) ?>" type="appliaction/pdf" width="350px" height="200px"></object>
+                                                    <iframe src="<?= base_url('upload/laporan/'.$row->dokumen) ?>" frameborder="0" style="width:100%;height:100%;border:none;"></iframe>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <!-- <a href="<?= base_url('admin/update/' . $row->id_laporan) ?>" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Delete User">Edit</a> -->
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Tutup">Tutup</button>
                                                 </div>
                                             </div>
                                         </div>
