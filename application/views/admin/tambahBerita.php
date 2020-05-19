@@ -32,6 +32,7 @@
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
+                                <div id="toolbar-container"></div>
                                 <div class="form-group">
                                     <label>Isi</label>
                                     <textarea id="editor" name="isi"></textarea>
@@ -63,10 +64,11 @@
 </div>
 <!-- /.container-fluid -->
 <script src="<?= base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/decoupled-document/ckeditor.js"></script> -->
 <script>
     ClassicEditor
         .create(document.querySelector('#editor'), {
-            // toolbar: ['heading', '|', 'bold', 'italic', 'link']
+            // toolbar: ['heading', '|', 'bold', 'italic', 'link', 'alignment']
         })
         .then(editor => {
             window.editor = editor;

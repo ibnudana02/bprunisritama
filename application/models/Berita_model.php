@@ -45,11 +45,19 @@ class Berita_model extends CI_Model
     {
         // return $this->db->get_where($this->_table, ['slug' => $slug])->row();
         $this->db->select('*')
-        ->from($this->_table);
-        $this->db->join('kategori', $this->_table.'.id_kategori = kategori.id_kategori', 'left');
+            ->from($this->_table);
+        $this->db->join('kategori', $this->_table . '.id_kategori = kategori.id_kategori', 'left');
         $this->db->where('slug', $slug);
         return $this->db->get()->row();
-        
+    }
+
+    public function getKategori($kategori)
+    {
+        $this->db->select('*')
+            ->from($this->_table);
+        $this->db->join('kategori', $this->_table . '.id_kategori = kategori.id_kategori', 'left');
+        $this->db->where('link', $kategori);
+        return $this->db->get();
     }
 
     public function getCount()

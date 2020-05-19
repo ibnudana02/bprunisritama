@@ -74,17 +74,19 @@ class Produk extends CI_Controller
         $data['bread'] = 'Home';
         $data['crumb'] = 'Produk Dana';
         $data['data'] = $this->produk->getDana();
-        // print_r($data['data']->result());
-        // die;
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
     }
 
-    public function awards()
+    public function produk()
     {
-        $this->load->view('template/header');
-        $this->load->view('tentang/awards');
+        $data['judul'] = 'Produk | Bank Unisritama';
+        $data['bread'] = 'Home';
+        $data['crumb'] = 'Produk';
+        $data['data'] = $this->produk->getAll();
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
     }
 }

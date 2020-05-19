@@ -34,13 +34,12 @@
                 <div class="col-md-2 col-sm-2 col-xs-12">
                     <div class="footer-content">
                         <div class="footer-head">
-                            <h4 class="footer-title"><span>Kategori</span></h4>
+                            <h4 class="footer-title"><span>Kategori Berita</span></h4>
                             <ul class=" footer-list">
-                                <li><a href="#">Berita Terbaru</a></li>
-                                <li><a href="#">Layanan </a></li>
-                                <li><a href="#">Profil Perusahaan</a></li>
-                                <li><a href="#">Milad</a></li>
-                                <li><a href="#">Produk</a></li>
+                                <li><a href="<?= base_url('kategori_berita/berita_terbaru') ?>">Berita Terbaru</a></li>
+                                <li><a href="<?= base_url('kategori_berita/profil') ?>">Profil Perusahaan</a></li>
+                                <li><a href="<?= base_url('kategori_berita/milad') ?>">Milad</a></li>
+                                <li><a href="<?= base_url('kategori_berita/produk') ?>">Produk</a></li>
                             </ul>
                         </div>
                         <br>
