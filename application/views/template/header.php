@@ -50,7 +50,7 @@
                             <div class="quote-button hidden-xs">
                                 <a href="<?= base_url('admin') ?>" target="_blank" class="quote-btn" title="Quick view">Login</a>
                             </div>
-                            <div class="top-social">
+                            <div class="top-social hidden-xs">
                                 <ul>
                                     <li><a href="https://www.instagram.com/bpr_unisritama" class="instagram" target="_blank" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="https://wa.me/6282391031212" class="whatsapp" target="_blank" data-toggle="tooltip" data-placement="right" title="Whatsapp"><i class="fa fa-whatsapp"></i></a></li>
@@ -63,8 +63,8 @@
                     <div class=" col-md-6 col-sm-6">
                         <div class="topbar-right">
                             <ul>
-                                <li><a href="#" data-toggle="tooltip" data-placement="left" title="Email Corporate"><i class="fa fa-envelope"></i> unisritamabpr@yahoo.co.id</a></li>
                                 <li><a href="#" data-toggle="tooltip" data-placement="left" title="Telpon Kantor"><i class="fa fa-phone"></i> (0761) - 63381</a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="left" title="Email Corporate"><i class="fa fa-envelope"></i> unisritamabpr@yahoo.co.id</a></li>
                             </ul>
                         </div>
                     </div>

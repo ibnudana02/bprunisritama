@@ -475,6 +475,7 @@ div#preloader {
     padding: 12px 0;
     text-decoration: none;
     font-size: 16px;
+    margin-bottom: -5px;
 }
 
 .topbar-right ul li a i {
@@ -4233,10 +4234,10 @@ hr {
         text-align: center;
     }
 
-    .top-social {
+    /* .top-social {
         float: none;
         text-align: center;
-    }
+    } */
 }
 
 .berita-load a:hover {

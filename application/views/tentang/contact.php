@@ -1,5 +1,5 @@
 <head>
-    <!-- <?php echo $script_captcha; ?> -->
+    <?php echo $script_captcha; ?>
 </head>
 <!-- Start contact Area -->
 <div class="contact-page" style="margin-top: 50px;">
@@ -45,7 +45,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <!-- <?php echo $captcha ?> -->
+                                <?php echo $captcha ?>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                                 <button type="submit" id="submit" class="contact-btn">Submit</button>
