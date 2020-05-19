@@ -1004,7 +1004,7 @@ div#preloader {
 }
 
 .ready-btn:hover {
-    background: rgb(252, 252, 252,0.5);
+    background: rgb(252, 252, 252, 0.5);
     border: 1px solid #1FC157;
     color: #fff;
     transform: translateY(-4px);
@@ -2073,6 +2073,7 @@ single-services:hover .service-inner {
     line-height: 28px;
     margin-bottom: 10px;
 }
+
 .blog-content a h5 {
     font-size: 16px;
     text-transform: capitalize;
@@ -2095,7 +2096,8 @@ single-services:hover .service-inner {
     margin-bottom: 20px;
     min-height: 120px;
 }
-.bor{
+
+.bor {
     border: 1px solid #ddd;
     padding: 30px 30px;
     margin-top: -20px !important;
@@ -2766,6 +2768,7 @@ single-services:hover .service-inner {
     display: inline-block;
     margin: 0px 1px;
 }
+
 .team-hover li a {
     color: #fff;
     border: 1px solid #1FC157;
@@ -2777,11 +2780,13 @@ single-services:hover .service-inner {
     background: #1FC157;
     transition: 0.4s;
 }
+
 .team-hover li a:hover {
     color: #1FC157;
     transition: 0.4s;
     background: transparent;
 }
+
 .team-hover {
     padding: 20px 0 0px;
     text-align: center;
@@ -3524,8 +3529,9 @@ span.email-notes {
     border-radius: 2px;
     font-weight: 700;
 }
+
 .contact-page .contact-btn:hover {
-    color:#1FC157;
+    color: #1FC157;
     background: transparent;
     transition: all 0.4s ease 0s;
     transform: translateY(-4px);
@@ -4173,7 +4179,7 @@ hr {
     min-height: 1px;
     padding-left: 15px !important;
     padding-right: 15px !important;
-    margin-bottom: -15px;
+    /* margin-bottom: -15px; */
 }
 
 .classic-title {
@@ -4211,6 +4217,7 @@ hr {
         margin-left: 50px;
     }
 }
+
 @media (max-width: 767px) {
     .topbar-right ul li a {
         color: #ddd;
@@ -4221,10 +4228,12 @@ hr {
         text-decoration: none;
         font-size: 16px;
     }
-    .topbar-right{
+
+    .topbar-right {
         text-align: center;
     }
-    .top-social{
+
+    .top-social {
         float: none;
         text-align: center;
     }
