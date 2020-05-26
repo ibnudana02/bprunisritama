@@ -18,7 +18,7 @@
         <div class="row">
             <div class="project-content project-2">
                 <!-- single-awesome-project start -->
-                <?php foreach ($data as $row) : ?>
+                <?php foreach ($data->result() as $row) : ?>
                     <div class="col-md-6 col-sm-6 col-xs-12 produk">
                         <div class="single-awesome-project">
                             <div class="awesome-img">

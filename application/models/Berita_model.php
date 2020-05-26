@@ -87,18 +87,22 @@ class Berita_model extends CI_Model
     {
         date_default_timezone_set('Asia/Jakarta');
         $post = $this->input->post();
-        $this->id_berita = uniqid();
+        $this->id_berita = htmlspecialchars($post['id_berita']);
         $this->id_kategori = htmlspecialchars($post['kategori']);
         $this->judul = htmlspecialchars(strtolower($post['judul']));
         $out = explode(" ", $this->judul);
         $this->slug = implode("-", $out);
         $this->isi = htmlspecialchars($post['isi']);
-        $this->image = $this->_uploadImage();
+        if (!empty($_FILES["image"]["name"])) {
+            $this->image = $this->_uploadImage();
+        } else {
+            $this->image = $post["old_image"];
+        }
         $this->penulis = $this->session->userdata('name');
         $this->created_on = date('Y-m-d H:i:s');
         $this->update_by = $this->session->userdata('name');
         $this->update_on = date('Y-m-d H:i:s');
-        return $this->db->update($this->_table, $this, array('product_id' => $post['id']));
+        return $this->db->update($this->_table, $this, array('id_berita' => $post['id_berita']));
     }
 
     private function _uploadImage()

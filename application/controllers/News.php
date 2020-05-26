@@ -28,7 +28,7 @@ class News extends CI_Controller
     public function berita()
     {
         $data['judul'] = 'Berita Terbaru | Bank Unisritama';
-        $data['berita'] = $this->berita->getAll()->result();
+        $data['berita'] = $this->berita->getAll();
         $this->load->view('template/header', $data);
         $this->load->view('news/berita', $data);
         $this->load->view('template/footer');

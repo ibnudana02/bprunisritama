@@ -19,7 +19,7 @@
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
                             <form class="user" method="post" action="" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?php echo $produk->id_produk?>"/>
+                                <input type="hidden" name="id" value="<?php echo $produk->id_produk ?>" />
                                 <div class="form-group">
                                     <label>Produk</label>
                                     <input type="text" class="form-control form-control-user" name="produk" id="produk" placeholder="Enter produk" value="<?= $produk->produk ?>">
@@ -30,20 +30,21 @@
                                     <select class="form-control custom-select custom-select-md" id="jenis" name="jenis">
                                         <option value="" disabled diselected>--Pilih Jenis Produk--</option>
                                         <?php foreach ($data as $row) : ?>
-                                            <option <?php if($row->id_jenis==$produk->jenis){
-                                                echo 'selected="selected"';
-                                                } ?> value="<?= $row->id_jenis; ?>"><?= strtoupper($row->jenis); ?></option>
+                                            <option <?php if ($row->id_jenis == $produk->jenis) {
+                                                        echo 'selected="selected"';
+                                                    } ?> value="<?= $row->id_jenis; ?>"><?= strtoupper($row->jenis); ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>
-                                    <textarea name="deskripsi" rows="3" class="form-control" required data-error="Write your deskripsi" ><?= $produk->deskripsi ?></textarea>
+                                    <textarea name="deskripsi" id="editor" rows="3" class="form-control" required data-error="Write your deskripsi"><?= $produk->deskripsi ?></textarea>
                                 </div>
                                 <?php echo form_error('image', '<small class="text-danger pl-5">', '</small>'); ?>
                                 <div class="form-group">
                                     <label for="image">Gambar</label>
                                     <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                    <img src="<?= base_url('upload/produk/' . $produk->image); ?>" height="100px" width="120px">
                                     <input type="hidden" name="old_image" value="<?= $produk->image ?>" />
                                 </div>
                                 <div class="form-group row">

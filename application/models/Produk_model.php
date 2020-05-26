@@ -38,7 +38,12 @@ class Produk_model extends CI_Model
         $this->produk = htmlspecialchars($post['produk']);
         $this->deskripsi = htmlspecialchars($post['deskripsi']);
         $this->jenis = $post['jenis'];
-        $this->image = $post['old_image'];
+        // $this->image = $post['old_image'];
+        if (!empty($_FILES["image"]["name"])) {
+            $this->image = $this->_uploadImage();
+        } else {
+            $this->image = $post["old_image"];
+        }
         $this->penulis = $this->session->userdata('name');
         $this->created_on = date('Y-m-d H:i:s');
         $this->update_by = '';

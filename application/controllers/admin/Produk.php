@@ -70,8 +70,8 @@ class Produk extends CI_Controller
         }
 
         $data['data'] = $this->jenis->getAll()->result();
-        $data['title'] = 'Tambah Produk';
-        $data['heading'] = 'Tambah Produk';
+        $data['title'] = 'Edit Produk';
+        $data['heading'] = 'Edit Produk';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
         $data['produk'] = $produk->getById($id);
         // print_r($data['produk']);

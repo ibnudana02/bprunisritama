@@ -17,10 +17,11 @@
                 <div class="card-body col-12 mx-auto">
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
-                            <form class="user" method="post" action="<?= base_url('admin/update'); ?>" enctype="multipart/form-data">
+                            <form class="user" method="post" action="" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>Judul</label>
-                                    <input type="text" class="form-control form-control-user" name="judul" id="judul" placeholder="Enter Judul" value="<?= strtoupper($data->judul); ?>">
+                                    <input type="hidden" name="id_berita" value="<?= $data->id_berita; ?>">
+                                    <input type="text" class="form-control form-control-user" name="judul" id="judul" value="<?= strtoupper($data->judul); ?>">
                                     <?php echo form_error('judul', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
@@ -47,6 +48,7 @@
                                     <div class="col">
                                         <a href="#" class="thumbnail">
                                             <img src="<?= base_url('upload/berita/' . $data->image); ?>" height="100px" width="120px">
+                                            <input type="hidden" name="old_image" value="<?= $data->image; ?>">
                                         </a>
                                     </div>
                                 </div>

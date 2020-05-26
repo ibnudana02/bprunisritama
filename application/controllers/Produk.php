@@ -89,4 +89,15 @@ class Produk extends CI_Controller
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
     }
+
+    public function detailProduk($id)
+    {
+        $row = $this->produk->getById($id);
+        $data['judul'] = $row->produk . ' | Bank Unisritama';
+        $data['berita'] = $this->berita->getLima();
+        $data['row'] = $row;
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/detailProduk', $data);
+        $this->load->view('template/footer');
+    }
 }

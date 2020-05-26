@@ -116,6 +116,7 @@ $route['gcg'] = 'news/gcg';
 $route['publikasi'] = 'news/publikasi';
 $route['berita'] = 'news/berita';
 $route['berita/(:any)'] = 'news/detailBerita/$1';
+$route['produk/(:any)'] = 'produk/detailProduk/$1';
 $route['kategori_berita/(:any)'] = 'news/kategoriBerita/$1';
 
 //Routes for Page Tentang
