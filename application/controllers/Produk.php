@@ -90,10 +90,11 @@ class Produk extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function detailProduk($id)
+    public function detailProduk($slug)
     {
-        $row = $this->produk->getById($id);
-        $data['judul'] = $row->produk . ' | Bank Unisritama';
+        // $row = $this->produk->getById($id);
+        $row = $this->produk->getBySlug($slug);
+        $data['judul'] = ucwords($row->produk) . ' | Bank Unisritama';
         $data['berita'] = $this->berita->getLima();
         $data['row'] = $row;
         $this->load->view('template/header', $data);

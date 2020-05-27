@@ -17,8 +17,7 @@
                                     <h6><span class="label label-success"><?= $row->jenis; ?></span></h6>
                                 </div>
                                 <h3><?= strtoupper($row->produk); ?></h3>
-                                <?= htmlentities(ucfirst($row->deskripsi), ENT_QUOTES, 'UTF-8', false); ?>
-                                <?php echo htmlspecialchars_decode(ucfirst($row->deskripsi)); ?>
+                                <?php echo $row->deskripsi; ?>
                             </div>
                         </div>
                     </article>

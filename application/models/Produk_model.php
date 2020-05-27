@@ -20,7 +20,9 @@ class Produk_model extends CI_Model
         $post = $this->input->post();
         $this->id_produk = uniqid();
         $this->produk = htmlspecialchars($post['produk']);
-        $this->deskripsi = htmlspecialchars($post['deskripsi']);
+        $this->deskripsi = $post['deskripsi'];
+        $out = explode(" ", $this->produk);
+        $this->slug = implode("-", $out);
         $this->jenis = $post['jenis'];
         $this->image = $this->_uploadImage();
         $this->penulis = $this->session->userdata('name');
@@ -36,9 +38,10 @@ class Produk_model extends CI_Model
         $post = $this->input->post();
         $this->id_produk = $post['id'];
         $this->produk = htmlspecialchars($post['produk']);
-        $this->deskripsi = htmlspecialchars($post['deskripsi']);
+        $this->deskripsi = $post['deskripsi'];
+        $out = explode(" ", $this->produk);
+        $this->slug = implode("-", $out);
         $this->jenis = $post['jenis'];
-        // $this->image = $post['old_image'];
         if (!empty($_FILES["image"]["name"])) {
             $this->image = $this->_uploadImage();
         } else {
@@ -46,9 +49,18 @@ class Produk_model extends CI_Model
         }
         $this->penulis = $this->session->userdata('name');
         $this->created_on = date('Y-m-d H:i:s');
-        $this->update_by = '';
+        $this->update_by = $this->session->userdata('name');
         $this->update_on = date('Y-m-d H:i:s');
         return $this->db->update($this->_table, $this, array('id_produk' => $post['id']));
+    }
+
+    public function getBySlug($slug)
+    {
+        $this->db->select('*')
+            ->from($this->_table);
+        $this->db->join('jenis', $this->_table . '.jenis = jenis.id_jenis', 'left');
+        $this->db->where('slug', $slug);
+        return $this->db->get()->row();
     }
 
     public function getById($id)

@@ -26,7 +26,7 @@
                                     <img src="<?= base_url('upload/produk/' . $row->image); ?>" alt="" />
                                 </a>
                                 <div class="add-actions text-center">
-                                    <a class="venobox" data-gall="myGallery" href="<?= base_url('upload/produk/' . $row->image); ?>">
+                                    <a href="<?= base_url('produk/' . $row->slug); ?>">
                                         <i class="port-icon icon icon-picture"></i>
                                     </a>
                                 </div>

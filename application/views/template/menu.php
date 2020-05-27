@@ -43,10 +43,10 @@
                                         </li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('tabungan') ?>">Tabungan</a>
                                             <div class="dropdown-content">
-                                                <a href="#">Tabungan Sejahtera</a>
-                                                <a href="#">Tabungan Umroh</a>
-                                                <a href="#">TabunganKu</a>
-                                                <a href="#">Tabungan Qurban</a>
+                                                <a href="<?= base_url('produk/tabungan-sejahtera') ?>">Tabungan Sejahtera</a>
+                                                <a href="<?= base_url('produk/tabungan-umroh') ?>">Tabungan Umroh</a>
+                                                <a href="<?= base_url('produk/tabunganku') ?>">TabunganKu</a>
+                                                <a href="<?= base_url('produk/tabungan-qurban-warga') ?>">Tabungan Qurban</a>
                                             </div>
                                         </li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('kredit') ?>">Kredit</a>
@@ -112,10 +112,10 @@
                                     </li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('tabungan') ?>">Tabungan</a>
                                         <div class="dropdown-content">
-                                            <a href="#">Tabungan Sejahtera</a>
-                                            <a href="#">Tabungan Umroh</a>
-                                            <a href="#">TabunganKu</a>
-                                            <a href="#">Tabungan Qurban</a>
+                                            <a href="<?= base_url('produk/tabungan-sejahtera') ?>">Tabungan Sejahtera</a>
+                                            <a href="<?= base_url('produk/tabungan-umroh') ?>">Tabungan Umroh</a>
+                                            <a href="<?= base_url('produk/tabunganku') ?>">TabunganKu</a>
+                                            <a href="<?= base_url('produk/tabungan-qurban-warga') ?>">Tabungan Qurban</a>
                                         </div>
                                     </li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('kredit') ?>">Kredit</a>
