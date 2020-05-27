@@ -16,7 +16,6 @@ class Laporan extends CI_Controller
             redirect(base_url());
         }
         $this->load->model('Laporan_model', 'laporan');
-        
     }
 
 
@@ -33,7 +32,7 @@ class Laporan extends CI_Controller
 
     public function tambah_laporan()
     {
-        $this->form_validation->set_message('required','Field Tidak boleh dikosongkan');
+        $this->form_validation->set_message('required', 'Field Tidak boleh dikosongkan');
         $this->form_validation->set_rules('laporan', 'Laporan', 'required|trim');
         $this->form_validation->set_rules('tipe', 'Tipe', 'required|trim');
         $this->form_validation->set_rules('dokumen', 'Dokumen');
@@ -53,8 +52,17 @@ class Laporan extends CI_Controller
         $this->load->view('template/admin_footer');
     }
 
-
-
+    public function delete($id)
+    {
+        if (!isset($id)) show_404(); //jika tidak ada $id yang dipilih, tampilkan error page
+        if ($this->laporan->delete($id)) { //jika $id terpilih, lakukan hapus data 
+            $this->session->set_flashdata( //tambahkan pesan jika berhasil
+                'alert',
+                'Hapus Laporan Berhasil!'
+            );
+            redirect(site_url('admin/laporan')); //arahkan ke halaman list berita
+        }
+    }
 }
 
 /* End of file Gcg.php */

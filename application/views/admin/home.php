@@ -14,7 +14,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 <h6><a href="<?= base_url('admin/laporan') ?>">Company Report</a></h6>
                             </div>
-                            <!-- <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $laporanCount; ?></div> -->
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $laporanCount; ?></div>
                         </div>
                         <div class="col-auto">
                             <a href="<?= base_url('admin/in_mail') ?>"> <i class="fas fa-fw fa-file-signature fa-2x text-gray-300"></i></a>

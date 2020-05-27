@@ -106,6 +106,7 @@ $route['admin/add_berita'] = 'admin/berita/add_berita';
 $route['admin/delete_berita/(:any)'] = 'admin/berita/delete/$1';
 // Routes for Laporan
 $route['admin/laporan'] = 'admin/laporan/index';
+$route['admin/delete_laporan/(:any)'] = 'admin/laporan/delete/$1';
 $route['admin/add_laporan'] = 'admin/laporan/tambah_laporan';
 
 //Routes for Auth function

@@ -1,8 +1,9 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Laporan_model extends CI_Model {
+class Laporan_model extends CI_Model
+{
     private $_table = 'laporan';
     public $id_laporan;
     public $laporan;
@@ -17,7 +18,7 @@ class Laporan_model extends CI_Model {
         $post = $this->input->post();
         $this->id_laporan = uniqid();
         $this->laporan = htmlspecialchars($post['laporan']);
-        $this->tipe = htmlspecialchars($post['tipe']);        
+        $this->tipe = htmlspecialchars($post['tipe']);
         $this->dokumen = $this->_uploadFile();
         $this->created_by = $this->session->userdata('name');
         $this->created_on = date('Y-m-d H:i:s');
@@ -52,28 +53,44 @@ class Laporan_model extends CI_Model {
     public function getAll()
     {
         $this->db->select('*')
-        ->from($this->_table)
-        ->join('tipe', $this->_table.'.tipe=tipe.id_tipe');
+            ->from($this->_table)
+            ->join('tipe', $this->_table . '.tipe=tipe.id_tipe');
         return $this->db->get();
-        
     }
 
     public function getGcg()
     {
         $this->db->select('*')
-        ->from($this->_table)
-        ->where('tipe','5ebfa858d95c0');
+            ->from($this->_table)
+            ->where('tipe', '5ebfa858d95c0');
         return $this->db->get();
     }
 
     public function getPub()
     {
         $this->db->select('*')
-        ->from($this->_table)
-        ->where('tipe','5ebfa858d95c2');
+            ->from($this->_table)
+            ->where('tipe', '5ebfa858d95c2');
         return $this->db->get();
     }
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ['id_laporan' => $id])->row();
+    }
 
+    public function delete($id)
+    {
+        $this->_deleteDokumen($id);
+        return $this->db->delete($this->_table, array('id_laporan' => $id));
+    }
+    private function _deleteDokumen($id)
+    {
+        $laporan = $this->getById($id);
+        if ($laporan->dokumen != null) {
+            $filename = explode(".", $laporan->dokumen)[0];
+            return array_map('unlink', glob(FCPATH . "upload/laporan/$filename.*"));
+        }
+    }
 }
 
 /* End of file Laporan_model.php */

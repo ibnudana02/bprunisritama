@@ -43,8 +43,8 @@
                                     <tr>
                                         <th><?= $no++; ?></th>
                                         <th><?= strtoupper($row->laporan); ?></th>
-                                        <th><?= $row->tipe; ?></th>                                        
-                                        <th><a href="<?= $row->id_laporan?>" class="btn btn-sm btn-primary float-center" data-target="#view<?php echo $row->id_laporan; ?>" data-toggle="modal">View</a></th>
+                                        <th><?= $row->tipe; ?></th>
+                                        <th><a href="<?= $row->id_laporan ?>" class="btn btn-sm btn-primary float-center" data-target="#view<?php echo $row->id_laporan; ?>" data-toggle="modal">View</a></th>
                                         <th width><a href="<?php echo $row->id_laporan; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_laporan; ?>" data-toggle="modal">Edit</a>
                                             <a href="<?php echo $row->id_laporan; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_laporan; ?>" data-toggle="modal">Hapus</a></th>
                                     </tr>
@@ -59,7 +59,7 @@
                                                     <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="<?= base_url('admin/delete_berita/' . $row->id_laporan) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
+                                                    <a href="<?= base_url('admin/delete_laporan/' . $row->id_laporan) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
                                                 </div>
                                             </div>
@@ -91,8 +91,8 @@
                                                 </div>
                                                 <div class="modal-body" style="height: 350px;">
                                                     <!-- <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5> -->
-                                                    <object data="<?= base_url('upload/laporan/'.$row->dokumen) ?>" type="appliaction/pdf" width="350px" height="200px"></object>
-                                                    <iframe src="<?= base_url('upload/laporan/'.$row->dokumen) ?>" frameborder="0" style="width:100%;height:100%;border:none;"></iframe>
+                                                    <object data="<?= base_url('upload/laporan/' . $row->dokumen) ?>" type="appliaction/pdf" width="350px" height="200px"></object>
+                                                    <iframe src="<?= base_url('upload/laporan/' . $row->dokumen) ?>" frameborder="0" style="width:100%;height:100%;border:none;"></iframe>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <!-- <a href="<?= base_url('admin/update/' . $row->id_laporan) ?>" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Delete User">Edit</a> -->

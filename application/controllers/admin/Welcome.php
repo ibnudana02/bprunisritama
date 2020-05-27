@@ -32,7 +32,7 @@ class Welcome extends CI_Controller
 		$data['jenisCount'] = $this->jenis->getAll()->num_rows();
 		$data['pegawaiCount'] = $this->pegawai->getAll()->num_rows();
 		$data['awardsCount'] = $this->awards->getAll()->num_rows();
-		// $data['laporanCount'] = $this->laporan->getAll()->num_rows();
+		$data['laporanCount'] = $this->laporan->getAll()->num_rows();
 		$this->load->view('template/admin_header', $data);
 		$this->load->view('admin/home');
 		$this->load->view('template/admin_footer');

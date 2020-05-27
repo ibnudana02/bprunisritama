@@ -30,6 +30,5 @@ class Welcome extends CI_Controller
 		// $this->load->view('produk/tabungan', $data);
 		// $this->load->view('template/footer');
 		$this->load->view('unik');
-		
 	}
 }
