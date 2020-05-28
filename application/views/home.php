@@ -30,7 +30,7 @@
                             </a>
                             <div class="service-content">
                                 <h4><a href="<?= base_url('dana') ?>">Produk Dana</a></h4>
-                                <p class="text-justify">Solusi kebutuhan modal usaha Anda, kredit kendaraan bermotor, biaya pendidikan dan keperluan mendesak lainnya.</p>
+                                <p class="text-justify">Saving Dana anda dengan Aman sekaligus bisa berinvestasi dengan Suku Bunga bersaing dan Pastinya dijamin LPS!.</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             </a>
                             <div class="service-content">
                                 <h4><a href="#">Jasa Layanan</a></h4>
-                                <p class="text-justify">Solusi kebutuhan modal usaha Anda, kredit kendaraan bermotor, biaya pendidikan dan keperluan mendesak lainnya.</p>
+                                <p class="text-justify">Melayani Pembayaran Uang Kuliah Mahasiswa Universitas Islam Riau, Top Up OVO, Listrik Pra dan Pasca Bayar, Telkom dan Pembayaran Lainnya.</p>
                             </div>
                         </div>
                     </div>

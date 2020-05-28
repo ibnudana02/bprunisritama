@@ -22,7 +22,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-12 blog">
                             <div class="single-blog">
                                 <div class="blog-image">
-                                    <a class="image-scale" href="<?= 'berita/' . $row->slug ?>">
+                                    <a class="image-scale" href="<?= base_url('berita/' . $row->slug) ?>">
                                         <img src="<?= base_url('upload/berita/' . $row->image) ?>" alt="">
                                     </a>
                                 </div>
