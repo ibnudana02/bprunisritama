@@ -12,7 +12,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-12 servis">
                     <div class="single-services">
                         <div class="service-inner layanan">
-                            <a class="service-icon" href="#">
+                            <a class="service-icon" href="<?= base_url('kredit') ?>">
                                 <i class="flaticon-point-of-service"></i>
                             </a>
                             <div class="service-content">
@@ -25,7 +25,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-12 servis">
                     <div class="single-services">
                         <div class="service-inner layanan">
-                            <a class="service-icon" href="#">
+                            <a class="service-icon" href="<?= base_url('dana') ?>">
                                 <i class="flaticon-point-of-service"></i>
                             </a>
                             <div class="service-content">
@@ -43,7 +43,7 @@
                             </a>
                             <div class="service-content">
                                 <h4><a href="#">Jasa Layanan</a></h4>
-                                <p class="text-justify">Melayani Pembayaran Uang Kuliah Mahasiswa Universitas Islam Riau, Top Up OVO, Listrik Pra dan Pasca Bayar, Telkom dan Pembayaran Lainnya.</p>
+                                <p class="text-justify">MelayaniPembelian PIN Pendaftaran, Pembayaran Uang Kuliah Mahasiswa Universitas Islam Riau, Top Up OVO, Listrik Pra dan Pasca Bayar, Telkom dan Pembayaran Lainnya.</p>
                             </div>
                         </div>
                     </div>
