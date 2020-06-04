@@ -39,7 +39,7 @@
                                 <li><a href="<?= base_url('kategori_berita/berita_terbaru') ?>">Berita Terbaru</a></li>
                                 <li><a href="<?= base_url('kategori_berita/profil') ?>">Profil Perusahaan</a></li>
                                 <li><a href="<?= base_url('kategori_berita/milad') ?>">Milad</a></li>
-                                <li><a href="<?= base_url('kategori_berita/produk') ?>">Produk</a></li>
+                                <li><a href="<?= base_url('produk') ?>">Produk</a></li>
                             </ul>
                         </div>
                         <br>

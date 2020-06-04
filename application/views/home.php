@@ -30,7 +30,7 @@
                             </a>
                             <div class="service-content">
                                 <h4><a href="<?= base_url('dana') ?>">Produk Dana</a></h4>
-                                <p class="text-justify">Saving Dana anda dengan Aman sekaligus bisa berinvestasi dengan Suku Bunga bersaing dan Pastinya dijamin LPS!.</p>
+                                <p class="text-justify">Saving Dana anda dengan Aman sekaligus bisa berinvestasi dengan Suku Bunga bersaing dan Pastinya dijamin LPS.</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             </a>
                             <div class="service-content">
                                 <h4><a href="#">Jasa Layanan</a></h4>
-                                <p class="text-justify">MelayaniPembelian PIN Pendaftaran, Pembayaran Uang Kuliah Mahasiswa Universitas Islam Riau, Top Up OVO, Listrik Pra dan Pasca Bayar, Telkom dan Pembayaran Lainnya.</p>
+                                <p class="text-justify">Melayani Pembelian PIN Pendaftaran, Pembayaran Uang Kuliah Mahasiswa Universitas Islam Riau, Top Up OVO, Listrik Pra dan Pasca Bayar, Telkom dan Pembayaran Lainnya.</p>
                             </div>
                         </div>
                     </div>

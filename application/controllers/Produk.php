@@ -40,7 +40,7 @@ class Produk extends CI_Controller
         $data['judul'] = 'Deposito | Bank Unisritama';
         $data['bread'] = 'Home';
         $data['crumb'] = 'Deposito';
-        $data['data'] = $this->produk->getDep();
+        $data['data'] = $this->produk->getDep()->result();
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
@@ -51,7 +51,7 @@ class Produk extends CI_Controller
         $data['judul'] = 'Tabungan | Bank Unisritama';
         $data['bread'] = 'Home';
         $data['crumb'] = 'Tabungan';
-        $data['data'] = $this->produk->getTab();
+        $data['data'] = $this->produk->getTab()->result();
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
@@ -62,7 +62,7 @@ class Produk extends CI_Controller
         $data['judul'] = 'Kredit | Bank Unisritama';
         $data['bread'] = 'Home';
         $data['crumb'] = 'Kredit';
-        $data['data'] = $this->produk->getKrd();
+        $data['data'] = $this->produk->getKrd()->result();
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
@@ -73,7 +73,7 @@ class Produk extends CI_Controller
         $data['judul'] = 'Produk Dana | Bank Unisritama';
         $data['bread'] = 'Home';
         $data['crumb'] = 'Produk Dana';
-        $data['data'] = $this->produk->getDana();
+        $data['data'] = $this->produk->getDana()->result();
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
@@ -85,6 +85,8 @@ class Produk extends CI_Controller
         $data['bread'] = 'Home';
         $data['crumb'] = 'Produk';
         $data['data'] = $this->produk->getAll();
+        // print_r($data['data']);
+        // die;
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');

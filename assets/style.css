@@ -203,7 +203,7 @@ body {
 #scrollUp {
     background: #000 none repeat scroll 0 0;
     border-radius: 20px;
-    bottom: 90px;
+    bottom: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     color: #fff;
     font-size: 30px;
@@ -211,7 +211,7 @@ body {
     line-height: 25px;
     right: 35px;
     text-align: center;
-    transition: all 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
     width: 35px;
 }
 
@@ -3997,7 +3997,7 @@ hr {
 }
 
 .layanan {
-    height: 230px;
+    height: 270px;
 }
 
 .servis {
