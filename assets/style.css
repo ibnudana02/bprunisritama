@@ -1589,7 +1589,7 @@ single-services:hover .service-inner {
 }
 
 .awesome-img>a::after {
-    /* background: #002c57f2; */
+    background: #002c57f2;
     content: "";
     height: 100%;
     left: 0;
