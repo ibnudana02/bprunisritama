@@ -51,23 +51,5 @@
 <!-- /.container-fluid -->
 <script src="<?= base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
 <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            // toolbar: ['heading', '|', 'bold', 'italic', 'link']
-        })
-        .then(editor => {
-            window.editor = editor;
-        })
-        .catch(err => {
-            console.error(err.stack);
-        });
-</script>
-<script>
-    $('#iconpicker').iconpicker({
-        iconset: 'fontawesome',
-        icon: 'fa-key',
-        rows: 5,
-        cols: 5,
-        placement: 'top',
-    });
+    CKEDITOR.replace('editor');
 </script>

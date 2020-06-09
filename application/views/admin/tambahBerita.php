@@ -64,16 +64,6 @@
 </div>
 <!-- /.container-fluid -->
 <script src="<?= base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
-<!-- <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/decoupled-document/ckeditor.js"></script> -->
 <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            // toolbar: ['heading', '|', 'bold', 'italic', 'link', 'alignment']
-        })
-        .then(editor => {
-            window.editor = editor;
-        })
-        .catch(err => {
-            console.error(err.stack);
-        });
+    CKEDITOR.replace('editor');
 </script>
