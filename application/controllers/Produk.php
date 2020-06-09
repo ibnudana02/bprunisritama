@@ -97,7 +97,9 @@ class Produk extends CI_Controller
         // $row = $this->produk->getById($id);
         $row = $this->produk->getBySlug($slug);
         $data['judul'] = ucwords($row->produk) . ' | Bank Unisritama';
-        // $data['berita'] = $this->berita->getLima();
+        $data['dps'] = $this->produk->getDep()->result();
+        $data['tab'] = $this->produk->getTab()->result();
+        $data['krd'] = $this->produk->getKrd()->result();
         $data['berita'] = $this->berita->getLima();
         $data['row'] = $row;
         $this->load->view('template/header', $data);

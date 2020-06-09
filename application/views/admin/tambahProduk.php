@@ -36,7 +36,7 @@
                                 <div class="form-group">
                                     <label>Deskripsi</label>
                                     <!-- <textarea id="editor" name="deskripsi"></textarea> -->
-                                    <textarea name="deskripsi" rows="3" class="form-control" required data-error="Write your deskripsi"></textarea>
+                                    <textarea name="deskripsi" id="editor" rows="3" class="form-control" required data-error="Write your deskripsi"></textarea>
                                 </div>
                                 <?php echo form_error('image', '<small class="text-danger pl-5">', '</small>'); ?>
                                 <div class="form-group">

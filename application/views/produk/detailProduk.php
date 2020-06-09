@@ -23,7 +23,7 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <?php $this->load->view('template/sidebar'); ?>
+            <?php $this->load->view('template/sidebar_produk'); ?>
         </div>
     </div>
 </div>
