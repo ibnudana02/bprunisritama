@@ -37,8 +37,8 @@
                                         <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                             <div class="dropdown-content">
-                                                <a href="#">Deposito Masyarakat</a>
-                                                <a href="#">Deposito Berjangka</a>
+                                                <a href="<?= base_url('produk/deposito-masyarakat') ?>">Deposito Masyarakat</a>
+                                                <a href="<?= base_url('produk/deposito-bank-lain') ?>">Deposito Bank Lain</a>
                                             </div>
                                         </li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('tabungan') ?>">Tabungan</a>
@@ -51,8 +51,8 @@
                                         </li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('kredit') ?>">Kredit</a>
                                             <div class="dropdown-content">
-                                                <a href="#">Kredit Bakulan</a>
-                                                <a href="#">Kredit Konsumtif</a>
+                                                <a href="<?= base_url('produk/kredit-bakulan') ?>">Kredit Bakulan</a>
+                                                <a href="<?= base_url('produk/kredit-konsumtif') ?>">Kredit Konsumtif</a>
                                                 <a href="#">Kredit Produktif</a>
                                             </div>
                                         </li>
@@ -106,8 +106,8 @@
                                     <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                         <div class="dropdown-content">
-                                            <a href="#">Deposito Masyarakat</a>
-                                            <a href="#">Deposito Berjangka</a>
+                                            <a href="<?= base_url('produk/deposito-masyarakat') ?>">Deposito Masyarakat</a>
+                                            <a href="<?= base_url('produk/deposito-bank-lain') ?>">Deposito Bank Lain</a>
                                         </div>
                                     </li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('tabungan') ?>">Tabungan</a>
@@ -120,8 +120,8 @@
                                     </li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('kredit') ?>">Kredit</a>
                                         <div class="dropdown-content">
-                                            <a href="#">Kredit Bakulan</a>
-                                            <a href="#">Kredit Konsumtif</a>
+                                            <a href="<?= base_url('produk/kredit-bakulan') ?>">Kredit Bakulan</a>
+                                            <a href="<?= base_url('produk/kredit-konsumtif') ?>">Kredit Konsumtif</a>
                                             <a href="#">Kredit Produktif</a>
                                         </div>
                                     </li>

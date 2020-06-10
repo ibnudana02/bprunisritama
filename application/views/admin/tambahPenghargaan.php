@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 ">
-                                        <a href="<?= base_url('admin/kategori'); ?>" class="btn btn-google btn-user btn-block">
+                                        <a href="<?= base_url('admin/awards'); ?>" class="btn btn-google btn-user btn-block">
                                             Cancel
                                         </a>
                                     </div>
