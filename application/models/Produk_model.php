@@ -10,6 +10,7 @@ class Produk_model extends CI_Model
     public $jenis;
     public $image;
     public $penulis;
+    public $link;
     public $created_on;
     public $update_by;
     public $update_on;
@@ -23,6 +24,7 @@ class Produk_model extends CI_Model
         $this->deskripsi = $post['deskripsi'];
         $out = explode(" ", $this->produk);
         $this->slug = implode("-", $out);
+        $this->link = $post['link'];
         $this->jenis = $post['jenis'];
         $this->image = $this->_uploadImage();
         $this->penulis = $this->session->userdata('name');

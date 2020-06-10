@@ -18,7 +18,7 @@
                 <div class="card-body col-12 mx-auto">
                     <div class="table-responsive">
                         <div class="col-10 mx-auto">
-                            <form class="user" method="post" action="<?= base_url('admin/add_produk'); ?>" enctype="multipart/form-data">
+                            <form name="produk" class="user" method="post" action="<?= base_url('admin/add_produk'); ?>" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>Produk</label>
                                     <input type="text" class="form-control form-control-user" name="produk" id="produk" placeholder="Enter produk" value="<?= set_value('produk'); ?>">
@@ -32,6 +32,10 @@
                                             <option value="<?= $row->id_jenis; ?>"><?= $row->jenis; ?></option>
                                         <?php endforeach; ?>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Link">Link - Pembukaan Produk</label>
+                                    <input type="text" class="form-control form-control-user link" id="link" name="link" placeholder="Link" value="<?= set_value('link'); ?>">
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>
@@ -67,4 +71,24 @@
 <script src="<?= base_url('assets/'); ?>ckeditor/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('editor');
+</script>
+<script>
+    $(document).ready(function() {
+
+        $("#jenis").change(function() {
+            // $(this).hide();
+            var link;
+            var d = document.forms["produk"]["jenis"].value;
+            if (d == "5e9545a2ecf3e") {
+                link = "pembukaan-rekening-tabungan";
+            } else if (d == "5e95459d30794") {
+                link = "pembukaan-rekening-kredit";
+            } else if (d == "5e954595bcb46") {
+                link = "pembukaan-rekening-deposito";
+            } else {
+                link = "";
+            }
+            $("#link").val(link);
+        });
+    });
 </script>
