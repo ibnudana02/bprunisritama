@@ -17,6 +17,7 @@
                                 </div>
                                 <h3><?= strtoupper($row->produk); ?></h3>
                                 <?php echo $row->deskripsi; ?>
+                                <a href="<?= base_url($row->link) ?>" class="btn btn-info btn btn-outline-success">Saya Berminat</a>
                             </div>
                         </div>
                     </article>

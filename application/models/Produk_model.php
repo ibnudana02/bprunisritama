@@ -43,6 +43,7 @@ class Produk_model extends CI_Model
         $this->deskripsi = $post['deskripsi'];
         $out = explode(" ", $this->produk);
         $this->slug = implode("-", $out);
+        $this->link = $post['link'];
         $this->jenis = $post['jenis'];
         if (!empty($_FILES["image"]["name"])) {
             $this->image = $this->_uploadImage();
