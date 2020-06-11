@@ -81,6 +81,7 @@
 <script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js"></script>
 <!-- bootstrap js -->
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
+<script src="<?php echo base_url('assets/'); ?>js/bootstrap-datepicker.min.js"></script>
 <!-- owl.carousel js -->
 <script src="<?php echo base_url('assets/'); ?>js/owl.carousel.min.js"></script>
 <!-- Counter js -->
@@ -107,7 +108,7 @@
     });
 </script>
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
     (function() {
@@ -119,7 +120,7 @@
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
     })();
-</script>
+</script> -->
 <!--End of Tawk.to Script-->
 </body>
 

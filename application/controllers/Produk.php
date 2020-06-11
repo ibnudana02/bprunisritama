@@ -7,7 +7,7 @@ class Produk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk'));
+        $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk', 'Jenis_model' => 'jenis'));
     }
 
     public function index()
@@ -104,6 +104,18 @@ class Produk extends CI_Controller
         $data['row'] = $row;
         $this->load->view('template/header', $data);
         $this->load->view('produk/detailProduk', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function createTab()
+    {
+        $da = $this->produk->getTab()->result();
+        $data['judul'] = 'Pembukaan Rekening Tabungan | Bank Unisritama';
+        $data['bread'] = 'Home';
+        $data['crumb'] = 'Produk';
+        $data['jenis'] = $da;
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/bukaRek', $data);
         $this->load->view('template/footer');
     }
 }

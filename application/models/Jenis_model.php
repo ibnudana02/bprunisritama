@@ -21,6 +21,15 @@ class Jenis_model extends CI_Model
     {
         return $this->db->get('jenis');
     }
+
+    public function getRek()
+    {
+        $jenis = array('Deposito', 'Kredit', 'Tabungan');
+        $this->db->select('*')
+            ->from($this->_table)
+            ->where_in('jenis', $jenis);
+        return $this->db->get();
+    }
 }
 
 /* End of file Jenis_model.php */

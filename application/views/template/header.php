@@ -15,6 +15,7 @@
     <!-- all css here -->
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap-datepicker.min.css">
     <!-- owl.carousel css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/owl.transitions.css">
