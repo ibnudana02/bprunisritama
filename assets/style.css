@@ -4267,3 +4267,11 @@ hr {
 .blog {
     padding-bottom: 20px !important;
 }
+
+.scroll {
+    background: #e5e6e5;
+    overflow: scroll;
+    width: 100%;
+    height: 200px;
+    text-align: justify;
+}

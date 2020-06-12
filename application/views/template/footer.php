@@ -78,7 +78,7 @@
 <!-- all js here -->
 
 <!-- jquery latest version -->
-<script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js"></script>
+<script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js" type="text/javascript"></script>
 <!-- bootstrap js -->
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap-datepicker.min.js"></script>
