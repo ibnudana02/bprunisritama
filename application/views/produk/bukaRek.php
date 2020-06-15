@@ -1,17 +1,13 @@
 <div class="blog-page-area struktur">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
-
-            </div>
-
+            <div class="col-md-2"></div>
             <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Formulir Pembukaan Rekening Tabungan</h3>
                     </div>
                     <div class="panel-body">
-                        <!-- <h5 class="text-center">Formulir Pembukaan Rekening Tabungan</h5> -->
                         <form name="produk" class="user" method="post" action="<?= base_url(); ?>" enctype="multipart/form-data">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#home">Identitas Diri</a></li>
@@ -19,7 +15,6 @@
                                 <li><a data-toggle="tab" href="#menu2">Alamat</a></li>
                                 <li><a data-toggle="tab" href="#dokumen">Dokumen</a></li>
                             </ul>
-
                             <div class="tab-content">
                                 <div id="home" class="tab-pane fade in active">
                                     <p class="alert alert-danger" role="alert">Mohon isi sesuai data sebenarnya!</p>
@@ -222,12 +217,13 @@
                                 <br>
                                 Syarat dan Ketentuan ini merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Formulir Pembukaan Rekening Tabungan Perorangan termasuk perubahannya di kemudian hari. Syarat dan Ketentuan ini berlaku pula untuk setiap pembukaan berikutnya dari produkTabungan yang sama yang dilakukan oleh Nasabah
                             </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-info" id="btSubmit">
-                                    SUBMIT
-                                </button>
-                            </div>
                         </form>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="button" class="btn btn-primary pull-right" id="btSubmit">
+                            SUBMIT
+                        </button>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
