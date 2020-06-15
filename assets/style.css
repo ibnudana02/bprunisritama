@@ -1845,7 +1845,7 @@ single-services:hover .service-inner {
 .panel {
     margin-bottom: 20px;
     background-color: #fff;
-    border: none;
+    /* border: none; */
     border-radius: 4px;
 }
 

@@ -25,10 +25,10 @@ class Welcome extends CI_Controller
 
 	public function test()
 	{
-		// $data['data'] = $this->produk->getTab()->result();
-		// $this->load->view('template/header');
+		$data['judul'] = 'BPR Unisritama - Mitra Ekonomi Kerakyatan';
+		$this->load->view('template/header', $data);
 		// $this->load->view('produk/tabungan', $data);
-		// $this->load->view('template/footer');
 		$this->load->view('unik');
+		$this->load->view('template/footer');
 	}
 }
