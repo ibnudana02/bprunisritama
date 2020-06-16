@@ -1,8 +1,8 @@
 <div class="blog-page-area struktur">
     <div class="container">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 col-sm-8 col-xs-12">
+            <!-- <div class="col-md-1"></div> -->
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Formulir Pembukaan Rekening Tabungan</h3>
@@ -12,65 +12,127 @@
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#home">Identitas Diri</a></li>
                                 <li><a data-toggle="tab" href="#menu1">Pekerjaan</a></li>
-                                <li><a data-toggle="tab" href="#menu2">Alamat</a></li>
+                                <li><a data-toggle="tab" href="#menu2">Alamat dan Data Tambahan</a></li>
                                 <li><a data-toggle="tab" href="#dokumen">Dokumen</a></li>
+                                <li><a data-toggle="tab" href="#accept">Persetujuan</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="home" class="tab-pane fade in active">
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
-                                    <div class="form-group">
-                                        <input type="text" autofocus class="form-control form-control-user" name="produk" id="produk" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
-                                        <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control form-control-user" name="produk" id="produk" placeholder="Nomor Tanda Pengenal" value="<?= set_value('produk'); ?>">
-                                        <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="produk" id="produk" placeholder="Tempat Dikeluarkan Tanda Pengenal" value="<?= set_value('produk'); ?>">
-                                        <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="e">Berlaku Hingga:</label>
-                                        <input type="text" class="form-control form-control-user datepicker" placeholder="Masa Berlaku" />
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="alamat_domisili" id="alamat_domisili" rows="3" class="form-control form-control-user" placeholder="Alamat sesuai Domisili"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="kode_pos" placeholder="Kode Pos" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control form-control-user" name="no" placeholder="No. Hp/Telp" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="email" placeholder="Email" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="alamat_surat" placeholder="Alamat Surat Menyurat" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="kota_surat" placeholder="Kota" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="kode_pos_surat" placeholder="Kode Pos" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="jenis_kelamin">Jenis Kelamin</label>
-                                        <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
-                                        <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="tgl_lhr" placeholder="Tanggal Lahir">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="nama_ibu" placeholder="Nama Gadis Ibu Kandung">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" autofocus class="form-control form-control-user" name="produk" id="produk" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
+                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" autofocus class="form-control form-control-user" name="produk" id="produk" placeholder="Nama Sesuai Identitas" value="<?= set_value('produk'); ?>">
+                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Jenis Identitas</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">KTP</option>
+                                                    <option value="">SIM</option>
+                                                    <option value="">Passport</option>
+                                                    <option value="">Lainnya</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="e">Berlaku Hingga:</label>
+                                                <input type="text" class="form-control form-control-user" placeholder="Masa Berlaku" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal" value="<?= set_value('produk'); ?>">
+                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <textarea name="alamat_ktp" id="alamat_ktp" rows="1" class="form-control form-control-user" placeholder="Alamat sesuai Tanda Pengenal"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="kode_pos" placeholder="Kode Pos" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="jenis_kelamin">Jenis Kelamin :</label><br>
+                                                <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
+                                                <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Agama</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Islam</option>
+                                                    <option value="">Katolik</option>
+                                                    <option value="">Kristen</option>
+                                                    <option value="">Hindu</option>
+                                                    <option value="">Budha</option>
+                                                    <option value="">Kong Hu Cu</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="tgl_lhr" placeholder="Tanggal Lahir">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="nama_ibu" placeholder="Nama Gadis Ibu Kandung">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control form-control-user" name="no" placeholder="No. Hp/Telp" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="email" placeholder="Email" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="alamat_surat" placeholder="Alamat Surat Menyurat" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="kota_surat" placeholder="Kota" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="kode_pos_surat" placeholder="Kode Pos" />
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                 </div>
                                 <div id="menu1" class="tab-pane fade">
@@ -155,17 +217,6 @@
                                         <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
                                     </div>
                                     <div class="form-group">
-                                        <label for="sumber dana">Agama</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Islam</option>
-                                            <option value="">Katolik</option>
-                                            <option value="">Kristen</option>
-                                            <option value="">Hindu</option>
-                                            <option value="">Budha</option>
-                                            <option value="">Kong Hu Cu</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
                                         <input type="text" class="form-control form-control-user" name="wn" placeholder="Kewarganegaraan">
                                     </div>
                                     <div class="form-group">
@@ -210,12 +261,14 @@
                                         <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
                                     </div>
                                 </div>
-                            </div>
-                            <p><b>Mohon Baca Persyaratan dan Ketentuan berikut ini:</b></p>
-                            <div class="scroll">
-                                Mohon dibaca secara seksama sebelum Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan karena Anda akan terikat oleh Syarat dan Ketentuan ini setelah Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan ini.
-                                <br>
-                                Syarat dan Ketentuan ini merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Formulir Pembukaan Rekening Tabungan Perorangan termasuk perubahannya di kemudian hari. Syarat dan Ketentuan ini berlaku pula untuk setiap pembukaan berikutnya dari produkTabungan yang sama yang dilakukan oleh Nasabah
+                                <div id="accept" class="tab-pane fade">
+                                    <p><b>Mohon Baca Persyaratan dan Ketentuan berikut ini:</b></p>
+                                    <div class="scroll">
+                                        Mohon dibaca secara seksama sebelum Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan karena Anda akan terikat oleh Syarat dan Ketentuan ini setelah Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan ini.
+                                        <br>
+                                        Syarat dan Ketentuan ini merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Formulir Pembukaan Rekening Tabungan Perorangan termasuk perubahannya di kemudian hari. Syarat dan Ketentuan ini berlaku pula untuk setiap pembukaan berikutnya dari produkTabungan yang sama yang dilakukan oleh Nasabah
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
