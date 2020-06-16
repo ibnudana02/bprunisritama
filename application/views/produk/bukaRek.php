@@ -17,7 +17,7 @@
                             </ul>
                             <div class="tab-content">
                                 <div id="home" class="tab-pane fade in active">
-                                    <p class="alert alert-danger" role="alert">Mohon isi sesuai data sebenarnya!</p>
+                                    <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <div class="form-group">
                                         <input type="text" autofocus class="form-control form-control-user" name="produk" id="produk" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
                                         <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
                                 <div id="menu1" class="tab-pane fade">
-                                    <p class="alert alert-danger" role="alert">Mohon isi sesuai data sebenarnya!</p>
+                                    <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" name="pekerjaan" placeholder="Pekerjaan">
                                     </div>
@@ -133,7 +133,7 @@
                                     </div>
                                 </div>
                                 <div id="menu2" class="tab-pane fade">
-                                    <p class="alert alert-danger" role="alert">Mohon isi sesuai data sebenarnya!</p>
+                                    <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <div class="form-group">
                                         <label for="sumber dana">Status Tempat Tinggal</label>
                                         <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
@@ -191,7 +191,7 @@
                                     </div>
                                 </div>
                                 <div id="dokumen" class="tab-pane fade">
-                                    <p class="alert alert-danger" role="alert">Mohon isi sesuai data sebenarnya!</p>
+                                    <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <?php echo form_error('image', '<small class="text-danger pl-5">', '</small>'); ?>
                                     <div class="form-group">
                                         <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
