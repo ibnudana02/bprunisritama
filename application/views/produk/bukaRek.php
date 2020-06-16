@@ -9,15 +9,15 @@
                     </div>
                     <div class="panel-body">
                         <form name="produk" class="user" method="post" action="<?= base_url(); ?>" enctype="multipart/form-data">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#home">Identitas Diri</a></li>
-                                <li><a data-toggle="tab" href="#menu1">Pekerjaan</a></li>
-                                <li><a data-toggle="tab" href="#menu2">Alamat dan Data Tambahan</a></li>
+                            <ul class="nav nav-pills">
+                                <li class="active"><a data-toggle="tab" href="#identitas">Identitas Diri</a></li>
+                                <li><a data-toggle="tab" href="#pekerjaan">Pekerjaan</a></li>
+                                <li><a data-toggle="tab" href="#tambahan">Alamat dan Data Tambahan</a></li>
                                 <li><a data-toggle="tab" href="#dokumen">Dokumen</a></li>
                                 <li><a data-toggle="tab" href="#accept">Persetujuan</a></li>
                             </ul>
                             <div class="tab-content">
-                                <div id="home" class="tab-pane fade in active">
+                                <div id="identitas" class="tab-pane fade in active">
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -32,7 +32,7 @@
                                                 <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="sumber dana">Jenis Identitas</label>
                                                 <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
@@ -43,42 +43,13 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="e">Berlaku Hingga:</label>
                                                 <input type="text" class="form-control form-control-user" placeholder="Masa Berlaku" />
                                             </div>
                                         </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal" value="<?= set_value('produk'); ?>">
-                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <textarea name="alamat_ktp" id="alamat_ktp" rows="1" class="form-control form-control-user" placeholder="Alamat sesuai Tanda Pengenal"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kode_pos" placeholder="Kode Pos" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <label for="jenis_kelamin">Jenis Kelamin :</label><br>
-                                                <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
-                                                <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="sumber dana">Agama</label>
                                                 <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
@@ -91,22 +62,51 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal" value="<?= set_value('produk'); ?>">
+                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <textarea name="alamat_ktp" id="alamat_ktp" rows="3" class="form-control form-control-user" placeholder="Alamat sesuai Tanda Pengenal"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota sesuai Tanda Pengenal" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="kode_pos" placeholder="Kode Pos sesuai Tanda Pengenal" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12"></div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="jenis_kelamin">Jenis Kelamin :</label><br>
+                                                <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
+                                                <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="tgl_lhr" placeholder="Tanggal Lahir">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="nama_ibu" placeholder="Nama Gadis Ibu Kandung">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="number" class="form-control form-control-user" name="no" placeholder="No. Hp/Telp" />
                                             </div>
@@ -121,152 +121,203 @@
                                                 <input type="text" class="form-control form-control-user" name="alamat_surat" placeholder="Alamat Surat Menyurat" />
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="" disabled>--Kewarganegaraan--</option>
+                                                    <option value="">Indonesia</option>
+                                                    <option value="">Asing</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <!-- <label for="sumber dana">Pendidikan Terakhir</label> -->
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="" disabled>--Pendidikan Terakhir--</option>
+                                                    <option value="">S3</option>
+                                                    <option value="">S2</option>
+                                                    <option value="">S1</option>
+                                                    <option value="">Diploma</option>
+                                                    <option value="">SMA/SMK Sederajat</option>
+                                                    <option value="">SMP</option>
+                                                    <option value="">SD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="kota_surat" placeholder="Kota" />
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="kode_pos_surat" placeholder="Kode Pos" />
                                             </div>
                                         </div>
-
-
                                     </div>
-                                </div>
-                                <div id="menu1" class="tab-pane fade">
+                                </div> <!-- end tab identitas -->
+                                <div id="pekerjaan" class="tab-pane fade">
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="pekerjaan" placeholder="Pekerjaan">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Pekerjaan</label>
+                                                <input type="text" class="form-control form-control-user" name="pekerjaan" placeholder="Pekerjaan">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Status Pekerjaan</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Tetap</option>
+                                                    <option value="">Kontrak</option>
+                                                    <option value="">Honorer</option>
+                                                    <option value="">Paruh-Waktu</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Sumber Penghasilan</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Gaji</option>
+                                                    <option value="">Hasil Investasi</option>
+                                                    <option value="">Hasil Usaha</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Penghasilan/Gaji Kotor per Tahun (Rp.)</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Kecil dari 15 Juta</option>
+                                                    <option value="">Berkisar dari 15 sampai 100 Juta</option>
+                                                    <option value="">Berkisar dari 100 sampai 200 Juta</option>
+                                                    <option value="">Lebih dari 200 Juta</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Penghasilan Lainnya per Tahun (Rp.)</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Kecil dari 15 Juta</option>
+                                                    <option value="">Berkisar dari 15 sampai 100 Juta</option>
+                                                    <option value="">Berkisar dari 100 sampai 200 Juta</option>
+                                                    <option value="">Lebih dari 200 Juta</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Total Penghasilan per Tahun (Rp.)</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Kecil dari 15 Juta</option>
+                                                    <option value="">Berkisar dari 15 sampai 100 Juta</option>
+                                                    <option value="">Berkisar dari 100 sampai 200 Juta</option>
+                                                    <option value="">Lebih dari 200 Juta</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Status Pekerjaan</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Tetap</option>
-                                            <option value="">Kontrak</option>
-                                            <option value="">Honorer</option>
-                                            <option value="">Paruh-Waktu</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Sumber Penghasilan</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Gaji</option>
-                                            <option value="">Hasil Investasi</option>
-                                            <option value="">Hasil Usaha</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Tujuan Pembukaan Rekening</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Transaksi</option>
-                                            <option value="">Investasi/Tabungan</option>
-                                            <option value="">Keperluan Pribadi</option>
-                                            <option value="">Pinjaman/Kredit</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Penghasilan/Gaji Kotor per Tahun (Rp.)</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Kecil dari 15 Juta</option>
-                                            <option value="">Berkisar dari 15 sampai 100 Juta</option>
-                                            <option value="">Berkisar dari 100 sampai 200 Juta</option>
-                                            <option value="">Lebih dari 200 Juta</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Penghasilan Lainnya per Tahun (Rp.)</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Kecil dari 15 Juta</option>
-                                            <option value="">Berkisar dari 15 sampai 100 Juta</option>
-                                            <option value="">Berkisar dari 100 sampai 200 Juta</option>
-                                            <option value="">Lebih dari 200 Juta</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Total Penghasilan per Tahun (Rp.)</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Kecil dari 15 Juta</option>
-                                            <option value="">Berkisar dari 15 sampai 100 Juta</option>
-                                            <option value="">Berkisar dari 100 sampai 200 Juta</option>
-                                            <option value="">Lebih dari 200 Juta</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div id="menu2" class="tab-pane fade">
+                                </div><!-- end tab pekerjaan -->
+                                <div id="tambahan" class="tab-pane fade">
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Status Tempat Tinggal</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Milik Sendiri</option>
-                                            <option value="">Sewa</option>
-                                            <option value="">Dinas</option>
-                                            <option value="">Keluarga</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Status Pernikahan</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">Belum Menikah</option>
-                                            <option value="">Menikah</option>
-                                            <option value="">Duda / Janda</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="wn" placeholder="Kewarganegaraan">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sumber dana">Pendidikan Terakhir</label>
-                                        <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                            <option value="">S3</option>
-                                            <option value="">S2</option>
-                                            <option value="">S1</option>
-                                            <option value="">Diploma</option>
-                                            <option value="">SMA/SMK Sederajat</option>
-                                            <option value="">SMP</option>
-                                            <option value="">SD</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="jenis tabungan">Jenis Tabungan</label>
-                                        <select class="form-control custom-select custom-select-md" id="jenis" name="jenis">
-                                            <option value="" disabled diselected>--Pilih Jenis Produk--</option>
-                                            <?php foreach ($jenis as $row) : ?>
-                                                <option value="<?= $row->id_produk; ?>"><?= ucwords($row->produk); ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Status Tempat Tinggal</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Milik Sendiri</option>
+                                                    <option value="">Sewa</option>
+                                                    <option value="">Dinas</option>
+                                                    <option value="">Keluarga</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Status Pernikahan</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Belum Menikah</option>
+                                                    <option value="">Menikah</option>
+                                                    <option value="">Duda / Janda</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-lg-12"></div> -->
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="">Jumlah Tanggungan</label>
+                                                <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="sumber dana">Tujuan Pembukaan Rekening</label>
+                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                    <option value="">Transaksi</option>
+                                                    <option value="">Investasi/Tabungan</option>
+                                                    <option value="">Keperluan Pribadi</option>
+                                                    <option value="">Pinjaman/Kredit</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="jenis tabungan">Jenis Tabungan</label>
+                                                <select class="form-control custom-select custom-select-md" id="jenis" name="jenis">
+                                                    <option value="" disabled diselected>--Pilih Jenis Produk--</option>
+                                                    <?php foreach ($jenis as $row) : ?>
+                                                        <option value="<?= $row->id_produk; ?>"><?= ucwords($row->produk); ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div id="dokumen" class="tab-pane fade">
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
-                                    <?php echo form_error('image', '<small class="text-danger pl-5">', '</small>'); ?>
-                                    <div class="form-group">
-                                        <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
-                                        <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="image">Lampirkan Foto Selfie</label>
-                                        <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="image">Lampirkan Foto Tanda Tangan</label>
-                                        <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="image">Lampirkan Foto NPWP</label>
-                                        <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
+                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="image">Lampirkan Foto Selfie</label>
+                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="image">Lampirkan Foto Tanda Tangan</label>
+                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="image">Lampirkan Foto NPWP</label>
+                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div id="accept" class="tab-pane fade">
-                                    <p><b>Mohon Baca Persyaratan dan Ketentuan berikut ini:</b></p>
-                                    <div class="scroll">
-                                        Mohon dibaca secara seksama sebelum Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan karena Anda akan terikat oleh Syarat dan Ketentuan ini setelah Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan ini.
-                                        <br>
-                                        Syarat dan Ketentuan ini merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Formulir Pembukaan Rekening Tabungan Perorangan termasuk perubahannya di kemudian hari. Syarat dan Ketentuan ini berlaku pula untuk setiap pembukaan berikutnya dari produkTabungan yang sama yang dilakukan oleh Nasabah
+                                    <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon Baca Persyaratan dan Ketentuan berikut ini!</p>
+                                    <div class="row">
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-8">
+                                            <div class="scroll">
+                                                Mohon dibaca secara seksama sebelum Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan karena Anda akan terikat oleh Syarat dan Ketentuan ini setelah Anda menandatangani Formulir Pembukaan Rekening Tabungan Perorangan ini.
+                                                <br>
+                                                Syarat dan Ketentuan ini merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Formulir Pembukaan Rekening Tabungan Perorangan termasuk perubahannya di kemudian hari. Syarat dan Ketentuan ini berlaku pula untuk setiap pembukaan berikutnya dari produkTabungan yang sama yang dilakukan oleh Nasabah
+                                                Syarat dan Ketentuan ini merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Formulir Pembukaan Rekening Tabungan Perorangan termasuk perubahannya di kemudian hari. Syarat dan Ketentuan ini berlaku pula untuk setiap pembukaan berikutnya dari produkTabungan yang sama yang dilakukan oleh Nasabah
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
