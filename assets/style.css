@@ -1880,6 +1880,12 @@ single-services:hover .service-inner {
     padding: 10px 45px;
 }
 
+@media (max-width: 767px) {
+    .panel-body {
+        padding: 10px 20px;
+    }
+}
+
 .faq-details h4.check-title {
     color: #444;
     font-size: 18px;
