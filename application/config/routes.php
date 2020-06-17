@@ -121,7 +121,7 @@ $route['produk/(:any)'] = 'produk/detailProduk/$1';
 $route['kategori_berita/(:any)'] = 'news/kategoriBerita/$1';
 
 //Routes for Page Tentang
-$route['buat'] = 'produk/createTab';
+$route['pembukaan-rekening-tabungan'] = 'produk/createTab';
 $route['produk'] = 'produk/produk';
 $route['dana'] = 'produk/dana';
 $route['deposito'] = 'produk/deposito';
