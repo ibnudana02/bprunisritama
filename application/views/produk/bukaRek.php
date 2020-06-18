@@ -116,7 +116,6 @@
                                                 <input type="text" class="form-control form-control-user" name="kel" placeholder="Kelurahan / Desa" />
                                             </div>
                                         </div>
-
                                         <div class="col-lg-12"></div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
@@ -135,7 +134,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="alamat_surat" placeholder="Alamat Surat Menyurat" />
+                                                <input type="text" class="form-control form-control-user" name="alamat_surat" placeholder="Alamat Domisili" />
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -248,7 +247,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota sesuai Tanda Pengenal" />
+                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota sesuai Identitas" />
                                             </div>
                                         </div>
                                     </div>
@@ -256,13 +255,29 @@
                                 <div id="pekerjaan" class="tab-pane fade">
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <div class="row">
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Pekerjaan</label>
-                                                <input type="text" class="form-control form-control-user" name="pekerjaan" placeholder="Pekerjaan">
+                                                <label for="sumber dana">Profesi</label>
+                                                <!-- <input type="text" class="form-control form-control-user" name="pekerjaan" placeholder="Pekerjaan"> -->
+                                                <select name="profesi" id="" class="form-control form-control-user">
+                                                    <option value="">Pegawai Negeri / Swasta</option>
+                                                    <option value="">Profesional</option>
+                                                    <option value="">Wiraswasta</option>
+                                                    <option value="">Pelajar</option>
+                                                    <option value="">Pensiunan</option>
+                                                    <option value="">IRT</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
+                                            <label for="jenis_pekerjaan">Jenis Pekerjaan</label>
+                                            <select name="jenis_pekerjaan" id="" class="form-control form-control-user">
+                                                <option value="">Pemerintah</option>
+                                                <option value="">Perusahaan</option>
+                                                <option value="">CV</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Status Pekerjaan</label>
                                                 <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
@@ -273,7 +288,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Sumber Penghasilan</label>
                                                 <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
@@ -282,6 +297,37 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" name="jabatan" id="" class="form-control form-control-user" placeholder="Jabatan">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" name="gaji" id="" class="form-control form-control-user" placeholder="Gaji / Pendapatan Perbulan">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="nm_perusahaan" id="" class="form-control form-control-user" placeholder="Nama Perusahaan / Usaha">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="form-group">
+                                                <input type="text" name="alamat_perusahaan" class="form-control form-control-user" placeholder="Alamat Perusahaan / Usaha">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" name="no_kantor" id="" class="form-control form-control-user" placeholder="No. Telp Kantor / Usaha">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="frm-group">
+                                                <input type="text" name="email_kantor" id="" class="form-control form-control-user" placeholder="Email Kantor">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12"></div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for="sumber dana">Penghasilan/Gaji Kotor per Tahun (Rp.)</label>
@@ -331,22 +377,19 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="">Jumlah Tanggungan</label>
                                                 <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
                                             </div>
                                         </div>
-
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Tujuan Pembukaan Rekening</label>
                                                 <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Transaksi</option>
-                                                    <option value="">Investasi/Tabungan</option>
-                                                    <option value="">Keperluan Pribadi</option>
-                                                    <option value="">Pinjaman/Kredit</option>
+                                                    <option value="">Simpanan</option>
+                                                    <option value="">Penerimaan Gaji</option>
+                                                    <option value="">Penyaluran Kredit</option>
                                                 </select>
                                             </div>
                                         </div>
