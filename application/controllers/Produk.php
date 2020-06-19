@@ -13,7 +13,6 @@ class Produk extends CI_Controller
     public function index()
     {
         $this->load->view('template/header');
-        // $this->load->view('tentang/profil');
         $this->load->view('template/footer');
     }
 
@@ -85,8 +84,6 @@ class Produk extends CI_Controller
         $data['bread'] = 'Home';
         $data['crumb'] = 'Produk';
         $data['data'] = $this->produk->getAll();
-        // print_r($data['data']);
-        // die;
         $this->load->view('template/header', $data);
         $this->load->view('produk/produk', $data);
         $this->load->view('template/footer');
@@ -109,11 +106,20 @@ class Produk extends CI_Controller
 
     public function createTab()
     {
-        $da = $this->produk->getTab()->result();
+        $this->form_validation->set_rules('produk', 'Produk', 'required|trim');
+        $this->form_validation->set_rules('jenis', 'Jenis', 'required|trim');
+        $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required|trim');
+        $produk = $this->produk; //produk model disimpan dalam variable
+        if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
+            $produk->save();
+            $this->session->set_flashdata('message', 'Berhasil ditambahkan');
+            redirect('admin/produk', 'refresh');
+        }
+
         $data['judul'] = 'Pembukaan Rekening Tabungan | Bank Unisritama';
         $data['bread'] = 'Home';
         $data['crumb'] = 'Produk';
-        $data['jenis'] = $da;
+        $data['jenis'] = $this->produk->getTab()->result();
         $this->load->view('template/header', $data);
         $this->load->view('produk/bukaRek', $data);
         $this->load->view('template/footer');

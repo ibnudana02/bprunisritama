@@ -269,7 +269,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota sesuai Identitas" />
+                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="No. HP Pasangan" />
                                             </div>
                                         </div>
                                     </div>
