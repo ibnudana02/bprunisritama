@@ -73,6 +73,13 @@ class News extends CI_Controller
         $this->load->view('news/gcg', $data);
         $this->load->view('template/footer');
     }
+
+    public function unduh()
+    {
+        $name = $this->uri->segment(3);
+        $data = file_get_contents("upload/laporan/" . $name);
+        force_download($name, $data);
+    }
 }
 
 /* End of file News.php */

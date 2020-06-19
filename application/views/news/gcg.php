@@ -7,15 +7,15 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 blog">
                         <div class="single-blog">
                             <div class="blog-content">
-                                <div class="blog-title" style="padding: 0 25px;">
-                                    <a href="">
-                                        <h5><?= $row->laporan ?></h4>
+                                <div class="blog-title" style="padding: 0 25px;min-height:56px;">
+                                    <a>
+                                        <h5 class="text-center"><?= $row->laporan ?></h5>
                                     </a>
                                 </div>
                                 <div class="single-page-head">
                                     <div class="download-btn">
                                         <div class="about-btn text-center">
-                                            <a href="<?= base_url('upload/laporan/' . $row->dokumen) ?>" class="down-btn">Download <i class="fa fa-file-pdf-o"></i></a>
+                                            <a href="<?= base_url('news/unduh/' . $row->dokumen) ?>" class="down-btn">Download <i class="fa fa-file-pdf-o"></i></a>
                                             <a href="<?= $row->id_laporan ?>" class="down-btn" data-target="#view<?php echo $row->id_laporan; ?>" data-toggle="modal">View <i class="fa fa-file-pdf-o"></i></a>
                                         </div>
                                     </div>
@@ -27,14 +27,14 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title mt-0"><?= strtoupper($row->laporan); ?></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h5 class="modal-title mt-0 text-center"><?= strtoupper($row->laporan); ?></h5>
+                                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
                                 </div>
-                                <div class="modal-body" style="height: 500px;">
-                                    <iframe src="<?= base_url('upload/laporan/' . $row->dokumen) ?>" frameborder="0" style="width:100%;height:100%;border:none;"></iframe>
+                                <div class="modal-body" style="height: 420px;width:fit-content;">
+                                    <embed src="<?= base_url('upload/laporan/' . $row->dokumen) ?>" type='application/pdf' width='100%' height='420px' />
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Tutup">Tutup</button>
+                                <div class="modal-footer" style="margin-top: 25px;">
+                                    <button type="button" class="btn btn-danger center-block" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Tutup">Tutup</button>
                                 </div>
                             </div>
                         </div>

@@ -68,6 +68,15 @@ class User_model extends CI_Model
     {
         return $this->db->get($this->_table);
     }
+
+    function getData()
+    {
+        return $this->db->get('provinsi')->result_array();
+    }
+    function getKab()
+    {
+        return $this->db->get('kec')->result_array();
+    }
 }
 
 /* End of file User_model.php */
