@@ -414,16 +414,6 @@
                                                 <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
                                             </div>
                                         </div>
-                                        <!-- <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <label for="sumber dana">Tujuan Pembukaan Rekening</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Simpanan</option>
-                                                    <option value="">Penerimaan Gaji</option>
-                                                    <option value="">Penyaluran Kredit</option>
-                                                </select>
-                                            </div>
-                                        </div> -->
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="jenis tabungan">Jenis Deposito</label>
@@ -435,8 +425,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
-
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Pendidikan Terakhir</label>

@@ -18,7 +18,7 @@ class Produk extends CI_Controller
 
     public function pmb()
     {
-        $data['judul'] = 'Pembayaran Mahasiswa';
+        $data['judul'] = 'Pembayaran Mahasiswa | Bank Unisritama';
         $data['category'] = $this->kategori->getAll(); //Ambil data kategori
         $data['berita'] = $this->berita->getLima(); //Ambil data berita
         $data['row'] =  $this->produk->getPmb(); //Ambil data berita
@@ -29,7 +29,7 @@ class Produk extends CI_Controller
 
     public function ppob()
     {
-        $data['judul'] = 'Payment Point Online Bank';
+        $data['judul'] = 'Payment Point Online Bank | Bank Unisritama';
         $data['category'] = $this->kategori->getAll(); //Ambil data kategori
         $data['berita'] = $this->berita->getLima(); //Ambil data berita
         $data['row'] =  $this->produk->getPayment(); //Ambil data berita

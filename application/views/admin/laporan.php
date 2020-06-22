@@ -89,10 +89,10 @@
                                                     <h5 class="modal-title mt-0"><?= strtoupper($row->laporan); ?></h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 </div>
-                                                <div class="modal-body" style="height: 350px;">
+                                                <div class="modal-body" style="height: 420px;">
                                                     <!-- <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5> -->
-                                                    <object data="<?= base_url('upload/laporan/' . $row->dokumen) ?>" type="appliaction/pdf" width="350px" height="200px"></object>
-                                                    <iframe src="<?= base_url('upload/laporan/' . $row->dokumen) ?>" frameborder="0" style="width:100%;height:100%;border:none;"></iframe>
+
+                                                    <embed src="<?= base_url('upload/laporan/' . $row->dokumen) ?>" type='application/pdf' width='100%' height='420px' />
                                                 </div>
                                                 <div class="modal-footer">
                                                     <!-- <a href="<?= base_url('admin/update/' . $row->id_laporan) ?>" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Delete User">Edit</a> -->
