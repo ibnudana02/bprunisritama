@@ -86,7 +86,7 @@
             if (d == "5e9545a2ecf3e") {
                 link = "pembukaan-rekening-tabungan";
             } else if (d == "5e95459d30794") {
-                link = "pembukaan-rekening-kredit";
+                link = "pengajuan-aplikasi-kredit";
             } else if (d == "5e954595bcb46") {
                 link = "pembukaan-rekening-deposito";
             } else {

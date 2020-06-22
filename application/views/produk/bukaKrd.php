@@ -1,0 +1,1 @@
+<div class="alert-danger">Halaman aplikasi kredit</div>

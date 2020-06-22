@@ -44,7 +44,7 @@
                                         <th><?= $no++; ?>
                                         <th><?= htmlspecialchars(ucwords($row->produk)); ?></th>
                                         <th><?= htmlspecialchars(strtoupper($row->jenis)); ?></th>
-                                        <th><?= html_entity_decode($row->deskripsi); ?></th>
+                                        <th><?= html_entity_decode(substr($row->deskripsi, 0, 80)); ?></th>
                                         <th><img src="<?= base_url('upload/produk/' . $row->image); ?>" width="70" height="70"></th>
                                         <th width><a href="<?php echo $row->id_produk; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_produk; ?>" data-toggle="modal">Edit</a>
                                             <a href="<?php echo $row->id_produk; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_produk; ?>" data-toggle="modal">Hapus</a></th>

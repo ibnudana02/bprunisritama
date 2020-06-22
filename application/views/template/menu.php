@@ -53,7 +53,7 @@
                                             <div class="dropdown-content">
                                                 <a href="<?= base_url('produk/kredit-bakulan') ?>">Kredit Bakulan</a>
                                                 <a href="<?= base_url('produk/kredit-konsumtif') ?>">Kredit Konsumtif</a>
-                                                <a href="#">Kredit Produktif</a>
+                                                <a href="<?= base_url('produk/kredit-produktif') ?>">Kredit Produktif</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -122,7 +122,7 @@
                                         <div class="dropdown-content">
                                             <a href="<?= base_url('produk/kredit-bakulan') ?>">Kredit Bakulan</a>
                                             <a href="<?= base_url('produk/kredit-konsumtif') ?>">Kredit Konsumtif</a>
-                                            <a href="#">Kredit Produktif</a>
+                                            <a href="<?= base_url('produk/kredit-produktif') ?>">Kredit Produktif</a>
                                         </div>
                                     </li>
                                 </ul>

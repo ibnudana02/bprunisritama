@@ -132,6 +132,31 @@ class Produk extends CI_Controller
         $this->load->view('template/footer');
     }
 
+    public function createDps()
+    {
+        $data['judul'] = 'Pembukaan RekeningDeposito | Bank Unisritama';
+        $data['bread'] = 'Home';
+        $data['crumb'] = 'Produk';
+        $data['jenis'] = $this->produk->getDep()->result();
+        $data['prop'] = $this->user->getProv();
+        // $data['kab'] = $this->user->viewByProvinsi();
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/bukaDps', $data);
+        $this->load->view('template/footer');
+    }
+    public function createKrd()
+    {
+        $data['judul'] = 'Pembukaan RekeningDeposito | Bank Unisritama';
+        $data['bread'] = 'Home';
+        $data['crumb'] = 'Produk';
+        $data['jenis'] = $this->produk->getDep()->result();
+        $data['prop'] = $this->user->getProv();
+        // $data['kab'] = $this->user->viewByProvinsi();
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/bukaKrd', $data);
+        $this->load->view('template/footer');
+    }
+
     public function listkota()
     {
         $id = $this->input->post('prop');

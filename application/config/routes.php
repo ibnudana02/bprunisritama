@@ -123,6 +123,8 @@ $route['kategori_berita/(:any)'] = 'news/kategoriBerita/$1';
 
 //Routes for Page Tentang
 $route['pembukaan-rekening-tabungan'] = 'produk/createTab';
+$route['pembukaan-rekening-deposito'] = 'produk/createDps';
+$route['pengajuan-aplikasi-kredit'] = 'produk/createKrd';
 $route['produk'] = 'produk/produk';
 $route['getKota'] = 'produk/getKota';
 $route['dana'] = 'produk/dana';
