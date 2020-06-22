@@ -75,7 +75,18 @@ class User_model extends CI_Model
     }
     function getKab()
     {
-        return $this->db->get('kec')->result_array();
+        return $this->db->get('desa')->result_array();
+    }
+
+    public function getProv()
+    {
+        return $this->db->get('provinsi')->result();
+    }
+
+    public function viewByProvinsi($id)
+    {
+        $this->db->where('prov', $id);
+        return $this->db->get('kab')->result();
     }
 }
 

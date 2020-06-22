@@ -7,7 +7,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 blog">
                         <div class="single-blog">
                             <div class="blog-content">
-                                <div class="blog-title" style="padding: 0 25px;min-height:56px;">
+                                <div class="blog-title" style="padding: 0 25px;">
                                     <a>
                                         <h5 class="text-center"><?= $row->laporan ?></h5>
                                     </a>

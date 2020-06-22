@@ -7,7 +7,7 @@ class Produk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk', 'Jenis_model' => 'jenis'));
+        $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk', 'Jenis_model' => 'jenis', 'User_model' => 'user'));
     }
 
     public function index()
@@ -120,8 +120,25 @@ class Produk extends CI_Controller
         $data['bread'] = 'Home';
         $data['crumb'] = 'Produk';
         $data['jenis'] = $this->produk->getTab()->result();
+        $data['prop'] = $this->user->getProv();
+        // $data['kab'] = $this->user->viewByProvinsi();
         $this->load->view('template/header', $data);
         $this->load->view('produk/bukaRek', $data);
         $this->load->view('template/footer');
+    }
+
+    public function listKota()
+    {
+        $id = $this->input->post('prop');
+        $kota = $this->user->viewByProvinsi($id);
+        // print_r($kota);
+        // die;
+        $lists = "<option value=''>Pilih</option>";
+        foreach ($kota as $row) {
+            $lists .= "<option value='" . $row->id . "'>" . $row->nama . "</option>";
+        }
+
+        $callback = array('list_kota' => $lists);
+        echo json_encode($callback);
     }
 }

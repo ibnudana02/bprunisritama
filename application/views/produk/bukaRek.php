@@ -98,12 +98,21 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="propinsi" placeholder="Provinsi" />
+                                                <!-- <input type="text" class="form-control form-control-user" name="propinsi" placeholder="Provinsi" /> -->
+                                                <select name="prop" id="prop" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                    <?php foreach ($prop as $row) : ?>
+                                                        <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota / Kabupaten" />
+                                                <!-- <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota / Kabupaten" /> -->
+                                                <select name="kota" id="kota" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -580,3 +589,28 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $("#prop").change(function() {
+            $.ajax({
+                type: "post",
+                url: "<?= base_url('produk/listKota'); ?>",
+                data: {
+                    id: $("#prop").val()
+                },
+                dataType: "json",
+                beforeSend: function(e) {
+                    if (e && e.overrideMimeType) {
+                        e.overrideMimeType("application/json;charset=UTF-8");
+                    }
+                },
+                success: function(response) {
+                    $("#kota").html(response.list_kota).show();
+                },
+                error: function(xhr, ajaxOptions, thrownError) { // Ketika ada error          
+                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError); // Munculkan alert error        
+                }
+            });
+        });
+    });
+</script>

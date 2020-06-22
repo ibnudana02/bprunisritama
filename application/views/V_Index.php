@@ -28,6 +28,7 @@
                 <th>No</th>
                 <th>Provinsi</th>
                 <th>Kabupaten</th>
+                <th>Kecamatan</th>
                 <th>Kode</th>
                 <th>Kel/Desa</th>
             </tr>
@@ -39,6 +40,7 @@
                     <td><?= $no; ?></td>
                     <td><?= $value['prov'] ?></td>
                     <td><?= $value['kab'] ?></td>
+                    <td><?= $value['kec'] ?></td>
                     <td><?= $value['kode'] ?></td>
                     <td><?= $value['nama']; ?></td>
                 </tr>
