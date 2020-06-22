@@ -28,20 +28,4 @@
         </div>
     </div>
 </div>
-<div class="share-sossial-buttons">
-    <!-- Untuk Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u=https://dumetschool.com" target="_blank">
-        <img src="https://www.kursuswebsite.org/wp-content/uploads/2017/03/facebook.png" alt="Facebook" />
-    </a>
-
-    <!-- Untuk Google+ -->
-    <a href="https://plus.google.com/share?url=https://dumetschool.com" target="_blank">
-        <img src="https://www.kursuswebsite.org/wp-content/uploads/2017/03/google.png" alt="Google" />
-    </a>
-
-    <!-- Untuk Twitter -->
-    <a href="https://twitter.com/share?url=https://dumetschool.com&text=Simple%20Share%20Buttons&hashtags=simplesharebuttons" target="_blank">
-        <img src="https://www.kursuswebsite.org/wp-content/uploads/2017/03/twitter.png" alt="Twitter" />
-    </a>
-</div>
 <!--End of Blog Area-->

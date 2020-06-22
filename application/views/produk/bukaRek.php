@@ -98,7 +98,6 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <!-- <input type="text" class="form-control form-control-user" name="propinsi" placeholder="Provinsi" /> -->
                                                 <select name="prop" id="prop" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
@@ -109,7 +108,6 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <!-- <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota / Kabupaten" /> -->
                                                 <select name="kota" id="kota" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
@@ -578,37 +576,32 @@
                             </div>
                         </form>
                     </div>
-                    <!-- <div class="panel-footer">
-                        <button type="button" class="btn btn-primary pull-right" id="btSubmit">
-                            SUBMIT
-                        </button>
-                        <div class="clearfix"></div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
         $("#prop").change(function() {
+            var id = $(this).val();
             $.ajax({
-                type: "post",
-                url: "<?= base_url('produk/listKota'); ?>",
+                url: "<?= base_url('getKota'); ?>",
+                method: "POST",
                 data: {
-                    id: $("#prop").val()
+                    id: id
                 },
+                async: false,
                 dataType: "json",
-                beforeSend: function(e) {
-                    if (e && e.overrideMimeType) {
-                        e.overrideMimeType("application/json;charset=UTF-8");
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        // const element = array[i];
+                        html += "<option>" + data[i].nama + "< /option>";
                     }
-                },
-                success: function(response) {
-                    $("#kota").html(response.list_kota).show();
-                },
-                error: function(xhr, ajaxOptions, thrownError) { // Ketika ada error          
-                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError); // Munculkan alert error        
+                    $('#kota').html(html);
                 }
             });
         });

@@ -34,7 +34,7 @@
                                 <li><a class="pagess">Produk dan Layanan</a>
                                     <ul class="sub-menu">
                                         <li><a href="<?= base_url('pembayaran_mahasiswa_uir') ?>">Pembayaran Mahasiswa</a></li>
-                                        <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
+                                        <li><a href="<?= base_url('payment-point') ?>">Payment Point Online Bank</a></li>
                                         <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                             <div class="dropdown-content">
                                                 <a href="<?= base_url('produk/deposito-masyarakat') ?>">Deposito Masyarakat</a>
@@ -103,7 +103,7 @@
                             <li><a class="pagess">Produk dan Layanan</a>
                                 <ul class="sub-menu">
                                     <li><a href="<?= base_url('pembayaran_mahasiswa_uir') ?>">Pembayaran Mahasiswa</a></li>
-                                    <li><a href="<?= base_url('produk/') ?>">Online Payment</a></li>
+                                    <li><a href="<?= base_url('payment-point') ?>">Payment Point Online Bank</a></li>
                                     <li class="dropdown"><a class="dropbtn" href="<?= base_url('deposito') ?>">Deposito</a>
                                         <div class="dropdown-content">
                                             <a href="<?= base_url('produk/deposito-masyarakat') ?>">Deposito Masyarakat</a>

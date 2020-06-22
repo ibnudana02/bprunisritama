@@ -107,10 +107,8 @@ class Produk_model extends CI_Model
             $config['source_image'] = './upload/produk/' . $gbr['file_name'];
             $config['create_thumb'] = FALSE;
             $config['maintain_ratio'] = FALSE;
-            $config['quality'] = '70%';
             $config['width'] = 1200;
             $config['height'] = 760;
-            // $config['new_image'] = './upload/produk/' . $gbr['file_name'];
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
 
@@ -138,6 +136,15 @@ class Produk_model extends CI_Model
             ->from($this->_table)
             ->join('jenis', $this->_table . '.jenis=jenis.id_jenis');
         $this->db->where('id_produk', '5e96bd2139efc');
+        return $this->db->get()->row();
+    }
+
+    public function getPayment()
+    {
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('jenis', $this->_table . '.jenis=jenis.id_jenis');
+        $this->db->where('id_produk', '5ef051b1b36da');
         return $this->db->get()->row();
     }
 

@@ -27,10 +27,15 @@ class Produk extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function pob()
+    public function ppob()
     {
-        $this->load->view('template/header');
-        $this->load->view('produk/pob');
+        $data['judul'] = 'Payment Point Online Bank';
+        $data['category'] = $this->kategori->getAll(); //Ambil data kategori
+        $data['berita'] = $this->berita->getLima(); //Ambil data berita
+        $data['row'] =  $this->produk->getPayment(); //Ambil data berita
+        // var_dump($data['row']);
+        $this->load->view('template/header', $data);
+        $this->load->view('produk/pmb', $data);
         $this->load->view('template/footer');
     }
 
@@ -127,7 +132,7 @@ class Produk extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function listKota()
+    public function listkota()
     {
         $id = $this->input->post('prop');
         $kota = $this->user->viewByProvinsi($id);
@@ -135,10 +140,19 @@ class Produk extends CI_Controller
         // die;
         $lists = "<option value=''>Pilih</option>";
         foreach ($kota as $row) {
+            // $d = $row->nama;
             $lists .= "<option value='" . $row->id . "'>" . $row->nama . "</option>";
+            // $lists .= "<option value=" . $row->id . ">" . $row->nama . "</option>";
         }
-
         $callback = array('list_kota' => $lists);
         echo json_encode($callback);
+    }
+
+    public function getKota()
+    {
+        $id = $this->input->post('prop');
+        $kota = $this->user->viewByProvinsi($id);
+        var_dump($kota);
+        echo json_encode($kota);
     }
 }

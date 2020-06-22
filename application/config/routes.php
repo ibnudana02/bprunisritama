@@ -59,6 +59,7 @@ $route['admin/dashboard'] = 'admin/welcome/home';
 $route['admin/welcome'] = 'admin/welcome/index';
 $route['admin/corporate'] = 'admin/corporate';
 $route['pembayaran_mahasiswa_uir'] = 'produk/pmb';
+$route['payment-point'] = 'produk/ppob';
 $route['admin/profil'] = 'admin/profil';
 $route['pengkinian_nasabah'] = 'news/pengkinian_data';
 
@@ -123,6 +124,7 @@ $route['kategori_berita/(:any)'] = 'news/kategoriBerita/$1';
 //Routes for Page Tentang
 $route['pembukaan-rekening-tabungan'] = 'produk/createTab';
 $route['produk'] = 'produk/produk';
+$route['getKota'] = 'produk/getKota';
 $route['dana'] = 'produk/dana';
 $route['deposito'] = 'produk/deposito';
 $route['kredit'] = 'produk/kredit';
