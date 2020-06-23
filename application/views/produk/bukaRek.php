@@ -587,19 +587,19 @@
         $("#prop").change(function() {
             var id = $(this).val();
             $.ajax({
-                url: "<?= base_url('getKota'); ?>",
+                url: "<?= base_url('listkota'); ?>",
                 method: "POST",
+                dataType: "JSON",
                 data: {
                     id: id
                 },
                 async: false,
-                dataType: "json",
-                success: function(data) {
+                success: function(array) {
                     var html = '';
-                    var i;
-                    for (i = 0; i < data.length; i++) {
+                    // var i;
+                    for (let i = 0; i < array.length; i++) {
                         // const element = array[i];
-                        html += "<option>" + data[i].nama + "< /option>";
+                        html += "<option>" + array[index].nama + "< /option>";
                     }
                     $('#kota').html(html);
                 }

@@ -7,7 +7,7 @@ class Welcome extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(array('Layanan_model' => 'layanan', 'Slider_model' => 'slider', 'Berita_model' => 'berita', 'Produk_model' => 'produk'));
+		$this->load->model(array('Layanan_model' => 'layanan', 'Slider_model' => 'slider', 'Berita_model' => 'berita', 'Produk_model' => 'produk', 'User_model' => 'user'));
 	}
 
 
@@ -30,5 +30,15 @@ class Welcome extends CI_Controller
 		// $this->load->view('produk/tabungan', $data);
 		$this->load->view('unik');
 		$this->load->view('template/footer');
+	}
+
+	public function getkota()
+	{
+		$id = $this->input->post('prop');
+		var_dump($id);
+		die;
+		$kota = $this->user->viewByProvinsi($id);
+		var_dump($kota);
+		echo json_encode($kota);
 	}
 }

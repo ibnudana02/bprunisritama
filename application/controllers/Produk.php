@@ -159,18 +159,10 @@ class Produk extends CI_Controller
 
     public function listkota()
     {
-        $id = $this->input->post('prop');
+        $id = 11;
         $kota = $this->user->viewByProvinsi($id);
-        // print_r($kota);
-        // die;
-        $lists = "<option value=''>Pilih</option>";
-        foreach ($kota as $row) {
-            // $d = $row->nama;
-            $lists .= "<option value='" . $row->id . "'>" . $row->nama . "</option>";
-            // $lists .= "<option value=" . $row->id . ">" . $row->nama . "</option>";
-        }
-        $callback = array('list_kota' => $lists);
-        echo json_encode($callback);
+        // var_dump($kota);
+        echo json_encode($kota);
     }
 
     public function getKota()
