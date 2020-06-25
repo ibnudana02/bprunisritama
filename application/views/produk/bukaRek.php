@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <select name="prop" id="prop" class="form-control form-control-user">
+                                                <select name="propinsi" id="propinsi" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
                                                         <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
@@ -115,12 +115,17 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kec" placeholder="Kecamatan" />
+                                                <select name="camat" id="camat" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kel" placeholder="Kelurahan / Desa" />
+                                                <select name="lurah" id="lurah" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                </select>
+                                                <!-- <input type="text" class="form-control form-control-user" name="kel" placeholder="Kelurahan / Desa" /> -->
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -584,24 +589,54 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
-        $("#prop").change(function() {
+        $("#propinsi").change(function() {
             var id = $(this).val();
+            // window.alert(id);
             $.ajax({
-                url: "<?= base_url('listkota'); ?>",
+                url: "<?php echo base_url('getkota'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
                     id: id
                 },
-                async: false,
-                success: function(array) {
-                    var html = '';
-                    // var i;
-                    for (let i = 0; i < array.length; i++) {
-                        // const element = array[i];
-                        html += "<option>" + array[index].nama + "< /option>";
-                    }
-                    $('#kota').html(html);
+                success: function(response) {
+                    // $('#kota').html(data);
+                    $("#kota").html(response.list_kota).show();
+                }
+            });
+        });
+
+        $("#kota").change(function() {
+            var id_prop = $("#propinsi").val();
+            var id_kota = $(this).val();
+            $.ajax({
+                url: "<?= base_url('welcome/getcamat'); ?>",
+                method: "POST",
+                dataType: "JSON",
+                data: {
+                    id_prop: id_prop,
+                    id_kota: id_kota
+                },
+                success: function(response) {
+                    $("#camat").html(response.list_camat).show();
+                }
+            });
+        });
+        $("#camat").change(function() {
+            var id_prop = $("#propinsi").val();
+            var id_kota = $("#kota").val();
+            var id_camat = $(this).val();
+            $.ajax({
+                url: "<?= base_url('welcome/getdesa'); ?>",
+                method: "POST",
+                dataType: "JSON",
+                data: {
+                    id_prop: id_prop,
+                    id_kota: id_kota,
+                    id_camat: id_camat
+                },
+                success: function(response) {
+                    $("#desa").html(response.list_desa).show();
                 }
             });
         });

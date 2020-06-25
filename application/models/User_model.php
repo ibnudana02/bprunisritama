@@ -86,7 +86,31 @@ class User_model extends CI_Model
     public function viewByProvinsi($id)
     {
         $this->db->where('prov', $id);
-        return $this->db->get('kab')->result();
+        // $this->db->order_by('nama', 'ASC');
+        $this->db->order_by('nama', 'asc');
+        $query = $this->db->get('kab');
+
+        return $query->result();
+    }
+
+    public function viewByKab($id_prop, $id_kota)
+    {
+        $camat = array('prov' => $id_prop, 'kab' => $id_kota);
+        $this->db->where($camat);
+        $this->db->order_by('nama', 'asc');
+        $query = $this->db->get('kec');
+
+        return $query->result();
+    }
+
+    public function viewByCam($id_prop, $id_kota, $id_camat)
+    {
+        $desa = array('prov' => $id_prop, 'kab' => $id_kota, 'kec' => $id_camat);
+        $this->db->where($desa);
+        $this->db->order_by('nama', 'asc');
+        $query = $this->db->get('desa');
+
+        return $query->result();
     }
 }
 

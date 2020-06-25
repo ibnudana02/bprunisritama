@@ -34,11 +34,39 @@ class Welcome extends CI_Controller
 
 	public function getkota()
 	{
-		$id = $this->input->post('prop');
-		var_dump($id);
-		die;
+		$id = $this->input->post('id');
 		$kota = $this->user->viewByProvinsi($id);
-		var_dump($kota);
-		echo json_encode($kota);
+		$lists = "<option value=''>Pilih</option>";
+		foreach ($kota as $data) {
+			$lists .= "<option value='" . $data->kode . "'>" . $data->nama . "</option>";
+		}
+		$callback = array('list_kota' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_kota
+		echo json_encode($callback);
+	}
+
+	public function getcamat()
+	{
+		$id_prop = $this->input->post('id_prop');
+		$id_kota = $this->input->post('id_kota');
+		$camat = $this->user->viewByKab($id_prop, $id_kota);
+		$lists = "<option value=''>Pilih</option>";
+		foreach ($camat as $row) {
+			$lists .= "<option value='" . $row->kode . "'>" . $row->nama . "</option>";
+		}
+		$callback = array('list_camat' => $lists);
+		echo json_encode($callback);
+	}
+	public function getdesa()
+	{
+		$id_prop = $this->input->post('id_prop');
+		$id_kota = $this->input->post('id_kota');
+		$id_camat = $this->input->post('id_camat');
+		$desa = $this->user->viewByCam($id_prop, $id_kota, $id_camat);
+		$lists = "<option value=''>Pilih</option>";
+		foreach ($desa as $row) {
+			$lists .= "<option value='" . $row->kode . "'>" . $row->nama . "</option>";
+		}
+		$callback = array('list_desa' => $lists);
+		echo json_encode($callback);
 	}
 }
