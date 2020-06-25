@@ -636,7 +636,7 @@
                     id_camat: id_camat
                 },
                 success: function(response) {
-                    $("#desa").html(response.list_desa).show();
+                    $("#lurah").html(response.list_desa).show();
                 }
             });
         });
