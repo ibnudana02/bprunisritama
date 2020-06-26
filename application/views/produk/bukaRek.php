@@ -83,7 +83,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="e">Berlaku Hingga</label>
-                                                <input type="text" class="form-control form-control-user" placeholder="Masa Berlaku" />
+                                                <input type="text" class="form-control form-control-user datepicker" placeholder="Masa Berlaku" />
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -91,13 +91,29 @@
                                                 <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="alamat_ktp" placeholder="Alamat sesuai Tanda Pengenal">
+                                                <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group date">
+                                                <input type="text" class="form-control form-control-user datepicker" id="datepicker" name="tgl_lhr" placeholder="Tanggal Lahir">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
+                                                <input type="number" class="form-control form-control-user" name="no" placeholder="No. Hp/Telp" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-info alert-dismissible" role="alert">
+                                                Mohon isi alamat sesuai tanda pengenal!
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="Provinsi">Provinsi</label>
                                                 <select name="propinsi" id="propinsi" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
@@ -108,6 +124,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
+                                                <label for="Kabupaten/Kota">Kabupaten/Kota</label>
                                                 <select name="kota" id="kota" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
@@ -115,6 +132,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
+                                                <label for="Kecamatan">Kecamatan</label>
                                                 <select name="camat" id="camat" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
@@ -122,10 +140,15 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
+                                                <label for="Desa/Kelurahan">Desa/Kelurahan</label>
                                                 <select name="lurah" id="lurah" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
-                                                <!-- <input type="text" class="form-control form-control-user" name="kel" placeholder="Kelurahan / Desa" /> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user" name="alamat_ktp" placeholder="Alamat sesuai Tanda Pengenal">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -133,19 +156,46 @@
                                                 <input type="text" class="form-control form-control-user" name="kode_pos" id="" placeholder="Kode Pos"></div>
                                         </div>
                                         <div class="col-lg-12"></div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir">
+
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-info alert-dismissible" role="alert">
+                                                Mohon isi alamat domisili!
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+
+                                        <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="tgl_lhr" placeholder="Tanggal Lahir">
+                                                <label for="Provinsi">Provinsi</label>
+                                                <select name="prop_domisili" id="prop_domisili" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                    <?php foreach ($prop as $row) : ?>
+                                                        <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="number" class="form-control form-control-user" name="no" placeholder="No. Hp/Telp" />
+                                                <label for="Kabupaten/Kota">Kabupaten/Kota</label>
+                                                <select name="kota_domisili" id="kota_domisili" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="Kecamatan">Kecamatan</label>
+                                                <select name="camat_domisili" id="camat_domisili" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="Desa/Kelurahan">Desa/Kelurahan</label>
+                                                <select name="lurah_domisili" id="lurah_domisili" class="form-control form-control-user">
+                                                    <option value="">Pilih</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -155,31 +205,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="propinsi" placeholder="Provinsi" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="Kota / Kabupaten" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kec" placeholder="Kecamatan" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kel" placeholder="Kelurahan / Desa" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="kode_pos" id="" placeholder="Kode Pos"></div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="npwp" id="" placeholder="No. NPWP"></div>
                                         </div>
                                     </div>
                                 </div> <!-- end tab identitas -->
@@ -251,7 +277,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="tgl_lhr" placeholder="Tanggal Lahir Pasangan">
+                                                <input type="text" class="form-control form-control-user datepicker" id="datepicker2" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan">
                                             </div>
                                         </div>
                                         <div class="col-lg-12"></div>
@@ -440,8 +466,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
-
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Pendidikan Terakhir</label>
@@ -462,6 +486,11 @@
                                                 <label for=""></label>
                                                 <input type="text" class="form-control form-control-user" name="email" placeholder="Email" />
                                             </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for=""></label>
+                                                <input type="text" class="form-control form-control-user" name="npwp" id="" placeholder="No. NPWP"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -639,6 +668,67 @@
                     $("#lurah").html(response.list_desa).show();
                 }
             });
+        });
+        $("#prop_domisili").change(function() {
+            var id = $(this).val();
+            // window.alert(id);
+            $.ajax({
+                url: "<?php echo base_url('getkota'); ?>",
+                method: "POST",
+                dataType: "JSON",
+                data: {
+                    id: id
+                },
+                success: function(response) {
+                    // $('#kota').html(data);
+                    $("#kota_domisili").html(response.list_kota).show();
+                }
+            });
+        });
+
+        $("#kota_domisili").change(function() {
+            var id_prop = $("#prop_domisili").val();
+            var id_kota = $(this).val();
+            $.ajax({
+                url: "<?= base_url('welcome/getcamat'); ?>",
+                method: "POST",
+                dataType: "JSON",
+                data: {
+                    id_prop: id_prop,
+                    id_kota: id_kota
+                },
+                success: function(response) {
+                    $("#camat_domisili").html(response.list_camat).show();
+                }
+            });
+        });
+        $("#camat_domisili").change(function() {
+            var id_prop = $("#prop_domisili").val();
+            var id_kota = $("#kota_domisili").val();
+            var id_camat = $(this).val();
+            $.ajax({
+                url: "<?= base_url('welcome/getdesa'); ?>",
+                method: "POST",
+                dataType: "JSON",
+                data: {
+                    id_prop: id_prop,
+                    id_kota: id_kota,
+                    id_camat: id_camat
+                },
+                success: function(response) {
+                    $("#lurah_domisili").html(response.list_desa).show();
+                }
+            });
+        });
+        $(".datepicker").datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+            // todayHighlight: true,
+        });
+        $("#").datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+            todayHighlight: true,
         });
     });
 </script>
