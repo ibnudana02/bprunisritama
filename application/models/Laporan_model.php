@@ -38,7 +38,7 @@ class Laporan_model extends CI_Model
 
         if (!$this->upload->do_upload('dokumen')) {
             $this->session->set_flashdata('alert', $this->upload->display_errors());
-            redirect('admin/tambahLaporan');
+            redirect('admin/add_laporan');
         } else {
             // $dok = $this->upload->data();
             return $this->upload->file_name;
