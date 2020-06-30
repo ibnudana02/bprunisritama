@@ -1,10 +1,10 @@
 <div class="blog-page-area struktur">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-12" style="margin-bottom: 15px;">
-                <img src="<?= base_url('assets/img/client/banner-buka-tab.png') ?>" alt="">
+                <img src="</?= base_url('assets/img/client/banner-buka-tab.png') ?>" alt="">
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="panel panel-primary">
@@ -12,7 +12,7 @@
                         <h3 class="panel-title">Formulir Pembukaan Rekening Tabungan</h3>
                     </div>
                     <div class="panel-body">
-                        <form name="produk" class="user" method="post" action="<?= base_url(); ?>" enctype="multipart/form-data">
+                        <form name="produk" class="user" method="post" action="<?= base_url('pembukaan-rekening-tabungan'); ?>" enctype="multipart/form-data">
                             <ul class="nav nav-pills">
                                 <li class="active"><a data-toggle="tab" href="#identitas">Identitas Diri</a></li>
                                 <li><a data-toggle="tab" href="#kontak">Ahli Waris/Kontak</a></li>
@@ -27,63 +27,56 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" autofocus class="form-control form-control-user" name="produk" id="produk" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
+                                                <input type="text" autofocus class="form-control form-control-user" name="nm_lengkap" id="nm_lengkap" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
                                                 <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" autofocus class="form-control form-control-user" name="produk" id="produk" placeholder="Nama Sesuai Identitas" value="<?= set_value('produk'); ?>">
+                                                <input type="text" autofocus class="form-control form-control-user" name="nm_identitas" id="nm_identitas" placeholder="Nama Sesuai Identitas" value="<?= set_value('produk'); ?>">
                                                 <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
                                             <div class="form-group">
                                                 <label for="jenis_kelamin">Jenis Kelamin </label><br>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Laki-laki</option>
-                                                    <option value="">Perempuan</option>
-                                                </select>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('jenis_kelamin', $jk, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
                                             <div class="form-group">
                                                 <label for="sumber dana">Agama</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Islam</option>
-                                                    <option value="">Katolik</option>
-                                                    <option value="">Kristen</option>
-                                                    <option value="">Hindu</option>
-                                                    <option value="">Budha</option>
-                                                    <option value="">Kong Hu Cu</option>
-                                                </select>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('agama', $agama, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
                                             <div class="form-group">
                                                 <label for="wn">Kewarganegaraan</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="" disabled>--Kewarganegaraan--</option>
-                                                    <option value="">Indonesia</option>
-                                                    <option value="">Asing</option>
-                                                </select>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('warga_negara', $wn, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Jenis Identitas</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">KTP</option>
-                                                    <option value="">SIM</option>
-                                                    <option value="">Passport</option>
-                                                    <option value="">Lainnya</option>
-                                                </select>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('jenis_identitas', $identitas, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="e">Berlaku Hingga</label>
-                                                <input type="text" class="form-control form-control-user datepicker" placeholder="Masa Berlaku" />
+                                                <input type="text" class="form-control form-control-user datepicker" name="masa_berlaku" placeholder="Masa Berlaku" />
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -93,7 +86,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir">
+                                                <input type="text" class="form-control form-control-user" name="tempat_lahir" placeholder="Tempat Lahir">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -103,7 +96,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="number" class="form-control form-control-user" name="no" placeholder="No. Hp/Telp" />
+                                                <input type="number" class="form-control form-control-user" name="no_hp" placeholder="No. Hp/Telp" />
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
@@ -114,7 +107,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Provinsi">Provinsi</label>
-                                                <select name="propinsi" id="propinsi" class="form-control form-control-user">
+                                                <select name="provinsi_identitas" id="propinsi" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
                                                         <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
@@ -125,7 +118,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Kabupaten/Kota">Kabupaten/Kota</label>
-                                                <select name="kota" id="kota" class="form-control form-control-user">
+                                                <select name="kab_identitas" id="kota" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
                                             </div>
@@ -133,7 +126,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Kecamatan">Kecamatan</label>
-                                                <select name="camat" id="camat" class="form-control form-control-user">
+                                                <select name="kec_identitas" id="camat" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
                                             </div>
@@ -141,19 +134,19 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Desa/Kelurahan">Desa/Kelurahan</label>
-                                                <select name="lurah" id="lurah" class="form-control form-control-user">
+                                                <select name="kel_identitas" id="lurah" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="alamat_ktp" placeholder="Alamat sesuai Tanda Pengenal">
+                                                <input type="text" class="form-control form-control-user" name="alamat_identitas" placeholder="Alamat sesuai Tanda Pengenal">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kode_pos" id="" placeholder="Kode Pos"></div>
+                                                <input type="text" class="form-control form-control-user" name="pos_identitas" id="" placeholder="Kode Pos"></div>
                                         </div>
                                         <div class="col-lg-12"></div>
 
@@ -166,7 +159,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Provinsi">Provinsi</label>
-                                                <select name="prop_domisili" id="prop_domisili" class="form-control form-control-user">
+                                                <select name="prov_domisili" id="prop_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
                                                         <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
@@ -177,7 +170,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Kabupaten/Kota">Kabupaten/Kota</label>
-                                                <select name="kota_domisili" id="kota_domisili" class="form-control form-control-user">
+                                                <select name="kab_domisili" id="kota_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
                                             </div>
@@ -185,7 +178,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Kecamatan">Kecamatan</label>
-                                                <select name="camat_domisili" id="camat_domisili" class="form-control form-control-user">
+                                                <select name="kec_domisili" id="camat_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
                                             </div>
@@ -193,19 +186,19 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="Desa/Kelurahan">Desa/Kelurahan</label>
-                                                <select name="lurah_domisili" id="lurah_domisili" class="form-control form-control-user">
+                                                <select name="kel_domisili" id="lurah_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="alamat_surat" placeholder="Alamat Domisili" />
+                                                <input type="text" class="form-control form-control-user" name="alamat_domisili" placeholder="Alamat Domisili" />
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="kode_pos" id="" placeholder="Kode Pos"></div>
+                                                <input type="text" class="form-control form-control-user" name="pos_domisili" id="" placeholder="Kode Pos"></div>
                                         </div>
                                     </div>
                                 </div> <!-- end tab identitas -->
@@ -224,21 +217,15 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="waris" placeholder="Nama Ahli Waris">
+                                                <input type="text" class="form-control form-control-user" name="nm_ahli_waris" placeholder="Nama Ahli Waris">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <label for="hb_aw">Hubungan dengan Ahli Waris</label>
-                                            <select name="hb_aw" id="" class="form-control custom-select custom-select-md">
-                                                <option value="">Ayah</option>
-                                                <option value="">Ibu</option>
-                                                <option value="">Anak</option>
-                                                <option value="">Suami/Istri</option>
-                                                <option value="">Mertua</option>
-                                                <option value="">Keluarga</option>
-                                                <option value="">Saudara</option>
-                                                <option value="">Lainnya</option>
-                                            </select>
+                                            <?php
+                                            $style = 'class="form-control custom-select custom-select-md" required';
+                                            echo form_dropdown('hb_ahli_waris', $aw, '', $style);
+                                            ?>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -254,12 +241,11 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Status Pernikahan</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Belum Menikah</option>
-                                                    <option value="">Menikah</option>
-                                                    <option value="">Duda / Janda</option>
-                                                </select>
+                                                <label for="status_pernikahan dana">Status Pernikahan</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('status', $status, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -271,43 +257,41 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="tempat_lhr" placeholder="Tempat Lahir Pasangan">
+                                                <input type="text" class="form-control form-control-user" name="tmp_lhr_pasangan" placeholder="Tempat Lahir Pasangan">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user datepicker" id="datepicker2" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan">
+                                                <input type="text" class="form-control form-control-user datepicker" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan">
                                             </div>
                                         </div>
                                         <div class="col-lg-12"></div>
                                         <div class="col-lg-2">
                                             <div class="form-group">
-                                                <label for="sumber dana">Jenis Identitas</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">KTP</option>
-                                                    <option value="">SIM</option>
-                                                    <option value="">Passport</option>
-                                                    <option value="">Lainnya</option>
-                                                </select>
+                                                <label for="jenis_id_pasangan">Jenis Identitas</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('identitas_pasangan', $identitas, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Identitas Pasangan">
+                                                <input type="number" class="form-control form-control-user" name="no_identitas_pasangan" id="no_identitas" placeholder="Nomor Identitas Pasangan">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="alamat_ktp" placeholder="Alamat sesuai Identitas">
+                                                <input type="text" class="form-control form-control-user" name="alamat_pasangan" placeholder="Alamat sesuai Identitas">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="kota" placeholder="No. HP Pasangan" />
+                                                <input type="number" class="form-control form-control-user" name="no_pasangan" placeholder="No. HP Pasangan" />
                                             </div>
                                         </div>
                                     </div>
@@ -317,46 +301,36 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Profesi</label>
-                                                <!-- <input type="text" class="form-control form-control-user" name="pekerjaan" placeholder="Pekerjaan"> -->
-                                                <select name="profesi" id="" class="form-control form-control-user">
-                                                    <option value="">Pegawai Negeri / Swasta</option>
-                                                    <option value="">Profesional</option>
-                                                    <option value="">Wiraswasta</option>
-                                                    <option value="">Pelajar</option>
-                                                    <option value="">Pensiunan</option>
-                                                    <option value="">IRT</option>
-                                                </select>
+                                                <label for="profesi">Profesi</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('profesi', $profesi, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <label for="jenis_pekerjaan">Jenis Pekerjaan</label>
-                                            <select name="jenis_pekerjaan" id="" class="form-control form-control-user">
-                                                <option value="">Pemerintah</option>
-                                                <option value="">Perusahaan</option>
-                                                <option value="">CV</option>
-                                                <option value="">Lainnya</option>
-                                            </select>
+                                            <?php
+                                            $style = 'class="form-control custom-select custom-select-md" required';
+                                            echo form_dropdown('jenis_pekerjaan', $jenis_pekerjaan, '', $style);
+                                            ?>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Status Pekerjaan</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Tetap</option>
-                                                    <option value="">Kontrak</option>
-                                                    <option value="">Honorer</option>
-                                                    <option value="">Paruh-Waktu</option>
-                                                    <option value="">Lainnya</option>
-                                                </select>
+                                                <label for="status_pekerjaan">Status Pekerjaan</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('status_pekerjaan', $status_pekerjaan, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Sumber Penghasilan</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Gaji</option>
-                                                    <option value="">Hasil Usaha</option>
-                                                </select>
+                                                <label for="sumber_dana">Sumber Penghasilan</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('sumber_dana', $sumber_dana, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -366,7 +340,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="gaji" id="" class="form-control form-control-user" placeholder="Gaji / Pendapatan Perbulan">
+                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user" placeholder="Gaji / Pendapatan Perbulan">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -381,7 +355,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="no_kantor" id="" class="form-control form-control-user" placeholder="No. Telp Kantor / Usaha">
+                                                <input type="text" name="telp_kantor" id="" class="form-control form-control-user" placeholder="No. Telp Kantor / Usaha">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -392,8 +366,8 @@
                                         <div class="col-lg-12"></div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label for="sumber dana">Penghasilan/Gaji Kotor per Tahun (Rp.)</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                <label for="gaji_thn">Penghasilan/Gaji Kotor per Tahun (Rp.)</label>
+                                                <select name="gaji_thn" id="gaji_thn" class="form-control custom-select custom-select-md">
                                                     <option value="">Kecil dari 15 Juta</option>
                                                     <option value="">Berkisar dari 15 sampai 100 Juta</option>
                                                     <option value="">Berkisar dari 100 sampai 200 Juta</option>
@@ -403,8 +377,8 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label for="sumber dana">Penghasilan Lainnya per Tahun (Rp.)</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                <label for="tambahan_penghasilan">Penghasilan Lainnya per Tahun (Rp.)</label>
+                                                <select name="tambahan_penghasilan" id="tambahan_penghasilan" class="form-control custom-select custom-select-md">
                                                     <option value="">Kecil dari 15 Juta</option>
                                                     <option value="">Berkisar dari 15 sampai 100 Juta</option>
                                                     <option value="">Berkisar dari 100 sampai 200 Juta</option>
@@ -414,8 +388,8 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label for="sumber dana">Total Penghasilan per Tahun (Rp.)</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
+                                                <label for="tot_penghasilan">Total Penghasilan per Tahun (Rp.)</label>
+                                                <select name="tot_penghasilan" id="tot_penghasilan" class="form-control custom-select custom-select-md">
                                                     <option value="">Kecil dari 15 Juta</option>
                                                     <option value="">Berkisar dari 15 sampai 100 Juta</option>
                                                     <option value="">Berkisar dari 100 sampai 200 Juta</option>
@@ -430,13 +404,11 @@
                                     <div class="row">
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Status Tempat Tinggal</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Milik Sendiri</option>
-                                                    <option value="">Sewa</option>
-                                                    <option value="">Dinas</option>
-                                                    <option value="">Keluarga</option>
-                                                </select>
+                                                <label for="status_rumah">Status Tempat Tinggal</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('status_rumah', $status_rumah, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -447,12 +419,11 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Tujuan Pembukaan Rekening</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="">Simpanan</option>
-                                                    <option value="">Penerimaan Gaji</option>
-                                                    <option value="">Penyaluran Kredit</option>
-                                                </select>
+                                                <label for="tujuan_buka">Tujuan Pembukaan Rekening</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('tujuan_buka', $tujuan_buka, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -468,17 +439,11 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="sumber dana">Pendidikan Terakhir</label>
-                                                <select name="sumber" id="sumber" class="form-control custom-select custom-select-md">
-                                                    <option value="" disabled>--Pendidikan Terakhir--</option>
-                                                    <option value="">S3</option>
-                                                    <option value="">S2</option>
-                                                    <option value="">S1</option>
-                                                    <option value="">Diploma</option>
-                                                    <option value="">SMA/SMK Sederajat</option>
-                                                    <option value="">SMP</option>
-                                                    <option value="">SD</option>
-                                                </select>
+                                                <label for="pendidikan">Pendidikan Terakhir</label>
+                                                <?php
+                                                $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('pendidikan', $pendidikan, '', $style);
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -500,7 +465,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
-                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_identitas" value="<?= set_value('ft_identitas'); ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -600,7 +565,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-12" style="margin-top: 15px;">
-                                            <button type="button" class="btn btn-primary center-block" id="btSubmit">
+                                            <button type="submit" class="btn btn-primary center-block" id="btSubmit">
                                                 SUBMIT
                                             </button>
                                             <div class="clearfix"></div>
