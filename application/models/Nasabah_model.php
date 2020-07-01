@@ -63,7 +63,7 @@ class Nasabah_model extends CI_Model
     public $tanggungan;
     public $tujuan_buka;
     public $jenis_tab;
-    public $penidikan;
+    public $pendidikan;
     public $ft_identitas;
     public $ft_kk;
     public $ft_diri;
@@ -104,7 +104,7 @@ class Nasabah_model extends CI_Model
         $this->hb_ahli_waris = $post['hb_ahli_waris'];
         $this->alamat_ahli_waris = $post['alamat_ahli_waris'];
         $this->no_ahli_waris = $post['no_ahli_waris'];
-        $this->status_ahli_waris = $post['status_ahli_waris'];
+        $this->status_menikah = $post['status_menikah'];
         $this->nm_pasangan = $post['nm_pasangan'];
         $this->tmp_lhr_pasangan = $post['tmp_lhr_pasangan'];
         $this->tgl_lhr_pasangan = $post['tgl_lhr_pasangan'];
@@ -129,13 +129,14 @@ class Nasabah_model extends CI_Model
         $this->tanggungan = $post['tanggungan'];
         $this->tujuan_buka = $post['tujuan_buka'];
         $this->jenis_tab = $post['jenis_tab'];
-        $this->penidikan = $post['penidikan'];
-        $this->ft_identitas = $this->_uploadImage();
-        $this->ft_kk = $post['ft_kk'];
-        $this->ft_diri = $post['ft_diri'];
-        $this->ft_ttd = $post['ft_ttd'];
-        $this->ft_npwp = $post['ft_npwp'];
-        print_r($this);
+        $this->pendidikan = $post['pendidikan'];
+        // $this->ft_identitas = $this->_uploadImage();
+        // $this->ft_kk = $post['ft_kk'];
+        // $this->ft_diri = $post['ft_diri'];
+        // $this->ft_ttd = $post['ft_ttd'];
+        // $this->ft_npwp = $post['ft_npwp'];
+        // print_r($this);
+        echo json_encode($this);
         die;
         $this->db->insert($this->_table, $this);
     }

@@ -28,13 +28,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" autofocus class="form-control form-control-user" name="nm_lengkap" id="nm_lengkap" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
-                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                                <?php echo form_error('nm_lengkap', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" autofocus class="form-control form-control-user" name="nm_identitas" id="nm_identitas" placeholder="Nama Sesuai Identitas" value="<?= set_value('produk'); ?>">
-                                                <?php echo form_error('produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                                                <?php echo form_error('nm_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group date">
-                                                <input type="text" class="form-control form-control-user datepicker" id="datepicker" name="tgl_lhr" placeholder="Tanggal Lahir">
+                                                <input type="text" class="form-control form-control-user datepicker" id="datepicker" name="tgl_lahir" placeholder="Tanggal Lahir">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -230,13 +230,13 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="alamat_aw"></label>
-                                                <input type="text" class="form-control form-control-user" name="alamat_aw" placeholder="Alamat Ahli Waris" />
+                                                <input type="text" class="form-control form-control-user" name="alamat_ahli_waris" placeholder="Alamat Ahli Waris" />
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="no_aw"></label>
-                                                <input type="text" class="form-control form-control-user" name="no_aw" placeholder="No Ahli Waris">
+                                                <input type="text" class="form-control form-control-user" name="no_ahli_waris" placeholder="No Ahli Waris">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -244,7 +244,7 @@
                                                 <label for="status_pernikahan dana">Status Pernikahan</label>
                                                 <?php
                                                 $style = 'class="form-control custom-select custom-select-md" required';
-                                                echo form_dropdown('status', $status, '', $style);
+                                                echo form_dropdown('status_menikah', $status, '', $style);
                                                 ?>
                                             </div>
                                         </div>
@@ -345,12 +345,12 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" name="nm_perusahaan" id="" class="form-control form-control-user" placeholder="Nama Perusahaan / Usaha">
+                                                <input type="text" name="perusahaan" id="" class="form-control form-control-user" placeholder="Nama Perusahaan / Usaha">
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
                                             <div class="form-group">
-                                                <input type="text" name="alamat_perusahaan" class="form-control form-control-user" placeholder="Alamat Perusahaan / Usaha">
+                                                <input type="text" name="alamat_kantor" class="form-control form-control-user" placeholder="Alamat Perusahaan / Usaha">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -429,7 +429,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="jenis tabungan">Jenis Tabungan</label>
-                                                <select class="form-control custom-select custom-select-md" id="jenis" name="jenis">
+                                                <select class="form-control custom-select custom-select-md" id="jenis_tab" name="jenis_tab">
                                                     <option value="" disabled diselected>--Pilih Jenis Produk--</option>
                                                     <?php foreach ($jenis as $row) : ?>
                                                         <option value="<?= $row->id_produk; ?>"><?= ucwords($row->produk); ?></option>
@@ -471,25 +471,25 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Kartu Keluarga</label>
-                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_kk" value="<?= set_value('ft_kk'); ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Selfie</label>
-                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_diri" value="<?= set_value('ft_diri'); ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Tangan</label>
-                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_ttd" value="<?= set_value('ft_ttd'); ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto NPWP</label>
-                                                <input type="file" class="form-control-file" name="image" value="<?= set_value('image'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_npwp" value="<?= set_value('ft_npwp'); ?>">
                                             </div>
                                         </div>
                                     </div>

@@ -115,7 +115,7 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('nm_identitas', 'Nama Identitas', 'required|trim');
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
             $this->nsb->createNsb();
-            $this->session->set_flashdata('message', 'Berhasil ditambahkan');
+            $this->session->set_flashdata('message', 'Selamat data Anda telah disimpan! Mohon tunggu verifikasi dari pihak Bank Unisritama.');
             redirect('admin/produk', 'refresh');
         }
 
