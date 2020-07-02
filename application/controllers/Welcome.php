@@ -34,11 +34,13 @@ class Welcome extends CI_Controller
 
 	public function getkota()
 	{
+		$kab_domisili = '';
 		$id = $this->input->post('id');
 		$kota = $this->user->viewByProvinsi($id);
 		$lists = "<option value=''>Pilih</option>";
 		foreach ($kota as $data) {
-			$lists .= "<option value='" . $data->kode . "'>" . $data->nama . "</option>";
+			$lists .= "<option value='" . $data->kode . "'>";
+			$lists .= $data->nama . "</option>";
 		}
 		$callback = array('list_kota' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_kota
 		echo json_encode($callback);
@@ -64,7 +66,8 @@ class Welcome extends CI_Controller
 		$desa = $this->user->viewByCam($id_prop, $id_kota, $id_camat);
 		$lists = "<option value=''>Pilih</option>";
 		foreach ($desa as $row) {
-			$lists .= "<option value='" . $row->kode . "'>" . $row->nama . "</option>";
+			$lists .= "<option value='" . $row->kode . "'>";
+			$lists .= $row->nama . "</option>";
 		}
 		$callback = array('list_desa' => $lists);
 		echo json_encode($callback);

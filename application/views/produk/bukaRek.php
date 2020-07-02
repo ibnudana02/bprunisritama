@@ -27,13 +27,13 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" autofocus class="form-control form-control-user" name="nm_lengkap" id="nm_lengkap" placeholder="Nama Lengkap" value="<?= set_value('produk'); ?>">
+                                                <input type="text" autofocus class="form-control form-control-user" name="nm_lengkap" id="nm_lengkap" placeholder="Nama Lengkap" value="<?= set_value('nm_lengkap'); ?>">
                                                 <?php echo form_error('nm_lengkap', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" autofocus class="form-control form-control-user" name="nm_identitas" id="nm_identitas" placeholder="Nama Sesuai Identitas" value="<?= set_value('produk'); ?>">
+                                                <input type="text" autofocus class="form-control form-control-user" name="nm_identitas" id="nm_identitas" placeholder="Nama Sesuai Identitas" value="<?= set_value('nm_identitas'); ?>">
                                                 <?php echo form_error('nm_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -42,8 +42,9 @@
                                                 <label for="jenis_kelamin">Jenis Kelamin </label><br>
                                                 <?php
                                                 $style = 'class="form-control custom-select custom-select-md" required';
-                                                echo form_dropdown('jenis_kelamin', $jk, '', $style);
+                                                echo form_dropdown('jenis_kelamin', $jk, set_value('jenis_kelamin'), $style);
                                                 ?>
+                                                <?php echo form_error('jenis_kelamin', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -51,8 +52,9 @@
                                                 <label for="sumber dana">Agama</label>
                                                 <?php
                                                 $style = 'class="form-control custom-select custom-select-md" required';
-                                                echo form_dropdown('agama', $agama, '', $style);
+                                                echo form_dropdown('agama', $agama, set_value('agama'), $style);
                                                 ?>
+                                                <?php echo form_error('agama', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
@@ -60,43 +62,48 @@
                                                 <label for="wn">Kewarganegaraan</label>
                                                 <?php
                                                 $style = 'class="form-control custom-select custom-select-md" required';
-                                                echo form_dropdown('warga_negara', $wn, '', $style);
+                                                echo form_dropdown('warga_negara', $wn, set_value('warga_negara'), $style);
                                                 ?>
+                                                <?php echo form_error('warga_negara', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="sumber dana">Jenis Identitas</label>
-                                                <?php
-                                                $style = 'class="form-control custom-select custom-select-md" required';
-                                                echo form_dropdown('jenis_identitas', $identitas, '', $style);
-                                                ?>
+                                                <?php $style = 'class="form-control custom-select custom-select-md" required';
+                                                echo form_dropdown('jenis_identitas', $identitas, set_value('jenis_identitas'), $style); ?>
+                                                <?php echo form_error('jenis_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="e">Berlaku Hingga</label>
                                                 <input type="text" class="form-control form-control-user datepicker" name="masa_berlaku" placeholder="Masa Berlaku" />
+                                                <?php echo form_error('masa_berlaku', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal">
+                                                <?php echo form_error('no_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="tempat_lahir" placeholder="Tempat Lahir">
+                                                <?php echo form_error('tempat_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group date">
                                                 <input type="text" class="form-control form-control-user datepicker" id="datepicker" name="tgl_lahir" placeholder="Tanggal Lahir">
+                                                <?php echo form_error('tgl_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <input type="number" class="form-control form-control-user" name="no_hp" placeholder="No. Hp/Telp" />
+                                                <?php echo form_error('no_hp', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
@@ -110,7 +117,7 @@
                                                 <select name="provinsi_identitas" id="propinsi" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
-                                                        <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
+                                                        <option value="<?= $row->kode; ?>" <?= set_select('provinsi_identitas', $row->kode) ?>><?= ucwords($row->nama); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -162,7 +169,7 @@
                                                 <select name="prov_domisili" id="prop_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
-                                                        <option value="<?= $row->kode; ?>"><?= ucwords($row->nama); ?></option>
+                                                        <option value="<?= $row->kode; ?>" <?= set_select('prov_domisili', $row->kode) ?>><?= ucwords($row->nama); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -689,11 +696,6 @@
             format: 'dd-mm-yyyy',
             autoclose: true,
             // todayHighlight: true,
-        });
-        $("#").datepicker({
-            format: 'dd-mm-yyyy',
-            autoclose: true,
-            todayHighlight: true,
         });
     });
 </script>

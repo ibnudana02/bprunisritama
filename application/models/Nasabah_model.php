@@ -86,6 +86,8 @@ class Nasabah_model extends CI_Model
         $this->alamat_identitas = $post['alamat_identitas'];
         $this->provinsi_identitas = $post['provinsi_identitas'];
         $this->kab_identitas = $post['kab_identitas'];
+        $this->kec_identitas = $post['kec_identitas'];
+        $this->kel_identitas = $post['kel_identitas'];
         $this->pos_identitas = $post['pos_identitas'];
         $this->tempat_lahir = $post['tempat_lahir'];
         $this->tgl_lahir = $post['tgl_lahir'];
