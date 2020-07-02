@@ -111,29 +111,29 @@ class Produk extends CI_Controller
 
     public function createTab()
     {
-        $this->form_validation->set_rules('nm_lengkap', 'Nama Lengkap', 'required|trim');
-        $this->form_validation->set_rules('nm_identitas', 'Nama Identitas', 'required|trim');
+        $this->form_validation->set_rules('nm_lengkap', 'Nama Lengkap', 'required|trim', ['required' => 'Nama Lengkap harus diisi!']);
+        $this->form_validation->set_rules('nm_identitas', 'Nama Identitas', 'required|trim', ['required' => 'Nama Identitas harus diisi!']);
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required|trim');
         $this->form_validation->set_rules('agama', 'Agama', 'required|trim');
         $this->form_validation->set_rules('warga_negara', 'Kewarganegaraan', 'required|trim');
         $this->form_validation->set_rules('jenis_identitas', 'Jenis Identitas', 'required|trim');
-        $this->form_validation->set_rules('masa_berlaku', 'Masa Berlaku', 'required|trim', ['required' => 'Field Tidak Boleh Kosong!']);
-        $this->form_validation->set_rules('no_identitas', 'Nomor Tanda Pengenal', 'required|trim', ['required' => 'Field Tidak Boleh Kosong!']);
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat lahir', 'required|trim');
-        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required|trim');
-        $this->form_validation->set_rules('no_hp', 'No. HP', 'required|trim');
-        $this->form_validation->set_rules('provinsi_identitas', 'Provinsi Identitas', 'required|trim');
-        $this->form_validation->set_rules('kab_identitas', 'Kabupaten/Kota Identitas', 'required|trim');
-        $this->form_validation->set_rules('kec_identitas', 'Kecamatan Identitas', 'required|trim');
-        $this->form_validation->set_rules('kel_identitas', 'Desa/Kelurahan Identitas', 'required|trim');
-        $this->form_validation->set_rules('alamat_identitas', 'Alamat sesuai Identitas', 'required|trim');
-        $this->form_validation->set_rules('provinsi_domisili', 'Provinsi Domisili', 'required|trim');
-        $this->form_validation->set_rules('kab_domisili', 'Kabupaten/Kota Domisili', 'required|trim');
-        $this->form_validation->set_rules('kec_domisili', 'Kecamatan Domisili', 'required|trim');
-        $this->form_validation->set_rules('kel_domisili', 'Desa/Kelurahan Domisili', 'required|trim');
-        $this->form_validation->set_rules('alamat_domisili', 'Alamat sesuai Domisili', 'required|trim');
-        $this->form_validation->set_rules('nm_ayah', 'Nama Ayah', 'required|trim');
-        $this->form_validation->set_rules('nm_ibu', 'Nama Ibu', 'required|trim');
+        $this->form_validation->set_rules('masa_berlaku', 'Masa Berlaku', 'required|trim', ['required' => 'Masa Berlaku harus diisi!']);
+        $this->form_validation->set_rules('no_identitas', 'Nomor Tanda Pengenal', 'required|trim', ['required' => 'No Identitas harus diisi!']);
+        $this->form_validation->set_rules('tempat_lahir', 'Tempat lahir', 'required|trim', ['required' => 'Tempat Lahir harus diisi!']);
+        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required|trim', ['required' => 'Tanggal Lahir harus diisi!']);
+        $this->form_validation->set_rules('no_hp', 'No. HP', 'required|trim', ['required' => 'No. HP harus diisi!']);
+        $this->form_validation->set_rules('provinsi_identitas', 'Provinsi Identitas', 'required|trim', ['required' => 'Provinsi Identitas harus diisi!']);
+        $this->form_validation->set_rules('kab_identitas', 'Kabupaten/Kota Identitas', 'required|trim', ['required' => 'Kota Identitas harus diisi!']);
+        $this->form_validation->set_rules('kec_identitas', 'Kecamatan Identitas', 'required|trim', ['required' => 'Kecamatan Identitas harus diisi!']);
+        $this->form_validation->set_rules('kel_identitas', 'Desa/Kelurahan Identitas', 'required|trim', ['required' => 'Desa Identitas harus diisi!']);
+        $this->form_validation->set_rules('alamat_identitas', 'Alamat sesuai Identitas', 'required|trim', ['required' => 'Alamat sesuai Identitas harus diisi!']);
+        $this->form_validation->set_rules('prov_domisili', 'Provinsi Domisili', 'required|trim', ['required' => 'Provinsi Domisili harus diisi!']);
+        $this->form_validation->set_rules('kab_domisili', 'Kabupaten/Kota Domisili', 'required|trim', ['required' => 'Kota Domisili harus diisi!']);
+        $this->form_validation->set_rules('kec_domisili', 'Kecamatan Domisili', 'required|trim', ['required' => 'Kecamatan Domisili harus diisi!']);
+        $this->form_validation->set_rules('kel_domisili', 'Desa/Kelurahan Domisili', 'required|trim', ['required' => 'Desa Domisili harus diisi!']);
+        $this->form_validation->set_rules('alamat_domisili', 'Alamat sesuai Domisili', 'required|trim', ['required' => 'Alamat Domisili harus diisi!']);
+        $this->form_validation->set_rules('nm_ayah', 'Nama Ayah', 'required|trim', ['required' => 'Nama Ayah harus diisi!']);
+        $this->form_validation->set_rules('nm_ibu', 'Nama Ibu', 'required|trim', ['required' => 'Nama Gadis Ibu Kandung harus diisi!']);
         $this->form_validation->set_rules('nm_ahli_waris', 'Nama Ahli Waris', 'required|trim');
         $this->form_validation->set_rules('hb_ahli_waris', 'Hub dg Ahli Waris', 'required|trim');
         $this->form_validation->set_rules('alamat_ahli_waris', 'Alamat Ahli Waris', 'required|trim');

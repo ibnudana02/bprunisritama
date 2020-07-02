@@ -120,6 +120,7 @@
                                                         <option value="<?= $row->kode; ?>" <?= set_select('provinsi_identitas', $row->kode) ?>><?= ucwords($row->nama); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
+                                                <?php echo form_error('provinsi_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -128,6 +129,7 @@
                                                 <select name="kab_identitas" id="kota" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
+                                                <?php echo form_error('kab_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -136,6 +138,7 @@
                                                 <select name="kec_identitas" id="camat" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
+                                                <?php echo form_error('kec_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -144,11 +147,13 @@
                                                 <select name="kel_identitas" id="lurah" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
+                                                <?php echo form_error('kel_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="alamat_identitas" placeholder="Alamat sesuai Tanda Pengenal">
+                                                <?php echo form_error('alamat_identitas', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -172,6 +177,7 @@
                                                         <option value="<?= $row->kode; ?>" <?= set_select('prov_domisili', $row->kode) ?>><?= ucwords($row->nama); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
+                                                <?php echo form_error('prov_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -180,6 +186,7 @@
                                                 <select name="kab_domisili" id="kota_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
+                                                <?php echo form_error('kab_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -188,6 +195,7 @@
                                                 <select name="kec_domisili" id="camat_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
+                                                <?php echo form_error('kec_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -196,16 +204,19 @@
                                                 <select name="kel_domisili" id="lurah_domisili" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                 </select>
+                                                <?php echo form_error('kel_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="alamat_domisili" placeholder="Alamat Domisili" />
+                                                <?php echo form_error('alamat_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="pos_domisili" id="" placeholder="Kode Pos"></div>
+                                            <?php echo form_error('pos_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div> <!-- end tab identitas -->
@@ -215,16 +226,19 @@
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="nm_ayah" placeholder="Nama Ayah Kandung">
+                                                <?php echo form_error('nm_ayah', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="nm_ibu" placeholder="Nama Gadis Ibu Kandung">
+                                                <?php echo form_error('nm_ibu', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user" name="nm_ahli_waris" placeholder="Nama Ahli Waris">
+                                                <?php echo form_error('nm_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -233,6 +247,7 @@
                                             $style = 'class="form-control custom-select custom-select-md" required';
                                             echo form_dropdown('hb_ahli_waris', $aw, '', $style);
                                             ?>
+                                            <?php echo form_error('hb_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
