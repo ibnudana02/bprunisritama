@@ -2671,11 +2671,15 @@ select[multiple].input-lg {
 }
 
 .has-feedback label~.form-control-feedback {
-    top: 25px
+    top: 40px
+}
+
+.has-feedback .form-control-feedback {
+    top: 10px
 }
 
 .has-feedback label.sr-only~.form-control-feedback {
-    top: 0
+    top: 40px
 }
 
 .help-block {

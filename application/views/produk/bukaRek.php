@@ -77,8 +77,12 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="e">Berlaku Hingga</label>
-                                                <input type="text" class="form-control form-control-user datepicker" name="masa_berlaku" placeholder="Masa Berlaku" />
+                                                <label class="control-label">Berlaku Hingga</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control datepicker" aria-describedby="start-date" name="masa_berlaku" placeholder="Masa Berlaku">
+                                                    <span class="input-group-addon" id="start-date"><span class="fa fa-calendar"></span></span>
+                                                    <!-- <span class="input-group-btn" id="start-date"><button class="btn btn-default">S</button></span> -->
+                                                </div>
                                                 <?php echo form_error('masa_berlaku', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -95,8 +99,11 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
-                                            <div class="form-group date">
-                                                <input type="text" class="form-control form-control-user datepicker" id="datepicker" name="tgl_lahir" placeholder="Tanggal Lahir">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control datepicker" aria-describedby="start-date" name="tgl_lahir" placeholder="Tanggal Lahir">
+                                                    <span class="input-group-addon" id="start-date"><span class="fa fa-calendar"></span></span>
+                                                </div>
                                                 <?php echo form_error('tgl_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -252,13 +259,15 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="alamat_aw"></label>
-                                                <input type="text" class="form-control form-control-user" name="alamat_ahli_waris" placeholder="Alamat Ahli Waris" />
+                                                <input type="text" class="form-control form-control-user" name="alamat_ahli_waris" placeholder="Alamat Ahli Waris" style="margin-top: 5px;" />
+                                                <?php echo form_error('alamat_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="no_aw"></label>
-                                                <input type="text" class="form-control form-control-user" name="no_ahli_waris" placeholder="No Ahli Waris">
+                                                <input type="text" class="form-control form-control-user" name="no_ahli_waris" placeholder="No Ahli Waris" style="margin-top: 5px;">
+                                                <?php echo form_error('no_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -268,24 +277,29 @@
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('status_menikah', $status, '', $style);
                                                 ?>
+                                                <?php echo form_error('status_menikah', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="nm_pasangan"></label>
-                                                <input type="text" name="nm_pasangan" class="form-control form-control-user" placeholder="Nama Pasangan">
+                                                <input type="text" name="nm_pasangan" class="form-control form-control-user" placeholder="Nama Pasangan" style="margin-top: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="tmp_lhr_pasangan" placeholder="Tempat Lahir Pasangan">
+                                                <input type="text" class="form-control form-control-user" name="tmp_lhr_pasangan" placeholder="Tempat Lahir Pasangan" style="margin-top: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for=""></label>
-                                                <input type="text" class="form-control form-control-user datepicker" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan">
+                                                <label class="control-label"></label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control form-control-user datepicker" aria-describedby="start-date" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan" style="margin-top: 5px;">
+                                                    <span class="input-group-addon" id="start-date" style="margin-top: 5px;"><span class="fa fa-calendar"></span></span>
+                                                </div>
+                                                <?php echo form_error('tgl_lhr_pasangan', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-12"></div>
@@ -301,19 +315,19 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="number" class="form-control form-control-user" name="no_identitas_pasangan" id="no_identitas" placeholder="Nomor Identitas Pasangan">
+                                                <input type="number" class="form-control form-control-user" name="no_identitas_pasangan" id="no_identitas" placeholder="Nomor Identitas Pasangan" style="margin-top: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="alamat_pasangan" placeholder="Alamat sesuai Identitas">
+                                                <input type="text" class="form-control form-control-user" name="alamat_pasangan" placeholder="Alamat sesuai Identitas" style="margin-top: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="number" class="form-control form-control-user" name="no_pasangan" placeholder="No. HP Pasangan" />
+                                                <input type="number" class="form-control form-control-user" name="no_pasangan" placeholder="No. HP Pasangan" style="margin-top: 5px;" />
                                             </div>
                                         </div>
                                     </div>
@@ -322,12 +336,13 @@
                                     <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Mohon isi sesuai data sebenarnya!</p>
                                     <div class="row">
                                         <div class="col-lg-3">
-                                            <div class="form-group">
+                                            <div class="form-group text-center">
                                                 <label for="profesi">Profesi</label>
                                                 <?php
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('profesi', $profesi, '', $style);
                                                 ?>
+                                                <?php echo form_error('profesi', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -336,6 +351,7 @@
                                             $style = 'class="form-control custom-select custom-select-md" required';
                                             echo form_dropdown('jenis_pekerjaan', $jenis_pekerjaan, '', $style);
                                             ?>
+                                            <?php echo form_error('jenis_pekerjaan', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
@@ -344,6 +360,7 @@
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('status_pekerjaan', $status_pekerjaan, '', $style);
                                                 ?>
+                                                <?php echo form_error('status_pekerjaan', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -353,6 +370,7 @@
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('sumber_dana', $sumber_dana, '', $style);
                                                 ?>
+                                                <?php echo form_error('sumber_dana', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -431,12 +449,14 @@
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('status_rumah', $status_rumah, '', $style);
                                                 ?>
+                                                <?php echo form_error('status_rumah', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="">Jumlah Tanggungan</label>
                                                 <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
+                                                <?php echo form_error('tanggungan', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -446,6 +466,7 @@
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('tujuan_buka', $tujuan_buka, '', $style);
                                                 ?>
+                                                <?php echo form_error('tujuan_buka', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -457,8 +478,10 @@
                                                         <option value="<?= $row->id_produk; ?>"><?= ucwords($row->produk); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
+                                                <?php echo form_error('jenis_tab', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
+                                        <div class="col-lg-12"></div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="pendidikan">Pendidikan Terakhir</label>
@@ -466,18 +489,21 @@
                                                 $style = 'class="form-control custom-select custom-select-md" required';
                                                 echo form_dropdown('pendidikan', $pendidikan, '', $style);
                                                 ?>
+                                                <?php echo form_error('pendidikan', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="email" placeholder="Email" />
+                                                <input type="text" class="form-control form-control-user" name="email" placeholder="Email" value="<?= set_value('email') ?>" />
+                                                <?php echo form_error('email', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="npwp" id="" placeholder="No. NPWP"></div>
+                                                <input type="text" class="form-control form-control-user" name="npwp" id="npwp" placeholder="No. NPWP"></div>
+                                            <?php echo form_error('npwp', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -488,30 +514,35 @@
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
                                                 <input type="file" class="form-control-file" name="ft_identitas" value="<?= set_value('ft_identitas'); ?>">
+                                                <?php echo form_error('ft_identitas', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Kartu Keluarga</label>
                                                 <input type="file" class="form-control-file" name="ft_kk" value="<?= set_value('ft_kk'); ?>">
+                                                <?php echo form_error('ft_kk', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Selfie</label>
                                                 <input type="file" class="form-control-file" name="ft_diri" value="<?= set_value('ft_diri'); ?>">
+                                                <?php echo form_error('ft_diri', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Tangan</label>
                                                 <input type="file" class="form-control-file" name="ft_ttd" value="<?= set_value('ft_ttd'); ?>">
+                                                <?php echo form_error('ft_ttd', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto NPWP</label>
                                                 <input type="file" class="form-control-file" name="ft_npwp" value="<?= set_value('ft_npwp'); ?>">
+                                                <?php echo form_error('ft_npwp', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -712,5 +743,8 @@
             autoclose: true,
             // todayHighlight: true,
         });
+        if ($("#npwp") != '') {
+            $("#ft_npwp").attr('required', true);
+        }
     });
 </script>
