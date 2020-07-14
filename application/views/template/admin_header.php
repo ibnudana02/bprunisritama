@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,8 +24,14 @@
 <script src="<?= base_url('assets/'); ?>js/bootstrap-iconpicker.min.js"></script>
 <!-- Custom styles for this page -->
 <link href="<?= base_url('assets/admin/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-
+<style>
+    @media only screen and (max-width: 600px) {
+        #accordionSidebar {
+            width: 0 !important;
+            overflow: hidden
+        }
+    }
+</style>
 </head>
 
 <body id="page-top">
@@ -75,8 +79,6 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
