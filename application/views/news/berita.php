@@ -36,7 +36,7 @@
                                         </a>
                                     </div>
                                     <div class="berita-more">
-                                        <a href="<?= 'berita/' . $row->slug ?>">Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                                        <a href="<?= base_url('berita/') . $row->slug ?>">Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
