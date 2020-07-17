@@ -26,10 +26,12 @@
 <link href="<?= base_url('assets/admin/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 <style>
     @media only screen and (max-width: 600px) {
-        #accordionSidebar {
-            width: 0 !important;
+
+        /* #accordionSidebar {
+            width: 0;
             overflow: hidden
-        }
+        } */
+
     }
 </style>
 </head>
