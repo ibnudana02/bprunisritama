@@ -513,35 +513,35 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
-                                                <input type="file" class="form-control-file" name="ft_identitas" value="<?= set_value('ft_identitas'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_identitas">
                                                 <?php echo form_error('ft_identitas', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Kartu Keluarga</label>
-                                                <input type="file" class="form-control-file" name="ft_kk" value="<?= set_value('ft_kk'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_kk">
                                                 <?php echo form_error('ft_kk', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Selfie</label>
-                                                <input type="file" class="form-control-file" name="ft_diri" value="<?= set_value('ft_diri'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_diri">
                                                 <?php echo form_error('ft_diri', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Tangan</label>
-                                                <input type="file" class="form-control-file" name="ft_ttd" value="<?= set_value('ft_ttd'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_ttd">
                                                 <?php echo form_error('ft_ttd', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto NPWP</label>
-                                                <input type="file" class="form-control-file" name="ft_npwp" value="<?= set_value('ft_npwp'); ?>">
+                                                <input type="file" class="form-control-file" name="ft_npwp">
                                                 <?php echo form_error('ft_npwp', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -743,8 +743,5 @@
             autoclose: true,
             // todayHighlight: true,
         });
-        if ($("#npwp") != '') {
-            $("#ft_npwp").attr('required', true);
-        }
     });
 </script>

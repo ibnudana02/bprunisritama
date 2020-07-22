@@ -121,15 +121,15 @@ class Berita_model extends CI_Model
         } else {
             $gbr = $this->upload->data();
             //Compress Image
-            $config['image_library'] = 'gd2';
-            $config['source_image'] = './upload/berita/' . $gbr['file_name'];
-            $config['create_thumb'] = FALSE;
-            $config['maintain_ratio'] = FALSE;
-            $config['quality'] = '70%';
-            $config['width'] = 1200;
-            $config['height'] = 760;
-            $this->load->library('image_lib', $config);
-            $this->image_lib->resize();
+            // $config['image_library'] = 'gd2';
+            // $config['source_image'] = './upload/berita/' . $gbr['file_name'];
+            // $config['create_thumb'] = FALSE;
+            // $config['maintain_ratio'] = FALSE;
+            // // $config['quality'] = '70%';
+            // $config['width'] = 1200;
+            // $config['height'] = 760;
+            // $this->load->library('image_lib', $config);
+            // $this->image_lib->resize();
 
             return $gbr['file_name'];
         }

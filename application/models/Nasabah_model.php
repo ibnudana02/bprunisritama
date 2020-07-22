@@ -132,45 +132,74 @@ class Nasabah_model extends CI_Model
         $this->tujuan_buka = $post['tujuan_buka'];
         $this->jenis_tab = $post['jenis_tab'];
         $this->pendidikan = $post['pendidikan'];
-        // $this->ft_identitas = $this->_uploadImage();
-        // $this->ft_kk = $post['ft_kk'];
-        // $this->ft_diri = $post['ft_diri'];
-        // $this->ft_ttd = $post['ft_ttd'];
-        // $this->ft_npwp = $post['ft_npwp'];
+        $files = $this->upload();
+        $this->ft_identitas = $files['ft_identitas']['file_name'];
+        $this->ft_kk = $files['ft_kk']['file_name'];
+        $this->ft_diri = $files['ft_diri']['file_name'];
+        $this->ft_ttd = $files['ft_ttd']['file_name'];
+        $this->ft_npwp = $files['ft_npwp']['file_name'];
         // print_r($this);
         echo json_encode($this);
         die;
         $this->db->insert($this->_table, $this);
     }
 
-    private function _uploadImage()
+    public function unggah()
     {
-        $config['upload_path'] = './upload/produk/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['file_name'] = $this->nm_lengkap;
-        $config['overwrite'] = true;
+        $this->id_nsb = uniqid();
+        $data = $this->upload();
+        $this->ft_identitas = $data['ft_identitas']['file_name'];
+        $this->ft_kk = $data['ft_kk']['file_name'];
+        $this->ft_selfie = $data['ft_selfie']['file_name'];
+        $this->ft_ttd = $data['ft_ttd']['file_name'];
+        $this->ft_npwp = $data['ft_npwp']['file_name'];
+
+        var_dump($this);
+        die;
+    }
+
+    private function upload()
+    {
+        $config['upload_path'] = './upload/nasabah/';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = 2048;
+        // $config['file_name'] = $this->id_nsb;
+        $config['encrypt_name'] = true;
 
         $this->upload->initialize($config);
-
         if (!$this->upload->do_upload('ft_identitas')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('pembukaan-rekening-tabungan');
+            redirect('welcome/upload');
         } else {
-            // return $this->upload->file_name;
-            $gbr = $this->upload->data();
-            //Compress Image
-            $config['image_library'] = 'gd2';
-            $config['source_image'] = './upload/tabungan/' . $gbr['file_name'];
-            $config['create_thumb'] = FALSE;
-            $config['maintain_ratio'] = FALSE;
-            // $config['width'] = 1200;
-            // $config['height'] = 760;
-            $this->load->library('image_lib', $config);
-            $this->image_lib->resize();
-
-            return "KTP_" . $gbr['file_name'];
+            $ft_identitas = $this->upload->data();
         }
+        if (!$this->upload->do_upload('ft_kk')) {
+            $this->session->set_flashdata('message', $this->upload->display_errors());
+            redirect('welcome/upload');
+        } else {
+            $ft_kk = $this->upload->data();
+        }
+        if (!$this->upload->do_upload('ft_selfie')) {
+            $this->session->set_flashdata('message', $this->upload->display_errors());
+            redirect('welcome/upload');
+        } else {
+            $ft_selfie = $this->upload->data();
+        }
+        if (!$this->upload->do_upload('ft_ttd')) {
+            $this->session->set_flashdata('message', $this->upload->display_errors());
+            redirect('welcome/upload');
+        } else {
+            $ft_ttd = $this->upload->data();
+        }
+
+        if (!$this->upload->do_upload('ft_npwp')) {
+            $this->session->flashdata('message', $this->upload->display_errors());
+            redirect('welcome/upload');
+        } else {
+            $ft_npwp = $this->upload->data();
+        }
+        $files = array('ft_identitas' => $ft_identitas, 'ft_kk' => $ft_kk, 'ft_selfie' => $ft_selfie, 'ft_ttd' => $ft_ttd, 'ft_npwp' => $ft_npwp);
+        return $files;
     }
 }
 

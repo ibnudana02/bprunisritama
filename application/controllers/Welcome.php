@@ -72,4 +72,21 @@ class Welcome extends CI_Controller
 		$callback = array('list_desa' => $lists);
 		echo json_encode($callback);
 	}
+
+	public function upload()
+	{
+		$this->load->model('Nasabah_model', 'nsb');
+		$this->form_validation->set_rules('ft_identitas', 'Foto', 'trim');
+		$this->form_validation->set_rules('ft_kk', 'Foto', 'trim');
+		$this->form_validation->set_rules('ft_selfie', 'Foto', 'trim');
+		$this->form_validation->set_rules('ft_ttd', 'Foto', 'trim');
+		$this->form_validation->set_rules('ft_npwp', 'Foto', 'trim');
+
+
+		if ($this->form_validation->run()) {
+			$this->nsb->unggah();
+			// redirect('Welcome/upload', 'refresh');
+		}
+		$this->load->view('multi');
+	}
 }
