@@ -66,6 +66,10 @@ $route['admin/add_laporan'] = 'admin/laporan/tambah_laporan';
 $route['admin'] = 'admin/welcome/index';
 $route['admin/logout'] = 'admin/welcome/logout';
 
+// Routes for data master
+$route['nasabah-tab'] = 'admin/master';
+
+
 $route['gcg'] = 'news/gcg';
 $route['publikasi'] = 'news/publikasi';
 $route['berita'] = 'news/berita';

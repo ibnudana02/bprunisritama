@@ -93,7 +93,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('pengajuan'); ?>">
+        <a class="nav-link" href="<?= base_url('nasabah-tab'); ?>">
             <i class="fas fa-fw fa-database"></i>
             <span>Master Data</span></a>
     </li>
