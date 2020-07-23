@@ -76,6 +76,7 @@ class Welcome extends CI_Controller
 	public function upload()
 	{
 		$this->load->model('Nasabah_model', 'nsb');
+		$this->form_validation->set_rules('nama', 'Nama', 'trim');
 		$this->form_validation->set_rules('ft_identitas', 'Foto', 'trim');
 		$this->form_validation->set_rules('ft_kk', 'Foto', 'trim');
 		$this->form_validation->set_rules('ft_selfie', 'Foto', 'trim');

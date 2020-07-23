@@ -69,10 +69,10 @@ class Nasabah_model extends CI_Model
     public $ft_diri;
     public $ft_ttd;
     public $ft_npwp;
+    // public $nama;
 
     public function createNsb()
     {
-        date_default_timezone_set('Asia/Jakarta');
         $post = $this->input->post();
         $this->id_nsb = uniqid();
         $this->nm_lengkap = $post['nm_lengkap'];
@@ -138,23 +138,24 @@ class Nasabah_model extends CI_Model
         $this->ft_diri = $files['ft_diri']['file_name'];
         $this->ft_ttd = $files['ft_ttd']['file_name'];
         $this->ft_npwp = $files['ft_npwp']['file_name'];
-        // print_r($this);
+        // print_r($files);
         echo json_encode($this);
-        die;
+        // die;
         $this->db->insert($this->_table, $this);
     }
 
     public function unggah()
     {
         $this->id_nsb = uniqid();
-        $data = $this->upload();
-        $this->ft_identitas = $data['ft_identitas']['file_name'];
-        $this->ft_kk = $data['ft_kk']['file_name'];
-        $this->ft_selfie = $data['ft_selfie']['file_name'];
-        $this->ft_ttd = $data['ft_ttd']['file_name'];
-        $this->ft_npwp = $data['ft_npwp']['file_name'];
+        $data['nama'] = $this->input->post('nama');
+        $fill = $this->upload();
+        $data['ft_identitas'] = $fill['ft_identitas']['file_name'];
+        $data['ft_kk'] = $fill['ft_kk']['file_name'];
+        $data['ft_selfie'] = $fill['ft_selfie']['file_name'];
+        $data['ft_ttd'] = $fill['ft_ttd']['file_name'];
+        $data['ft_npwp'] = $fill['ft_npwp']['file_name'];
 
-        var_dump($this);
+        echo json_encode($data);
         die;
     }
 
@@ -169,36 +170,36 @@ class Nasabah_model extends CI_Model
         $this->upload->initialize($config);
         if (!$this->upload->do_upload('ft_identitas')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('welcome/upload');
+            redirect('pembukaan-rekening-tabungan');
         } else {
             $ft_identitas = $this->upload->data();
         }
         if (!$this->upload->do_upload('ft_kk')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('welcome/upload');
+            redirect('pembukaan-rekening-tabungan');
         } else {
             $ft_kk = $this->upload->data();
         }
-        if (!$this->upload->do_upload('ft_selfie')) {
+        if (!$this->upload->do_upload('ft_diri')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('welcome/upload');
+            redirect('pembukaan-rekening-tabungan');
         } else {
-            $ft_selfie = $this->upload->data();
+            $ft_diri = $this->upload->data();
         }
         if (!$this->upload->do_upload('ft_ttd')) {
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('welcome/upload');
+            redirect('pembukaan-rekening-tabungan');
         } else {
             $ft_ttd = $this->upload->data();
         }
 
         if (!$this->upload->do_upload('ft_npwp')) {
             $this->session->flashdata('message', $this->upload->display_errors());
-            redirect('welcome/upload');
+            redirect('pembukaan-rekening-tabungan');
         } else {
             $ft_npwp = $this->upload->data();
         }
-        $files = array('ft_identitas' => $ft_identitas, 'ft_kk' => $ft_kk, 'ft_selfie' => $ft_selfie, 'ft_ttd' => $ft_ttd, 'ft_npwp' => $ft_npwp);
+        $files = array('ft_identitas' => $ft_identitas, 'ft_kk' => $ft_kk, 'ft_diri' => $ft_diri, 'ft_ttd' => $ft_ttd, 'ft_npwp' => $ft_npwp);
         return $files;
     }
 }

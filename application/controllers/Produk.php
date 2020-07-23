@@ -127,11 +127,13 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('kec_identitas', 'Kecamatan Identitas', 'required|trim', ['required' => 'Kecamatan Identitas harus diisi!']);
         $this->form_validation->set_rules('kel_identitas', 'Desa/Kelurahan Identitas', 'required|trim', ['required' => 'Desa Identitas harus diisi!']);
         $this->form_validation->set_rules('alamat_identitas', 'Alamat sesuai Identitas', 'required|trim', ['required' => 'Alamat sesuai Identitas harus diisi!']);
+        $this->form_validation->set_rules('pos_identitas', 'Kode Pos Identitas', 'trim');
         $this->form_validation->set_rules('prov_domisili', 'Provinsi Domisili', 'required|trim', ['required' => 'Provinsi Domisili harus diisi!']);
         $this->form_validation->set_rules('kab_domisili', 'Kabupaten/Kota Domisili', 'required|trim', ['required' => 'Kota Domisili harus diisi!']);
         $this->form_validation->set_rules('kec_domisili', 'Kecamatan Domisili', 'required|trim', ['required' => 'Kecamatan Domisili harus diisi!']);
         $this->form_validation->set_rules('kel_domisili', 'Desa/Kelurahan Domisili', 'required|trim', ['required' => 'Desa Domisili harus diisi!']);
         $this->form_validation->set_rules('alamat_domisili', 'Alamat sesuai Domisili', 'required|trim', ['required' => 'Alamat Domisili harus diisi!']);
+        $this->form_validation->set_rules('pos_domisili', 'Kode Pos Domisili', 'trim');
         $this->form_validation->set_rules('nm_ayah', 'Nama Ayah', 'required|trim', ['required' => 'Nama Ayah harus diisi!']);
         $this->form_validation->set_rules('nm_ibu', 'Nama Ibu', 'required|trim', ['required' => 'Nama Gadis Ibu Kandung harus diisi!']);
         $this->form_validation->set_rules('nm_ahli_waris', 'Nama Ahli Waris', 'required|trim', ['required' => 'Nama Ahli Waris harus diisi!']);
@@ -150,22 +152,31 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('jenis_pekerjaan', 'Jenis Pekerjaan', 'required|trim', ['required' => 'Jenis Pekerjaan harus diisi!']);
         $this->form_validation->set_rules('status_pekerjaan', 'Status Pekerjaan', 'required|trim', ['required' => 'Status Pekerjaan harus diisi!']);
         $this->form_validation->set_rules('sumber_dana', 'Sumber Penghasilan', 'required|trim', ['required' => 'Sumber Penghasilan harus diisi!']);
+        $this->form_validation->set_rules('jabatan', 'Jabatan', 'trim');
+        $this->form_validation->set_rules('gaji_bln', 'Gaji per Bulan', 'trim');
+        $this->form_validation->set_rules('perusahaan', 'Nama Perusahaan / Usaha', 'trim');
+        $this->form_validation->set_rules('alamat_kantor', 'Alamat Perusahaan/Usaha', 'trim');
+        $this->form_validation->set_rules('telp_kantor', 'Telp Kantor', 'trim');
+        $this->form_validation->set_rules('email_kantor', 'Email Perusahaan', 'trim');
+        $this->form_validation->set_rules('gaji_thn', 'Penghasilan per Tahun', 'trim');
+        $this->form_validation->set_rules('tambahan_penghasilan', 'Penghasilan Lainnya', 'trim');
+        $this->form_validation->set_rules('tot_penghasilan', 'Total Penghasilan', 'trim');
         $this->form_validation->set_rules('status_rumah', 'Status Tempat Tinggal', 'required|trim', ['required' => 'status_rumah harus diisi!']);
         $this->form_validation->set_rules('tanggungan', 'Tanggungan', 'required|trim', ['required' => 'Jumlah Tanggungan harus diisi!']);
         $this->form_validation->set_rules('tujuan_buka', 'Tujuan Pembukaan', 'required|trim', ['required' => 'Tujuan Pembukaan Rek harus diisi!']);
         $this->form_validation->set_rules('jenis_tab', 'Jenis Tabungan', 'required|trim', ['required' => 'Jenis Tabungan harus diisi!']);
         $this->form_validation->set_rules('pendidikan', 'Pendidikan Terakhir', 'required|trim', ['required' => 'Pendidikan Terakhir harus diisi!']);
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', ['required' => 'Email harus diisi!', 'valid_email' => '']);
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', ['required' => 'Email harus diisi!']);
         $this->form_validation->set_rules('npwp', 'NPWP', 'trim');
-        $this->form_validation->set_rules('ft_identitas', 'Foto Kartu Tanda Pengenal', 'required|trim', ['required' => 'Foto Tanda Pengenal harus diisi!']);
-        $this->form_validation->set_rules('ft_kk', 'Foto Kartu Keluarga', 'trim', ['required' => 'Foto Kartu Keluarga harus diisi!']);
-        $this->form_validation->set_rules('ft_diri', 'Foto Selfie', 'trim', ['required' => 'Foto Selfie harus diisi!']);
-        $this->form_validation->set_rules('ft_ttd', 'Foto Tanda Tangan', 'trim', ['required' => 'Foto Tanda Tangan harus diisi!']);
+        $this->form_validation->set_rules('ft_identitas', 'Foto Kartu Tanda Pengenal', 'trim');
+        $this->form_validation->set_rules('ft_kk', 'Foto Kartu Keluarga', 'trim');
+        $this->form_validation->set_rules('ft_diri', 'Foto Selfie', 'trim');
+        $this->form_validation->set_rules('ft_ttd', 'Foto Tanda Tangan', 'trim');
         $this->form_validation->set_rules('ft_npwp', 'Foto NPWP', 'trim');
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
             $this->nsb->createNsb();
-            // $this->session->set_flashdata('message', 'Selamat data Anda telah disimpan! Mohon tunggu verifikasi dari pihak Bank Unisritama.');
-            // redirect('pembukaan-rekening-tabungan', 'refresh');
+            $this->session->set_flashdata('message', '<strong>Congratulation!</strong> Data anda telah disimpan. Mohon tunggu verifikasi dari pihak Bank Unisritama.');
+            redirect('pembukaan-rekening-tabungan', 'refresh');
         }
 
         $data['judul'] = 'Pembukaan Rekening Tabungan | Bank Unisritama';

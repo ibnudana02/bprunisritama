@@ -1,12 +1,11 @@
 <div class="blog-page-area struktur">
     <div class="container">
-        <!-- <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 15px;">
-                <img src="</?= base_url('assets/img/client/banner-buka-tab.png') ?>" alt="">
-            </div>
-        </div> -->
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-success alert-dismissible text-center" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <?= $this->session->flashdata('message'); ?>
+                </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Formulir Pembukaan Rekening Tabungan</h3>
@@ -79,7 +78,7 @@
                                             <div class="form-group">
                                                 <label class="control-label">Berlaku Hingga</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control datepicker" aria-describedby="start-date" name="masa_berlaku" placeholder="Masa Berlaku">
+                                                    <input type="text" class="form-control datepicker" aria-describedby="start-date" name="masa_berlaku" placeholder="Masa Berlaku" value="<?= set_value('masa_berlaku'); ?>">
                                                     <span class="input-group-addon" id="start-date"><span class="fa fa-calendar"></span></span>
                                                     <!-- <span class="input-group-btn" id="start-date"><button class="btn btn-default">S</button></span> -->
                                                 </div>
@@ -88,20 +87,20 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal">
+                                                <input type="number" class="form-control form-control-user" name="no_identitas" id="no_identitas" placeholder="Nomor Tanda Pengenal" value="<?= set_value('no_identitas') ?>">
                                                 <?php echo form_error('no_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="tempat_lahir" placeholder="Tempat Lahir">
+                                                <input type="text" class="form-control form-control-user" name="tempat_lahir" placeholder="Tempat Lahir" value="<?= set_value('tempat_lahir') ?>">
                                                 <?php echo form_error('tempat_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control datepicker" aria-describedby="start-date" name="tgl_lahir" placeholder="Tanggal Lahir">
+                                                    <input type="text" class="form-control datepicker" aria-describedby="start-date" name="tgl_lahir" placeholder="Tanggal Lahir" value="<?= set_value('tgl_lahir'); ?>">
                                                     <span class="input-group-addon" id="start-date"><span class="fa fa-calendar"></span></span>
                                                 </div>
                                                 <?php echo form_error('tgl_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -109,7 +108,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="number" class="form-control form-control-user" name="no_hp" placeholder="No. Hp/Telp" />
+                                                <input type="number" class="form-control form-control-user" name="no_hp" placeholder="No. Hp/Telp" value="<?= set_value('no_hp'); ?>" />
                                                 <?php echo form_error('no_hp', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -159,13 +158,13 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="alamat_identitas" placeholder="Alamat sesuai Tanda Pengenal">
+                                                <input type="text" class="form-control form-control-user" name="alamat_identitas" placeholder="Alamat sesuai Tanda Pengenal" value="<?= set_value('alamat_identitas') ?>">
                                                 <?php echo form_error('alamat_identitas', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="pos_identitas" id="" placeholder="Kode Pos"></div>
+                                                <input type="text" class="form-control form-control-user" name="pos_identitas" id="" placeholder="Kode Pos" value="<?= set_value('pos_identitas') ?>"></div>
                                         </div>
                                         <div class="col-lg-12"></div>
 
@@ -216,13 +215,13 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="alamat_domisili" placeholder="Alamat Domisili" />
+                                                <input type="text" class="form-control form-control-user" name="alamat_domisili" placeholder="Alamat Domisili" value="<?= set_value('alamat_domisili') ?>" />
                                                 <?php echo form_error('alamat_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="pos_domisili" id="" placeholder="Kode Pos"></div>
+                                                <input type="text" class="form-control form-control-user" name="pos_domisili" id="" placeholder="Kode Pos" value="<?= set_value('pos_domisili') ?>"></div>
                                             <?php echo form_error('pos_domisili', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
@@ -232,19 +231,19 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="nm_ayah" placeholder="Nama Ayah Kandung">
+                                                <input type="text" class="form-control form-control-user" name="nm_ayah" placeholder="Nama Ayah Kandung" value="<?= set_value('nm_ayah') ?>">
                                                 <?php echo form_error('nm_ayah', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="nm_ibu" placeholder="Nama Gadis Ibu Kandung">
+                                                <input type="text" class="form-control form-control-user" name="nm_ibu" placeholder="Nama Gadis Ibu Kandung" value="<?= set_value('nm_ibu') ?>">
                                                 <?php echo form_error('nm_ibu', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" name="nm_ahli_waris" placeholder="Nama Ahli Waris">
+                                                <input type="text" class="form-control form-control-user" name="nm_ahli_waris" placeholder="Nama Ahli Waris" value="<?= set_value('nm_ahli_waris') ?>">
                                                 <?php echo form_error('nm_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -259,14 +258,14 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="alamat_aw"></label>
-                                                <input type="text" class="form-control form-control-user" name="alamat_ahli_waris" placeholder="Alamat Ahli Waris" style="margin-top: 5px;" />
+                                                <input type="text" class="form-control form-control-user" name="alamat_ahli_waris" placeholder="Alamat Ahli Waris" style="margin-top: 5px;" value="<?= set_value('alamat_ahli_waris') ?>" />
                                                 <?php echo form_error('alamat_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="no_aw"></label>
-                                                <input type="text" class="form-control form-control-user" name="no_ahli_waris" placeholder="No Ahli Waris" style="margin-top: 5px;">
+                                                <input type="text" class="form-control form-control-user" name="no_ahli_waris" placeholder="No Ahli Waris" style="margin-top: 5px;" value="<?= set_value('no_ahli_waris') ?>">
                                                 <?php echo form_error('no_ahli_waris', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -283,20 +282,20 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="nm_pasangan"></label>
-                                                <input type="text" name="nm_pasangan" class="form-control form-control-user" placeholder="Nama Pasangan" style="margin-top: 5px;">
+                                                <input type="text" name="nm_pasangan" class="form-control form-control-user" placeholder="Nama Pasangan" style="margin-top: 5px;" value="<?= set_value('nm_pasangan') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="tmp_lhr_pasangan" placeholder="Tempat Lahir Pasangan" style="margin-top: 5px;">
+                                                <input type="text" class="form-control form-control-user" name="tmp_lhr_pasangan" placeholder="Tempat Lahir Pasangan" style="margin-top: 5px;" value="<?= set_value('tmp_lhr_pasangan') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="control-label"></label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control form-control-user datepicker" aria-describedby="start-date" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan" style="margin-top: 5px;">
+                                                    <input type="text" class="form-control form-control-user datepicker" aria-describedby="start-date" name="tgl_lhr_pasangan" placeholder="Tanggal Lahir Pasangan" style="margin-top: 5px;" value="<?= set_value('tgl_lhr_pasangan') ?>">
                                                     <span class="input-group-addon" id="start-date" style="margin-top: 5px;"><span class="fa fa-calendar"></span></span>
                                                 </div>
                                                 <?php echo form_error('tgl_lhr_pasangan', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -315,19 +314,19 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="number" class="form-control form-control-user" name="no_identitas_pasangan" id="no_identitas" placeholder="Nomor Identitas Pasangan" style="margin-top: 5px;">
+                                                <input type="number" class="form-control form-control-user" name="no_identitas_pasangan" placeholder="Nomor Identitas Pasangan" style="margin-top: 5px;" value="<?= set_value('no_identitas_pasangan') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="alamat_pasangan" placeholder="Alamat sesuai Identitas" style="margin-top: 5px;">
+                                                <input type="text" class="form-control form-control-user" name="alamat_pasangan" placeholder="Alamat sesuai Identitas" style="margin-top: 5px;" value="<?= set_value('alamat_pasangan') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="number" class="form-control form-control-user" name="no_pasangan" placeholder="No. HP Pasangan" style="margin-top: 5px;" />
+                                                <input type="number" class="form-control form-control-user" name="no_pasangan" placeholder="No. HP Pasangan" style="margin-top: 5px;" value="<?= set_value('no_pasangan') ?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -375,32 +374,32 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="jabatan" id="" class="form-control form-control-user" placeholder="Jabatan">
+                                                <input type="text" name="jabatan" id="" class="form-control form-control-user" placeholder="Jabatan" value="<?= set_value('jabatan') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user" placeholder="Gaji / Pendapatan Perbulan">
+                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user" placeholder="Gaji / Pendapatan Perbulan" value="<?= set_value('gaji_bln') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" name="perusahaan" id="" class="form-control form-control-user" placeholder="Nama Perusahaan / Usaha">
+                                                <input type="text" name="perusahaan" id="" class="form-control form-control-user" placeholder="Nama Perusahaan / Usaha" value="<?= set_value('perusahaan') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-5">
                                             <div class="form-group">
-                                                <input type="text" name="alamat_kantor" class="form-control form-control-user" placeholder="Alamat Perusahaan / Usaha">
+                                                <input type="text" name="alamat_kantor" class="form-control form-control-user" placeholder="Alamat Perusahaan / Usaha" value="<?= set_value('alamat_kantor') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="telp_kantor" id="" class="form-control form-control-user" placeholder="No. Telp Kantor / Usaha">
+                                                <input type="text" name="telp_kantor" id="" class="form-control form-control-user" placeholder="No. Telp Kantor / Usaha" value="<?= set_value('telp_kantor') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="frm-group">
-                                                <input type="text" name="email_kantor" id="" class="form-control form-control-user" placeholder="Email Kantor">
+                                                <input type="text" name="email_kantor" id="" class="form-control form-control-user" placeholder="Email Kantor" value="<?= set_value('email_kantor') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-12"></div>
@@ -455,7 +454,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for="">Jumlah Tanggungan</label>
-                                                <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan">
+                                                <input type="text" class="form-control form-control-user" name="tanggungan" placeholder="Jumlah Tanggungan" value="<?= set_value('tanggungan') ?>">
                                                 <?php echo form_error('tanggungan', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -502,7 +501,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label for=""></label>
-                                                <input type="text" class="form-control form-control-user" name="npwp" id="npwp" placeholder="No. NPWP"></div>
+                                                <input type="text" class="form-control form-control-user" name="npwp" id="npwp" placeholder="No. NPWP" value="<?= set_value('npwp') ?>"></div>
                                             <?php echo form_error('npwp', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
