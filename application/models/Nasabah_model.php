@@ -202,6 +202,15 @@ class Nasabah_model extends CI_Model
         $files = array('ft_identitas' => $ft_identitas, 'ft_kk' => $ft_kk, 'ft_diri' => $ft_diri, 'ft_ttd' => $ft_ttd, 'ft_npwp' => $ft_npwp);
         return $files;
     }
+
+    public function getTab()
+    {
+        $this->db->select('*')
+            ->from($this->_table)
+            ->join('produk', $this->_table . '.jenis_tab=produk.id_produk');
+        // ->order_by('produk', 'asc');
+        return $this->db->get();
+    }
 }
 
 /* End of file Nasabah_model.php */

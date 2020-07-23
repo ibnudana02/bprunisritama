@@ -1,5 +1,5 @@
 <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion-toggled toggled" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion-toggled" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>">
@@ -93,13 +93,18 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('pengajuan'); ?>">
+            <i class="fas fa-fw fa-database"></i>
+            <span>Master Data</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="<?= base_url('admin/profil'); ?>">
             <i class="fas fa-fw fa-user-cog"></i>
             <span>Profil</span></a>
     </li>
 
     <!-- Divider -->
-    <!-- <hr class="sidebar-divider d-none d-md-block"> -->
+    <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">

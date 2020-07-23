@@ -24,16 +24,6 @@
 <script src="<?= base_url('assets/'); ?>js/bootstrap-iconpicker.min.js"></script>
 <!-- Custom styles for this page -->
 <link href="<?= base_url('assets/admin/'); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-<style>
-    @media only screen and (max-width: 600px) {
-
-        /* #accordionSidebar {
-            width: 0;
-            overflow: hidden
-        } */
-
-    }
-</style>
 </head>
 
 <body id="page-top">
