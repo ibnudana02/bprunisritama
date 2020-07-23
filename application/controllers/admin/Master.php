@@ -8,12 +8,8 @@ class Master extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // $nama = $this->session->has_userdata('name');
-        // if (empty($nama)) {
-
-        //     redirect('admin', 'refresh');
-        // }
         $this->load->model('Nasabah_model', 'nsb');
+        $this->load->library('Pdf');
     }
 
     public function index()
@@ -26,6 +22,14 @@ class Master extends CI_Controller
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/nasabah_tab');
         $this->load->view('template/admin_footer');
+    }
+
+    public function print_nasabah($id_nsb)
+    {
+        $data['data_nsb'] = $this->nsb->getByIdNsb($id_nsb)->row();
+        // var_dump($data['data_nsb']);
+        // die;
+        $this->load->view('cetakData_nsb', $data);
     }
 }
 

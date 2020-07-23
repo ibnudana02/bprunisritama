@@ -211,6 +211,15 @@ class Nasabah_model extends CI_Model
         // ->order_by('produk', 'asc');
         return $this->db->get();
     }
+
+    public function getByIdNsb($id_nsb)
+    {
+        $this->db->select('*')
+            ->from('nasabah_tab')
+            ->join('produk', $this->_table . '.jenis_tab=produk.id_produk', 'left')
+            ->where('id_nsb', $id_nsb);
+        return $this->db->get();
+    }
 }
 
 /* End of file Nasabah_model.php */

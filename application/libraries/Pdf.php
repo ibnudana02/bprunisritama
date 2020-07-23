@@ -1,9 +1,12 @@
 <?php
-class pdf
+defined('BASEPATH') or exit('No direct script access allowed');
+require_once dirname(__FILE__) . '\TCPDF\tcpdf.php';
+class Pdf extends TCPDF
 {
 
-    function __construct()
+    public function __construct()
     {
-        include_once APPPATH . '/third_party/TCPDF/tcpdf.php';
+        parent::__construct();
+        //Do your magic here
     }
 }

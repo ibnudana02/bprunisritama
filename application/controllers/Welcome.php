@@ -39,7 +39,7 @@ class Welcome extends CI_Controller
 		$kota = $this->user->viewByProvinsi($id);
 		$lists = "<option value=''>Pilih</option>";
 		foreach ($kota as $data) {
-			$lists .= "<option value='" . $data->kode . "'>";
+			$lists .= "<option value='" . $data->nama . "'>";
 			$lists .= $data->nama . "</option>";
 		}
 		$callback = array('list_kota' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_kota
@@ -53,7 +53,7 @@ class Welcome extends CI_Controller
 		$camat = $this->user->viewByKab($id_prop, $id_kota);
 		$lists = "<option value=''>Pilih</option>";
 		foreach ($camat as $row) {
-			$lists .= "<option value='" . $row->kode . "'>" . $row->nama . "</option>";
+			$lists .= "<option value='" . $row->nama . "'>" . $row->nama . "</option>";
 		}
 		$callback = array('list_camat' => $lists);
 		echo json_encode($callback);
@@ -66,7 +66,7 @@ class Welcome extends CI_Controller
 		$desa = $this->user->viewByCam($id_prop, $id_kota, $id_camat);
 		$lists = "<option value=''>Pilih</option>";
 		foreach ($desa as $row) {
-			$lists .= "<option value='" . $row->kode . "'>";
+			$lists .= "<option value='" . $row->nama . "'>";
 			$lists .= $row->nama . "</option>";
 		}
 		$callback = array('list_desa' => $lists);
