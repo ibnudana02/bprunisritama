@@ -68,6 +68,7 @@ $route['admin/logout'] = 'admin/welcome/logout';
 
 // Routes for data master
 $route['nasabah-tab'] = 'admin/master';
+$route['cetak-nasabah-tab/(:any)'] = 'admin/master/print_nasabah/$1';
 
 
 $route['gcg'] = 'news/gcg';

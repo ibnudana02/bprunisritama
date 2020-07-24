@@ -126,7 +126,7 @@
                                                 <select name="provinsi_identitas" id="propinsi" class="form-control form-control-user">
                                                     <option value="">Pilih</option>
                                                     <?php foreach ($prop as $row) : ?>
-                                                        <option value="<?= $row->nama; ?>" <?= set_select('provinsi_identitas', $row->kode) ?>><?= ucwords($row->nama); ?></option>
+                                                        <option value="<?= $row->kode; ?>" <?= set_select('provinsi_identitas', $row->kode) ?>><?= ucwords($row->nama); ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                                 <?php echo form_error('provinsi_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
