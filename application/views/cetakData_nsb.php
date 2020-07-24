@@ -17,7 +17,7 @@ $pdf->SetAuthor('BPR Unisritama');
 $pdf->SetDisplayMode('real', 'default');
 $pdf->AddPage();
 $html =
-    '<h3 align="center">FORMULIR PEMBUKAAN REKENING - BANK UNISRITAMA</h3>
+    '<h2 align="center">FORMULIR PEMBUKAAN REKENING TABUNGAN</h2>
 <table width="100%"  cellspacing="1" cellpadding="2">
 <tr>
     <td>Nama Nasabah</td>
