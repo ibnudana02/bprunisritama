@@ -1,9 +1,3 @@
-<?php foreach ($data as $row) : ?>
-    <?= $row->nm_lengkap ?>
-    <?= $row->nm_identitas ?>
-    <?= $row->jenis_kelamin ?>
-<?php endforeach; ?>
-
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
