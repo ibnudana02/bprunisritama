@@ -1,15 +1,18 @@
 <?php
 $file = base_url('upload/nasabah/');
 $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
-$pdf->SetTitle('Pembukaan Rekening Tabungan Online - ' . $data_nsb->nm_lengkap);
+$pdf->SetTitle('eForm Rekening Tabungan - ' . $data_nsb->nm_lengkap);
 $pdf->setHeaderMargin(5);
 // set font
 $pdf->SetFont('times', '', 12);
 
 $pdf->SetTopMargin(23);
-// $pdf->setFooterMargin(1);
-$pdf->SetAutoPageBreak(true);
+// $pdf->setFooterMargin(10);
+$pdf->SetAutoPageBreak(true, 10);
 $pdf->SetAuthor('BPR Unisritama');
+$pdf->SetCreator('BPR Unisritama');
+$pdf->SetSubject('eForm Bank Unisritama');
+$pdf->SetKeywords('eForm, online-form');
 $pdf->SetDisplayMode('real', 'default');
 $pdf->AddPage();
 $html =
@@ -125,6 +128,10 @@ $html =
 <td>: ' . $data_nsb->nm_pasangan . '</td>
 </tr>
 <tr>
+<td>Jumlah Tanggungan</td>
+<td>: ' . $data_nsb->tanggungan . ' Orang</td>
+</tr>
+<tr>
 <td>Profesi</td>
 <td>: ' . $data_nsb->profesi . '</td>
 </tr>
@@ -143,6 +150,10 @@ $html =
 <tr>
 <td>Perusahaan</td>
 <td>: ' . $data_nsb->perusahaan . '</td>
+</tr>
+<tr>
+<td>Jabatan</td>
+<td>: ' . $data_nsb->jabatan . '</td>
 </tr>
 <tr>
 <td>Alamat Perusahaan/Usaha</td>
