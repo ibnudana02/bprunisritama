@@ -175,7 +175,6 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('ft_npwp', 'Foto NPWP', 'trim');
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
             $this->nsb->createNsb();
-            $this->session->set_flashdata('message', '<strong>Congratulation!</strong> Data anda telah disimpan. Mohon tunggu verifikasi dari pihak Bank Unisritama.');
             redirect('pembukaan-rekening-tabungan', 'refresh');
         }
 

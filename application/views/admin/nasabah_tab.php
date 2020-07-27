@@ -21,7 +21,7 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>ID Nasabah</th>
+                                    <th>Kode Referensi</th>
                                     <th>Nama Lengkap</th>
                                     <th>Tujuan Pembukaan</th>
                                     <th>Jenis Tabungan</th>
@@ -34,7 +34,7 @@
                                 foreach ($data as $row) : ?>
                                     <tr>
                                         <th><?= $no++; ?>
-                                        <th><?= htmlspecialchars($row->id_nsb); ?></th>
+                                        <th><?= htmlspecialchars($row->kd_ref); ?></th>
                                         <th><?= htmlspecialchars($row->nm_lengkap); ?></th>
                                         <th><?= htmlspecialchars($row->tujuan_buka); ?></th>
                                         <th><?= htmlspecialchars(strtoupper($row->produk)); ?></th>

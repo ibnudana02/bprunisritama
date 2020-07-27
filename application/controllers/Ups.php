@@ -68,6 +68,14 @@ class Ups extends CI_Controller
         }
         redirect('Ups');
     }
+
+    public function ref()
+    {
+        $this->load->model('Nasabah_model', 'nsb');
+        $nsb = $this->nsb->createRef();
+        print_r($nsb);
+        die;
+    }
 }
 
 /* End of file Ups.php */

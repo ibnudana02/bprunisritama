@@ -7,6 +7,7 @@ class Nasabah_model extends CI_Model
 
     private $_table = "nasabah_tab";
     public $id_nsb;
+    public $kd_ref;
     public $nm_lengkap;
     public $nm_identitas;
     public $jenis_kelamin;
@@ -75,6 +76,7 @@ class Nasabah_model extends CI_Model
     {
         $post = $this->input->post();
         $this->id_nsb = uniqid();
+        $this->kd_ref = $this->createRef();
         $this->nm_lengkap = $post['nm_lengkap'];
         $this->nm_identitas = $post['nm_identitas'];
         $this->jenis_kelamin = $post['jenis_kelamin'];
@@ -139,9 +141,10 @@ class Nasabah_model extends CI_Model
         $this->ft_ttd = $files['ft_ttd']['file_name'];
         $this->ft_npwp = $files['ft_npwp']['file_name'];
         // print_r($files);
-        echo json_encode($this);
+        // echo json_encode($this);
         // die;
         $this->db->insert($this->_table, $this);
+        $this->session->set_flashdata('message', '<strong>Congratulation!</strong> Kode Referensi: ' . $this->kd_ref . ' Data anda telah disimpan. Mohon tunggu verifikasi dari pihak Bank Unisritama.');
     }
 
     public function unggah()
@@ -219,6 +222,26 @@ class Nasabah_model extends CI_Model
             ->join('produk', $this->_table . '.jenis_tab=produk.id_produk', 'left')
             ->where('id_nsb', $id_nsb);
         return $this->db->get();
+    }
+
+    private function createRef()
+    {
+        $this->db->select('RIGHT(nasabah_tab.kd_ref,4) as kode', FALSE);
+        $this->db->order_by('kd_ref', 'DESC');
+        $this->db->limit(1);
+        $query = $this->db->get('nasabah_tab');      //cek dulu apakah ada sudah ada kode di tabel.    
+        if ($query->num_rows() <> 0) {
+            //jika kode ternyata sudah ada.      
+            $data = $query->row();
+            $kode = intval($data->kode) + 1;
+        } else {
+            //jika kode belum ada      
+            $kode = 1;
+        }
+
+        $kodemax = str_pad($kode, 4, "0", STR_PAD_LEFT); // angka 4 menunjukkan jumlah digit angka 0
+        $kodejadi = "TAB-" . date("ym-") . $kodemax;    // hasilnya ODJ-9921-0001 dst.
+        return $kodejadi;
     }
 }
 

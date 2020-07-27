@@ -1,5 +1,5 @@
 <?php
-
+$file = base_url('upload/nasabah/');
 $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
 $pdf->SetTitle('Pembukaan Rekening Tabungan Online - ' . $data_nsb->nm_lengkap);
 $pdf->setHeaderMargin(5);
@@ -19,6 +19,10 @@ $html =
 <tr>
     <td>Nama Nasabah</td>
     <td>: ' . $data_nsb->nm_lengkap . '</td>
+</tr>
+<tr>
+    <td>Kode Referensi</td>
+    <td>: ' . $data_nsb->kd_ref . '</td>
 </tr>
 <tr>
     <td>Tujuan Pembukaan</td>
@@ -73,6 +77,18 @@ $html =
 <td>: ' . $data_nsb->email . '</td>
 </tr>
 <tr>
+<td>Pendidikan</td>
+<td>: ' . $data_nsb->pendidikan . '</td>
+</tr>
+<tr>
+<td>Kepemilikan Rumah</td>
+<td>: ' . $data_nsb->status_rumah . '</td>
+</tr>
+<tr>
+<td>Penghasilan per Bulan</td>
+<td>: Rp ' . number_format($data_nsb->gaji_bln, 2, ',', '.')  . '</td>
+</tr>
+<tr>
 <td>NPWP</td>
 <td>: ' . $data_nsb->npwp . '</td>
 </tr>
@@ -101,6 +117,14 @@ $html =
 <td>: ' . $data_nsb->no_ahli_waris . '</td>
 </tr>
 <tr>
+<td>Status Pernikahan</td>
+<td>: ' . $data_nsb->status_menikah . '</td>
+</tr>
+<tr>
+<td>Nama Pasangan</td>
+<td>: ' . $data_nsb->nm_pasangan . '</td>
+</tr>
+<tr>
 <td>Profesi</td>
 <td>: ' . $data_nsb->profesi . '</td>
 </tr>
@@ -127,7 +151,14 @@ $html =
 <tr>
 <td>Telp. Kantor</td>
 <td>: ' . $data_nsb->telp_kantor . '</td>
+</tr>
+<tr>
+<td>KTP</td>
+<td>: <img src="' . $file . $data_nsb->ft_identitas . '" width="220px" height="140px"></td>
 </tr>';
+
 $html .= '</table>';
+// echo $html;
+// die;
 $pdf->writeHTML($html, true, false, true, false, '');
 $pdf->Output('e-Form ' . $data_nsb->nm_lengkap . '.pdf', 'I');
