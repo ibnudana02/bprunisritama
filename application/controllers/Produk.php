@@ -168,10 +168,10 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('pendidikan', 'Pendidikan Terakhir', 'required|trim', ['required' => 'Pendidikan Terakhir harus diisi!']);
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', ['required' => 'Email harus diisi!']);
         $this->form_validation->set_rules('npwp', 'NPWP', 'trim');
-        $this->form_validation->set_rules('ft_identitas', 'Foto Kartu Tanda Pengenal', 'trim');
-        $this->form_validation->set_rules('ft_kk', 'Foto Kartu Keluarga', 'trim');
-        $this->form_validation->set_rules('ft_diri', 'Foto Selfie', 'trim');
-        $this->form_validation->set_rules('ft_ttd', 'Foto Tanda Tangan', 'trim');
+        $this->form_validation->set_rules('ft_identitas', 'Foto Kartu Tanda Pengenal', 'required|trim');
+        $this->form_validation->set_rules('ft_kk', 'Foto Kartu Keluarga', 'required|trim');
+        $this->form_validation->set_rules('ft_diri', 'Foto Selfie', 'required|trim');
+        $this->form_validation->set_rules('ft_ttd', 'Foto Tanda Tangan', 'required|trim');
         $this->form_validation->set_rules('ft_npwp', 'Foto NPWP', 'trim');
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
             $this->nsb->createNsb();

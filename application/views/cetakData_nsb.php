@@ -6,9 +6,9 @@ $pdf->setHeaderMargin(5);
 // set font
 $pdf->SetFont('times', '', 12);
 
-$pdf->SetTopMargin(23);
+$pdf->SetTopMargin(15);
 // $pdf->setFooterMargin(10);
-$pdf->SetAutoPageBreak(true, 10);
+$pdf->SetAutoPageBreak(true, 15);
 $pdf->SetAuthor('BPR Unisritama');
 $pdf->SetCreator('BPR Unisritama');
 $pdf->SetSubject('eForm Bank Unisritama');
@@ -164,8 +164,15 @@ $html =
 <td>: ' . $data_nsb->telp_kantor . '</td>
 </tr>
 <tr>
-<td>KTP</td>
-<td>: <img src="' . $file . $data_nsb->ft_identitas . '" width="220px" height="140px"></td>
+<td align="center">KTP:<br><img src="' . $file . $data_nsb->ft_identitas . '" width="220px" height="140px"></td>
+<td align="center">Kartu Keluarga: <img src="' . $file . $data_nsb->ft_kk . '" width="220px" height="140px"></td>
+</tr>
+<tr>
+<td align="center">Foto Selfie: <br><img src="' . $file . $data_nsb->ft_diri . '" width="220px" height="140px"></td>
+<td align="center">NPWP: <br><img src="' . $file . $data_nsb->ft_npwp . '" width="220px" height="140px"></td>
+</tr>
+<tr>
+<td align="center">Sample Tanda Tangan: <br><img src="' . $file . $data_nsb->ft_ttd . '" width="220px" height="140px"></td>
 </tr>';
 
 $html .= '</table>';

@@ -10,9 +10,8 @@
                 <div class="card-header py-3">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="font-weight-bold text-primary">List Penghargaan</h4>
+                            <h4 class="font-weight-bold text-primary">Daftar Nasabah eForm</h4>
                         </div>
-                        <div class="col-4"><a href="<?= base_url('admin/add_awards'); ?>" class="btn btn-facebook float-right">Tambah Penghargaan</a></div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -55,23 +54,6 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a href="<?= base_url('admin/delete_awards/' . $row->id_nsb) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="edit<?= $row->id_nsb; ?>" class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title mt-0">Peringatan!</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a href="<?= base_url('admin/delete_kategori/' . $row->id_nsb) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
                                                 </div>
                                             </div>

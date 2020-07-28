@@ -382,7 +382,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user" placeholder="Gaji / Pendapatan Perbulan" value="<?= set_value('gaji_bln') ?>">
+                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user money" placeholder="000.000.000.000.000,00" value="<?= set_value('gaji_bln') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -635,7 +635,9 @@
         </div>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/'); ?>js/jquery.mask.js"></script>
 <script>
     $(document).ready(function() {
         $("#propinsi").change(function() {
@@ -745,5 +747,6 @@
             autoclose: true,
             // todayHighlight: true,
         });
+        $('.money').inputmask('000.000.000.000.000,00');
     });
 </script>
