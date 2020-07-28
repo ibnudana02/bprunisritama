@@ -243,6 +243,14 @@ class Nasabah_model extends CI_Model
         $kodejadi = "TAB-" . date("ym-") . $kodemax;    // hasilnya ODJ-9921-0001 dst.
         return $kodejadi;
     }
+
+    public function approve($id_nsb)
+    {
+        $this->db->set('status', 'Approved');
+        $this->db->where('id_nsb', $id_nsb);
+        $this->db->update($this->_table);
+        // $this->session->set_flashdata('message', '');
+    }
 }
 
 /* End of file Nasabah_model.php */

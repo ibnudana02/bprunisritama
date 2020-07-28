@@ -24,6 +24,23 @@ class Master extends CI_Controller
         $this->load->view('template/admin_footer');
     }
 
+    public function approve($id_nsb)
+    {
+        $d = $this->nsb->getByIdNsb($id_nsb)->row();
+        if ($d->status == 'WAITING') {
+            # code...
+            $this->nsb->approve($id_nsb);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">eForm <strong>' . $d->nm_lengkap . '</strong> telah berhasil di Approved!</div>');
+            redirect('nasabah-tab', 'refresh');
+        } elseif ($d->status == 'APPROVED') {
+            $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert">eForm <strong>' . $d->nm_lengkap . '</strong> sudah pernah di Approved!</div>');
+            redirect('nasabah-tab', 'refresh');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">eForm <strong>' . $d->nm_lengkap . '</strong> tidak valid!</div>');
+            redirect('nasabah-tab', 'refresh');
+        }
+    }
+
     public function print_nasabah($id_nsb)
     {
         $data['data_nsb'] = $this->nsb->getByIdNsb($id_nsb)->row();

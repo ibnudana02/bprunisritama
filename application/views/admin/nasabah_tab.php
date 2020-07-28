@@ -39,7 +39,7 @@
                                         <th><?= htmlspecialchars($row->tujuan_buka); ?></th>
                                         <th><?= htmlspecialchars(strtoupper($row->produk)); ?></th>
                                         <th><?= htmlspecialchars($row->status); ?></th>
-                                        <th width><a href="<?php echo $row->id_nsb; ?>" class="btn btn-sm btn-info float-center" data-target="#edit<?php echo $row->id_nsb; ?>" data-toggle="modal"><i class="fas fa-edit"></i></a>
+                                        <th width><a href="<?= base_url('acc-nsb/' . $row->id_nsb) ?>" class="btn btn-sm btn-info float-center"><i class="fas fa-check"></i></a>
                                             <a href="<?= base_url('cetak-nasabah-tab/' . $row->id_nsb) ?>" target="_blank" class="btn btn-sm btn-success float-center"><i class="fas fa-print"></i></a>
                                             <a href="<?php echo $row->id_nsb; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_nsb; ?>" data-toggle="modal"><i class="fas fa-trash"></i></a></th>
                                     </tr>
