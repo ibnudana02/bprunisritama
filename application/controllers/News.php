@@ -74,11 +74,12 @@ class News extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    public function unduh()
+    public function unduh($id_laporan)
     {
-        $name = $this->uri->segment(3);
-        $data = file_get_contents("upload/laporan/" . $name);
-        force_download($name, $data);
+        $d = $this->laporan->getById($id_laporan);
+        $file = $d->dokumen;
+        $data = file_get_contents("upload/laporan/" . $file);
+        force_download($file, $data);
     }
 }
 

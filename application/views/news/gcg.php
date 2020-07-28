@@ -15,7 +15,7 @@
                                 <div class="single-page-head">
                                     <div class="download-btn">
                                         <div class="about-btn text-center">
-                                            <a href="<?= base_url('news/unduh/' . $row->dokumen) ?>" class="down-btn">Download <i class="fa fa-file-pdf-o"></i></a>
+                                            <a href="<?= base_url('news/unduh/' . $row->id_laporan) ?>" class="down-btn">Download <i class="fa fa-file-pdf-o"></i></a>
                                             <a href="<?= $row->id_laporan ?>" class="down-btn" data-target="#view<?php echo $row->id_laporan; ?>" data-toggle="modal">View <i class="fa fa-file-pdf-o"></i></a>
                                         </div>
                                     </div>
