@@ -1,3 +1,14 @@
+<head>
+    <style>
+        .form-required {
+            color: #cd201f;
+        }
+
+        .form-required:before {
+            content: ' ';
+        }
+    </style>
+</head>
 <div class="blog-page-area struktur">
     <div class="container">
         <div class="row">
@@ -20,8 +31,8 @@
                                 <li><a data-toggle="tab" href="#kontak">Ahli Waris/Kontak</a></li>
                                 <li><a data-toggle="tab" href="#pekerjaan">Pekerjaan</a></li>
                                 <li><a data-toggle="tab" href="#tambahan">Data Tambahan</a></li>
-                                <li><a data-toggle="tab" href="#dokumen">Dokumen</a></li>
-                                <li><a data-toggle="tab" href="#accept">Persetujuan</a></li>
+                                <li><a data-toggle="tab" href="#dokumen">Dokumen & Persetujuan</a></li>
+                                <!-- <li><a data-toggle="tab" href="#accept">Persetujuan</a></li> -->
                             </ul>
                             <div class="tab-content">
                                 <div id="identitas" class="tab-pane fade in active">
@@ -30,12 +41,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" autofocus class="form-control form-control-user" name="nm_lengkap" id="nm_lengkap" placeholder="Nama Lengkap" value="<?= set_value('nm_lengkap'); ?>" onkeyup="this.value = this.value.toUpperCase()">
+                                                <span class="form-required">*</span>
                                                 <?php echo form_error('nm_lengkap', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" autofocus class="form-control form-control-user" name="nm_identitas" id="nm_identitas" placeholder="Nama Sesuai Identitas" value="<?= set_value('nm_identitas'); ?>" onkeyup="this.value = this.value.toUpperCase()">
+                                                <input type="text" class="form-control form-control-user" name="nm_identitas" id="nm_identitas" placeholder="Nama Sesuai Identitas" value="<?= set_value('nm_identitas'); ?>" onkeyup="this.value = this.value.toUpperCase()">
                                                 <?php echo form_error('nm_identitas', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -548,9 +560,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="accept" class="tab-pane fade">
-                                    <p class="alert alert-danger" role="alert" style="margin-top: 25px;">Syaratan dan Ketentuan</p>
+                                    <p class="alert alert-danger" role="alert">Syaratan dan Ketentuan</p>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="scroll">

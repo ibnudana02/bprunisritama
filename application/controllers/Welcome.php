@@ -90,4 +90,9 @@ class Welcome extends CI_Controller
 		}
 		$this->load->view('multi');
 	}
+
+	public function step()
+	{
+		$this->load->view('step');
+	}
 }
