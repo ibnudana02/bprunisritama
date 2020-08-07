@@ -382,7 +382,7 @@
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user money" placeholder="000.000.000.000.000,00" value="<?= set_value('gaji_bln') ?>">
+                                                <input type="text" name="gaji_bln" id="" class="form-control form-control-user" placeholder="Gaji per Bulan" value="<?= set_value('gaji_bln') ?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -515,28 +515,28 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Pengenal (KTP, SIM, Passport)</label>
-                                                <input type="file" class="form-control-file" name="ft_identitas">
+                                                <input type="file" class="form-control-file" name="ft_identitas" required>
                                                 <?php echo form_error('ft_identitas', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Kartu Keluarga</label>
-                                                <input type="file" class="form-control-file" name="ft_kk">
+                                                <input type="file" class="form-control-file" name="ft_kk" required>
                                                 <?php echo form_error('ft_kk', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Selfie</label>
-                                                <input type="file" class="form-control-file" name="ft_diri">
+                                                <input type="file" class="form-control-file" name="ft_diri" required>
                                                 <?php echo form_error('ft_diri', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="image">Lampirkan Foto Tanda Tangan</label>
-                                                <input type="file" class="form-control-file" name="ft_ttd">
+                                                <input type="file" class="form-control-file" name="ft_ttd" required>
                                                 <?php echo form_error('ft_ttd', '<small class="text-center text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -637,7 +637,7 @@
 </div>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 <script src="<?php echo base_url('assets/'); ?>js/vendor/jquery-1.12.4.min.js" type="text/javascript"></script>
-<script src="<?php echo base_url('assets/'); ?>js/jquery.mask.js"></script>
+<!-- <script src="<?php echo base_url('assets/'); ?>js/jquery.mask.js"></script> -->
 <script>
     $(document).ready(function() {
         $("#propinsi").change(function() {
@@ -747,6 +747,5 @@
             autoclose: true,
             // todayHighlight: true,
         });
-        $('.money').inputmask('000.000.000.000.000,00');
     });
 </script>

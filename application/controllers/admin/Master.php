@@ -41,6 +41,21 @@ class Master extends CI_Controller
         }
     }
 
+    public function delete($id_nsb)
+    {
+        if (!isset($id_nsb)) show_404(); //jika tidak ada $id yang dipilih, tampilkan error page
+        if ($this->nsb->delete($id_nsb)) { //jika $id terpilih, lakukan hapus data 
+            $this->session->set_flashdata( //tambahkan pesan jika berhasil
+                'message',
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Hapus Data Nasabah<strong>Berhasil!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button></div>'
+            );
+            redirect(site_url('nasabah-tab')); //arahkan ke halaman list berita
+        }
+    }
+
     public function print_nasabah($id_nsb)
     {
         $data['data_nsb'] = $this->nsb->getByIdNsb($id_nsb)->row();

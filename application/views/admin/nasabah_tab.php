@@ -38,7 +38,7 @@
                                         <th><?= htmlspecialchars($row->tujuan_buka); ?></th>
                                         <th><?= htmlspecialchars(strtoupper($row->produk)); ?></th>
                                         <th><?= htmlspecialchars($row->status); ?></th>
-                                        <th width><a href="<?= base_url('acc-nsb/' . $row->id_nsb) ?>" class="btn btn-sm btn-info float-center"><i class="fas fa-check"></i></a>
+                                        <th width><a href="<?= base_url('acc-nsb/' . $row->id_nsb) ?>" id="acc" class="btn btn-sm btn-info float-center"><i class="fas fa-check"></i></a>
                                             <a href="<?= base_url('cetak-nasabah-tab/' . $row->id_nsb) ?>" target="_blank" class="btn btn-sm btn-success float-center"><i class="fas fa-print"></i></a>
                                             <a href="<?php echo $row->id_nsb; ?>" class="btn btn-sm btn-danger float-center" data-target="#hapus<?php echo $row->id_nsb; ?>" data-toggle="modal"><i class="fas fa-trash"></i></a></th>
                                     </tr>
@@ -53,7 +53,7 @@
                                                     <h5 class="modal-body mt-0">Yakin menghapus data ini?</h5>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="<?= base_url('admin/delete_awards/' . $row->id_nsb) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
+                                                    <a href="<?= base_url('del-nsb/' . $row->id_nsb) ?>" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete User">Hapus</a>
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Kembali">Tidak</button>
                                                 </div>
                                             </div>
@@ -69,3 +69,14 @@
     </div>
 </div>
 <!-- /.container-fluid -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#acc').click(function() {
+            var status = <?php echo $row->status ?>;
+            if (status == 'APPROVED') {
+                $('a')
+            }
+        });
+        $('#acc').get
+    })
+</script>

@@ -7,6 +7,8 @@ class Produk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('email');
+
         $this->load->model(array('Kategori_model' => 'kategori', 'Berita_model' => 'berita', 'Produk_model' => 'produk', 'Jenis_model' => 'jenis', 'User_model' => 'user', 'Nasabah_model' => 'nsb'));
     }
 
@@ -168,12 +170,15 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('pendidikan', 'Pendidikan Terakhir', 'required|trim', ['required' => 'Pendidikan Terakhir harus diisi!']);
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', ['required' => 'Email harus diisi!']);
         $this->form_validation->set_rules('npwp', 'NPWP', 'trim');
-        $this->form_validation->set_rules('ft_identitas', 'Foto Kartu Tanda Pengenal', 'required|trim');
-        $this->form_validation->set_rules('ft_kk', 'Foto Kartu Keluarga', 'required|trim');
-        $this->form_validation->set_rules('ft_diri', 'Foto Selfie', 'required|trim');
-        $this->form_validation->set_rules('ft_ttd', 'Foto Tanda Tangan', 'required|trim');
+        $this->form_validation->set_rules('ft_identitas', 'Foto Kartu Tanda Pengenal', 'trim');
+        $this->form_validation->set_rules('ft_kk', 'Foto Kartu Keluarga', 'trim');
+        $this->form_validation->set_rules('ft_diri', 'Foto Selfie', 'trim');
+        $this->form_validation->set_rules('ft_ttd', 'Foto Tanda Tangan', 'trim');
         $this->form_validation->set_rules('ft_npwp', 'Foto NPWP', 'trim');
         if ($this->form_validation->run()) { //jika form_validation berhasil dijalankan, fungsi save() atau simpan data dijalankan
+            $d = $this->input->post();
+            // var_dump($d);
+            // die;
             $this->nsb->createNsb();
             redirect('pembukaan-rekening-tabungan', 'refresh');
         }
@@ -242,5 +247,38 @@ class Produk extends CI_Controller
         $kota = $this->user->viewByProvinsi($id);
         var_dump($kota);
         echo json_encode($kota);
+    }
+
+    public function send()
+    {
+        if ($this->sendMail()) {
+            $this->session->set_flashdata('message', '<strong>Congratulation!</strong> Data anda telah disimpan. Mohon tunggu verifikasi dari pihak Bank Unisritama.');
+            redirect('pembukaan-rekening-tabungan', 'refresh');
+        } else {
+            $this->session->set_flashdata('message', '<strong>Terdapat masalah pada sambungan. Coba lagi!</strong>.');
+            redirect('pembukaan-rekening-tabungan', 'refresh');
+        }
+    }
+
+    public function sendMail()
+    {
+        // configure the email setting  
+        $config['protocol'] = 'smtp';
+        $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name  
+        $config['smtp_port'] = '465'; //smtp port number  
+        $config['smtp_user'] = 'unisritamabpr@gmail.com';
+        $config['smtp_pass'] = 'Admin-web10'; //$from_email password  
+        $config['mailtype'] = 'html';
+        $config['charset'] = 'iso-8859-1';
+        $config['wordwrap'] = TRUE;
+        $config['newline'] = "\r\n"; //use double quotes  
+        $this->email->initialize($config);
+        // $url = base_url() . "user/confirmation/" . $saltid;
+        $this->email->from('unisritamabpr@gmail.com', 'Web-BPR Unisritama');
+        $this->email->to('unisritamabpr@yahoo.co.id');
+        $this->email->subject('New Nasabah Register!');
+        $message = "<html><head><head></head><body><p>Hi,</p><p>Terdapat Nasabah Baru yang sudah selesai Registrasi. Harap segera di verifikasi!</p><br/><p>Sincerely,</p><p>webbprunisritama.com</p></body></html>";
+        $this->email->message($message);
+        return $this->email->send();
     }
 }

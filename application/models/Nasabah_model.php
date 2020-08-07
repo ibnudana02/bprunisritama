@@ -141,7 +141,7 @@ class Nasabah_model extends CI_Model
         $this->ft_ttd = $files['ft_ttd']['file_name'];
         $this->ft_npwp = $files['ft_npwp']['file_name'];
         // print_r($files);
-        // echo json_encode($this);
+        // var_dump($this);
         // die;
         $this->db->insert($this->_table, $this);
         $this->session->set_flashdata('message', '<strong>Congratulation!</strong> Kode Referensi: ' . $this->kd_ref . ' Data anda telah disimpan. Mohon tunggu verifikasi dari pihak Bank Unisritama.');
@@ -154,7 +154,7 @@ class Nasabah_model extends CI_Model
         $fill = $this->upload();
         $data['ft_identitas'] = $fill['ft_identitas']['file_name'];
         $data['ft_kk'] = $fill['ft_kk']['file_name'];
-        $data['ft_selfie'] = $fill['ft_selfie']['file_name'];
+        $data['ft_diri'] = $fill['ft_diri']['file_name'];
         $data['ft_ttd'] = $fill['ft_ttd']['file_name'];
         $data['ft_npwp'] = $fill['ft_npwp']['file_name'];
 
@@ -250,6 +250,11 @@ class Nasabah_model extends CI_Model
         $this->db->where('id_nsb', $id_nsb);
         $this->db->update($this->_table);
         // $this->session->set_flashdata('message', '');
+    }
+
+    public function delete($id_nsb)
+    {
+        return $this->db->delete($this->_table, array('id_nsb' => $id_nsb));
     }
 }
 
