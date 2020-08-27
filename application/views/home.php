@@ -53,6 +53,75 @@
     </div>
 </div>
 
+<!-- Welcome service area start -->
+<div class="welcome-area bg-color-2 area-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center">
+                    <h4>Business consultant is offering world wide business planning. We are a solution oriented company and your needs are our greatest concern</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- single-well end-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="well-services">
+                    <div class="services-img">
+                        <img src="<?= base_url('assets/') ?>img/service/1.jpg" alt="">
+                        <span class="top-icon"><i class="flaticon-graph-3"></i></span>
+                        <div class="image-layer">
+                            <a href="#"><i class="flaticon-graph-8"></i>Simulasi Kredit</a>
+                            <a href="#"><i class="flaticon-graph-3"></i>Form Aplikasi Kredit</a>
+                        </div>
+                    </div>
+                    <div class="main-services">
+                        <div class="service-content">
+                            <h4>Aplikasi Kredit</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single-well end-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="well-services">
+                    <div class="services-img">
+                        <img src="<?= base_url('assets/') ?>img/service/2.jpg" alt="">
+                        <span class="top-icon"><i class="flaticon-graph-1"></i></span>
+                        <div class="image-layer">
+                            <a href="<?= base_url('pembukaan-rekening-tabungan') ?>"><i class="flaticon-grocery"></i>Form Pembukaan Tabungan</a>
+                        </div>
+                    </div>
+                    <div class="main-services">
+                        <div class="service-content">
+                            <h4>Pembukaan Tabungan Online</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single-well end-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="well-services">
+                    <div class="services-img">
+                        <img src="<?= base_url('assets/') ?>img/service/3.jpg" alt="">
+                        <span class="top-icon"><i class="flaticon-bank"></i></span>
+                        <div class="image-layer">
+                            <a href="#"><i class="flaticon-change"></i>Bank investment plan</a>
+                        </div>
+                    </div>
+                    <div class="main-services">
+                        <div class="service-content">
+                            <h4>Pembukaan Deposito Online</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- single-well end-->
+        </div>
+    </div>
+</div>
+<!-- Welcome service area End -->
+
 <div class="project-area">
     <div class="container">
         <div class="row">

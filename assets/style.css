@@ -1135,7 +1135,7 @@ div#preloader {
     padding: 20px;
     position: relative;
     z-index: 1;
-    min-height: 150px;
+    /* min-height: 100px; */
 }
 
 .well-icon {

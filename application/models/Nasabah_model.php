@@ -141,8 +141,8 @@ class Nasabah_model extends CI_Model
         $this->ft_ttd = $files['ft_ttd']['file_name'];
         $this->ft_npwp = $files['ft_npwp']['file_name'];
         // print_r($files);
-        // var_dump($this);
-        // die;
+        var_dump($this);
+        die;
         $this->db->insert($this->_table, $this);
         $this->session->set_flashdata('message', '<strong>Congratulation!</strong> Kode Referensi: ' . $this->kd_ref . ' Data anda telah disimpan. Mohon tunggu verifikasi dari pihak Bank Unisritama.');
     }
