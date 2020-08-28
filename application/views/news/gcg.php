@@ -30,7 +30,7 @@
                                     <h5 class="modal-title mt-0 text-center"><?= strtoupper($row->laporan); ?></h5>
                                 </div>
                                 <div class="modal-body" style="height: 420px;width:100%;">
-                                    <!-- <embed src="<//?= base_url('upload/laporan/' . $row->dokumen) ?>" type='application/pdf' width='100%' height='420px' /> -->
+
                                     <iframe id="pdfviewer" src="http://docs.google.com/gview?embedded=true&url=https://web.bprunisritama.com/upload/laporan/<?= $row->dokumen ?>" width='100%' height='420px' frameborder="0"></iframe>
                                 </div>
                                 <div class="modal-footer" style="margin-top: 25px;">
