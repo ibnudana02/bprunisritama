@@ -1,11 +1,11 @@
 .wizard {
-    margin: 20px auto;
+    margin: 5px auto;
     background: #fff;
 }
 
 .wizard .nav-tabs {
     position: relative;
-    margin: 40px auto;
+    margin: 5px auto;
     margin-bottom: 0;
     border-bottom-color: #e0e0e0;
 }
@@ -130,7 +130,7 @@ span.round-tab:hover {
 .step33 {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding-left: 10px;
+    padding: 15px 30px;
     margin-bottom: 10px;
 }
 
