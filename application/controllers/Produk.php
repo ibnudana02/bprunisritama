@@ -206,7 +206,9 @@ class Produk extends CI_Controller
             $data['crumb'] = 'Produk';
             $data['jenis'] = $this->produk->getTab()->result();
             $data['prop'] = $this->user->getProv();
-            $this->load->view('step', $data);
+            $this->load->view('template/header', $data);
+            $this->load->view('produk/bukaRek', $data);
+            $this->load->view('template/footer');
         }
     }
 

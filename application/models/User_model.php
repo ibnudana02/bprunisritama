@@ -69,48 +69,40 @@ class User_model extends CI_Model
         return $this->db->get($this->_table);
     }
 
-    function getData()
-    {
-        return $this->db->get('provinsi')->result_array();
-    }
-    function getKab()
-    {
-        return $this->db->get('desa')->result_array();
-    }
-
     public function getProv()
     {
-        return $this->db->get('provinsi')->result();
+        // return $this->db->get('provinsi')->result();
+        $this->db->select('kode,nama');
+        $this->db->where('LENGTH(kode)', 2);
+        return $this->db->get('wilayah_2020')->result();
     }
 
-    public function viewByProvinsi($id)
+    public function viewKab($id, $n, $m)
     {
-        $this->db->where('prov', $id);
-        // $this->db->order_by('nama', 'ASC');
+        $this->db->select('kode, nama');
+        // LEFT(kode,'$n')='$id'
+        $this->db->where('LEFT(kode,' . $n . ')', $id);
+        $this->db->where('LENGTH(kode)', $m);
         $this->db->order_by('nama', 'asc');
-        $query = $this->db->get('kab');
-
-        return $query->result();
+        return $this->db->get('wilayah_2020')->result();
     }
-
-    public function viewByKab($id_prop, $id_kota)
+    public function viewKec($id, $n, $m)
     {
-        $camat = array('prov' => $id_prop, 'kab' => $id_kota);
-        $this->db->where($camat);
+        $this->db->select('kode, nama');
+        // LEFT(kode,'$n')='$id'
+        $this->db->where('LEFT(kode,' . $n . ')', $id);
+        $this->db->where('LENGTH(kode)', $m);
         $this->db->order_by('nama', 'asc');
-        $query = $this->db->get('kec');
-
-        return $query->result();
+        return $this->db->get('wilayah_2020')->result();
     }
-
-    public function viewByCam($id_prop, $id_kota, $id_camat)
+    public function viewDesa($id, $n, $m)
     {
-        $desa = array('prov' => $id_prop, 'kab' => $id_kota, 'kec' => $id_camat);
-        $this->db->where($desa);
+        $this->db->select('kode, nama');
+        // LEFT(kode,'$n')='$id'
+        $this->db->where('LEFT(kode,' . $n . ')', $id);
+        $this->db->where('LENGTH(kode)', $m);
         $this->db->order_by('nama', 'asc');
-        $query = $this->db->get('desa');
-
-        return $query->result();
+        return $this->db->get('wilayah_2020')->result();
     }
 }
 

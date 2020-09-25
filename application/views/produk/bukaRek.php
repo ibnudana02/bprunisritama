@@ -41,7 +41,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <input type="text" autofocus class="form-control form-control-user" name="nm_lengkap" id="nm_lengkap" placeholder="Nama Lengkap" value="<?= set_value('nm_lengkap'); ?>" onkeyup="this.value = this.value.toUpperCase()">
-                                                <span class="form-required">*</span>
+                                                <!-- <span class="form-required">*</span> -->
                                                 <?php echo form_error('nm_lengkap', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                         </div>
@@ -652,13 +652,15 @@
     $(document).ready(function() {
         $("#propinsi").change(function() {
             var id = $(this).val();
+            var data = "kabupaten";
             // window.alert(id);
             $.ajax({
-                url: "<?php echo base_url('getkota'); ?>",
+                url: "<?php echo base_url('getDati'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
-                    id: id
+                    id: id,
+                    data: data,
                 },
                 success: function(response) {
                     // $('#kota').html(data);
@@ -668,48 +670,48 @@
         });
 
         $("#kota").change(function() {
-            var id_prop = $("#propinsi").val();
-            var id_kota = $(this).val();
+            var id = $(this).val();
+            var data = "kecamatan";
             $.ajax({
-                url: "<?= base_url('welcome/getcamat'); ?>",
+                url: "<?= base_url('getDati'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
-                    id_prop: id_prop,
-                    id_kota: id_kota
+                    id: id,
+                    data: data,
                 },
                 success: function(response) {
-                    $("#camat").html(response.list_camat).show();
+                    $("#camat").html(response.list_kota).show();
                 }
             });
         });
         $("#camat").change(function() {
-            var id_prop = $("#propinsi").val();
-            var id_kota = $("#kota").val();
-            var id_camat = $(this).val();
+            var id = $(this).val();
+            var data = "desa";
             $.ajax({
-                url: "<?= base_url('welcome/getdesa'); ?>",
+                url: "<?= base_url('getDati'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
-                    id_prop: id_prop,
-                    id_kota: id_kota,
-                    id_camat: id_camat
+                    id: id,
+                    data: data,
                 },
                 success: function(response) {
-                    $("#lurah").html(response.list_desa).show();
+                    $("#lurah").html(response.list_kota).show();
                 }
             });
         });
         $("#prop_domisili").change(function() {
             var id = $(this).val();
+            var data = "kabupaten";
             // window.alert(id);
             $.ajax({
-                url: "<?php echo base_url('getkota'); ?>",
+                url: "<?php echo base_url('getDati'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
-                    id: id
+                    id: id,
+                    data: data,
                 },
                 success: function(response) {
                     // $('#kota').html(data);
@@ -719,36 +721,34 @@
         });
 
         $("#kota_domisili").change(function() {
-            var id_prop = $("#prop_domisili").val();
-            var id_kota = $(this).val();
+            var id = $(this).val();
+            var data = "kecamatan";
             $.ajax({
-                url: "<?= base_url('welcome/getcamat'); ?>",
+                url: "<?= base_url('getDati'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
-                    id_prop: id_prop,
-                    id_kota: id_kota
+                    id: id,
+                    data: data,
                 },
                 success: function(response) {
-                    $("#camat_domisili").html(response.list_camat).show();
+                    $("#camat_domisili").html(response.list_kota).show();
                 }
             });
         });
         $("#camat_domisili").change(function() {
-            var id_prop = $("#prop_domisili").val();
-            var id_kota = $("#kota_domisili").val();
-            var id_camat = $(this).val();
+            var id = $(this).val();
+            var data = "desa";
             $.ajax({
-                url: "<?= base_url('welcome/getdesa'); ?>",
+                url: "<?= base_url('getDati'); ?>",
                 method: "POST",
                 dataType: "JSON",
                 data: {
-                    id_prop: id_prop,
-                    id_kota: id_kota,
-                    id_camat: id_camat
+                    id: id,
+                    data: data,
                 },
                 success: function(response) {
-                    $("#lurah_domisili").html(response.list_desa).show();
+                    $("#lurah_domisili").html(response.list_kota).show();
                 }
             });
         });

@@ -32,6 +32,47 @@ class Welcome extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function getDati()
+	{
+		$id = $this->input->post('id');
+		$data = $this->input->post('data');
+
+
+		$n = strlen($id);
+		$m = ($n == 2 ? 5 : ($n == 5 ? 8 : 13));
+		// die;
+
+		if ($data == "kabupaten") {
+			$daerah = $this->user->viewKab($id, $n, $m);
+			// var_dump($daerah);
+			$lists = "<option value=''>Pilih</option>";
+			foreach ($daerah as $data) {
+				$lists .= "<option value='" . $data->kode . "'>";
+				$lists .= $data->nama . "</option>";
+			}
+			$callback = array('list_kota' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_kota
+			echo json_encode($callback);
+		} elseif ($data == "kecamatan") {
+			$daerah = $this->user->viewKec($id, $n, $m);
+			$lists = "<option value=''>Pilih</option>";
+			foreach ($daerah as $data) {
+				$lists .= "<option value='" . $data->kode . "'>";
+				$lists .= $data->nama . "</option>";
+			}
+			$callback = array('list_kota' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_kota
+			echo json_encode($callback);
+		} elseif ($data = "desa") {
+			$daerah = $this->user->viewDesa($id, $n, $m);
+			$lists = "<option value=''>Pilih</option>";
+			foreach ($daerah as $data) {
+				$lists .= "<option value='" . $data->kode . "'>";
+				$lists .= $data->nama . "</option>";
+			}
+			$callback = array('list_kota' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_kota
+			echo json_encode($callback);
+		}
+	}
+
 	public function getkota()
 	{
 		$kab_domisili = '';
