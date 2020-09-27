@@ -6,9 +6,9 @@ $pdf->setHeaderMargin(5);
 // set font
 $pdf->SetFont('times', '', 12);
 
-$pdf->SetTopMargin(15);
+$pdf->SetTopMargin(25);
 // $pdf->setFooterMargin(10);
-$pdf->SetAutoPageBreak(true, 15);
+$pdf->SetAutoPageBreak(true, 10);
 $pdf->SetAuthor('BPR Unisritama');
 $pdf->SetCreator('BPR Unisritama');
 $pdf->SetSubject('eForm Bank Unisritama');
@@ -17,7 +17,7 @@ $pdf->SetDisplayMode('real', 'default');
 $pdf->AddPage();
 $html =
     '<h2 align="center">e-Form ' . ucwords($data_nsb->produk) . '</h2>
-    <hr>
+    <br>
 <table cellspacing="1" cellpadding="2">
 <tr>
     <td>Nama Nasabah</td>
