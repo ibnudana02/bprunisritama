@@ -252,28 +252,6 @@ class Nasabah_model extends CI_Model
         // $this->session->set_flashdata('message', '');
     }
 
-    public function sendMail()
-    {
-        // configure the email setting  
-        $config['protocol'] = 'smtp';
-        $config['smtp_host'] = 'ssl://smtp.gmail.com'; //smtp host name  
-        $config['smtp_port'] = '465'; //smtp port number  
-        $config['smtp_user'] = 'unisritamabpr@gmail.com';
-        $config['smtp_pass'] = 'Admin-web10'; //$from_email password  
-        $config['mailtype'] = 'html';
-        $config['charset'] = 'iso-8859-1';
-        $config['wordwrap'] = TRUE;
-        $config['newline'] = "\r\n"; //use double quotes  
-        $this->email->initialize($config);
-        // $url = base_url() . "user/confirmation/" . $saltid;
-        $this->email->from('unisritamabpr@gmail.com', 'Web-BPR Unisritama');
-        $this->email->to('unisritamabpr@yahoo.co.id');
-        $this->email->subject('Pembukaan Rekening Baru!');
-        $message = "<html><head><head></head><body><p>Hi,</p><p>Terdapat Nasabah Baru yang sudah selesai Registrasi. Harap segera di verifikasi!</p><br/><p>Sincerely,</p><p>www.bprunisritama.com</p></body></html>";
-        $this->email->message($message);
-        return $this->email->send();
-    }
-
     public function delete($id_nsb)
     {
         return $this->db->delete($this->_table, array('id_nsb' => $id_nsb));
